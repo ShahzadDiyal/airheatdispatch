@@ -12,7 +12,7 @@ export default function DirectAnswerCard({
   keyPoints,
 }: DirectAnswerCardProps) {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-sky-500/30 rounded-2xl p-6 sm:p-8 shadow-xl my-8 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-sky-500/30 rounded-2xl p-3 md:p-6 sm:p-8 shadow-xl my-8 relative overflow-hidden">
       <div className="flex items-center gap-2 text-sky-400 text-xs font-bold uppercase tracking-wider mb-2">
         <Sparkles className="w-4 h-4 text-amber-400" />
         <span>AEO Direct Answer Summary</span>

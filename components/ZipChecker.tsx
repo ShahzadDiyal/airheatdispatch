@@ -15,7 +15,7 @@ export default function ZipChecker() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl my-10 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-8 shadow-xl my-10 relative overflow-hidden">
       <div className="max-w-2xl">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-2">
           <MapPin className="w-3.5 h-3.5" />

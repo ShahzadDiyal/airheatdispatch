@@ -178,7 +178,7 @@ export default function RootLayout({
             className="flex-1 py-3 px-3 rounded-xl bg-amber-400 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-md"
           >
             <Phone className="w-4 h-4 fill-slate-950 animate-bounce" />
-            <span>Call {SITE_CONFIG.phone}</span>
+            <span>{SITE_CONFIG.phone}</span>
           </a>
           <a
             href="#hero-booking"

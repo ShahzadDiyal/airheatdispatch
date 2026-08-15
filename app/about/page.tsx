@@ -74,7 +74,7 @@ export default function AboutPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-14">
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-4">
+            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-4">
               <h2 className="text-2xl font-bold text-white">
                 Our Mission & Standards
               </h2>
@@ -103,7 +103,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-4 flex flex-col justify-between">
+            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-4 flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-white">
                   Corporate Headquarters

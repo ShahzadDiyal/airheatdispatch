@@ -83,7 +83,7 @@ export default function WhyUsPage() {
           <BrandTrustGrid />
 
           {/* Licensing & Credentials Card */}
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 my-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 sm:p-12 my-14 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 text-center sm:text-left">
               <Award className="w-8 h-8 text-amber-400 mx-auto sm:mx-0" />
               <h2 className="text-lg font-bold text-white">

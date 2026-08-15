@@ -54,7 +54,7 @@ export default function FaqAccordion({
                 onClick={() => toggleIndex(index)}
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${index}`}
-                className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-2xl cursor-pointer"
+                className="w-full px-3 md:px-6 py-3 md:py-5 flex items-center justify-between text-left gap-4 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-2xl cursor-pointer"
               >
                 <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
                   {faq.question}

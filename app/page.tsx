@@ -322,7 +322,7 @@ export default function HomePage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-slate-950 border border-slate-800 hover:border-amber-400/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xl group"
+                className="bg-slate-950 border border-slate-800 hover:border-amber-400/50 rounded-2xl p-3 md:p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xl group"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
@@ -459,7 +459,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Side Authority Badge & Stats Box */}
-            <div className="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 space-y-8 shadow-2xl relative">
+            <div className="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-10 space-y-8 shadow-2xl relative">
               <div className="text-center space-y-2">
                 <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-amber-400">
                   99.4%
@@ -574,7 +574,7 @@ export default function HomePage() {
             ].map((rev, idx) => (
               <div
                 key={idx}
-                className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4"
+                className="bg-slate-900 border border-slate-800 rounded-2xl p-3 md:p-6 flex flex-col justify-between space-y-4"
               >
                 <div className="space-y-3">
                   <div className="flex items-center gap-1 text-amber-400">
@@ -641,7 +641,7 @@ export default function HomePage() {
                 className="px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95"
               >
                 <Phone className="w-5 h-5 fill-slate-950" />
-                <span>Call Hotline: {SITE_CONFIG.phone}</span>
+                <span>{SITE_CONFIG.phone}</span>
               </a>
             </div>
           </div>

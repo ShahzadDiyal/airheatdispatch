@@ -198,15 +198,7 @@ export default function Header() {
 
           {/* Mobile Hamburger Button */}
           <div className="flex items-center gap-3 lg:hidden">
-            <a
-              href={`tel:${SITE_CONFIG.phoneRaw}`}
-              rel="dofollow"
-              className="px-3 py-2 rounded-lg bg-amber-400 text-slate-950 font-black text-xs flex items-center gap-1.5"
-              aria-label={`Call HVAC Service at ${SITE_CONFIG.phone}`}
-            >
-              <Phone className="w-4 h-4" />
-              <span>{SITE_CONFIG.phone}</span>
-            </a>
+            
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

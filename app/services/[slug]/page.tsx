@@ -220,7 +220,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </div>
 
             {/* Service Summary Highlight Box */}
-            <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 shadow-2xl">
+            <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6 shadow-2xl">
               <h2 className="text-xl font-bold text-white border-b border-slate-800 pb-4">
                 Service Guarantees & Features
               </h2>
@@ -253,7 +253,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           />
 
           {/* Rich Semantic Topical Content Section */}
-          <section className="my-16 bg-slate-900/60 border border-slate-800 rounded-3xl p-8 space-y-6">
+          <section className="my-16 bg-slate-900/60 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
             <h2 className="text-2xl font-bold text-white">
               Technical Principles & Diagnostic Science of {service.name}
             </h2>
@@ -310,7 +310,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {service.processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-3 relative overflow-hidden"
+                  className="bg-slate-900 border border-slate-800 rounded-2xl p-3 md:p-6 space-y-3 relative overflow-hidden"
                 >
                   <div className="text-xs font-black text-amber-400 uppercase tracking-wider">
                     Step {idx + 1}
@@ -327,7 +327,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </section>
 
           {/* Transparent Pricing Comparison Table (Quote Based) */}
-          <section className="my-16 bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6">
+          <section className="my-16 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
             <h2 className="text-2xl font-bold text-white">
               Transparent Service Tier Comparison
             </h2>
@@ -413,7 +413,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           {/* Contact / Booking CTA Section */}
           <section
             id="book-service"
-            className="my-16 bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center space-y-6"
+            className="my-16 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 sm:p-12 text-center space-y-6"
           >
             <h2 className="text-3xl font-black text-white">
               Ready to Request Your Free Quote for {service.name}?

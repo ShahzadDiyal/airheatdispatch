@@ -13,7 +13,7 @@ export default function BrandTrustGrid() {
   ];
 
   return (
-    <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-10 my-12">
+    <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-10 my-12">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-2">

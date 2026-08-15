@@ -70,7 +70,7 @@ export default function ContactPage() {
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-12">
-            <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6">
+            <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
               <h2 className="text-2xl font-bold text-white">Direct Dispatch Details</h2>
 
               <div className="space-y-4">
@@ -123,7 +123,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6">
+            <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
               <h2 className="text-2xl font-bold text-white">Send Direct Message to Dispatch Desk</h2>
               <form className="space-y-4" action={`tel:${SITE_CONFIG.phoneRaw}`}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

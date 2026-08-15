@@ -101,7 +101,7 @@ export default function FaqsPage() {
             />
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-4">
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 text-center space-y-4">
             <h2 className="text-2xl font-bold text-white">
               Have a Specific HVAC Question Not Answered Here?
             </h2>

@@ -90,7 +90,7 @@ export default function ServicesPage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 hover:border-amber-400/40 transition-all shadow-xl flex flex-col justify-between"
+                className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6 hover:border-amber-400/40 transition-all shadow-xl flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">

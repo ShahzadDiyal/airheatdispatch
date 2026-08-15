@@ -41,7 +41,7 @@ export default function TrustGuarantees() {
           return (
             <div
               key={idx}
-              className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-3 relative hover:border-sky-500/30 transition-colors"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-3 md:p-6 space-y-3 relative hover:border-sky-500/30 transition-colors"
             >
               <div className="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center">
                 <Icon className="w-5 h-5" />

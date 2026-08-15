@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
           </p>
         </div>
 
-        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 text-sm leading-relaxed">
+        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6 text-sm leading-relaxed">
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">
               1. Service Scope & Flat-Rate Quotes

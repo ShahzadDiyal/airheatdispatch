@@ -12,7 +12,7 @@ export default function ServiceEstimator() {
   const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-slate-100">
+    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-slate-100">
       <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 
       <div className="max-w-3xl">
@@ -37,7 +37,7 @@ export default function ServiceEstimator() {
             <legend className="text-xs font-bold text-slate-200 uppercase tracking-wider block mb-2">
               1. Select HVAC System Type
             </legend>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-1 md:gap-2">
               {[
                 { id: "central-ac", label: "Central AC" },
                 { id: "heat-pump", label: "Heat Pump" },
@@ -89,7 +89,7 @@ export default function ServiceEstimator() {
           </fieldset>
 
           {/* Home Size */}
-          <fieldset>
+          <fieldset className="hidden md:block">
             <legend className="text-xs font-bold text-slate-200 uppercase tracking-wider block mb-2">
               3. Home Size (Square Feet)
             </legend>
@@ -117,7 +117,7 @@ export default function ServiceEstimator() {
         </div>
 
         {/* Quote Request Output Box */}
-        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-6">
+        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 md:p-6 flex flex-col justify-between space-y-6">
           <div>
             <div className="flex items-center justify-between text-xs text-slate-300 mb-2">
               <span>Upfront Flat-Rate Estimate</span>
