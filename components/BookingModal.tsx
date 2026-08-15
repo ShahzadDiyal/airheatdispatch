@@ -57,11 +57,11 @@ export default function BookingModal({
       aria-modal="true"
       aria-labelledby="booking-modal-title"
     >
-      <div className="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden relative text-slate-100 my-4 sm:my-0">
+      <div className="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden relative text-slate-100 my-4 sm:my-0 pt-16">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors z-10 cursor-pointer"
+          className="absolute top-3 right-3 sm:top-22 sm:right-10 p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors z-10 cursor-pointer"
           aria-label="Close booking modal"
         >
           <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -141,9 +141,6 @@ export default function BookingModal({
                   <div>
                     <div className="text-[11px] sm:text-xs font-bold">
                       24/7 Emergency
-                    </div>
-                    <div className="text-[9px] sm:text-[10px] text-slate-400">
-                      Under 60 Min Arrival
                     </div>
                   </div>
                 </button>

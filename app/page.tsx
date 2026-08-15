@@ -116,7 +116,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-white">
-                      Under 60 Mins
+                     Contact to Get Access
                     </div>
                     <div className="text-[10px] text-slate-400">
                       Emergency Dispatch
@@ -130,7 +130,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-white">
-                      1-Year Warranty
+                     Assured 
                     </div>
                     <div className="text-[10px] text-slate-400">
                       Parts & Labor
@@ -253,7 +253,7 @@ export default function HomePage() {
                     type="submit"
                     className="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] active:scale-95 cursor-pointer"
                   >
-                    Dispatch Certified Technician Now ({SITE_CONFIG.phone}) →
+                    Dispatch Certified Technician Now  →
                   </button>
 
                   <p className="text-[10px] text-center text-slate-400">
