@@ -63,10 +63,10 @@ export default function FaqsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="bg-slate-950 min-h-screen py-12 lg:py-20">
+      <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-            <Link href="/" rel="dofollow" className="hover:text-sky-400">
+            <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
             <span>/</span>
@@ -74,7 +74,7 @@ export default function FaqsPage() {
           </nav>
 
           <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
               <HelpCircle className="w-3.5 h-3.5" />
               <span>AEO Knowledge Base</span>
             </div>
@@ -101,15 +101,16 @@ export default function FaqsPage() {
 
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-4">
             <h2 className="text-2xl font-bold text-white">Have a Specific HVAC Question Not Answered Here?</h2>
-            <p className="text-slate-400 text-sm max-w-lg mx-auto">
+            <p className="text-slate-300 text-sm max-w-lg mx-auto">
               Our technical dispatch desk is staffed 24/7 by certified HVAC technicians who can diagnose issues over the phone or route an emergency service truck.
             </p>
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-sm transition-colors"
+              aria-label={`Call technician hotline at ${SITE_CONFIG.phone}`}
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm transition-colors"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 fill-slate-950" />
               <span>Call Technician Hotline: {SITE_CONFIG.phone}</span>
             </a>
           </div>

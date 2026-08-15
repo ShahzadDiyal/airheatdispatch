@@ -5,7 +5,7 @@ import BrandTrustGrid from "@/components/BrandTrustGrid";
 import TrustGuarantees from "@/components/TrustGuarantees";
 import ZipChecker from "@/components/ZipChecker";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
-import { ShieldCheck, Phone, CheckCircle2, Award, Clock, Star } from "lucide-react";
+import { ShieldCheck, Phone, Award, Clock, Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Why Choose Us | Certified & Licensed HVAC Contractors",
@@ -43,10 +43,10 @@ export default function WhyUsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="bg-slate-950 min-h-screen py-12 lg:py-20">
+      <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-            <Link href="/" rel="dofollow" className="hover:text-sky-400">
+            <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
             <span>/</span>
@@ -54,7 +54,7 @@ export default function WhyUsPage() {
           </nav>
 
           <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Licensed Authority & Trust</span>
             </div>
@@ -81,24 +81,24 @@ export default function WhyUsPage() {
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 my-14 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 text-center sm:text-left">
               <Award className="w-8 h-8 text-amber-400 mx-auto sm:mx-0" />
-              <h3 className="text-lg font-bold text-white">State Licensed & Insured</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Registered under Texas State HVAC License #{SITE_CONFIG.licenseNumber} with $2,000,000 general liability coverage.
+              <h2 className="text-lg font-bold text-white">State Licensed & Insured</h2>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Fully registered {SITE_CONFIG.licenseText} contractor with $2,000,000 general liability coverage for full home protection.
               </p>
             </div>
 
             <div className="space-y-3 text-center sm:text-left">
               <Clock className="w-8 h-8 text-sky-400 mx-auto sm:mx-0" />
-              <h3 className="text-lg font-bold text-white">24/7/365 Emergency Hotline</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Live dispatch managers available around the clock—never an automated call center machine.
+              <h2 className="text-lg font-bold text-white">24/7/365 Emergency Hotline</h2>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Live dispatch managers available around the clock at {SITE_CONFIG.phone}—never an automated call center machine.
               </p>
             </div>
 
             <div className="space-y-3 text-center sm:text-left">
               <Star className="w-8 h-8 text-emerald-400 mx-auto sm:mx-0" />
-              <h3 className="text-lg font-bold text-white">4.9★ Average Rating</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <h2 className="text-lg font-bold text-white">4.9★ Average Rating</h2>
+              <p className="text-xs text-slate-300 leading-relaxed">
                 Verified reviews from over 684 local homeowners on Google, Yelp, and Angi.
               </p>
             </div>
@@ -108,9 +108,10 @@ export default function WhyUsPage() {
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 text-white font-bold text-sm shadow-xl shadow-sky-500/20"
+              aria-label={`Call emergency dispatch hotline at ${SITE_CONFIG.phone}`}
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm shadow-xl transition-colors"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 fill-slate-950" />
               <span>Call Emergency Dispatch: {SITE_CONFIG.phone}</span>
             </a>
           </div>

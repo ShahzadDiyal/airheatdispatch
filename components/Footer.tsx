@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Shield, Award, Clock, Snowflake, Flame } from "luc
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
           {/* Brand Info */}
@@ -29,12 +29,12 @@ export default function Footer() {
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
-                className="flex items-center gap-3 text-white font-semibold hover:text-sky-400 transition-colors"
+                className="flex items-center gap-3 text-amber-400 font-bold hover:text-amber-300 transition-colors"
               >
-                <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400">
+                <div className="p-2 rounded-lg bg-amber-400/20 text-amber-400">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>{SITE_CONFIG.phone} (24/7 Emergency Line)</span>
+                <span>Call Hotline: {SITE_CONFIG.phone} (24/7 Dispatch)</span>
               </a>
 
               <div className="flex items-center gap-3 text-slate-300">
@@ -59,12 +59,12 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-base font-bold text-white tracking-wide">Core HVAC Services</h3>
             <ul className="space-y-2.5 text-sm">
-              {CORE_SERVICES.map((s) => (
+              {CORE_SERVICES.slice(0, 6).map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
                     rel="dofollow"
-                    className="hover:text-sky-400 transition-colors block py-0.5"
+                    className="hover:text-amber-400 transition-colors block py-0.5"
                   >
                     {s.name}
                   </Link>
@@ -74,9 +74,9 @@ export default function Footer() {
                 <Link
                   href="/services"
                   rel="dofollow"
-                  className="text-sky-400 font-semibold hover:underline block pt-1"
+                  className="text-amber-400 font-bold hover:underline block pt-1"
                 >
-                  View All Services →
+                  View All {CORE_SERVICES.length} Services →
                 </Link>
               </li>
             </ul>
@@ -87,32 +87,32 @@ export default function Footer() {
             <h3 className="text-base font-bold text-white tracking-wide">Company & Info</h3>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <Link href="/faqs" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/faqs" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   HVAC FAQs & Direct Answers
                 </Link>
               </li>
               <li>
-                <Link href="/why-us" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/why-us" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link href="/about" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/about" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   About Our Company
                 </Link>
               </li>
               <li>
-                <Link href="/contact" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/contact" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   Contact & Emergency Hotline
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/privacy-policy" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" rel="dofollow" className="hover:text-sky-400 transition-colors">
+                <Link href="/terms-of-service" rel="dofollow" className="hover:text-amber-400 transition-colors">
                   Terms of Service
                 </Link>
               </li>
@@ -127,14 +127,17 @@ export default function Footer() {
                 <Clock className="w-4 h-4" />
                 <span>Open 24/7 / 365 Days</span>
               </div>
-            
+              <div className="flex items-center gap-2 text-xs text-slate-300">
+                <Shield className="w-4 h-4 text-sky-400" />
+                <span>{SITE_CONFIG.licenseText}</span>
+              </div>
               <div className="flex items-center gap-2 text-xs text-slate-300">
                 <Award className="w-4 h-4 text-amber-400" />
                 <span>EPA 608 Universal Certified</span>
               </div>
             </div>
             <div className="text-xs text-slate-300">
-              <span className="font-semibold text-white">Need emergency repair?</span> Technicians are on call in your area right now.
+              <span className="font-semibold text-white">Need emergency repair?</span> Call <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-amber-400 font-bold underline">{SITE_CONFIG.phone}</a>.
             </div>
           </div>
         </div>
@@ -145,16 +148,16 @@ export default function Footer() {
             © {new Date().getFullYear()} {SITE_CONFIG.legalName}. All rights reserved. 100% Technical SEO & Search Console Ready.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="/sitemap.xml" rel="dofollow" className="hover:text-sky-400 transition-colors">
+            <Link href="/sitemap.xml" rel="dofollow" className="hover:text-amber-400 transition-colors">
               XML Sitemap
             </Link>
-            <Link href="/llms.txt" rel="dofollow" className="hover:text-sky-400 transition-colors">
+            <Link href="/llms.txt" rel="dofollow" className="hover:text-amber-400 transition-colors">
               llms.txt (AI Knowledge)
             </Link>
-            <Link href="/privacy-policy" rel="dofollow" className="hover:text-sky-400 transition-colors">
+            <Link href="/privacy-policy" rel="dofollow" className="hover:text-amber-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" rel="dofollow" className="hover:text-sky-400 transition-colors">
+            <Link href="/terms-of-service" rel="dofollow" className="hover:text-amber-400 transition-colors">
               Terms of Service
             </Link>
           </div>

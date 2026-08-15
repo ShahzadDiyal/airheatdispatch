@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
     <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-          <Link href="/" rel="dofollow" className="hover:text-sky-400">
+          <Link href="/" rel="dofollow" className="hover:text-amber-400">
             Home
           </Link>
           <span>/</span>
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
         </nav>
 
         <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Legal Compliance</span>
           </div>
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">3. Data Security & Storage</h2>
             <p>
-              We implement industry-standard encryption protocols (SSL/TLS) to safeguard your service booking records. Technical diagnostic notes are maintained strictly for warranty tracking under License #{SITE_CONFIG.licenseNumber}.
+              We implement industry-standard encryption protocols (SSL/TLS) to safeguard your service booking records. Technical diagnostic notes are maintained strictly for warranty tracking under our {SITE_CONFIG.licenseText} coverage.
             </p>
           </section>
 
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
             <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs space-y-1">
               <p className="font-bold text-white">{SITE_CONFIG.legalName}</p>
               <p>{SITE_CONFIG.address.street}, {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}</p>
-              <p className="text-sky-400 font-semibold">{SITE_CONFIG.email}</p>
+              <p className="text-amber-400 font-bold">{SITE_CONFIG.email}</p>
             </div>
           </section>
         </div>

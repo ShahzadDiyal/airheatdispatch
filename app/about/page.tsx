@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
-import { Building2, ShieldCheck, Award, CheckCircle2, Phone } from "lucide-react";
+import { Building2, CheckCircle2, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About AirHeat Dispatch | Local HVAC Service Specialists",
   description:
-    "Learn about AirHeat Dispatch LLC, Austin's premier 24/7 HVAC Service and Repair company. Fully licensed, EPA universal certified, and dedicated to transparent local service.",
+    "Learn about AirHeat Dispatch LLC, Austin's premier 24/7 HVAC Service and Repair company. State licensed & insured, EPA universal certified, and dedicated to transparent local service.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/about`,
   },
@@ -40,10 +40,10 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="bg-slate-950 min-h-screen py-12 lg:py-20">
+      <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-            <Link href="/" rel="dofollow" className="hover:text-sky-400">
+            <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
             <span>/</span>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           </nav>
 
           <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Building2 className="w-3.5 h-3.5" />
               <span>Local Company Profile</span>
             </div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
           <DirectAnswerCard
             questionTitle="Who is AirHeat Dispatch LLC?"
-            directAnswer="AirHeat Dispatch LLC is a licensed local HVAC contractor specializing in 24/7 emergency air conditioning repair, gas and electric furnace diagnostics, heat pump maintenance, and indoor air quality services across Austin and surrounding counties."
+            directAnswer="AirHeat Dispatch LLC is a certified local HVAC contractor specializing in 24/7 emergency air conditioning repair, gas and electric furnace diagnostics, heat pump maintenance, mini-splits, and indoor air quality services."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-14">
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <ul className="space-y-2.5 pt-2">
                 {[
                   "100% Upfront Price Quotes Before Work Starts",
-                  "Licensed under Texas HVAC License #TACLB98421E",
+                  "Fully State Licensed & Insured",
                   "Universal EPA 608 Refrigerant Certification",
                   "Continuous Factory Training on Inverter Units",
                 ].map((item, idx) => (
@@ -98,13 +98,20 @@ export default function AboutPage() {
                   <p>
                     {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
                   </p>
-                  <p className="text-sky-400 font-bold pt-2">{SITE_CONFIG.phone}</p>
+                  <p className="text-amber-400 font-bold pt-2">{SITE_CONFIG.phone}</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400">
-                <span className="font-bold text-white block mb-1">Emergency Dispatch Active:</span>
-                Mobile service vehicles are stationed across Austin for sub-60-minute dispatch response.
+              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-2">
+                <span className="font-bold text-white block">24/7 Dispatch Hotline:</span>
+                <a
+                  href={`tel:${SITE_CONFIG.phoneRaw}`}
+                  rel="dofollow"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 fill-slate-950" />
+                  <span>Call Hotline: {SITE_CONFIG.phone}</span>
+                </a>
               </div>
             </div>
           </div>

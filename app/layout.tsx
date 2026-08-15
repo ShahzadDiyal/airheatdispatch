@@ -146,7 +146,8 @@ export default function RootLayout({
         priceSpecification: {
           "@type": "PriceSpecification",
           priceCurrency: "USD",
-          price: s.startingPrice,
+          price: "0.00",
+          description: s.priceLabel,
         },
         position: index + 1,
       })),
@@ -161,9 +162,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(hvacBusinessSchema) }}
         />
       </head>
-      <body className="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
+      <body className="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-400 selection:text-slate-950 min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1" id="main-content">
+          {children}
+        </main>
         <Footer />
 
         {/* Mobile Sticky Quick Action Call Bar (Conversion Booster) */}
@@ -171,18 +174,20 @@ export default function RootLayout({
           <a
             href={`tel:${SITE_CONFIG.phoneRaw}`}
             rel="dofollow"
-            className="flex-1 py-3 px-3 rounded-xl bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 border border-slate-700 active:scale-95"
+            aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
+            className="flex-1 py-3 px-3 rounded-xl bg-amber-400 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-md"
           >
-            <Phone className="w-4 h-4 text-sky-400 animate-bounce" />
+            <Phone className="w-4 h-4 fill-slate-950 animate-bounce" />
             <span>Call {SITE_CONFIG.phone}</span>
           </a>
           <a
             href="#hero-booking"
             rel="dofollow"
-            className="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-sky-500/20 active:scale-95 text-center"
+            aria-label="Request Quote Online"
+            className="flex-1 py-3 px-3 rounded-xl bg-slate-100 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 text-center shadow-md"
           >
             <Calendar className="w-4 h-4" />
-            <span>Schedule Online</span>
+            <span>Request Quote</span>
           </a>
         </div>
       </body>

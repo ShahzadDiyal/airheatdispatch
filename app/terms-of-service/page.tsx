@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
     <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-          <Link href="/" rel="dofollow" className="hover:text-sky-400">
+          <Link href="/" rel="dofollow" className="hover:text-amber-400">
             Home
           </Link>
           <span>/</span>
@@ -25,7 +25,7 @@ export default function TermsOfServicePage() {
         </nav>
 
         <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Service Agreement</span>
           </div>
@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">2. Diagnostic Fee Policy</h2>
             <p>
-              A standard diagnostic inspection fee applies to evaluate system failure. However, this diagnostic fee is 100% waived when the customer approves any recommended repair work during the same service visit.
+              A standard diagnostic inspection applies to evaluate system failure. However, this diagnostic fee is 100% waived when the customer approves any recommended repair work during the same service visit.
             </p>
           </section>
 
@@ -58,7 +58,7 @@ export default function TermsOfServicePage() {
           <section className="space-y-2">
             <h2 className="text-xl font-bold text-white">4. Licensing & Authority</h2>
             <p>
-              All HVAC operations comply with state guidelines under Texas HVAC Contractor License #{SITE_CONFIG.licenseNumber}.
+              All HVAC operations comply with state guidelines under our {SITE_CONFIG.licenseText} status.
             </p>
           </section>
         </div>

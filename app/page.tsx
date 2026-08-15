@@ -63,7 +63,7 @@ export default function HomePage() {
                 <span className="hidden sm:inline text-slate-700">|</span>
                 <span className="text-emerald-400 flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" />
-                  Licensed & Insured
+                  {SITE_CONFIG.licenseText}
                 </span>
               </div>
 
@@ -77,27 +77,27 @@ export default function HomePage() {
 
               {/* Concise Value Proposition & Direct Answer */}
               <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
-                Certified local specialists providing 24/7 emergency air conditioning repair, furnace diagnostics, and energy-efficient system tune-ups. Zero hidden fees, upfront flat-rate pricing, and guaranteed same-day dispatch.
+                Certified local specialists providing 24/7 emergency air conditioning repair, furnace diagnostics, and energy-efficient system tune-ups. Zero hidden fees, upfront flat-rate quotes, and guaranteed same-day dispatch.
               </p>
 
-              {/* Dual Action CTAs */}
+              {/* Dual Action CTAs with High Contrast & Phone Number */}
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl shadow-sky-500/25 transition-all hover:scale-[1.02] active:scale-95 group"
+                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95 group"
                 >
-                  <Phone className="w-5 h-5 animate-pulse" />
-                  <span>Call Now: {SITE_CONFIG.phone}</span>
+                  <Phone className="w-5 h-5 fill-slate-950" />
+                  <span>Call Hotline: {SITE_CONFIG.phone}</span>
                 </a>
 
                 <a
                   href="#quick-quote"
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 border border-slate-700 transition-all hover:scale-[1.02] active:scale-95"
+                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-100 hover:bg-white text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95"
                 >
-                  <span>Get Upfront Price Quote</span>
-                  <ArrowRight className="w-4 h-4 text-sky-400" />
+                  <span>Request Free Quote ({SITE_CONFIG.phone})</span>
+                  <ArrowRight className="w-4 h-4 text-slate-950" />
                 </a>
               </div>
 
@@ -124,7 +124,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+                  <div className="p-2 rounded-lg bg-amber-400/10 text-amber-400">
                     <Wrench className="w-4 h-4" />
                   </div>
                   <div>
@@ -138,80 +138,91 @@ export default function HomePage() {
             {/* Right Column: Hero Quick Dispatch Card */}
             <div className="lg:col-span-5" id="hero-booking">
               <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-2xl relative">
-                <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-l from-amber-500 to-amber-600 text-slate-950 font-black text-[10px] sm:text-[11px] uppercase tracking-wider rounded-bl-xl rounded-tr-2xl">
+                <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-l from-amber-400 to-amber-500 text-slate-950 font-black text-[10px] sm:text-[11px] uppercase tracking-wider rounded-bl-xl rounded-tr-2xl">
                   24/7 Live Dispatch
                 </div>
 
                 <div className="mb-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-sky-400 shrink-0" />
+                  {/* Sequential Heading Fix: H2 instead of H3 right under H1 */}
+                  <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-amber-400 shrink-0" />
                     Request Emergency HVAC Dispatch
-                  </h3>
-                  <p className="text-xs text-slate-400 mt-1">
+                  </h2>
+                  <p className="text-xs text-slate-300 mt-1">
                     Fill in your details below for immediate technician call-back within 10 minutes.
                   </p>
                 </div>
 
                 <form className="space-y-4" action={`tel:${SITE_CONFIG.phoneRaw}`}>
                   <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider">
-                      Service Required
+                    <label htmlFor="hero-service-select" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                      Select HVAC Service Required *
                     </label>
-                    <select className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-500">
-                      <option>Emergency AC Repair (Not Cooling)</option>
-                      <option>Heating & Furnace Repair</option>
-                      <option>Seasonal HVAC Maintenance Tune-Up</option>
-                      <option>Water Leak / Frozen Coil</option>
-                      <option>Duct Cleaning & Air Quality</option>
+                    <select
+                      id="hero-service-select"
+                      aria-label="Select HVAC Service Required"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400"
+                    >
+                      {CORE_SERVICES.map((s) => (
+                        <option key={s.slug} value={s.slug}>
+                          {s.name} ({s.priceLabel})
+                        </option>
+                      ))}
                     </select>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider">
-                        Your Name
+                      <label htmlFor="hero-name-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                        Your Name *
                       </label>
                       <input
+                        id="hero-name-input"
+                        aria-label="Your Full Name"
                         type="text"
                         placeholder="John Smith"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
                         required
                       />
                     </div>
                     <div className="space-y-1">
-                      <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider">
-                        Phone Number
+                      <label htmlFor="hero-phone-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                        Phone Number *
                       </label>
                       <input
+                        id="hero-phone-input"
+                        aria-label="Phone Number"
                         type="tel"
                         placeholder="(555) 000-0000"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
                         required
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-slate-300 uppercase tracking-wider">
-                      Zip Code / City
+                    <label htmlFor="hero-zip-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                      Zip Code / City *
                     </label>
                     <input
+                      id="hero-zip-input"
+                      aria-label="Zip Code or City"
                       type="text"
                       placeholder="Austin, TX 78701"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-xs focus:outline-none focus:border-sky-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
                       required
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-black text-xs uppercase tracking-wider shadow-lg shadow-sky-500/20 transition-all hover:scale-[1.01] active:scale-95 cursor-pointer"
+                    className="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] active:scale-95 cursor-pointer"
                   >
-                    Dispatch Certified Technician Now →
+                    Dispatch Certified Technician Now ({SITE_CONFIG.phone}) →
                   </button>
 
                   <p className="text-[10px] text-center text-slate-400">
-                    🔒 No obligation. Diagnostic fee waived 100% with any approved repair.
+                    🔒 Zero obligation. Diagnostic fee waived 100% with any approved repair.
                   </p>
                 </form>
               </div>
@@ -256,15 +267,15 @@ export default function HomePage() {
       <section className="py-20 bg-slate-900 border-b border-slate-800 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-semibold uppercase tracking-wider mb-3">
               <Wrench className="w-3.5 h-3.5" />
               <span>Comprehensive HVAC Solutions</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
               Our Core HVAC Service and Repair Offerings
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-2">
-              Explore our specialized heating, air conditioning, and air quality services engineered for residential and commercial systems.
+            <p className="text-slate-300 text-sm sm:text-base mt-2">
+              Explore our {CORE_SERVICES.length} specialized heating, air conditioning, and air quality services engineered for residential and commercial systems.
             </p>
           </div>
 
@@ -272,28 +283,31 @@ export default function HomePage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-slate-950 border border-slate-800 hover:border-sky-500/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xl group"
+                className="bg-slate-950 border border-slate-800 hover:border-amber-400/50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xl group"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all">
+                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
                     {s.slug === "ac-repair" && <Snowflake className="w-6 h-6" />}
                     {s.slug === "heating-repair" && <Flame className="w-6 h-6" />}
                     {s.slug === "hvac-maintenance" && <Wrench className="w-6 h-6" />}
-                    {s.slug === "emergency-service" && <Zap className="w-6 h-6 text-amber-400 group-hover:text-white" />}
+                    {s.slug === "emergency-service" && <Zap className="w-6 h-6 text-amber-400 group-hover:text-slate-950" />}
                     {s.slug === "indoor-air-quality" && <Wind className="w-6 h-6" />}
+                    {!["ac-repair", "heating-repair", "hvac-maintenance", "emergency-service", "indoor-air-quality"].includes(s.slug) && (
+                      <Wrench className="w-6 h-6" />
+                    )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
                     {s.name}
                   </h3>
 
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
                     {s.shortDesc}
                   </p>
 
-                  <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 mb-6">
-                    <span className="text-slate-400 block font-medium">Estimated Pricing:</span>
-                    <span className="text-sky-400 font-bold text-sm">{s.priceRange}</span>
+                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 mb-6">
+                    <span className="text-slate-400 block font-medium">Pricing Model:</span>
+                    <span className="text-amber-400 font-bold text-sm">{s.priceLabel}</span>
                   </div>
 
                   <ul className="space-y-2 mb-6">
@@ -306,12 +320,14 @@ export default function HomePage() {
                   </ul>
                 </div>
 
+                {/* Unique Accessible Name on Card Links (Fix Lighthouse Identical Links error) */}
                 <Link
                   href={`/services/${s.slug}`}
                   rel="dofollow"
-                  className="w-full py-3 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-bold text-xs flex items-center justify-center gap-2 border border-slate-800 hover:border-sky-500 transition-all cursor-pointer"
+                  aria-label={`View details and request free quote for ${s.name}`}
+                  className="w-full py-3 rounded-xl bg-slate-900 hover:bg-amber-400 hover:text-slate-950 text-white font-bold text-xs flex items-center justify-center gap-2 border border-slate-700 transition-all cursor-pointer"
                 >
-                  <span>Learn Details & Pricing</span>
+                  <span>Request Quote & View Guide</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -325,7 +341,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Licensed & Trusted Experts</span>
               </div>
@@ -359,11 +375,11 @@ export default function HomePage() {
                 ].map((item, idx) => (
                   <div key={idx} className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4">
                     <div className="p-2.5 rounded-lg bg-sky-500/10 text-sky-400 mt-0.5 shrink-0">
-                      <CheckCircle2 className="w-5 h-5" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-400" />
                     </div>
                     <div>
                       <h3 className="text-sm font-bold text-white">{item.title}</h3>
-                      <p className="text-xs text-slate-400 mt-0.5 leading-relaxed">{item.desc}</p>
+                      <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -379,7 +395,7 @@ export default function HomePage() {
                 <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
                   First-Visit Repair Resolution Rate
                 </div>
-                <p className="text-xs text-slate-400 max-w-sm mx-auto">
+                <p className="text-xs text-slate-300 max-w-sm mx-auto">
                   Our mobile trucks carry over 200 OEM replacement parts to ensure your cooling or heating is fixed on the first visit.
                 </p>
               </div>
@@ -387,25 +403,26 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-4 border-t border-b border-slate-800 py-6 text-center">
                 <div>
                   <div className="text-2xl sm:text-3xl font-extrabold text-white">15,000+</div>
-                  <div className="text-xs text-slate-400 mt-1">HVAC Repairs Completed</div>
+                  <div className="text-xs text-slate-300 mt-1">HVAC Repairs Completed</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-extrabold text-white">&lt; 60 Mins</div>
-                  <div className="text-xs text-slate-400 mt-1">Average Response Time</div>
+                  <div className="text-xs text-slate-300 mt-1">Average Response Time</div>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-bold text-white text-center sm:text-left">Need Urgent Diagnostics?</div>
-                  <div className="text-[11px] text-slate-400 text-center sm:text-left">Technicians available in your area</div>
+                  <div className="text-[11px] text-slate-300 text-center sm:text-left">Technicians available in your area</div>
                 </div>
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
-                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs text-center"
+                  aria-label={`Call HVAC emergency hotline at ${SITE_CONFIG.phone}`}
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs text-center shadow-md"
                 >
-                  Call Now
+                  Call {SITE_CONFIG.phone}
                 </a>
               </div>
             </div>
@@ -428,14 +445,14 @@ export default function HomePage() {
       <section className="py-20 bg-slate-950 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Star className="w-3.5 h-3.5 fill-amber-400" />
               <span>Verified Customer Feedback</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
               Real Reviews from Local Homeowners
             </h2>
-            <p className="text-slate-400 text-sm mt-2">
+            <p className="text-slate-300 text-sm mt-2">
               Over 684 verified 5-star reviews across Google, Yelp, and Angi.
             </p>
           </div>
@@ -448,7 +465,7 @@ export default function HomePage() {
                 date: "2 days ago",
                 service: "Emergency AC Repair",
                 review:
-                  "Our AC unit stopped blowing cold air on a 102°F afternoon. AirHeat Dispatch arrived within 45 minutes, replaced a blown capacitor, and had icy cold air flowing again. Upfront price was exactly what they quoted!",
+                  "Our AC unit stopped blowing cold air on a 102°F afternoon. AirHeat Dispatch arrived within 45 minutes, replaced a blown capacitor, and had icy cold air flowing again. Upfront quote was clear and accurate!",
               },
               {
                 name: "Sarah Jenkins",
@@ -456,7 +473,7 @@ export default function HomePage() {
                 date: "1 week ago",
                 service: "Furnace Ignition Repair",
                 review:
-                  "Extremely professional technician! He diagnosed our gas furnace flame sensor issue in 15 minutes and performed a full safety check for carbon monoxide. Top-notch service and very reasonable flat rate.",
+                  "Extremely professional technician! He diagnosed our gas furnace flame sensor issue in 15 minutes and performed a full safety check for carbon monoxide. Top-notch service and very clear flat rate.",
               },
               {
                 name: "David Chen",
@@ -482,13 +499,13 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
                   <div>
                     <div className="font-bold text-white">{rev.name}</div>
                     <div className="text-slate-400">{rev.location}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-sky-400 font-semibold">{rev.service}</div>
+                    <div className="text-amber-400 font-semibold">{rev.service}</div>
                     <div className="text-[10px] text-slate-400">{rev.date}</div>
                   </div>
                 </div>
@@ -510,7 +527,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
                 <AlertTriangle className="w-4 h-4 text-amber-400 animate-bounce" />
                 <span>HVAC Emergency Alert</span>
               </div>
@@ -526,7 +543,7 @@ export default function HomePage() {
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
-                className="px-8 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base flex items-center justify-center gap-3 shadow-xl shadow-amber-500/20 transition-all hover:scale-[1.02] active:scale-95"
+                className="px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95"
               >
                 <Phone className="w-5 h-5 fill-slate-950" />
                 <span>Call Hotline: {SITE_CONFIG.phone}</span>
