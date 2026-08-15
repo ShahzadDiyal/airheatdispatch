@@ -42,7 +42,10 @@ export default function AboutPage() {
 
       <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
+          <nav
+            className="flex items-center gap-2 text-xs text-slate-400 mb-8"
+            aria-label="Breadcrumb"
+          >
             <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
@@ -59,7 +62,9 @@ export default function AboutPage() {
               About AirHeat Dispatch HVAC Specialists
             </h1>
             <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Founded on the principle that local homeowners deserve fast, transparent, and certified climate control solutions without surprise diagnostic fees or high-pressure upselling.
+              Founded on the principle that local homeowners deserve fast,
+              transparent, and certified climate control solutions without
+              surprise diagnostic fees or high-pressure upselling.
             </p>
           </div>
 
@@ -70,9 +75,15 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-14">
             <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-4">
-              <h2 className="text-2xl font-bold text-white">Our Mission & Standards</h2>
+              <h2 className="text-2xl font-bold text-white">
+                Our Mission & Standards
+              </h2>
               <p className="text-sm text-slate-300 leading-relaxed">
-                We believe that heating and cooling emergencies should be met with immediate action, clear flat-rate pricing, and certified workmanship. Our technicians carry universal EPA licenses and undergo rigorous background checks to ensure your home is safe and comfortable.
+                We believe that heating and cooling emergencies should be met
+                with immediate action, clear flat-rate pricing, and certified
+                workmanship. Our technicians carry universal EPA licenses and
+                undergo rigorous background checks to ensure your home is safe
+                and comfortable.
               </p>
               <ul className="space-y-2.5 pt-2">
                 {[
@@ -81,7 +92,10 @@ export default function AboutPage() {
                   "Universal EPA 608 Refrigerant Certification",
                   "Continuous Factory Training on Inverter Units",
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2.5 text-xs text-slate-300">
+                  <li
+                    key={idx}
+                    className="flex items-center gap-2.5 text-xs text-slate-300"
+                  >
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>{item}</span>
                   </li>
@@ -91,26 +105,35 @@ export default function AboutPage() {
 
             <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-4 flex flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-bold text-white">Corporate Headquarters</h2>
+                <h2 className="text-2xl font-bold text-white">
+                  Corporate Headquarters
+                </h2>
                 <div className="text-sm text-slate-300 mt-2 space-y-1">
-                  <p className="font-semibold text-white">{SITE_CONFIG.legalName}</p>
+                  <p className="font-semibold text-white">
+                    {SITE_CONFIG.legalName}
+                  </p>
                   <p>{SITE_CONFIG.address.street}</p>
                   <p>
-                    {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
+                    {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state}{" "}
+                    {SITE_CONFIG.address.zip}
                   </p>
-                  <p className="text-amber-400 font-bold pt-2">{SITE_CONFIG.phone}</p>
+                  <p className="text-amber-400 font-bold pt-2">
+                    {SITE_CONFIG.phone}
+                  </p>
                 </div>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-2">
-                <span className="font-bold text-white block">24/7 Dispatch Hotline:</span>
+                <span className="font-bold text-white block">
+                  24/7 Dispatch Hotline:
+                </span>
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 fill-slate-950" />
-                  <span>Call Hotline: {SITE_CONFIG.phone}</span>
+                  <span>{SITE_CONFIG.phone}</span>
                 </a>
               </div>
             </div>

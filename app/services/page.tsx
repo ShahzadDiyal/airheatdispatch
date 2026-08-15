@@ -3,7 +3,13 @@ import Link from "next/link";
 import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
 import FaqAccordion from "@/components/FaqAccordion";
-import { Wrench, ArrowRight, CheckCircle2, Phone, ShieldCheck } from "lucide-react";
+import {
+  Wrench,
+  ArrowRight,
+  CheckCircle2,
+  Phone,
+  ShieldCheck,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Comprehensive HVAC Services Catalog & Quote Directory",
@@ -44,7 +50,10 @@ export default function ServicesPage() {
       <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
+          <nav
+            className="flex items-center gap-2 text-xs text-slate-400 mb-8"
+            aria-label="Breadcrumb"
+          >
             <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
@@ -56,13 +65,17 @@ export default function ServicesPage() {
           <div className="max-w-3xl mb-12">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Wrench className="w-3.5 h-3.5" />
-              <span>Full Service Directory ({CORE_SERVICES.length} Solutions)</span>
+              <span>
+                Full Service Directory ({CORE_SERVICES.length} Solutions)
+              </span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
               HVAC Service and Repair Solutions
             </h1>
             <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Explore our complete range of certified residential and commercial HVAC services. All work includes flat-rate transparent quotes, 100% satisfaction guarantees, and same-day dispatch options.
+              Explore our complete range of certified residential and commercial
+              HVAC services. All work includes flat-rate transparent quotes,
+              100% satisfaction guarantees, and same-day dispatch options.
             </p>
           </div>
 
@@ -100,13 +113,20 @@ export default function ServicesPage() {
                     </Link>
                   </h2>
 
-                  <p className="text-slate-300 text-sm leading-relaxed">{s.shortDesc}</p>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {s.shortDesc}
+                  </p>
 
                   <div className="space-y-2 pt-2">
-                    <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">Key Features:</div>
+                    <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                      Key Features:
+                    </div>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {s.features.slice(0, 4).map((feat, idx) => (
-                        <li key={idx} className="text-xs text-slate-300 flex items-center gap-2">
+                        <li
+                          key={idx}
+                          className="text-xs text-slate-300 flex items-center gap-2"
+                        >
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                           <span>{feat}</span>
                         </li>

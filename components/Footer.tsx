@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
-import { Phone, Mail, MapPin, Shield, Award, Clock, Snowflake, Flame } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Shield,
+  Award,
+  Clock,
+  Snowflake,
+  Flame,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -17,12 +26,15 @@ export default function Footer() {
                 </div>
               </div>
               <span className="text-xl font-extrabold text-white tracking-tight">
-                Air<span className="text-sky-400">Heat</span> <span className="text-amber-500">Dispatch</span>
+                Air<span className="text-sky-400">Heat</span>{" "}
+                <span className="text-amber-500">Dispatch</span>
               </span>
             </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Certified local HVAC contractor specializing in emergency 24/7 air conditioning repair, heating and furnace diagnostics, seasonal maintenance tune-ups, and indoor air quality solutions.
+              Certified local HVAC contractor specializing in emergency 24/7 air
+              conditioning repair, heating and furnace diagnostics, seasonal
+              maintenance tune-ups, and indoor air quality solutions.
             </p>
 
             <div className="space-y-2.5 pt-2 text-sm">
@@ -34,7 +46,7 @@ export default function Footer() {
                 <div className="p-2 rounded-lg bg-amber-400/20 text-amber-400">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>Call Hotline: {SITE_CONFIG.phone} (24/7 Dispatch)</span>
+                <span>{SITE_CONFIG.phone} (24/7 Dispatch)</span>
               </a>
 
               <div className="flex items-center gap-3 text-slate-300">
@@ -49,7 +61,8 @@ export default function Footer() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span>
-                  {SITE_CONFIG.address.street}, {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
+                  {SITE_CONFIG.address.street}, {SITE_CONFIG.address.city},{" "}
+                  {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
                 </span>
               </div>
             </div>
@@ -57,7 +70,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-base font-bold text-white tracking-wide">Core HVAC Services</h3>
+            <h3 className="text-base font-bold text-white tracking-wide">
+              Core HVAC Services
+            </h3>
             <ul className="space-y-2.5 text-sm">
               {CORE_SERVICES.slice(0, 6).map((s) => (
                 <li key={s.slug}>
@@ -84,35 +99,61 @@ export default function Footer() {
 
           {/* Navigation Directory */}
           <div className="space-y-4">
-            <h3 className="text-base font-bold text-white tracking-wide">Company & Info</h3>
+            <h3 className="text-base font-bold text-white tracking-wide">
+              Company & Info
+            </h3>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <Link href="/faqs" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/faqs"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   HVAC FAQs & Direct Answers
                 </Link>
               </li>
               <li>
-                <Link href="/why-us" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/why-us"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link href="/about" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/about"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   About Our Company
                 </Link>
               </li>
               <li>
-                <Link href="/contact" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/contact"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Contact & Emergency Hotline
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" rel="dofollow" className="hover:text-amber-400 transition-colors">
+                <Link
+                  href="/terms-of-service"
+                  rel="dofollow"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Terms of Service
                 </Link>
               </li>
@@ -121,7 +162,9 @@ export default function Footer() {
 
           {/* Business Badges & Hours */}
           <div className="space-y-4">
-            <h3 className="text-base font-bold text-white tracking-wide">License & Hours</h3>
+            <h3 className="text-base font-bold text-white tracking-wide">
+              License & Hours
+            </h3>
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
               <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400">
                 <Clock className="w-4 h-4" />
@@ -137,7 +180,17 @@ export default function Footer() {
               </div>
             </div>
             <div className="text-xs text-slate-300">
-              <span className="font-semibold text-white">Need emergency repair?</span> Call <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-amber-400 font-bold underline">{SITE_CONFIG.phone}</a>.
+              <span className="font-semibold text-white">
+                Need emergency repair?
+              </span>{" "}
+              Call{" "}
+              <a
+                href={`tel:${SITE_CONFIG.phoneRaw}`}
+                className="text-amber-400 font-bold underline"
+              >
+                {SITE_CONFIG.phone}
+              </a>
+              .
             </div>
           </div>
         </div>
@@ -145,19 +198,36 @@ export default function Footer() {
         {/* Bottom Bar & Dofollow Links */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-300">
           <div>
-            © {new Date().getFullYear()} {SITE_CONFIG.legalName}. All rights reserved. 100% Technical SEO & Search Console Ready.
+            © {new Date().getFullYear()} {SITE_CONFIG.legalName}. All rights
+            reserved. 100% Technical SEO & Search Console Ready.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="/sitemap.xml" rel="dofollow" className="hover:text-amber-400 transition-colors">
+            <Link
+              href="/sitemap.xml"
+              rel="dofollow"
+              className="hover:text-amber-400 transition-colors"
+            >
               XML Sitemap
             </Link>
-            <Link href="/llms.txt" rel="dofollow" className="hover:text-amber-400 transition-colors">
+            <Link
+              href="/llms.txt"
+              rel="dofollow"
+              className="hover:text-amber-400 transition-colors"
+            >
               llms.txt (AI Knowledge)
             </Link>
-            <Link href="/privacy-policy" rel="dofollow" className="hover:text-amber-400 transition-colors">
+            <Link
+              href="/privacy-policy"
+              rel="dofollow"
+              className="hover:text-amber-400 transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" rel="dofollow" className="hover:text-amber-400 transition-colors">
+            <Link
+              href="/terms-of-service"
+              rel="dofollow"
+              className="hover:text-amber-400 transition-colors"
+            >
               Terms of Service
             </Link>
           </div>

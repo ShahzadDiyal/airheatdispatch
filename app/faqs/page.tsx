@@ -15,10 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function FaqsPage() {
-  const allFaqs = [
-    ...GENERAL_FAQS,
-    ...CORE_SERVICES.flatMap((s) => s.faqs),
-  ];
+  const allFaqs = [...GENERAL_FAQS, ...CORE_SERVICES.flatMap((s) => s.faqs)];
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -65,7 +62,10 @@ export default function FaqsPage() {
 
       <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
+          <nav
+            className="flex items-center gap-2 text-xs text-slate-400 mb-8"
+            aria-label="Breadcrumb"
+          >
             <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
@@ -82,7 +82,9 @@ export default function FaqsPage() {
               HVAC Service & Repair Frequently Asked Questions
             </h1>
             <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Find concise, expert answers to your most pressing questions about AC repair, furnace troubleshooting, maintenance schedules, and diagnostic costs.
+              Find concise, expert answers to your most pressing questions about
+              AC repair, furnace troubleshooting, maintenance schedules, and
+              diagnostic costs.
             </p>
           </div>
 
@@ -100,9 +102,13 @@ export default function FaqsPage() {
           </div>
 
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-4">
-            <h2 className="text-2xl font-bold text-white">Have a Specific HVAC Question Not Answered Here?</h2>
+            <h2 className="text-2xl font-bold text-white">
+              Have a Specific HVAC Question Not Answered Here?
+            </h2>
             <p className="text-slate-300 text-sm max-w-lg mx-auto">
-              Our technical dispatch desk is staffed 24/7 by certified HVAC technicians who can diagnose issues over the phone or route an emergency service truck.
+              Our technical dispatch desk is staffed 24/7 by certified HVAC
+              technicians who can diagnose issues over the phone or route an
+              emergency service truck.
             </p>
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}

@@ -45,7 +45,10 @@ export default function WhyUsPage() {
 
       <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
+          <nav
+            className="flex items-center gap-2 text-xs text-slate-400 mb-8"
+            aria-label="Breadcrumb"
+          >
             <Link href="/" rel="dofollow" className="hover:text-amber-400">
               Home
             </Link>
@@ -62,7 +65,9 @@ export default function WhyUsPage() {
               Why Austin Homeowners Trust AirHeat Dispatch
             </h1>
             <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Built on transparency, rapid response, and certified technical excellence. Discover why over 15,000 local homeowners rely on us for their heating and cooling needs.
+              Built on transparency, rapid response, and certified technical
+              excellence. Discover why over 15,000 local homeowners rely on us
+              for their heating and cooling needs.
             </p>
           </div>
 
@@ -81,25 +86,34 @@ export default function WhyUsPage() {
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 my-14 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 text-center sm:text-left">
               <Award className="w-8 h-8 text-amber-400 mx-auto sm:mx-0" />
-              <h2 className="text-lg font-bold text-white">State Licensed & Insured</h2>
+              <h2 className="text-lg font-bold text-white">
+                State Licensed & Insured
+              </h2>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Fully registered {SITE_CONFIG.licenseText} contractor with $2,000,000 general liability coverage for full home protection.
+                Fully registered {SITE_CONFIG.licenseText} contractor with
+                $2,000,000 general liability coverage for full home protection.
               </p>
             </div>
 
             <div className="space-y-3 text-center sm:text-left">
               <Clock className="w-8 h-8 text-sky-400 mx-auto sm:mx-0" />
-              <h2 className="text-lg font-bold text-white">24/7/365 Emergency Hotline</h2>
+              <h2 className="text-lg font-bold text-white">
+                24/7/365 Emergency Hotline
+              </h2>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Live dispatch managers available around the clock at {SITE_CONFIG.phone}—never an automated call center machine.
+                Live dispatch managers available around the clock at{" "}
+                {SITE_CONFIG.phone}—never an automated call center machine.
               </p>
             </div>
 
             <div className="space-y-3 text-center sm:text-left">
               <Star className="w-8 h-8 text-emerald-400 mx-auto sm:mx-0" />
-              <h2 className="text-lg font-bold text-white">4.9★ Average Rating</h2>
+              <h2 className="text-lg font-bold text-white">
+                4.9★ Average Rating
+              </h2>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Verified reviews from over 684 local homeowners on Google, Yelp, and Angi.
+                Verified reviews from over 684 local homeowners on Google, Yelp,
+                and Angi.
               </p>
             </div>
           </div>

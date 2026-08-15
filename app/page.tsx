@@ -57,8 +57,12 @@ export default function HomePage() {
               <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-sky-400">
                 <span className="flex items-center gap-1">
                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <span className="text-white font-bold">{SITE_CONFIG.rating.ratingValue}</span>
-                  <span className="text-slate-400">({SITE_CONFIG.rating.reviewCount} Verified Reviews)</span>
+                  <span className="text-white font-bold">
+                    {SITE_CONFIG.rating.ratingValue}
+                  </span>
+                  <span className="text-slate-400">
+                    ({SITE_CONFIG.rating.reviewCount} Verified Reviews)
+                  </span>
                 </span>
                 <span className="hidden sm:inline text-slate-700">|</span>
                 <span className="text-emerald-400 flex items-center gap-1">
@@ -77,7 +81,10 @@ export default function HomePage() {
 
               {/* Concise Value Proposition & Direct Answer */}
               <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
-                Certified local specialists providing 24/7 emergency air conditioning repair, furnace diagnostics, and energy-efficient system tune-ups. Zero hidden fees, upfront flat-rate quotes, and guaranteed same-day dispatch.
+                Certified local specialists providing 24/7 emergency air
+                conditioning repair, furnace diagnostics, and energy-efficient
+                system tune-ups. Zero hidden fees, upfront flat-rate quotes, and
+                guaranteed same-day dispatch.
               </p>
 
               {/* Dual Action CTAs with High Contrast & Phone Number */}
@@ -88,7 +95,7 @@ export default function HomePage() {
                   className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95 group"
                 >
                   <Phone className="w-5 h-5 fill-slate-950" />
-                  <span>Call Hotline: {SITE_CONFIG.phone}</span>
+                  <span>Call Hotline</span>
                 </a>
 
                 <a
@@ -96,7 +103,7 @@ export default function HomePage() {
                   rel="dofollow"
                   className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-100 hover:bg-white text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95"
                 >
-                  <span>Request Free Quote ({SITE_CONFIG.phone})</span>
+                  <span>Request Free Quote</span>
                   <ArrowRight className="w-4 h-4 text-slate-950" />
                 </a>
               </div>
@@ -108,8 +115,12 @@ export default function HomePage() {
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-white">Under 60 Mins</div>
-                    <div className="text-[10px] text-slate-400">Emergency Dispatch</div>
+                    <div className="text-xs font-bold text-white">
+                      Under 60 Mins
+                    </div>
+                    <div className="text-[10px] text-slate-400">
+                      Emergency Dispatch
+                    </div>
                   </div>
                 </div>
 
@@ -118,8 +129,12 @@ export default function HomePage() {
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-white">1-Year Warranty</div>
-                    <div className="text-[10px] text-slate-400">Parts & Labor</div>
+                    <div className="text-xs font-bold text-white">
+                      1-Year Warranty
+                    </div>
+                    <div className="text-[10px] text-slate-400">
+                      Parts & Labor
+                    </div>
                   </div>
                 </div>
 
@@ -128,8 +143,12 @@ export default function HomePage() {
                     <Wrench className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-white">All HVAC Brands</div>
-                    <div className="text-[10px] text-slate-400">Carrier, Trane, Lennox</div>
+                    <div className="text-xs font-bold text-white">
+                      All HVAC Brands
+                    </div>
+                    <div className="text-[10px] text-slate-400">
+                      Carrier, Trane, Lennox
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,13 +168,20 @@ export default function HomePage() {
                     Request Emergency HVAC Dispatch
                   </h2>
                   <p className="text-xs text-slate-300 mt-1">
-                    Fill in your details below for immediate technician call-back within 10 minutes.
+                    Fill in your details below for immediate technician
+                    call-back within 10 minutes.
                   </p>
                 </div>
 
-                <form className="space-y-4" action={`tel:${SITE_CONFIG.phoneRaw}`}>
+                <form
+                  className="space-y-4"
+                  action={`tel:${SITE_CONFIG.phoneRaw}`}
+                >
                   <div className="space-y-1">
-                    <label htmlFor="hero-service-select" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                    <label
+                      htmlFor="hero-service-select"
+                      className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
+                    >
                       Select HVAC Service Required *
                     </label>
                     <select
@@ -173,7 +199,10 @@ export default function HomePage() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <label htmlFor="hero-name-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                      <label
+                        htmlFor="hero-name-input"
+                        className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
+                      >
                         Your Name *
                       </label>
                       <input
@@ -186,7 +215,10 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="space-y-1">
-                      <label htmlFor="hero-phone-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                      <label
+                        htmlFor="hero-phone-input"
+                        className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
+                      >
                         Phone Number *
                       </label>
                       <input
@@ -201,7 +233,10 @@ export default function HomePage() {
                   </div>
 
                   <div className="space-y-1">
-                    <label htmlFor="hero-zip-input" className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block">
+                    <label
+                      htmlFor="hero-zip-input"
+                      className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
+                    >
                       Zip Code / City *
                     </label>
                     <input
@@ -222,7 +257,8 @@ export default function HomePage() {
                   </button>
 
                   <p className="text-[10px] text-center text-slate-400">
-                    🔒 Zero obligation. Diagnostic fee waived 100% with any approved repair.
+                    🔒 Zero obligation. Diagnostic fee waived 100% with any
+                    approved repair.
                   </p>
                 </form>
               </div>
@@ -239,7 +275,8 @@ export default function HomePage() {
               What is Professional HVAC Service and Repair?
             </h2>
             <p className="text-slate-400 text-sm mt-2">
-              Understanding core HVAC components, maintenance cycles, and repair standards.
+              Understanding core HVAC components, maintenance cycles, and repair
+              standards.
             </p>
           </div>
 
@@ -275,7 +312,9 @@ export default function HomePage() {
               Our Core HVAC Service and Repair Offerings
             </h2>
             <p className="text-slate-300 text-sm sm:text-base mt-2">
-              Explore our {CORE_SERVICES.length} specialized heating, air conditioning, and air quality services engineered for residential and commercial systems.
+              Explore our {CORE_SERVICES.length} specialized heating, air
+              conditioning, and air quality services engineered for residential
+              and commercial systems.
             </p>
           </div>
 
@@ -287,14 +326,28 @@ export default function HomePage() {
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
-                    {s.slug === "ac-repair" && <Snowflake className="w-6 h-6" />}
-                    {s.slug === "heating-repair" && <Flame className="w-6 h-6" />}
-                    {s.slug === "hvac-maintenance" && <Wrench className="w-6 h-6" />}
-                    {s.slug === "emergency-service" && <Zap className="w-6 h-6 text-amber-400 group-hover:text-slate-950" />}
-                    {s.slug === "indoor-air-quality" && <Wind className="w-6 h-6" />}
-                    {!["ac-repair", "heating-repair", "hvac-maintenance", "emergency-service", "indoor-air-quality"].includes(s.slug) && (
+                    {s.slug === "ac-repair" && (
+                      <Snowflake className="w-6 h-6" />
+                    )}
+                    {s.slug === "heating-repair" && (
+                      <Flame className="w-6 h-6" />
+                    )}
+                    {s.slug === "hvac-maintenance" && (
                       <Wrench className="w-6 h-6" />
                     )}
+                    {s.slug === "emergency-service" && (
+                      <Zap className="w-6 h-6 text-amber-400 group-hover:text-slate-950" />
+                    )}
+                    {s.slug === "indoor-air-quality" && (
+                      <Wind className="w-6 h-6" />
+                    )}
+                    {![
+                      "ac-repair",
+                      "heating-repair",
+                      "hvac-maintenance",
+                      "emergency-service",
+                      "indoor-air-quality",
+                    ].includes(s.slug) && <Wrench className="w-6 h-6" />}
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
@@ -306,13 +359,20 @@ export default function HomePage() {
                   </p>
 
                   <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 mb-6">
-                    <span className="text-slate-400 block font-medium">Pricing Model:</span>
-                    <span className="text-amber-400 font-bold text-sm">{s.priceLabel}</span>
+                    <span className="text-slate-400 block font-medium">
+                      Pricing Model:
+                    </span>
+                    <span className="text-amber-400 font-bold text-sm">
+                      {s.priceLabel}
+                    </span>
                   </div>
 
                   <ul className="space-y-2 mb-6">
                     {s.features.slice(0, 3).map((feat, i) => (
-                      <li key={i} className="text-xs text-slate-300 flex items-center gap-2">
+                      <li
+                        key={i}
+                        className="text-xs text-slate-300 flex items-center gap-2"
+                      >
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                         <span>{feat}</span>
                       </li>
@@ -337,7 +397,10 @@ export default function HomePage() {
       </section>
 
       {/* WHY CHOOSE US & AUTHORITY SECTION */}
-      <section className="py-20 bg-slate-950 border-b border-slate-800" id="why-us">
+      <section
+        className="py-20 bg-slate-950 border-b border-slate-800"
+        id="why-us"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -351,7 +414,9 @@ export default function HomePage() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                When your HVAC system breaks down during extreme heat or freezing cold, you need a contractor who responds immediately with transparent flat-rate pricing and certified expertise.
+                When your HVAC system breaks down during extreme heat or
+                freezing cold, you need a contractor who responds immediately
+                with transparent flat-rate pricing and certified expertise.
               </p>
 
               <div className="space-y-4 pt-2">
@@ -373,13 +438,20 @@ export default function HomePage() {
                     desc: "Every repair is backed by our unconditional 100% satisfaction guarantee.",
                   },
                 ].map((item, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4"
+                  >
                     <div className="p-2.5 rounded-lg bg-sky-500/10 text-sky-400 mt-0.5 shrink-0">
                       <CheckCircle2 className="w-5 h-5 text-emerald-400" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-white">{item.title}</h3>
-                      <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">{item.desc}</p>
+                      <h3 className="text-sm font-bold text-white">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -396,25 +468,38 @@ export default function HomePage() {
                   First-Visit Repair Resolution Rate
                 </div>
                 <p className="text-xs text-slate-300 max-w-sm mx-auto">
-                  Our mobile trucks carry over 200 OEM replacement parts to ensure your cooling or heating is fixed on the first visit.
+                  Our mobile trucks carry over 200 OEM replacement parts to
+                  ensure your cooling or heating is fixed on the first visit.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 border-t border-b border-slate-800 py-6 text-center">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">15,000+</div>
-                  <div className="text-xs text-slate-300 mt-1">HVAC Repairs Completed</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
+                    15,000+
+                  </div>
+                  <div className="text-xs text-slate-300 mt-1">
+                    HVAC Repairs Completed
+                  </div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">&lt; 60 Mins</div>
-                  <div className="text-xs text-slate-300 mt-1">Average Response Time</div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
+                    &lt; 60 Mins
+                  </div>
+                  <div className="text-xs text-slate-300 mt-1">
+                    Average Response Time
+                  </div>
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
-                  <div className="text-xs font-bold text-white text-center sm:text-left">Need Urgent Diagnostics?</div>
-                  <div className="text-[11px] text-slate-300 text-center sm:text-left">Technicians available in your area</div>
+                  <div className="text-xs font-bold text-white text-center sm:text-left">
+                    Need Urgent Diagnostics?
+                  </div>
+                  <div className="text-[11px] text-slate-300 text-center sm:text-left">
+                    Technicians available in your area
+                  </div>
                 </div>
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
@@ -435,7 +520,10 @@ export default function HomePage() {
       </section>
 
       {/* INTERACTIVE SERVICE ESTIMATOR SECTION */}
-      <section className="py-20 bg-slate-900 border-b border-slate-800" id="quick-quote">
+      <section
+        className="py-20 bg-slate-900 border-b border-slate-800"
+        id="quick-quote"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ServiceEstimator />
         </div>
@@ -505,7 +593,9 @@ export default function HomePage() {
                     <div className="text-slate-400">{rev.location}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-amber-400 font-semibold">{rev.service}</div>
+                    <div className="text-amber-400 font-semibold">
+                      {rev.service}
+                    </div>
                     <div className="text-[10px] text-slate-400">{rev.date}</div>
                   </div>
                 </div>
@@ -516,7 +606,10 @@ export default function HomePage() {
       </section>
 
       {/* AEO FAQ ACCORDION SECTION */}
-      <section className="py-20 bg-slate-900 border-b border-slate-800" id="faqs">
+      <section
+        className="py-20 bg-slate-900 border-b border-slate-800"
+        id="faqs"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FaqAccordion faqs={GENERAL_FAQS} />
         </div>
@@ -535,7 +628,9 @@ export default function HomePage() {
                 No Cooling or Heating Right Now?
               </h2>
               <p className="text-slate-200 text-sm sm:text-base">
-                Do not suffer in extreme heat or cold. Our emergency service trucks are on call 24 hours a day with guaranteed 60-minute response times.
+                Do not suffer in extreme heat or cold. Our emergency service
+                trucks are on call 24 hours a day with guaranteed 60-minute
+                response times.
               </p>
             </div>
 

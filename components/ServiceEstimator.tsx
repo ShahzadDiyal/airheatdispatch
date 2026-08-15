@@ -24,7 +24,8 @@ export default function ServiceEstimator() {
           Instant HVAC Service Quote Request
         </h3>
         <p className="text-slate-300 text-sm mt-1">
-          Select your system details to request an upfront flat-rate price quote before scheduling.
+          Select your system details to request an upfront flat-rate price quote
+          before scheduling.
         </p>
       </div>
 
@@ -126,7 +127,8 @@ export default function ServiceEstimator() {
               Request Free Quote
             </div>
             <p className="text-xs text-slate-300 mt-2">
-              Includes full technician diagnostic inspection. Diagnostic fee waived 100% upon repair approval.
+              Includes full technician diagnostic inspection. Diagnostic fee
+              waived 100% upon repair approval.
             </p>
           </div>
 
@@ -150,13 +152,16 @@ export default function ServiceEstimator() {
             onClick={() => setBookingOpen(true)}
             className="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-lg transition-all hover:scale-[1.02] cursor-pointer"
           >
-            <span>Request Free Quote ({SITE_CONFIG.phone})</span>
+            <span>Request Free Quote</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
 
-      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+      <BookingModal
+        isOpen={bookingOpen}
+        onClose={() => setBookingOpen(false)}
+      />
     </div>
   );
 }

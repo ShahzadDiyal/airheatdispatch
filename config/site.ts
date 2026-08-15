@@ -54,9 +54,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "ac-repair",
     name: "Emergency AC Repair & Diagnostics",
-    shortDesc: "Rapid 24/7 air conditioning repair, freon leak fixes, compressor restoration, and diagnostic troubleshooting.",
+    shortDesc:
+      "Rapid 24/7 air conditioning repair, freon leak fixes, compressor restoration, and diagnostic troubleshooting.",
     fullTitle: "Fast & Certified AC Repair & Diagnostic Services",
-    heroHeadline: "Immediate Air Conditioning Repair with Guaranteed Cold Air Restoration",
+    heroHeadline:
+      "Immediate Air Conditioning Repair with Guaranteed Cold Air Restoration",
     directAnswer:
       "Professional AC repair restores cooling performance by diagnosing refrigerant leaks, electrical capacitor failures, frozen coils, or compressor breakdowns. Emergency AC repair offers same-day dispatch to prevent system overheat and maintain indoor temperature efficiency.",
     priceLabel: "Upfront Free Quote",
@@ -87,7 +89,8 @@ export const CORE_SERVICES: ServiceItem[] = [
     ],
     faqs: [
       {
-        question: "How fast can a technician arrive for an emergency AC repair?",
+        question:
+          "How fast can a technician arrive for an emergency AC repair?",
         answer:
           "We offer 24/7 emergency dispatch with average arrival times within 60 minutes across our primary service territory.",
       },
@@ -106,7 +109,8 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "heating-repair",
     name: "Heating & Furnace Repair Services",
-    shortDesc: "Complete furnace troubleshooting, heat pump repairs, igniter replacement, and heat exchanger safety checks.",
+    shortDesc:
+      "Complete furnace troubleshooting, heat pump repairs, igniter replacement, and heat exchanger safety checks.",
     fullTitle: "Expert Furnace & Heat Pump Repair Services",
     heroHeadline: "Reliable Heating Repair to Keep Your Home Warm and Safe",
     directAnswer:
@@ -117,7 +121,6 @@ export const CORE_SERVICES: ServiceItem[] = [
       "Heat Pump Inverter & Defrost Board Repair",
       "Carbon Monoxide & Heat Exchanger Safety Testing",
       "OEM Replacement Parts for Carrier, Trane, Lennox & Rheem",
-      "1-Year Labor Warranty on All Repairs",
     ],
     processSteps: [
       {
@@ -153,7 +156,8 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "hvac-maintenance",
     name: "Seasonal HVAC Maintenance & Tune-Up",
-    shortDesc: "Comprehensive bi-annual tune-ups, coil cleaning, filter replacement, and system efficiency optimization.",
+    shortDesc:
+      "Comprehensive bi-annual tune-ups, coil cleaning, filter replacement, and system efficiency optimization.",
     fullTitle: "Proactive Seasonal HVAC Tune-Up & Maintenance",
     heroHeadline: "Prevent Costly Breakdowns & Reduce Energy Bills up to 30%",
     directAnswer:
@@ -200,9 +204,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "emergency-service",
     name: "24/7 Emergency HVAC Repair",
-    shortDesc: "Immediate 24-hour emergency response for extreme hot or cold weather HVAC outages.",
+    shortDesc:
+      "Immediate 24-hour emergency response for extreme hot or cold weather HVAC outages.",
     fullTitle: "24/7 Emergency Heating & Air Conditioning Repair",
-    heroHeadline: "Extreme Weather HVAC Outage? We're On Call 24 Hours a Day, 365 Days a Year",
+    heroHeadline:
+      "Extreme Weather HVAC Outage? We're On Call 24 Hours a Day, 365 Days a Year",
     directAnswer:
       "24/7 emergency HVAC repair provides immediate, on-demand dispatch for catastrophic heating or air conditioning failures during severe weather extremes. Emergency technicians arrive fully stocked to restore climate control instantly.",
     priceLabel: "Immediate Quote Required",
@@ -238,7 +244,8 @@ export const CORE_SERVICES: ServiceItem[] = [
           "An HVAC emergency includes total system failure during freezing winter temps (<35°F) or extreme summer heat (>95°F), electrical burning smells, refrigerant leaks, or flooding condensate drain pans.",
       },
       {
-        question: "Do you charge extra fees for weekend or holiday emergency service?",
+        question:
+          "Do you charge extra fees for weekend or holiday emergency service?",
         answer:
           "We offer transparent, flat-rate emergency pricing upfront so you know the exact cost before work begins without surprise fees.",
       },
@@ -247,9 +254,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "indoor-air-quality",
     name: "Indoor Air Quality & Duct Services",
-    shortDesc: "Duct cleaning, UV air purifier installation, HEPA filtration, and humidity control systems.",
+    shortDesc:
+      "Duct cleaning, UV air purifier installation, HEPA filtration, and humidity control systems.",
     fullTitle: "Indoor Air Quality (IAQ) & Air Duct Sanitization",
-    heroHeadline: "Breathe Cleaner, Healthier Air with Pro Duct Cleaning & UV Purification",
+    heroHeadline:
+      "Breathe Cleaner, Healthier Air with Pro Duct Cleaning & UV Purification",
     directAnswer:
       "Indoor air quality (IAQ) services eliminate allergens, dust mites, mold spores, and airborne pathogens using HEPA duct vacuuming, UV-C light purifiers, whole-home dehumidifiers, and MERV-13 air filtration systems.",
     priceLabel: "Request Free IAQ Quote",
@@ -294,9 +303,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "heat-pump-service",
     name: "Heat Pump Diagnostics & Inverter Service",
-    shortDesc: "Expert heat pump repair, reversing valve replacement, and energy-efficient inverter tuning.",
+    shortDesc:
+      "Expert heat pump repair, reversing valve replacement, and energy-efficient inverter tuning.",
     fullTitle: "Heat Pump Diagnostics & Inverter System Service",
-    heroHeadline: "Year-Round Dual Heating & Cooling Solutions for Maximum SEER2 Efficiency",
+    heroHeadline:
+      "Year-Round Dual Heating & Cooling Solutions for Maximum SEER2 Efficiency",
     directAnswer:
       "Heat pump service restores dual-mode heating and cooling performance by repairing reversing valves, defrost control boards, variable-speed inverter compressors, and auxiliary heating elements. Certified technicians ensure optimal thermal balance in summer and winter.",
     priceLabel: "Request Free Quote",
@@ -332,7 +343,8 @@ export const CORE_SERVICES: ServiceItem[] = [
           "A heat pump stuck in cooling mode usually indicates a broken reversing valve solenoid, faulty defrost control board, or incorrect thermostat wiring signals.",
       },
       {
-        question: "Is a heat pump more energy-efficient than a standard AC and furnace?",
+        question:
+          "Is a heat pump more energy-efficient than a standard AC and furnace?",
         answer:
           "Yes, modern inverter heat pumps can reach up to 24 SEER2 efficiency by transferring heat rather than burning fuel, cutting heating costs by up to 50%.",
       },
@@ -341,9 +353,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "ductless-mini-split",
     name: "Ductless Mini-Split Installation & Repair",
-    shortDesc: "Single and multi-zone ductless mini-split troubleshooting, refrigerant recharge, and deep coil wash.",
+    shortDesc:
+      "Single and multi-zone ductless mini-split troubleshooting, refrigerant recharge, and deep coil wash.",
     fullTitle: "Ductless Mini-Split Repair & Multi-Zone Installation",
-    heroHeadline: "Targeted Zoned Comfort for Additions, Sunrooms, and Whole Homes",
+    heroHeadline:
+      "Targeted Zoned Comfort for Additions, Sunrooms, and Whole Homes",
     directAnswer:
       "Ductless mini-split service addresses zone cooling failures, condensate drain leaks, communication wire faults, and dirty blower wheels. Specialized technicians repair inverter circuit boards and perform deep hydro-washing on indoor wall cassettes.",
     priceLabel: "Request Free Quote",
@@ -388,9 +402,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "commercial-hvac",
     name: "Commercial Rooftop HVAC & Refrigeration",
-    shortDesc: "Rooftop unit (RTU) maintenance, commercial packaged unit repair, and economizer tuning.",
+    shortDesc:
+      "Rooftop unit (RTU) maintenance, commercial packaged unit repair, and economizer tuning.",
     fullTitle: "Commercial Rooftop Unit (RTU) & Packaged HVAC Services",
-    heroHeadline: "Heavy-Duty Climate Control for Office Buildings, Retail, & Industrial Facilities",
+    heroHeadline:
+      "Heavy-Duty Climate Control for Office Buildings, Retail, & Industrial Facilities",
     directAnswer:
       "Commercial HVAC service provides preventative maintenance and emergency repair for rooftop packaged units (RTUs), chillers, commercial economizers, and makeup air units. Experienced commercial technicians prevent facility downtime and maintain strict indoor air standards.",
     priceLabel: "Request Commercial Estimate",
@@ -435,9 +451,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "thermostat-smart-controls",
     name: "Smart Thermostat Installation & Repair",
-    shortDesc: "Nest, Ecobee, and Honeywell smart thermostat setup, C-wire installation, and sensor calibration.",
+    shortDesc:
+      "Nest, Ecobee, and Honeywell smart thermostat setup, C-wire installation, and sensor calibration.",
     fullTitle: "Smart Thermostat Installation & HVAC Control Diagnostics",
-    heroHeadline: "Take Complete Control of Your Home Climate with Precision Smart Controls",
+    heroHeadline:
+      "Take Complete Control of Your Home Climate with Precision Smart Controls",
     directAnswer:
       "Smart thermostat services involve installing C-wire power adapters, calibrating digital temperature sensors, configuring multi-stage heat/cool relays, and troubleshooting WiFi connectivity issues on Nest, Ecobee, Honeywell, and communicating HVAC controls.",
     priceLabel: "Request Quote",
@@ -482,9 +500,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "coil-cleaning-sanitization",
     name: "Evaporator & Condenser Coil Sanitation",
-    shortDesc: "Deep chemical coil cleaning, mold removal, aluminum fin straightening, and drain pan flush.",
+    shortDesc:
+      "Deep chemical coil cleaning, mold removal, aluminum fin straightening, and drain pan flush.",
     fullTitle: "Deep Evaporator & Condenser Coil Sanitization",
-    heroHeadline: "Restore Icy Cold Air & System Efficiency with Pro Coil Cleaning",
+    heroHeadline:
+      "Restore Icy Cold Air & System Efficiency with Pro Coil Cleaning",
     directAnswer:
       "Coil cleaning and sanitization removes heavy dust buildup, organic slime, mold colonies, and oxidation from indoor evaporator coils and outdoor condenser fins using alkaline foaming cleansers, pressurized rinses, and antimicrobial sprays.",
     priceLabel: "Request Free Quote",
@@ -529,9 +549,11 @@ export const CORE_SERVICES: ServiceItem[] = [
   {
     slug: "furnace-safety-inspection",
     name: "Emergency Gas Line & Furnace Safety Check",
-    shortDesc: "Combustion safety testing, carbon monoxide clearance, heat exchanger crack detection, and gas valve check.",
+    shortDesc:
+      "Combustion safety testing, carbon monoxide clearance, heat exchanger crack detection, and gas valve check.",
     fullTitle: "Comprehensive Furnace Combustion & Gas Safety Inspection",
-    heroHeadline: "Protect Your Family with Certified Gas & Heat Exchanger Safety Testing",
+    heroHeadline:
+      "Protect Your Family with Certified Gas & Heat Exchanger Safety Testing",
     directAnswer:
       "Emergency furnace safety inspections test gas lines for methane leaks, inspect heat exchangers for microscopic cracks using optical borescopes, measure carbon monoxide (CO) ppm output, and verify draft inductor flue safety shutoffs.",
     priceLabel: "Request Free Quote",
@@ -567,7 +589,8 @@ export const CORE_SERVICES: ServiceItem[] = [
           "Symptoms include soot buildup inside the furnace cabinet, strange fluttering flames when the blower turns on, persistent headache or nausea (CO exposure), or a tripped rollout safety switch.",
       },
       {
-        question: "Is carbon monoxide testing included in a furnace safety check?",
+        question:
+          "Is carbon monoxide testing included in a furnace safety check?",
         answer:
           "Yes, we perform ambient and flue gas carbon monoxide analyzer testing on every single furnace service visit to guarantee safety.",
       },

@@ -25,11 +25,15 @@ export default function ZipChecker() {
           Check Immediate Emergency Technician Availability
         </h3>
         <p className="text-xs sm:text-sm text-slate-300 mt-1">
-          Enter your ZIP code to verify live technician positioning and emergency dispatch response time in your area.
+          Enter your ZIP code to verify live technician positioning and
+          emergency dispatch response time in your area.
         </p>
       </div>
 
-      <form onSubmit={handleCheck} className="mt-6 flex flex-col sm:flex-row gap-3 max-w-xl">
+      <form
+        onSubmit={handleCheck}
+        className="mt-6 flex flex-col sm:flex-row gap-3 max-w-xl"
+      >
         <div className="relative flex-1">
           <label htmlFor="zip-checker-input" className="sr-only">
             Enter Service ZIP Code or City
@@ -61,10 +65,15 @@ export default function ZipChecker() {
         <div className="mt-4 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm space-y-2 animate-in fade-in">
           <div className="flex items-center gap-2 font-bold text-emerald-300">
             <CheckCircle2 className="w-4 h-4 shrink-0" />
-            <span>Technicians On Call in Area ({zipInput}) - &lt; 45 Min Dispatch Available!</span>
+            <span>
+              Technicians On Call in Area ({zipInput}) - &lt; 45 Min Dispatch
+              Available!
+            </span>
           </div>
           <p className="text-slate-200 text-xs">
-            We have active mobile units routed near <span className="font-semibold text-white">{zipInput}</span> right now. Call our direct hotline for priority arrival:
+            We have active mobile units routed near{" "}
+            <span className="font-semibold text-white">{zipInput}</span> right
+            now. Call our direct hotline for priority arrival:
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneRaw}`}
@@ -72,7 +81,7 @@ export default function ZipChecker() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-400 text-slate-950 font-black text-xs hover:bg-emerald-300 transition-colors mt-1"
           >
             <Phone className="w-3.5 h-3.5" />
-            <span>Call Hotline: {SITE_CONFIG.phone}</span>
+            <span>{SITE_CONFIG.phone}</span>
           </a>
         </div>
       )}

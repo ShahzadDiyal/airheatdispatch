@@ -3,7 +3,16 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
-import { Phone, Flame, Snowflake, Menu, X, ChevronRight, ShieldCheck, Clock } from "lucide-react";
+import {
+  Phone,
+  Flame,
+  Snowflake,
+  Menu,
+  X,
+  ChevronRight,
+  ShieldCheck,
+  Clock,
+} from "lucide-react";
 import BookingModal from "./BookingModal";
 
 export default function Header() {
@@ -70,7 +79,11 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" rel="dofollow" className="flex items-center gap-2.5 group shrink-0">
+          <Link
+            href="/"
+            rel="dofollow"
+            className="flex items-center gap-2.5 group shrink-0"
+          >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-amber-500 p-0.5 shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
               <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center relative">
                 <Snowflake className="w-5 h-5 text-sky-400 absolute -translate-x-1 -translate-y-1" />
@@ -79,7 +92,8 @@ export default function Header() {
             </div>
             <div>
               <span className="text-xl font-extrabold text-white tracking-tight flex items-center gap-1">
-                Air<span className="text-sky-400">Heat</span> <span className="text-amber-500 font-black">Dispatch</span>
+                Air<span className="text-sky-400">Heat</span>{" "}
+                <span className="text-amber-500 font-black">Dispatch</span>
               </span>
               <span className="block text-[10px] font-medium text-slate-300 tracking-wider uppercase">
                 HVAC Service & Repair
@@ -88,7 +102,10 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main Header Navigation">
+          <nav
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
+            aria-label="Main Header Navigation"
+          >
             <Link
               href="/"
               rel="dofollow"
@@ -119,7 +136,9 @@ export default function Header() {
                     <div className="text-sm font-bold text-slate-100 group-hover/item:text-amber-400 transition-colors">
                       {s.name}
                     </div>
-                    <div className="text-xs text-slate-400 line-clamp-1 mt-0.5">{s.shortDesc}</div>
+                    <div className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                      {s.shortDesc}
+                    </div>
                   </Link>
                 ))}
               </div>
@@ -166,14 +185,14 @@ export default function Header() {
               className="flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs xl:text-sm transition-all hover:scale-[1.02] shadow-sm shrink-0"
             >
               <Phone className="w-4 h-4 fill-slate-950" />
-              <span>Call Hotline: {SITE_CONFIG.phone}</span>
+              <span>Call Hotline</span>
             </a>
 
             <button
               onClick={() => setBookingModalOpen(true)}
               className="px-4 py-2.5 rounded-lg bg-slate-100 hover:bg-white text-slate-950 font-black text-xs xl:text-sm shadow-md transition-all hover:scale-[1.02] active:scale-95 cursor-pointer shrink-0"
             >
-              Request Free Quote
+              Get Free Quote
             </button>
           </div>
 
@@ -195,7 +214,11 @@ export default function Header() {
               aria-label="Toggle Navigation Menu"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -272,7 +295,7 @@ export default function Header() {
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-amber-400 text-slate-950 font-black text-sm"
               >
                 <Phone className="w-4 h-4 fill-slate-950" />
-                Call Hotline: {SITE_CONFIG.phone}
+                {SITE_CONFIG.phone}
               </a>
               <button
                 onClick={() => {
@@ -289,7 +312,10 @@ export default function Header() {
       </header>
 
       {/* Booking Modal */}
-      <BookingModal isOpen={bookingModalOpen} onClose={() => setBookingModalOpen(false)} />
+      <BookingModal
+        isOpen={bookingModalOpen}
+        onClose={() => setBookingModalOpen(false)}
+      />
     </>
   );
 }
