@@ -86,13 +86,13 @@ export default function Footer() {
               State Service Hubs
             </h3>
             <ul className="space-y-2 text-xs text-slate-400">
-              {activeStates.map((st) => (
+              {activeStates.slice(0, 10).map((st) => (
                 <li key={st.stateSlug}>
                   <Link
                     href={`/hvac/${st.stateSlug}`}
-                    className="text-blue-400 font-bold hover:underline block"
+                    className="hover:text-orange-400 transition-colors block py-0.5"
                   >
-                    {st.stateName} Hub ({st.majorCities.length} Cities)
+                    {st.stateName} HVAC Hub ({st.majorCities.length} Cities)
                   </Link>
                 </li>
               ))}

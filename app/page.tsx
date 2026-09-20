@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_CONFIG, GENERAL_FAQS } from "@/lib/seo";
+import { SITE_CONFIG, GENERAL_FAQS, getSpeakableSchema, getEmergencyServiceSchema } from "@/lib/seo";
 import { CORE_SERVICES } from "@/config/services";
 import { TEXAS_CITIES_DATA } from "@/config/locations/texas";
 import FaqAccordion from "@/components/ui/FaqAccordion";
@@ -8,6 +8,8 @@ import BrandTrustGrid from "@/components/home/BrandTrustGrid";
 import ZipChecker from "@/components/locations/ZipChecker";
 import TrustGuarantees from "@/components/home/TrustGuarantees";
 import ServiceEstimator from "@/components/services/ServiceEstimator";
+import LiveSearchHero from "@/components/locations/LiveSearchHero";
+import ClimateAlertBanner from "@/components/home/ClimateAlertBanner";
 import {
   Phone,
   Clock,
@@ -38,11 +40,22 @@ export default function HomePage() {
     })),
   };
 
+  const speakableSchema = getSpeakableSchema(SITE_CONFIG.domain);
+  const emergencySchema = getEmergencyServiceSchema();
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencySchema) }}
       />
 
       {/* HERO SECTION */}
@@ -75,26 +88,9 @@ export default function HomePage() {
                 AirHeat Dispatch is a free homeowner service that connects you with independent local HVAC contractors for emergency air conditioning repair, furnace troubleshooting, heating service, and system tune-ups.
               </p>
 
-              {/* Dual Action CTAs */}
-              <div className="flex flex-col xs:flex-row sm:flex-row gap-3 pt-1">
-                <a
-                  href={`tel:${SITE_CONFIG.phoneRaw}`}
-                  rel="dofollow"
-                  aria-label={`Call now to connect with a local HVAC provider at ${SITE_CONFIG.phone}`}
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.02] active:scale-95"
-                >
-                  <Phone className="w-5 h-5 fill-white shrink-0" />
-                  <span className="truncate">Call Now ({SITE_CONFIG.phone})</span>
-                </a>
-
-                <Link
-                  href="/services"
-                  rel="dofollow"
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600  font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs whitespace-nowrap"
-                >
-                  <span>Find HVAC Service</span>
-                  <ArrowRight className="w-4 h-4 text-blue-600 shrink-0" />
-                </Link>
+              {/* Hero Live Search Bar */}
+              <div className="pt-2">
+                <LiveSearchHero />
               </div>
 
               {/* Trust Pill */}
@@ -160,8 +156,10 @@ export default function HomePage() {
       {/* AEO / DIRECT ANSWER SECTION */}
       <section className="py-12 sm:py-14 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ClimateAlertBanner />
+
           <div className="text-center mb-8 px-2">
-            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider  inline-block mb-2">
+            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider inline-block mb-2">
               HOMEOWNER SERVICE OVERVIEW
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">

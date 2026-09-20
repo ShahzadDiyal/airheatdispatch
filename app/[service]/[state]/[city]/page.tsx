@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/seo";
+import { SITE_CONFIG, getSpeakableSchema, getEmergencyServiceSchema } from "@/lib/seo";
 import { CORE_SERVICES } from "@/config/services";
 import { TEXAS_CITIES_DATA } from "@/config/locations/texas";
 import { ALABAMA_PRESET_CITIES_DATA } from "@/config/locations/alabama";
@@ -9,6 +9,7 @@ import { getLocationData } from "@/lib/locations";
 import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import ZipChecker from "@/components/locations/ZipChecker";
+import ClimateAlertBanner from "@/components/home/ClimateAlertBanner";
 import {
   Phone,
   CheckCircle2,
@@ -90,21 +91,30 @@ export default async function LocalServicePage({ params }: PageProps) {
     })),
   };
 
+  const pageUrl = `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}`;
+  const speakableSchema = getSpeakableSchema(pageUrl);
+  const emergencySchema = getEmergencyServiceSchema(`${cityName}, ${stateCode}`);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencySchema) }} />
 
       <article className="bg-slate-50 min-h-screen py-10 sm:py-12 lg:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav className="flex flex-wrap items-center gap-2 text-xs text-slate-500 mb-6 sm:mb-8" aria-label="Breadcrumb">
+          <nav className="flex flex-wrap items-center gap-2 text-xs text-slate-500 mb-4" aria-label="Breadcrumb">
             <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">Home</Link>
             <span>/</span>
             <Link href={`/${service.slug}`} rel="dofollow" className="hover:text-blue-600 font-medium truncate max-w-[100px] sm:max-w-none">{service.name}</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">{cityName}, {stateName}</span>
           </nav>
+
+          {/* Contextual Climate Alert Banner */}
+          <ClimateAlertBanner cityName={cityName} stateName={stateName} />
 
           {/* Hero Section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">

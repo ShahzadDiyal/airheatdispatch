@@ -59,19 +59,19 @@ export function getSitemapIndexEntries(): { url: string }[] {
   const entries: { url: string }[] = [];
 
   // Main sitemap entry
-  entries.push({ url: `${domain}/sitemap-main.xml` });
+  entries.push({ url: `${domain}/api/sitemaps/sitemap-main.xml` });
 
-  // State sitemaps entries
+  // State sitemaps entries for all 50 states
   const activeStates = Object.keys(ALL_STATES_DATA);
 
   for (const stateSlug of activeStates) {
     const stateUrls = getStateSitemapUrls(stateSlug);
     if (stateUrls.length <= CHUNK_LIMIT) {
-      entries.push({ url: `${domain}/sitemap-${stateSlug}.xml` });
+      entries.push({ url: `${domain}/api/sitemaps/sitemap-${stateSlug}.xml` });
     } else {
       const totalChunks = Math.ceil(stateUrls.length / CHUNK_LIMIT);
       for (let i = 1; i <= totalChunks; i++) {
-        entries.push({ url: `${domain}/sitemap-${stateSlug}-${i}.xml` });
+        entries.push({ url: `${domain}/api/sitemaps/sitemap-${stateSlug}-${i}.xml` });
       }
     }
   }

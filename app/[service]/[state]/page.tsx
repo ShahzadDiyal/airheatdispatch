@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/seo";
+import { SITE_CONFIG, getSpeakableSchema, getEmergencyServiceSchema } from "@/lib/seo";
 import { CORE_SERVICES } from "@/config/services";
 import { ALL_STATES_DATA, getStateData } from "@/config/states";
 import { getStateCities, getAllCitiesForState } from "@/lib/locations";
@@ -9,6 +9,7 @@ import { LocationData } from "@/types/location";
 import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 import ZipChecker from "@/components/locations/ZipChecker";
+import ClimateAlertBanner from "@/components/home/ClimateAlertBanner";
 import {
   Phone,
   CheckCircle2,
@@ -86,21 +87,30 @@ export default async function StateServicePage({ params }: PageProps) {
     })),
   };
 
+  const pageUrl = `${SITE_CONFIG.domain}/${service.slug}/${stateSlug}`;
+  const speakableSchema = getSpeakableSchema(pageUrl);
+  const emergencySchema = getEmergencyServiceSchema(stateData.stateName);
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencySchema) }} />
 
       <article className="bg-slate-50 min-h-screen py-10 sm:py-12 lg:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 sm:mb-8 flex-wrap" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs text-slate-500 mb-4 flex-wrap" aria-label="Breadcrumb">
             <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">Home</Link>
             <span>/</span>
             <Link href={`/${service.slug}`} rel="dofollow" className="hover:text-blue-600 font-medium truncate max-w-[120px] sm:max-w-none">{service.name}</Link>
             <span>/</span>
             <span className="text-slate-900 font-semibold">{stateData.stateName}</span>
           </nav>
+
+          {/* Contextual Weather / Emergency Alert Banner */}
+          <ClimateAlertBanner stateName={stateData.stateName} />
 
           {/* Hero Header */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
@@ -236,6 +246,29 @@ export default async function StateServicePage({ params }: PageProps) {
               </div>
             </section>
           )}
+
+          {/* 50 States Cross-Link Directory */}
+          <section className="my-8 sm:my-12 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
+            <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+              {service.name} Services in Other States:
+            </h3>
+            <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
+              {Object.values(ALL_STATES_DATA).slice(0, 18).map((st) => (
+                <Link
+                  key={st.stateSlug}
+                  href={`/${service.slug}/${st.stateSlug}`}
+                  className="px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-800 transition-colors truncate"
+                >
+                  {st.stateName} {service.name} →
+                </Link>
+              ))}
+            </div>
+            <div className="pt-1 text-xs">
+              <Link href="/service-areas" className="text-blue-600 font-bold hover:underline">
+                View All 50 State Directories →
+              </Link>
+            </div>
+          </section>
 
           <ZipChecker />
 

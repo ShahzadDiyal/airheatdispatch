@@ -314,7 +314,7 @@ export default function Header() {
                   Service Areas Directory →
                 </Link>
               </div>
-              {activeStates.map((st) => (
+              {activeStates.slice(0, 10).map((st) => (
                 <Link
                   key={st.stateSlug}
                   href={`/hvac/${st.stateSlug}`}
@@ -325,6 +325,14 @@ export default function Header() {
                   {st.stateName} Statewide Hub
                 </Link>
               ))}
+              <Link
+                href="/service-areas"
+                rel="dofollow"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-5 py-1.5 rounded-lg text-xs font-bold text-blue-600 hover:bg-slate-100"
+              >
+                View All 50 State Hubs →
+              </Link>
               <Link
                 href="/how-it-works"
                 rel="dofollow"
