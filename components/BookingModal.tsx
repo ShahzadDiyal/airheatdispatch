@@ -43,12 +43,13 @@ export default function BookingModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-150 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-150 overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="booking-modal-title"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="bg-white border border-slate-200 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden relative text-slate-900 my-4 sm:my-0 pt-16">
+      <div className="bg-white border border-slate-200 rounded-3xl w-full max-w-lg shadow-ms overflow-hidden relative text-slate-900 my-4 sm:my-8">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -60,8 +61,8 @@ export default function BookingModal({
 
         {isSubmitted ? (
           <div className="p-6 sm:p-8 text-center space-y-4">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
-              <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10" />
+            <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+              <CheckCircle2 className="w-8 h-8" />
             </div>
             <h2
               id="booking-modal-title"
@@ -77,12 +78,12 @@ export default function BookingModal({
               to assist with your request.
             </p>
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 break-words">
-              For immediate connection, call our 24/7 hotline right now:{" "}
+              For immediate connection, call our 24/7 hotline:{" "}
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 className="text-orange-500 font-bold underline"
               >
-                Call {SITE_CONFIG.phone}
+                {SITE_CONFIG.phone}
               </a>
             </div>
             <button
@@ -95,11 +96,12 @@ export default function BookingModal({
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="p-5 sm:p-6 md:p-8 space-y-4"
+            className="p-5 sm:p-6 space-y-4"
           >
-            <div>
+            {/* Header */}
+            <div className="pr-8">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-3.5 h-3.5 shrink-0" />
                 <span>24/7 Homeowner Connection</span>
               </div>
               <h2
@@ -109,7 +111,7 @@ export default function BookingModal({
                 Connect With a Local HVAC Provider
               </h2>
               <p className="text-xs text-slate-600 mt-1">
-                Fill out your details below or call our hotline for direct phone matching with an independent contractor.
+                Fill out your details below or call our hotline for direct phone matching.
               </p>
             </div>
 
@@ -138,7 +140,7 @@ export default function BookingModal({
             </div>
 
             {/* Input Fields */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-3">
               <div className="space-y-1.5">
                 <label
                   htmlFor="modal-full-name"
@@ -153,7 +155,7 @@ export default function BookingModal({
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Jane Smith"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
                 />
               </div>
 
@@ -171,7 +173,7 @@ export default function BookingModal({
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="(555) 000-0000"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
+                  className="w-full px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
                 />
               </div>
             </div>
@@ -190,7 +192,7 @@ export default function BookingModal({
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Austin, TX 78701"
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
+                className="w-full px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
               />
             </div>
 
@@ -199,7 +201,7 @@ export default function BookingModal({
                 htmlFor="modal-issue-notes"
                 className="text-xs font-bold text-slate-700 uppercase tracking-wider block"
               >
-                Describe System Issue (Optional)
+                System Issue (Optional)
               </label>
               <textarea
                 id="modal-issue-notes"
@@ -207,7 +209,7 @@ export default function BookingModal({
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="e.g. AC blowing warm air, furnace not turning on..."
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400 resize-none"
+                className="w-full px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400 resize-none"
               ></textarea>
             </div>
 
@@ -222,7 +224,7 @@ export default function BookingModal({
                 : "Request Provider Connection →"}
             </button>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+            <div className="flex flex-col xs:flex-row items-center justify-between gap-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
               <span className="flex items-center gap-1">
                 <ShieldAlert className="w-3.5 h-3.5 text-amber-500 shrink-0" />
                 Independent Local Contractors

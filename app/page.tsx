@@ -43,29 +43,29 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* HERO SECTION (Matches Image 1 Mockup) */}
-      <section className="relative pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-b from-blue-50/50 via-slate-50 to-slate-50 border-b border-slate-200">
+      {/* HERO SECTION */}
+      <section className="relative pt-8 pb-14 lg:pt-14 lg:pb-24 bg-gradient-to-b from-blue-50/50 via-slate-50 to-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 shadow-xs text-xs font-bold text-blue-600">
-                <span className="flex items-center gap-1.5 text-emerald-600">
-                  <span className="relative flex h-2 w-2">
+              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-200 shadow-xs text-xs font-bold text-blue-600">
+                <span className="flex items-center gap-1.5 text-emerald-600 shrink-0">
+                  <span className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
                   24/7 Homeowner Connection Desk
                 </span>
-                <span className="text-slate-300">|</span>
-                <span>Fast Local Provider Matching</span>
+                <span className="text-slate-300 hidden sm:inline">|</span>
+                <span className="hidden sm:inline">Fast Local Provider Matching</span>
               </div>
 
               {/* H1 Tag */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.12]">
-                Connect With Local <br />
-                <span className="text-blue-600">HVAC Service Providers</span>
+                Connect With Local{" "}
+                <span className="text-blue-600 block sm:inline">HVAC Service Providers</span>
               </h1>
 
               {/* Value Proposition */}
@@ -74,48 +74,48 @@ export default function HomePage() {
               </p>
 
               {/* Dual Action CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3.5 pt-1">
+              <div className="flex flex-col xs:flex-row sm:flex-row gap-3 pt-1">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
                   aria-label={`Call now to connect with a local HVAC provider at ${SITE_CONFIG.phone}`}
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-3 shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.02] active:scale-95 group"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.02] active:scale-95"
                 >
-                  <Phone className="w-5 h-5 fill-white" />
-                  <span>Call Now ({SITE_CONFIG.phone})</span>
+                  <Phone className="w-5 h-5 fill-white shrink-0" />
+                  <span className="truncate">Call Now ({SITE_CONFIG.phone})</span>
                 </a>
 
                 <Link
                   href="/services"
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600 border border-blue-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600 border border-blue-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs whitespace-nowrap"
                 >
                   <span>Find HVAC Service</span>
-                  <ArrowRight className="w-4 h-4 text-blue-600" />
+                  <ArrowRight className="w-4 h-4 text-blue-600 shrink-0" />
                 </Link>
               </div>
 
-              {/* Trust Pills */}
-              <div className="pt-2">
+              {/* Trust Pill */}
+              <div className="pt-1">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 fill-white" />
+                  <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
                   <span>Speak With a Local Provider</span>
                 </a>
               </div>
 
-              <p className="text-xs text-slate-500 flex items-center gap-1.5">
-                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
+              <p className="text-xs text-slate-500 flex items-start gap-1.5">
+                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>Fast homeowner connection service to find independent local HVAC contractors across the United States.</span>
               </p>
             </div>
 
-            {/* Right Column: Hero Technician Image Card (Matches Image 1 Mockup) */}
-            <div className="lg:col-span-5">
+            {/* Right Column: Hero Image Card */}
+            <div className="lg:col-span-5 mt-4 lg:mt-0">
               <div className="bg-white p-2 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden group">
-                <div className="relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden bg-slate-900">
+                <div className="relative h-[280px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden bg-slate-900">
                   <img
                     src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80"
                     alt="HVAC Technician Diagnosing Furnace and Air Conditioning System"
@@ -123,21 +123,21 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
 
-                  {/* Dark Glass Overlay Badge on Image */}
-                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-slate-800 text-white space-y-2">
+                  {/* Overlay Badge */}
+                  <div className="absolute bottom-3 left-3 right-3 p-3 sm:p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-slate-800 text-white space-y-1.5 sm:space-y-2">
                     <div className="flex items-center justify-between text-xs font-bold text-orange-400">
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-orange-400" />
+                        <Clock className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                         24/7 Hotline Active
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[10px] uppercase font-bold">
+                      <span className="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[10px] uppercase font-bold shrink-0">
                         Nationwide
                       </span>
                     </div>
-                    <div className="text-sm font-bold text-white">
+                    <div className="text-xs sm:text-sm font-bold text-white">
                       Emergency Response & Local Dispatch
                     </div>
-                    <p className="text-[11px] text-slate-300">
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 leading-snug">
                       Connecting homeowners directly with independent local HVAC contractors.
                     </p>
                   </div>
@@ -148,7 +148,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4 TRUST BADGES GRID (Matches Image 1 Mockup) */}
+      {/* 4 TRUST BADGES GRID */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <TrustGuarantees />
@@ -156,9 +156,9 @@ export default function HomePage() {
       </section>
 
       {/* AEO / DIRECT ANSWER SECTION */}
-      <section className="py-14 bg-white border-b border-slate-200">
-        <div className=" mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8">
+      <section className="py-12 sm:py-14 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 px-2">
             <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider border border-blue-200 inline-block mb-2">
               HOMEOWNER SERVICE OVERVIEW
             </span>
@@ -183,15 +183,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CORE ACCEPTED HVAC SERVICES GRID (Matches Image 1 & 4 Mockup) */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200 relative">
+      {/* CORE ACCEPTED HVAC SERVICES GRID */}
+      <section className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
               <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
                 RESPONSIVE REPAIR COVERAGE
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Core Accepted HVAC Services
               </h2>
             </div>
@@ -200,33 +200,32 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {CORE_SERVICES.map((s, idx) => {
-              // Highlight 1 dark card like Image 1
               const isEmergency = s.slug === "hvac" || idx === 7;
               if (isEmergency) {
                 return (
                   <div
                     key={s.slug}
-                    className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white flex flex-col justify-between shadow-xl relative overflow-hidden group"
+                    className="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 text-white flex flex-col justify-between shadow-xl relative overflow-hidden group"
                   >
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                       <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase">
                         24/7 Live Dispatch
                       </div>
-                      <h3 className="text-xl font-bold text-white">
+                      <h3 className="text-lg sm:text-xl font-bold text-white">
                         24/7 Emergency HVAC Dispatch
                       </h3>
                       <p className="text-xs text-slate-300 leading-relaxed">
                         Sudden cooling or heating failure during weather extremes? Call our hotline for immediate contractor routing.
                       </p>
-                      <ul className="space-y-1.5 text-xs text-slate-300 pt-2">
+                      <ul className="space-y-1.5 text-xs text-slate-300 pt-1">
                         <li className="flex items-center gap-1.5">
-                          <Check className="w-3.5 h-3.5 text-orange-400" />
+                          <Check className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                           <span>Immediate phone matching</span>
                         </li>
                         <li className="flex items-center gap-1.5">
-                          <Check className="w-3.5 h-3.5 text-orange-400" />
+                          <Check className="w-3.5 h-3.5 text-orange-400 shrink-0" />
                           <span>Local independent technicians</span>
                         </li>
                       </ul>
@@ -234,10 +233,10 @@ export default function HomePage() {
 
                     <a
                       href={`tel:${SITE_CONFIG.phoneRaw}`}
-                      className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/30 transition-all mt-6"
+                      className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/30 transition-all mt-5"
                     >
-                      <Phone className="w-3.5 h-3.5 fill-white" />
-                      <span>Call {SITE_CONFIG.phone}</span>
+                      <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
+                      <span className="truncate">Call {SITE_CONFIG.phone}</span>
                     </a>
                   </div>
                 );
@@ -246,26 +245,19 @@ export default function HomePage() {
               return (
                 <div
                   key={s.slug}
-                  className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md group"
+                  className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md group"
                 >
                   <div className="space-y-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0">
                       {s.slug.includes("ac") && <Snowflake className="w-5 h-5" />}
                       {(s.slug.includes("furnace") || s.slug.includes("heating")) && (
                         <Flame className="w-5 h-5" />
                       )}
                       {s.slug.includes("maintenance") && <Wrench className="w-5 h-5" />}
-                      {![
-                        "ac-repair",
-                        "furnace-repair",
-                        "furnace-cleaning",
-                        "furnace-replacement",
-                        "heating-repair",
-                        "hvac-maintenance",
-                      ].includes(s.slug) && <Wind className="w-5 h-5" />}
+                      {!["ac-repair","furnace-repair","furnace-cleaning","furnace-replacement","heating-repair","hvac-maintenance"].includes(s.slug) && <Wind className="w-5 h-5" />}
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                       {s.name}
                     </h3>
 
@@ -280,7 +272,7 @@ export default function HomePage() {
                       className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                     >
                       <span>Explore Service</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-blue-600" />
+                      <ArrowRight className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                     </Link>
                   </div>
                 </div>
@@ -290,14 +282,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HOW AIRHEAT DISPATCH WORKS (Matches Image 1 & 4 Mockup) */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      {/* HOW AIRHEAT DISPATCH WORKS */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center px-3 md:px-6 xl:px-12 mx-auto mb-12">
+          <div className="text-center px-2 sm:px-6 xl:px-12 mb-10 sm:mb-12">
             <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
               SIMPLE 3-STEP PROCESS
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
               How AirHeat Dispatch Works
             </h2>
             <p className="text-slate-600 text-sm mt-1">
@@ -305,14 +297,14 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Step 1 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20 shrink-0">
                   01
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
                   Tell Us What You Need
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -326,12 +318,12 @@ export default function HomePage() {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20 shrink-0">
                   02
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
                   Connect With a Local Provider
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -345,12 +337,12 @@ export default function HomePage() {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-orange-500/20">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-orange-500/20 shrink-0">
                   03
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900">
                   Receive Service Directly
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -366,101 +358,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY PROPERTY OWNERS USE AIRHEAT DISPATCH (Matches Image 1 Mockup) */}
-      <section className="py-16 bg-slate-50 border-b border-slate-200">
+      {/* WHY PROPERTY OWNERS USE AIRHEAT DISPATCH */}
+      <section className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-5 space-y-6">
+            <div className="lg:col-span-5 space-y-5 sm:space-y-6">
               <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider inline-block">
                 SUCCESSFUL MATCHING
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Why Property Owners Use AirHeat Dispatch
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
                 When heating or air conditioning systems fail during extreme weather, homeowners need a fast, reliable way to reach independent service providers in their local area.
               </p>
 
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-700 space-y-2">
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-700 space-y-1">
                 <strong className="text-slate-900 block font-bold">Free Connection Service:</strong>
                 Our homeowner connection desk is completely free to use. Call anytime to speak with a representative.
               </div>
 
-              <div>
-                <a
-                  href={`tel:${SITE_CONFIG.phoneRaw}`}
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02]"
-                >
-                  <Phone className="w-4 h-4 fill-white" />
-                  <span>Call ({SITE_CONFIG.phone})</span>
-                </a>
-              </div>
+              <a
+                href={`tel:${SITE_CONFIG.phoneRaw}`}
+                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02]"
+              >
+                <Phone className="w-4 h-4 fill-white shrink-0" />
+                <span className="truncate">Call ({SITE_CONFIG.phone})</span>
+              </a>
             </div>
 
             {/* Right Feature Cards Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                  <UserCheck className="w-5 h-5" />
+            <div className="lg:col-span-7 grid grid-cols-1 xs:grid-cols-2 gap-4">
+              {[
+                { icon: UserCheck, title: "Independent Local Contractors", desc: "Connect directly with independent local HVAC contractors serving your zip code." },
+                { icon: Clock, title: "24/7 Phone Connection", desc: "Call anytime day or night for fast assistance connecting with a local service provider." },
+                { icon: Wrench, title: "Full HVAC Coverage", desc: "Assistance for central AC repair, furnace troubleshooting, heat pump issues, and tune-ups." },
+                { icon: ShieldAlert, title: "Free for Homeowners", desc: "Our connection service helps homeowners find local service contractors at no cost to you." },
+              ].map(({ icon: Icon, title, desc }, idx) => (
+                <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-2 shrink-0">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900">{title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">{desc}</p>
                 </div>
-                <h3 className="text-base font-bold text-slate-900">
-                  Independent Local Contractors
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Connect directly with independent local HVAC contractors serving your zip code.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-slate-900">
-                  24/7 Phone Connection
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Call anytime day or night for fast assistance connecting with a local service provider.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                  <Wrench className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-slate-900">
-                  Full HVAC Coverage
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Assistance for central AC repair, furnace troubleshooting, heat pump issues, and tune-ups.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
-                  <ShieldAlert className="w-5 h-5 text-blue-600" />
-                </div>
-                <h3 className="text-base font-bold text-slate-900">
-                  Free for Homeowners
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Our connection service helps homeowners find local service contractors at no cost to you.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* NATIONWIDE SERVICE AREAS & REGIONAL DEMANDS (Matches Image 1 & 4 Mockup) */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      {/* NATIONWIDE SERVICE AREAS */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
               <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
                 NATIONWIDE SERVICE AREAS
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Nationwide Service Areas & Regional Demands
               </h2>
             </div>
@@ -469,24 +426,24 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {TEXAS_CITIES_DATA.slice(0, 6).map((city) => (
               <div
                 key={city.citySlug}
-                className="bg-slate-50 border border-slate-200 hover:border-blue-400 rounded-2xl p-6 space-y-4 transition-all group flex flex-col justify-between"
+                className="bg-slate-50 border border-slate-200 hover:border-blue-400 rounded-2xl p-5 sm:p-6 space-y-4 transition-all group flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-blue-600 flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-orange-500" />
+                      <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
                       {city.cityName}, TX
                     </span>
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold uppercase">
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold uppercase shrink-0">
                       Texas Hub
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                     {city.cityName} HVAC Service
                   </h3>
 
@@ -500,20 +457,20 @@ export default function HomePage() {
                   className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-500 text-blue-600 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
                 >
                   <span>View {city.cityName} Service Hub</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                 </Link>
               </div>
             ))}
           </div>
 
           {/* Statewide Link Bar */}
-          <div className="mt-8 p-4 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-6 sm:mt-8 p-4 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="text-xs text-slate-700 font-medium">
               <strong className="text-blue-700">Looking for more Texas cities?</strong> View our full Texas Statewide HVAC Service Hub covering Houston, Dallas, San Antonio, Austin, Fort Worth, El Paso, and more.
             </div>
             <Link
               href="/hvac/texas"
-              className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shrink-0 shadow-xs"
+              className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shrink-0 shadow-xs whitespace-nowrap"
             >
               Visit Texas Statewide Hub →
             </Link>
@@ -522,21 +479,21 @@ export default function HomePage() {
       </section>
 
       {/* COVERAGE CHECKER */}
-      <section className="py-12 bg-slate-50 border-b border-slate-200">
+      <section className="py-10 sm:py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ZipChecker />
         </div>
       </section>
 
-      {/* HOMEOWNER DIAGNOSTIC & MAINTENANCE GUIDES (Matches Image 1 Mockup) */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      {/* HOMEOWNER DIAGNOSTIC & MAINTENANCE GUIDES */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
               <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
                 HVAC KNOWLEDGE HUB
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Homeowner Diagnostic & Maintenance Guides
               </h2>
             </div>
@@ -545,7 +502,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 title: "Signs Your Furnace Needs Immediate Repair",
@@ -581,7 +538,7 @@ export default function HomePage() {
                 className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
-                  <div className="h-44 overflow-hidden relative bg-slate-100">
+                  <div className="h-40 sm:h-44 overflow-hidden relative bg-slate-100">
                     <img
                       src={guide.image}
                       alt={guide.title}
@@ -592,8 +549,8 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <div className="p-5 space-y-2">
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                  <div className="p-4 sm:p-5 space-y-2">
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
                       {guide.title}
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed">
@@ -602,13 +559,13 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="px-5 pb-5 pt-2 border-t border-slate-100">
+                <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-2 border-t border-slate-100">
                   <Link
                     href={guide.link}
                     className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                   >
                     <span>Read Article Guide</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                   </Link>
                 </div>
               </div>
@@ -618,27 +575,27 @@ export default function HomePage() {
       </section>
 
       {/* BRAND TRUST GRID */}
-      <section className="py-12 bg-slate-50 border-b border-slate-200">
+      <section className="py-10 sm:py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BrandTrustGrid />
         </div>
       </section>
 
-      {/* FAQ SECTION (Matches Image 1 & 4 Mockup) */}
-      <section className="py-16 bg-white border-b border-slate-200" id="faqs">
+      {/* FAQ SECTION */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200" id="faqs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FaqAccordion faqs={GENERAL_FAQS} />
         </div>
       </section>
 
-      {/* BOTTOM CONVERSION CALL CTA BANNER (Matches Image 1, 2, 3, 4, 5 Mockups) */}
-      <section className="py-16 bg-slate-900 text-white border-t border-slate-800 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+      {/* BOTTOM CONVERSION CALL CTA BANNER */}
+      <section className="py-12 sm:py-16 bg-slate-900 text-white border-t border-slate-800 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5 sm:space-y-6">
           <span className="px-3.5 py-1.5 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider border border-orange-500/30 inline-block">
             24/7 HOMEOWNER CONNECTION DESK
           </span>
 
-          <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Need HVAC Service Today?
           </h2>
 
@@ -646,26 +603,26 @@ export default function HomePage() {
             Do not suffer in extreme heat or freezing cold. Our 24/7 hotline connects you directly with independent local HVAC contractors in your area.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+          <div className="flex flex-col xs:flex-row sm:flex-row justify-center items-center gap-3 sm:gap-4 pt-2">
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-orange-500/30 transition-all hover:scale-[1.02] active:scale-95"
+              className="w-full xs:w-auto sm:w-auto px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 sm:gap-3 shadow-xl shadow-orange-500/30 transition-all hover:scale-[1.02] active:scale-95"
             >
-              <Phone className="w-5 h-5 fill-white" />
-              <span>Call ({SITE_CONFIG.phone})</span>
+              <Phone className="w-5 h-5 fill-white shrink-0" />
+              <span className="truncate">Call ({SITE_CONFIG.phone})</span>
             </a>
 
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-base flex items-center justify-center gap-2 border border-slate-200 shadow-md"
+              className="w-full xs:w-auto sm:w-auto px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-sm sm:text-base flex items-center justify-center gap-2 border border-slate-200 shadow-md whitespace-nowrap"
             >
-              <Phone className="w-4 h-4 text-slate-700" />
+              <Phone className="w-4 h-4 text-slate-700 shrink-0" />
               <span>Speak With a Local Provider</span>
             </Link>
           </div>
 
-          <div className="pt-6 px-3 md:px-6 xl:px-12 mx-auto">
+          <div className="pt-4 px-2 sm:px-6 xl:px-12">
             <p className="text-[11px] text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
               {SITE_CONFIG.disclaimer}
             </p>

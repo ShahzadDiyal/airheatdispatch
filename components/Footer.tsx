@@ -4,19 +4,19 @@ import { Phone, Mail, Clock, Snowflake, Flame, ShieldCheck } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 pt-16 pb-12">
+    <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 pt-12 pb-10 sm:pt-16 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-10 sm:pb-12 border-b border-slate-800/80">
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <Link href="/" rel="dofollow" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 p-0.5 shadow-md shadow-blue-500/20">
+              <div className="w-9 h-9 rounded-xl bg-blue-600 p-0.5 shadow-md shadow-blue-500/20 shrink-0">
                 <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center relative">
                   <Snowflake className="w-4 h-4 text-sky-400 absolute -translate-x-0.5 -translate-y-0.5" />
                   <Flame className="w-4 h-4 text-orange-500 absolute translate-x-0.5 translate-y-0.5" />
                 </div>
               </div>
-              <span className="text-xl font-bold text-white tracking-tight">
+              <span className="text-lg sm:text-xl font-bold text-white tracking-tight">
                 Air<span className="text-blue-500">Heat</span>{" "}
                 <span className="text-white">Dispatch</span>
               </span>
@@ -28,21 +28,21 @@ export default function Footer() {
               air conditioning, and system repairs.
             </p>
 
-            <div className="space-y-3 pt-2 text-sm">
+            <div className="space-y-3 pt-1 text-sm">
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
-                className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-md shadow-orange-500/20"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-md shadow-orange-500/20 text-xs sm:text-sm"
               >
-                <Phone className="w-4 h-4 fill-white" />
-                <span>Call {SITE_CONFIG.phone} (24/7 Hotline)</span>
+                <Phone className="w-4 h-4 fill-white shrink-0" />
+                <span className="truncate">Call {SITE_CONFIG.phone} (24/7)</span>
               </a>
 
               <div className="flex items-center gap-3 text-slate-400 text-xs">
-                <div className="p-2 rounded-lg bg-slate-900 text-slate-400">
+                <div className="p-2 rounded-lg bg-slate-900 text-slate-400 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span>{SITE_CONFIG.email}</span>
+                <span className="truncate">{SITE_CONFIG.email}</span>
               </div>
             </div>
           </div>
@@ -95,9 +95,9 @@ export default function Footer() {
                   <Link
                     href={`/hvac/texas/${city.citySlug}`}
                     rel="dofollow"
-                    className="hover:text-orange-400 transition-colors"
+                    className="hover:text-orange-400 transition-colors block py-0.5"
                   >
-                    {city.cityName} HVAC Service
+                    {city.cityName} HVAC
                   </Link>
                 </li>
               ))}
@@ -119,42 +119,42 @@ export default function Footer() {
             </h3>
             <div className="bg-slate-900 border border-slate-800 rounded-xl p-3.5 space-y-2.5">
               <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4 shrink-0" />
                 <span>24/7 Phone Connection</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-slate-300">
-                <ShieldCheck className="w-4 h-4 text-blue-400" />
+                <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
                 <span>Independent HVAC Providers</span>
               </div>
             </div>
             <ul className="space-y-1.5 text-xs text-slate-400">
               <li>
-                <Link href="/how-it-works" className="hover:text-orange-400 transition-colors">
+                <Link href="/how-it-works" className="hover:text-orange-400 transition-colors block py-0.5">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/faqs" className="hover:text-orange-400 transition-colors">
+                <Link href="/faqs" className="hover:text-orange-400 transition-colors block py-0.5">
                   HVAC FAQs
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-orange-400 transition-colors">
+                <Link href="/about" className="hover:text-orange-400 transition-colors block py-0.5">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-orange-400 transition-colors">
+                <Link href="/contact" className="hover:text-orange-400 transition-colors block py-0.5">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">
+                <Link href="/privacy-policy" className="hover:text-orange-400 transition-colors block py-0.5">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" className="hover:text-orange-400 transition-colors">
+                <Link href="/terms-of-service" className="hover:text-orange-400 transition-colors block py-0.5">
                   Terms of Service
                 </Link>
               </li>
@@ -162,9 +162,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* PROMINENT REQUIRED LEGAL DISCLAIMER (CRITICAL RULE 9) */}
+        {/* PROMINENT REQUIRED LEGAL DISCLAIMER */}
         <div className="py-6 border-b border-slate-900">
-          <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
+          <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-[10px] sm:text-xs text-slate-400 leading-relaxed">
             <strong className="text-white block mb-1">
               Important Homeowner Disclaimer:
             </strong>
@@ -173,11 +173,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <div>
+        <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <div className="text-center sm:text-left">
             © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link
               href="/sitemap.xml"
               rel="dofollow"
@@ -197,14 +197,14 @@ export default function Footer() {
               rel="dofollow"
               className="hover:text-orange-400 transition-colors"
             >
-              Privacy Policy
+              Privacy
             </Link>
             <Link
               href="/terms-of-service"
               rel="dofollow"
               className="hover:text-orange-400 transition-colors"
             >
-              Terms of Service
+              Terms
             </Link>
           </div>
         </div>

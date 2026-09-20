@@ -12,17 +12,17 @@ export default function DirectAnswerCard({
   keyPoints,
 }: DirectAnswerCardProps) {
   return (
-    <div className="bg-blue-50/70 border border-blue-200 rounded-3xl p-6 sm:p-8 shadow-xs relative overflow-hidden my-8">
-      <div className="flex items-start gap-4">
-        <div className="p-3 rounded-2xl bg-blue-600 text-white shrink-0 mt-1 shadow-md shadow-blue-500/20">
-          <HelpCircle className="w-6 h-6" />
+    <div className="bg-blue-50/70 border border-blue-200 rounded-3xl p-5 sm:p-8 shadow-xs relative overflow-hidden my-8">
+      <div className="flex items-start gap-3 sm:gap-4">
+        <div className="p-2.5 sm:p-3 rounded-2xl bg-blue-600 text-white shrink-0 mt-0.5 shadow-md shadow-blue-500/20">
+          <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
-        <div className="space-y-3 flex-1">
+        <div className="space-y-3 flex-1 min-w-0">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <span>Direct Answer & Summary</span>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-snug">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 tracking-tight leading-snug">
             {questionTitle}
           </h3>
 

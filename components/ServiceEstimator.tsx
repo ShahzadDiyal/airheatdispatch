@@ -10,14 +10,28 @@ export default function ServiceEstimator() {
   const [issueType, setIssueType] = useState("not-cooling");
   const [bookingOpen, setBookingOpen] = useState(false);
 
+  const systemOptions = [
+    { id: "central-ac", label: "Central AC" },
+    { id: "heat-pump", label: "Heat Pump" },
+    { id: "furnace", label: "Furnace" },
+  ];
+
+  const issueOptions = [
+    { id: "not-cooling", label: "Blowing Warm Air" },
+    { id: "full-outage", label: "Complete Outage" },
+    { id: "strange-noise", label: "Unusual Noises" },
+    { id: "leak", label: "Water Leak / Frozen Coil" },
+    { id: "maintenance", label: "Seasonal Tune-Up" },
+  ];
+
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden text-slate-900">
+    <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden text-slate-900">
       <div className="max-w-3xl">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
-          <Wrench className="w-3.5 h-3.5" />
+          <Wrench className="w-3.5 h-3.5 shrink-0" />
           <span>HVAC Connection Assistant</span>
         </div>
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">
           Find HVAC Help in Your Area
         </h3>
         <p className="text-slate-600 text-sm mt-1">
@@ -25,25 +39,21 @@ export default function ServiceEstimator() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mt-8">
         {/* Controls */}
-        <div className="lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-6">
           {/* System Type */}
           <fieldset>
             <legend className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
               1. Select HVAC System Type
             </legend>
             <div className="grid grid-cols-3 gap-2">
-              {[
-                { id: "central-ac", label: "Central AC" },
-                { id: "heat-pump", label: "Heat Pump" },
-                { id: "furnace", label: "Gas/Elec Furnace" },
-              ].map((item) => (
+              {systemOptions.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => setSystemType(item.id)}
-                  className={`py-3 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                  className={`py-2.5 px-2 rounded-xl border text-xs font-bold transition-all cursor-pointer leading-tight ${
                     systemType === item.id
                       ? "bg-blue-50 border-blue-500 text-blue-700 shadow-xs"
                       : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
@@ -60,19 +70,13 @@ export default function ServiceEstimator() {
             <legend className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
               2. What is the System Issue?
             </legend>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {[
-                { id: "not-cooling", label: "Blowing Warm Air" },
-                { id: "full-outage", label: "Complete Outage" },
-                { id: "strange-noise", label: "Unusual Noises" },
-                { id: "leak", label: "Water Leak / Frozen Coil" },
-                { id: "maintenance", label: "Seasonal Tune-Up" },
-              ].map((item) => (
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-2">
+              {issueOptions.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => setIssueType(item.id)}
-                  className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all text-left cursor-pointer ${
+                  className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all text-left cursor-pointer leading-snug ${
                     issueType === item.id
                       ? "bg-orange-50 border-orange-500 text-orange-700 shadow-xs"
                       : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
@@ -86,10 +90,10 @@ export default function ServiceEstimator() {
         </div>
 
         {/* Action Call Box */}
-        <div className="bg-slate-900 border border-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between space-y-6 shadow-md">
+        <div className="bg-slate-900 border border-slate-800 text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5 shadow-md">
           <div>
             <div className="text-xs text-orange-400 font-bold mb-1">Direct Phone Match</div>
-            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight">
               Connect With a Provider
             </div>
             <p className="text-xs text-slate-300 mt-2 leading-relaxed">
@@ -117,8 +121,8 @@ export default function ServiceEstimator() {
             rel="dofollow"
             className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-orange-500/30 transition-all cursor-pointer"
           >
-            <Phone className="w-4 h-4 fill-white" />
-            <span>Call {SITE_CONFIG.phone}</span>
+            <Phone className="w-4 h-4 fill-white shrink-0" />
+            <span className="truncate">Call {SITE_CONFIG.phone}</span>
           </a>
         </div>
       </div>

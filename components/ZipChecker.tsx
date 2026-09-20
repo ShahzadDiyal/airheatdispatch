@@ -15,10 +15,10 @@ export default function ZipChecker() {
   };
 
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs my-6 relative overflow-hidden">
+    <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-xs my-6 relative overflow-hidden">
       <div className="max-w-2xl">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
-          <MapPin className="w-3.5 h-3.5 text-orange-500" />
+          <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
           <span>Local Contractor Coverage Checker</span>
         </div>
         <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -31,13 +31,13 @@ export default function ZipChecker() {
 
       <form
         onSubmit={handleCheck}
-        className="mt-6 flex flex-col sm:flex-row gap-3 max-w-xl"
+        className="mt-5 flex flex-col sm:flex-row gap-3 max-w-xl"
       >
-        <div className="relative flex-1">
+        <div className="relative flex-1 min-w-0">
           <label htmlFor="zip-checker-input" className="sr-only">
             Enter Service ZIP Code or City
           </label>
-          <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 shrink-0" />
           <input
             id="zip-checker-input"
             aria-label="Enter Service ZIP Code or City"
@@ -54,7 +54,7 @@ export default function ZipChecker() {
         </div>
         <button
           type="submit"
-          className="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-md shadow-orange-500/20"
+          className="px-5 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-md shadow-orange-500/20 whitespace-nowrap"
         >
           Check Coverage
         </button>
@@ -65,7 +65,7 @@ export default function ZipChecker() {
           <div className="flex items-center gap-2 font-bold text-emerald-800">
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span>
-              Independent Contractors Available in Area ({zipInput})!
+              Contractors Available Near {zipInput}!
             </span>
           </div>
           <p className="text-slate-700 text-xs">
@@ -77,7 +77,7 @@ export default function ZipChecker() {
             rel="dofollow"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 text-white font-bold text-xs hover:bg-orange-600 transition-colors mt-1 shadow-sm"
           >
-            <Phone className="w-3.5 h-3.5 fill-white" />
+            <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
             <span>Call Now ({SITE_CONFIG.phone})</span>
           </a>
         </div>

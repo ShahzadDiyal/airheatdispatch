@@ -30,15 +30,15 @@ export default function TrustGuarantees() {
 
   return (
     <div className="my-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {benefits.map((item, idx) => {
           const Icon = item.icon;
           return (
             <div
               key={idx}
-              className="bg-white border border-slate-200 rounded-2xl p-5 space-y-2.5 relative hover:border-blue-400 transition-colors shadow-xs"
+              className="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-2.5 relative hover:border-blue-400 transition-colors shadow-xs"
             >
-              <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                 <Icon className="w-4 h-4" />
               </div>
               <h4 className={`text-sm font-bold leading-snug ${item.titleColor}`}>{item.title}</h4>

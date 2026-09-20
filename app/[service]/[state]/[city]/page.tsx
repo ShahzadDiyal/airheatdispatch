@@ -32,16 +32,12 @@ export async function generateStaticParams() {
   return params;
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { service: serviceSlug, state, city } = await params;
   const service = CORE_SERVICES.find((s) => s.slug === serviceSlug);
   const locationData = getLocationData(state, city);
 
-  if (!service || !locationData) {
-    return { title: "Location Service Not Found" };
-  }
+  if (!service || !locationData) return { title: "Location Service Not Found" };
 
   const cityName = locationData.cityName;
   const stateCode = "TX";
@@ -49,9 +45,7 @@ export async function generateMetadata({
   return {
     title: `${service.name} in ${cityName}, ${stateCode} | AirHeat Dispatch`,
     description: `Connect with independent local HVAC contractors for ${service.name} in ${cityName}, ${stateCode}. 24/7 phone hotline connection.`,
-    alternates: {
-      canonical: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}`,
-    },
+    alternates: { canonical: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}` },
     openGraph: {
       title: `${service.name} in ${cityName}, ${stateCode} | AirHeat Dispatch`,
       description: `Connect with independent local HVAC contractors for ${service.name} in ${cityName}, ${stateCode}.`,
@@ -65,9 +59,7 @@ export default async function LocalServicePage({ params }: PageProps) {
   const service = CORE_SERVICES.find((s) => s.slug === serviceSlug);
   const locationData = getLocationData(state, city);
 
-  if (!service || !locationData) {
-    notFound();
-  }
+  if (!service || !locationData) notFound();
 
   const cityName = locationData.cityName;
   const stateName = locationData.stateName;
@@ -76,24 +68,9 @@ export default async function LocalServicePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: SITE_CONFIG.domain,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: service.name,
-        item: `${SITE_CONFIG.domain}/${service.slug}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: `${cityName}, TX`,
-        item: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}`,
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_CONFIG.domain },
+      { "@type": "ListItem", position: 2, name: service.name, item: `${SITE_CONFIG.domain}/${service.slug}` },
+      { "@type": "ListItem", position: 3, name: `${cityName}, TX`, item: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}` },
     ],
   };
 
@@ -103,88 +80,70 @@ export default async function LocalServicePage({ params }: PageProps) {
     mainEntity: locationData.faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <article className="bg-slate-50 min-h-screen py-12 lg:py-16 text-slate-800">
+      <article className="bg-slate-50 min-h-screen py-10 sm:py-12 lg:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <nav
-            className="flex flex-wrap items-center gap-2 text-xs text-slate-500 mb-8"
-            aria-label="Breadcrumb"
-          >
-            <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">
-              Home
-            </Link>
+          <nav className="flex flex-wrap items-center gap-2 text-xs text-slate-500 mb-6 sm:mb-8" aria-label="Breadcrumb">
+            <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">Home</Link>
             <span>/</span>
-            <Link href={`/${service.slug}`} rel="dofollow" className="hover:text-blue-600 font-medium">
-              {service.name}
-            </Link>
+            <Link href={`/${service.slug}`} rel="dofollow" className="hover:text-blue-600 font-medium truncate max-w-[100px] sm:max-w-none">{service.name}</Link>
             <span>/</span>
-            <span className="text-slate-900 font-semibold">
-              {cityName}, {stateName}
-            </span>
+            <span className="text-slate-900 font-semibold">{cityName}, {stateName}</span>
           </nav>
 
           {/* Hero Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-            <div className="lg:col-span-7 space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-12 sm:mb-16">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
-                <MapPin className="w-3.5 h-3.5 text-blue-600" />
+                <MapPin className="w-3.5 h-3.5 shrink-0" />
                 <span>{cityName}, TX Local HVAC Hub</span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 {service.name} in {cityName}, TX
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+              <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-medium">
                 Connect with independent local HVAC contractors serving {cityName} and surrounding Texas communities.
               </p>
 
-              <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-700">
-                <span className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-orange-600 shadow-xs">
-                  <ShieldAlert className="w-4 h-4 text-orange-500" />
+              <div className="flex flex-wrap gap-2 sm:gap-3 text-xs font-semibold text-slate-700">
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-orange-600 shadow-xs">
+                  <ShieldAlert className="w-4 h-4 text-orange-500 shrink-0" />
                   Independent Local Providers
                 </span>
-                <span className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 shadow-xs">
-                  <Clock className="w-4 h-4 text-blue-600" />
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 shadow-xs">
+                  <Clock className="w-4 h-4 text-blue-600 shrink-0" />
                   24/7 Phone Connection Hotline
                 </span>
               </div>
 
               {/* Call CTA Button */}
-              <div className="pt-2">
+              <div className="pt-1">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
                   aria-label={`Call now to connect with an HVAC provider in ${cityName}`}
-                  className="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm inline-flex items-center gap-3 shadow-md transition-colors cursor-pointer"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm inline-flex items-center gap-2 sm:gap-3 shadow-md transition-colors cursor-pointer"
                 >
-                  <Phone className="w-5 h-5 fill-white" />
-                  <span>Call {SITE_CONFIG.phone} (Connect in {cityName})</span>
+                  <Phone className="w-5 h-5 fill-white shrink-0" />
+                  <span className="truncate">Call {SITE_CONFIG.phone} ({cityName})</span>
                 </a>
               </div>
             </div>
 
             {/* Right Summary Card */}
-            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
-              <h2 className="text-xl font-bold text-slate-900 border-b border-slate-100 pb-4">
+            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-5 shadow-sm">
+              <h2 className="text-lg sm:text-xl font-bold text-slate-900 border-b border-slate-100 pb-4">
                 Local Service Area Highlights
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -209,8 +168,8 @@ export default async function LocalServicePage({ params }: PageProps) {
           </div>
 
           {/* Local Climate Context Block */}
-          <section className="my-14 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
-            <h2 className="text-2xl font-bold text-slate-900">
+          <section className="my-10 sm:my-14 bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-4 shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               HVAC Demands & Climate Considerations in {cityName}
             </h2>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -226,9 +185,9 @@ export default async function LocalServicePage({ params }: PageProps) {
           />
 
           {/* Common Local HVAC Problems */}
-          <section className="my-16 space-y-8">
-            <div className="text-center px-3 md:px-6 xl:px-12 mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <section className="my-12 sm:my-16 space-y-6 sm:space-y-8">
+            <div className="text-center px-2 sm:px-6 lg:px-12">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Common HVAC Issues in {cityName}, TX
               </h2>
               <p className="text-slate-600 text-sm mt-2">
@@ -236,14 +195,14 @@ export default async function LocalServicePage({ params }: PageProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {locationData.commonProblems.map((prob, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-slate-200 rounded-2xl p-6 space-y-2 shadow-sm"
+                  className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-2 shadow-sm"
                 >
-                  <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{prob.title}</span>
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
@@ -255,23 +214,23 @@ export default async function LocalServicePage({ params }: PageProps) {
           </section>
 
           {/* Related HVAC Services in City */}
-          <section className="my-16 space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900">
+          <section className="my-12 sm:my-16 space-y-5 sm:space-y-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               All HVAC Services Available in {cityName}, TX
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {CORE_SERVICES.map((s) => (
                 <Link
                   key={s.slug}
                   href={`/${s.slug}/${state}/${city}`}
-                  className={`p-4 rounded-xl border transition-all flex items-center justify-between group ${
+                  className={`p-3 sm:p-4 rounded-xl border transition-all flex items-center justify-between gap-2 group ${
                     s.slug === service.slug
                       ? "bg-blue-50 border-blue-300 text-blue-700 shadow-xs"
                       : "bg-white border-slate-200 text-slate-800 hover:border-blue-300 shadow-xs"
                   }`}
                 >
-                  <div>
-                    <div className="text-sm font-bold group-hover:text-blue-600 transition-colors">
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm font-bold group-hover:text-blue-600 transition-colors truncate">
                       {s.name} in {cityName}
                     </div>
                     <div className="text-[11px] text-slate-500">
@@ -288,7 +247,7 @@ export default async function LocalServicePage({ params }: PageProps) {
           <ZipChecker />
 
           {/* Local FAQs */}
-          <div className="my-16">
+          <div className="my-12 sm:my-16">
             <FaqAccordion
               faqs={locationData.faqs}
               title={`Frequently Asked Questions About HVAC Service in ${cityName}`}
@@ -296,30 +255,28 @@ export default async function LocalServicePage({ params }: PageProps) {
             />
           </div>
 
-          {/* Mandated Disclaimer Callout */}
-          <div className="my-12 p-6 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 leading-relaxed shadow-sm">
-            <strong className="text-slate-900 block mb-1">
-              Legal Disclaimer:
-            </strong>
+          {/* Mandated Disclaimer */}
+          <div className="my-8 sm:my-12 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 leading-relaxed shadow-sm">
+            <strong className="text-slate-900 block mb-1">Legal Disclaimer:</strong>
             {SITE_CONFIG.disclaimer}
           </div>
 
           {/* Bottom CTA Banner */}
-          <section className="my-16 bg-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+          <section className="my-12 sm:my-16 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-5 shadow-lg">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white">
               Need HVAC Assistance in {cityName}, TX?
             </h2>
             <p className="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
               Independent HVAC contractors are available in {cityName} and surrounding areas. Call our connection line now.
             </p>
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-1">
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
                 aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
-                className="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-colors cursor-pointer"
+                className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-colors cursor-pointer"
               >
-                <Phone className="w-4 h-4 fill-white" />
+                <Phone className="w-4 h-4 fill-white shrink-0" />
                 <span>Call {SITE_CONFIG.phone} Now</span>
               </a>
             </div>

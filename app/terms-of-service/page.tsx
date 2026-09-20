@@ -14,25 +14,20 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-slate-50 min-h-screen py-12 lg:py-16 text-slate-700">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <nav
-          className="flex items-center gap-2 text-xs text-slate-500 mb-8"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">
-            Home
-          </Link>
+    <div className="bg-slate-50 min-h-screen py-10 sm:py-12 lg:py-16 text-slate-700">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 flex-wrap" aria-label="Breadcrumb">
+          <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">Home</Link>
           <span>/</span>
           <span className="text-slate-900 font-semibold">Terms of Service</span>
         </nav>
 
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">
-            <ShieldAlert className="w-3.5 h-3.5 text-orange-500" />
+            <ShieldAlert className="w-3.5 h-3.5 text-orange-500 shrink-0" />
             <span>Service Agreement</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">
             Terms of Service
           </h1>
           <p className="text-xs text-slate-500 mt-2">
@@ -40,9 +35,9 @@ export default function TermsOfServicePage() {
           </p>
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
+        <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
           <section className="space-y-2">
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               1. Free Connection Service
             </h2>
             <p>
@@ -51,7 +46,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               2. Independent Contractors & Licensing Verification
             </h2>
             <p>
@@ -60,7 +55,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               3. Depictions & Models
             </h2>
             <p>
@@ -69,7 +64,7 @@ export default function TermsOfServicePage() {
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               4. Mandatory Homeowner Disclaimer
             </h2>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">

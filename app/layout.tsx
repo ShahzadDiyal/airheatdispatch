@@ -137,7 +137,7 @@ export default function RootLayout({
         <Footer />
 
         {/* Mobile Sticky Call Bar (Bright Orange CTA) */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center justify-between gap-2 shadow-2xl">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center justify-between gap-2 shadow-ms">
           <a
             href={`tel:${SITE_CONFIG.phoneRaw}`}
             rel="dofollow"
