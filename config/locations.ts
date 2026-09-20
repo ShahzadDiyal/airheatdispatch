@@ -1,12 +1,25 @@
 import { LocationData, StateData, TEXAS_STATE_DATA, TEXAS_CITIES_DATA } from "../content/texas";
 import { ALABAMA_STATE_DATA, ALABAMA_PRESET_CITIES_DATA, ALABAMA_ALL_CITIES, getAlabamaLocationData } from "../content/alabama";
+import { ARIZONA_STATE_DATA, ARIZONA_PRESET_CITIES_DATA, ARIZONA_ALL_CITIES, getArizonaLocationData } from "../content/arizona";
 
 export type { LocationData, StateData };
-export { TEXAS_STATE_DATA, TEXAS_CITIES_DATA, ALABAMA_STATE_DATA, ALABAMA_PRESET_CITIES_DATA, ALABAMA_ALL_CITIES, getAlabamaLocationData };
+export {
+  TEXAS_STATE_DATA,
+  TEXAS_CITIES_DATA,
+  ALABAMA_STATE_DATA,
+  ALABAMA_PRESET_CITIES_DATA,
+  ALABAMA_ALL_CITIES,
+  getAlabamaLocationData,
+  ARIZONA_STATE_DATA,
+  ARIZONA_PRESET_CITIES_DATA,
+  ARIZONA_ALL_CITIES,
+  getArizonaLocationData,
+};
 
 export const ALL_STATES_DATA: Record<string, StateData> = {
   texas: TEXAS_STATE_DATA,
   alabama: ALABAMA_STATE_DATA,
+  arizona: ARIZONA_STATE_DATA,
 };
 
 export function getStateData(stateSlug: string): StateData | undefined {
@@ -17,6 +30,7 @@ export function getStateCities(stateSlug: string): LocationData[] {
   const normState = stateSlug.toLowerCase();
   if (normState === "texas") return TEXAS_CITIES_DATA;
   if (normState === "alabama") return ALABAMA_PRESET_CITIES_DATA;
+  if (normState === "arizona") return ARIZONA_PRESET_CITIES_DATA;
 
   // Fallback dynamic generator for any registered state's major cities
   const state = ALL_STATES_DATA[normState];
@@ -52,7 +66,7 @@ export function getAllPrebuiltCities(): LocationData[] {
   return cities;
 }
 
-// Multi-state location data lookup supporting Texas and all 463 cities in Alabama (and extensible for any state)
+// Multi-state location data lookup supporting Texas, all 463 cities in Alabama, all 91 cities in Arizona
 export function getLocationData(stateSlug: string, citySlug: string): LocationData | undefined {
   const normState = stateSlug.toLowerCase();
   const normCity = citySlug.toLowerCase();
@@ -89,6 +103,10 @@ export function getLocationData(stateSlug: string, citySlug: string): LocationDa
 
   if (normState === "alabama") {
     return getAlabamaLocationData(normCity);
+  }
+
+  if (normState === "arizona") {
+    return getArizonaLocationData(normCity);
   }
 
   // Generic dynamic fallback for any other registered state

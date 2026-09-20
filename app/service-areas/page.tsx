@@ -6,6 +6,8 @@ import {
   TEXAS_CITIES_DATA,
   ALABAMA_PRESET_CITIES_DATA,
   ALABAMA_ALL_CITIES,
+  ARIZONA_PRESET_CITIES_DATA,
+  ARIZONA_ALL_CITIES,
 } from "@/config/site";
 import ZipChecker from "@/components/ZipChecker";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
@@ -14,7 +16,7 @@ import { MapPin, ArrowRight, Phone, Building2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "HVAC Service Areas Directory | AirHeat Dispatch",
   description:
-    "Explore AirHeat Dispatch service areas directory covering Texas, Alabama (all 463 cities), and U.S. service regions. Connect with independent local HVAC contractors.",
+    "Explore AirHeat Dispatch service areas directory covering Texas, Alabama (all 463 cities), Arizona (all 91 cities), and U.S. service regions. Connect with independent local HVAC contractors.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/service-areas`,
   },
@@ -66,7 +68,7 @@ export default function ServiceAreasPage() {
           />
 
           {/* DYNAMIC STATEWIDE HUBS SECTION */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 sm:my-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 sm:my-12">
             {activeStates.map((st) => (
               <div
                 key={st.stateSlug}
@@ -93,6 +95,118 @@ export default function ServiceAreasPage() {
               </div>
             ))}
           </div>
+
+          {/* ARIZONA CITY HUBS */}
+          <section className="my-10 sm:my-14 space-y-6 sm:space-y-8">
+            <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-3 sm:gap-4">
+              <div>
+                <span className="px-3 py-1 rounded-full bg-orange-50 text-orange-700 border border-orange-200 text-xs font-bold uppercase tracking-wider inline-block mb-2">
+                  ARIZONA COVERAGE DIRECTORY
+                </span>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">
+                  Major Arizona City Hubs
+                </h2>
+                <p className="text-slate-600 text-sm mt-1">
+                  Connecting homeowners with independent contractors across all 91 Arizona cities and municipalities.
+                </p>
+              </div>
+              <Link
+                href="/hvac/arizona"
+                className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 shrink-0"
+              >
+                <span>View Full Arizona Directory →</span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {ARIZONA_PRESET_CITIES_DATA.map((cityData) => (
+                <div
+                  key={cityData.citySlug}
+                  className="bg-white border border-slate-200 hover:border-orange-300 rounded-2xl p-5 sm:p-6 space-y-4 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-bold text-orange-700 flex items-center gap-1 min-w-0">
+                        <MapPin className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                        <span className="truncate">{cityData.cityName}, AZ</span>
+                      </span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-orange-50 border border-orange-200 text-orange-800 font-medium shrink-0 whitespace-nowrap">
+                        Independent Contractors
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-orange-700 transition-colors">
+                      {cityData.cityName} Local HVAC Hub
+                    </h3>
+
+                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                      {cityData.intro}
+                    </p>
+
+                    <div className="pt-1">
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mb-1">
+                        Sub-Communities:
+                      </span>
+                      <div className="flex flex-wrap gap-1">
+                        {cityData.subAreas.slice(0, 4).map((sub, i) => (
+                          <span
+                            key={i}
+                            className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200"
+                          >
+                            {sub}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-100 space-y-2">
+                    <Link
+                      href={`/hvac/arizona/${cityData.citySlug}`}
+                      className="w-full py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-xs"
+                    >
+                      <span>Explore {cityData.cityName} Hub</span>
+                      <ArrowRight className="w-4 h-4 shrink-0" />
+                    </Link>
+
+                    <div className="grid grid-cols-2 gap-1 text-[11px] text-slate-500 pt-1">
+                      <Link href={`/ac-repair/arizona/${cityData.citySlug}`} className="hover:text-orange-700 transition-colors truncate">
+                        • AC Repair {cityData.cityName}
+                      </Link>
+                      <Link href={`/furnace-repair/arizona/${cityData.citySlug}`} className="hover:text-orange-700 transition-colors truncate">
+                        • Furnace Repair {cityData.cityName}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ALL 91 ARIZONA CITIES DIRECTORY */}
+          <section className="my-10 sm:my-14 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+            <div className="flex items-center gap-2">
+              <Building2 className="w-5 h-5 text-orange-600 shrink-0" />
+              <h2 className="text-xl font-bold text-slate-900">
+                All 91 Arizona Cities & Towns Directory
+              </h2>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              AirHeat Dispatch provides phone connection coverage across all 91 incorporated cities and towns in Arizona. Select any city to connect with independent local HVAC contractors:
+            </p>
+
+            <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 pt-2 max-h-96 overflow-y-auto pr-1">
+              {ARIZONA_ALL_CITIES.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/hvac/arizona/${city.slug}`}
+                  className="px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-medium text-slate-700 hover:bg-orange-50 hover:text-orange-800 hover:border-orange-300 transition-colors truncate"
+                >
+                  {city.name}, AZ
+                </Link>
+              ))}
+            </div>
+          </section>
 
           {/* ALABAMA CITY HUBS */}
           <section className="my-10 sm:my-14 space-y-6 sm:space-y-8">
@@ -181,6 +295,31 @@ export default function ServiceAreasPage() {
             </div>
           </section>
 
+          {/* ALL 463 ALABAMA CITIES QUICK LINK DIRECTORY */}
+          <section className="my-10 sm:my-14 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+            <div className="flex items-center gap-2">
+              <Building2 className="w-5 h-5 text-emerald-600 shrink-0" />
+              <h2 className="text-xl font-bold text-slate-900">
+                All 463 Alabama Cities & Towns Directory
+              </h2>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              AirHeat Dispatch provides phone connection coverage across all 463 incorporated cities and municipalities in Alabama. Select any city to connect with independent local HVAC contractors:
+            </p>
+
+            <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 pt-2 max-h-96 overflow-y-auto pr-1">
+              {ALABAMA_ALL_CITIES.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/hvac/alabama/${city.slug}`}
+                  className="px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 hover:border-emerald-300 transition-colors truncate"
+                >
+                  {city.name}, AL
+                </Link>
+              ))}
+            </div>
+          </section>
+
           {/* TEXAS CITY HUBS */}
           <section className="my-10 sm:my-14 space-y-6 sm:space-y-8">
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-3 sm:gap-4">
@@ -258,31 +397,6 @@ export default function ServiceAreasPage() {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* ALL 463 ALABAMA CITIES QUICK LINK DIRECTORY */}
-          <section className="my-10 sm:my-14 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
-            <div className="flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-emerald-600 shrink-0" />
-              <h2 className="text-xl font-bold text-slate-900">
-                All 463 Alabama Cities & Towns Directory
-              </h2>
-            </div>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              AirHeat Dispatch provides phone connection coverage across all 463 incorporated cities and municipalities in Alabama. Select any city to connect with independent local HVAC contractors:
-            </p>
-
-            <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 pt-2 max-h-96 overflow-y-auto pr-1">
-              {ALABAMA_ALL_CITIES.map((city) => (
-                <Link
-                  key={city.slug}
-                  href={`/hvac/alabama/${city.slug}`}
-                  className="px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 hover:border-emerald-300 transition-colors truncate"
-                >
-                  {city.name}, AL
-                </Link>
               ))}
             </div>
           </section>
