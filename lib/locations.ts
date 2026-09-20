@@ -4,6 +4,7 @@ import { TEXAS_CITIES_DATA, TEXAS_ALL_CITIES } from "@/config/locations/texas";
 import { ALABAMA_PRESET_CITIES_DATA, ALABAMA_ALL_CITIES, getAlabamaLocationData } from "@/config/locations/alabama";
 import { ARIZONA_PRESET_CITIES_DATA, ARIZONA_ALL_CITIES, getArizonaLocationData } from "@/config/locations/arizona";
 import { ARKANSAS_PRESET_CITIES_DATA, ARKANSAS_ALL_CITIES, getArkansasLocationData } from "@/config/locations/arkansas";
+import { ZIP_DATABASE } from "@/config/locations/zip-database";
 
 export function getStateCities(stateSlug: string): LocationData[] {
   const normState = stateSlug.toLowerCase();
@@ -38,6 +39,21 @@ export function getStateCities(stateSlug: string): LocationData[] {
 
 export function getAllCitiesForState(stateSlug: string): { name: string; slug: string }[] {
   const normState = stateSlug.toLowerCase();
+
+  const zipCities: { name: string; slug: string }[] = [];
+  const seenSlugs = new Set<string>();
+
+  for (const item of ZIP_DATABASE) {
+    if (item.stateSlug === normState) {
+      if (!seenSlugs.has(item.citySlug)) {
+        seenSlugs.add(item.citySlug);
+        zipCities.push({ name: item.city, slug: item.citySlug });
+      }
+    }
+  }
+
+  if (zipCities.length > 0) return zipCities;
+
   if (normState === "texas") return TEXAS_ALL_CITIES.map((c) => ({ name: c.name, slug: c.slug }));
   if (normState === "alabama") return ALABAMA_ALL_CITIES.map((c) => ({ name: c.name, slug: c.slug }));
   if (normState === "arizona") return ARIZONA_ALL_CITIES.map((c) => ({ name: c.name, slug: c.slug }));
