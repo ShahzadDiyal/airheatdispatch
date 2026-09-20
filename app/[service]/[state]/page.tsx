@@ -4,9 +4,9 @@ import Link from "next/link";
 import {
   SITE_CONFIG,
   CORE_SERVICES,
+  ALL_STATES_DATA,
   getStateData,
-  TEXAS_CITIES_DATA,
-  ALABAMA_PRESET_CITIES_DATA,
+  getStateCities,
   LocationData,
 } from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
@@ -27,7 +27,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const states = ["texas", "alabama"];
+  const states = Object.keys(ALL_STATES_DATA);
   const params: { service: string; state: string }[] = [];
   for (const s of CORE_SERVICES) {
     for (const state of states) {
@@ -63,10 +63,9 @@ export default async function StateServicePage({ params }: PageProps) {
 
   if (!service || !stateData) notFound();
 
+  const citiesList: LocationData[] = getStateCities(stateSlug);
   const isTexas = stateSlug.toLowerCase() === "texas";
-  const citiesList: LocationData[] = isTexas
-    ? TEXAS_CITIES_DATA
-    : ALABAMA_PRESET_CITIES_DATA;
+  const stateCode = isTexas ? "TX" : stateSlug.toLowerCase() === "alabama" ? "AL" : stateSlug.toUpperCase();
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -188,11 +187,11 @@ export default async function StateServicePage({ params }: PageProps) {
                         <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                         <span className="truncate">{stateData.stateName} Region</span>
                       </span>
-                      <span className="font-bold text-blue-600 shrink-0">{isTexas ? "TX" : "AL"}</span>
+                      <span className="font-bold text-blue-600 shrink-0">{stateCode}</span>
                     </div>
 
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {service.name} in {cityData.cityName}, {isTexas ? "TX" : "AL"}
+                      {service.name} in {cityData.cityName}, {stateCode}
                     </h3>
 
                     <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">

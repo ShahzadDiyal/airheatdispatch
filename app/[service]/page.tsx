@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, TEXAS_CITIES_DATA } from "@/config/site";
+import { SITE_CONFIG, CORE_SERVICES, ALL_STATES_DATA } from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import ZipChecker from "@/components/ZipChecker";
@@ -46,6 +46,8 @@ export default async function ServicePage({ params }: PageProps) {
   const service = CORE_SERVICES.find((s) => s.slug === serviceSlug);
 
   if (!service) notFound();
+
+  const activeStates = Object.values(ALL_STATES_DATA);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -115,11 +117,11 @@ export default async function ServicePage({ params }: PageProps) {
               </p>
 
               <div className="flex flex-wrap gap-2 sm:gap-3 text-xs font-semibold text-slate-700">
-                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white  text-orange-600 shadow-xs">
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white text-orange-600 shadow-xs">
                   <ShieldAlert className="w-4 h-4 text-orange-500 shrink-0" />
                   Independent Local Contractors
                 </span>
-                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white  text-slate-700 shadow-xs">
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white text-slate-700 shadow-xs">
                   <Clock className="w-4 h-4 text-blue-600 shrink-0" />
                   24/7 Hotline Connection
                 </span>
@@ -140,7 +142,7 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
 
             {/* Service Summary Highlight Box */}
-            <div className="lg:col-span-5 bg-white  rounded-2xl p-5 sm:p-8 space-y-6 shadow-sm">
+            <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 space-y-6 shadow-sm">
               <h2 className="text-lg sm:text-xl font-bold text-slate-900 border-b border-slate-100 pb-4">
                 Service Overview
               </h2>
@@ -152,12 +154,11 @@ export default async function ServicePage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <div className="p-4 rounded-xl bg-slate-50  text-xs text-slate-600">
-                <span className="font-bold text-slate-900 block mb-1">Texas Local Hubs:</span>
-                Are you located in Texas? View local coverage for{" "}
-                <Link href={`/${service.slug}/texas`} className="text-blue-600 font-bold underline hover:text-blue-700">
-                  {service.name} in Texas Cities
-                </Link>.
+              <div className="p-4 rounded-xl bg-slate-50 text-xs text-slate-600 space-y-1">
+                <span className="font-bold text-slate-900 block">Statewide Service Directories:</span>
+                <div>
+                  Select your state to explore localized city hubs for {service.name.toLowerCase()}.
+                </div>
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@ export default async function ServicePage({ params }: PageProps) {
               {service.processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-white  rounded-2xl p-5 sm:p-6 space-y-3 relative shadow-sm hover:shadow-xs transition-shadow"
+                  className="bg-white rounded-2xl p-5 sm:p-6 space-y-3 relative shadow-sm hover:shadow-xs transition-shadow"
                 >
                   <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center text-xs font-black uppercase tracking-wider shrink-0">
                     0{idx + 1}
@@ -196,28 +197,37 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
           </section>
 
-          {/* Texas Hub Link Card */}
-          <section className="my-8 sm:my-12 p-5 sm:p-6 rounded-2xl bg-white  shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-start sm:items-center gap-3">
-              <div className="p-3 rounded-xl bg-blue-50 text-blue-600 shrink-0">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
-              </div>
-              <div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900">
-                  Looking for {service.name} in Texas?
-                </h3>
-                <p className="text-xs text-slate-500">
-                  Explore coverage across 10 major Texas cities including Houston, Dallas, San Antonio, and Austin.
-                </p>
-              </div>
+          {/* Dynamic State Hub Link Cards */}
+          <section className="my-8 sm:my-12 p-5 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-6">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-5 h-5 text-blue-600 shrink-0" />
+              <h2 className="text-xl font-bold text-slate-900">
+                State Directories for {service.name}
+              </h2>
             </div>
-            <Link
-              href={`/${service.slug}/texas`}
-              className="px-4 sm:px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center gap-2 shrink-0 shadow-xs transition-colors whitespace-nowrap"
-            >
-              <span>Texas {service.name} Hub</span>
-              <ArrowRight className="w-4 h-4 shrink-0" />
-            </Link>
+            <p className="text-xs sm:text-sm text-slate-600">
+              Select your state below to access localized climate information, common regional HVAC issues, and city directories:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {activeStates.map((st) => (
+                <Link
+                  key={st.stateSlug}
+                  href={`/${service.slug}/${st.stateSlug}`}
+                  className="p-4 rounded-2xl border border-slate-200 hover:border-blue-400 bg-slate-50 hover:bg-white transition-all flex items-center justify-between group shadow-xs"
+                >
+                  <div className="space-y-1">
+                    <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {st.stateName} {service.name} Hub
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      Explore major {st.stateName} metros & city coverage
+                    </div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors shrink-0 ml-2" />
+                </Link>
+              ))}
+            </div>
           </section>
 
           {/* Zip Coverage Checker */}

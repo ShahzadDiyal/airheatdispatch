@@ -2,18 +2,20 @@ import {
   SITE_CONFIG,
   CORE_SERVICES,
   GENERAL_FAQS,
-  TEXAS_STATE_DATA,
-  TEXAS_CITIES_DATA,
-  ALABAMA_STATE_DATA,
-  ALABAMA_PRESET_CITIES_DATA,
+  ALL_STATES_DATA,
+  getAllPrebuiltCities,
 } from "@/config/site";
 
 export async function GET() {
+  const activeStates = Object.values(ALL_STATES_DATA);
+  const stateNamesStr = activeStates.map((s) => s.stateName).join(" & ");
+  const prebuiltCities = getAllPrebuiltCities();
+
   const content = `# ${SITE_CONFIG.name}
 
 > ${SITE_CONFIG.tagline}
 > Service Category: Free Homeowner HVAC Connection Service
-> Featured State Regions: ${TEXAS_STATE_DATA.stateName} & ${ALABAMA_STATE_DATA.stateName} (Covering 10 Texas Metros and All 463 Alabama Cities)
+> Featured State Regions: ${stateNamesStr} (Dynamic local city hubs across all registered U.S. service regions)
 > 24/7 Hotline Phone: ${SITE_CONFIG.phone}
 > Official Website: [AirHeat Dispatch](${SITE_CONFIG.domain})
 
@@ -28,12 +30,12 @@ ${CORE_SERVICES.map(
 - **Direct Answer**: ${s.directAnswer}
 - **Key Features**: ${s.features.join("; ")}
 - **Clean Service Link**: [Read ${s.name} Guide](${SITE_CONFIG.domain}/${s.slug})
-- **Texas Statewide Link**: [${s.name} in Texas](${SITE_CONFIG.domain}/${s.slug}/texas)
-- **Alabama Statewide Link**: [${s.name} in Alabama](${SITE_CONFIG.domain}/${s.slug}/alabama)
-- **Birmingham AL Link**: [${s.name} in Birmingham AL](${SITE_CONFIG.domain}/${s.slug}/alabama/birmingham)
-- **Huntsville AL Link**: [${s.name} in Huntsville AL](${SITE_CONFIG.domain}/${s.slug}/alabama/huntsville)
-- **Montgomery AL Link**: [${s.name} in Montgomery AL](${SITE_CONFIG.domain}/${s.slug}/alabama/montgomery)
-- **Mobile AL Link**: [${s.name} in Mobile AL](${SITE_CONFIG.domain}/${s.slug}/alabama/mobile)
+${activeStates
+  .map(
+    (st) =>
+      `- **${st.stateName} Statewide Link**: [${s.name} in ${st.stateName}](${SITE_CONFIG.domain}/${s.slug}/${st.stateSlug})`
+  )
+  .join("\n")}
 `
 ).join("\n")}
 
@@ -42,14 +44,19 @@ ${CORE_SERVICES.map(
 - [All HVAC Services Directory](${SITE_CONFIG.domain}/services)
 - [How It Works](${SITE_CONFIG.domain}/how-it-works)
 - [Service Areas Directory](${SITE_CONFIG.domain}/service-areas)
-- [Texas Statewide HVAC Hub](${SITE_CONFIG.domain}/hvac/texas)
-- [Alabama Statewide HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama)
-- [Birmingham AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/birmingham)
-- [Huntsville AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/huntsville)
-- [Montgomery AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/montgomery)
-- [Mobile AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/mobile)
-- [Austin TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/austin)
-- [Houston TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/houston)
+${activeStates
+  .map(
+    (st) =>
+      `- [${st.stateName} Statewide HVAC Hub](${SITE_CONFIG.domain}/hvac/${st.stateSlug})`
+  )
+  .join("\n")}
+${prebuiltCities
+  .slice(0, 15)
+  .map(
+    (c) =>
+      `- [${c.cityName} ${c.stateSlug === "alabama" ? "AL" : "TX"} Local HVAC Hub](${SITE_CONFIG.domain}/hvac/${c.stateSlug}/${c.citySlug})`
+  )
+  .join("\n")}
 - [HVAC FAQs & Knowledge Base](${SITE_CONFIG.domain}/faqs)
 - [Why Use Our Service](${SITE_CONFIG.domain}/why-us)
 - [About AirHeat Dispatch](${SITE_CONFIG.domain}/about)

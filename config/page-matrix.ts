@@ -1,24 +1,26 @@
 import { CORE_SERVICES } from "./services";
-import { TEXAS_CITIES_DATA } from "../content/texas";
-import { ALABAMA_PRESET_CITIES_DATA, ALABAMA_ALL_CITIES } from "../content/alabama";
+import { ALL_STATES_DATA, getStateCities, getAllPrebuiltCities } from "./locations";
+import { ALABAMA_ALL_CITIES } from "../content/alabama";
+
+export { getAllPrebuiltCities };
 
 export function getPrebuiltLocationParams() {
   const params: { service: string; state: string; city: string }[] = [];
-  const prebuiltLocations = [...TEXAS_CITIES_DATA, ...ALABAMA_PRESET_CITIES_DATA];
+  const activeStates = Object.keys(ALL_STATES_DATA);
+
   for (const service of CORE_SERVICES) {
-    for (const location of prebuiltLocations) {
-      params.push({
-        service: service.slug,
-        state: location.stateSlug,
-        city: location.citySlug,
-      });
+    for (const stateSlug of activeStates) {
+      const cities = getStateCities(stateSlug);
+      for (const cityData of cities) {
+        params.push({
+          service: service.slug,
+          state: stateSlug,
+          city: cityData.citySlug,
+        });
+      }
     }
   }
   return params;
-}
-
-export function getAllPrebuiltCities() {
-  return [...TEXAS_CITIES_DATA, ...ALABAMA_PRESET_CITIES_DATA];
 }
 
 export function getAllAlabamaCities() {

@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, TEXAS_CITIES_DATA } from "@/config/site";
+import { SITE_CONFIG, CORE_SERVICES, ALL_STATES_DATA } from "@/config/site";
 import { Phone, Mail, Clock, Snowflake, Flame, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
+  const activeStates = Object.values(ALL_STATES_DATA);
+
   return (
     <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 pt-12 pb-10 sm:pt-16 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,24 +84,18 @@ export default function Footer() {
               State Service Hubs
             </h3>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <Link
-                  href="/hvac/texas"
-                  className="text-blue-400 font-bold hover:underline block"
-                >
-                  Texas Hub (10 Metros)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hvac/alabama"
-                  className="text-emerald-400 font-bold hover:underline block"
-                >
-                  Alabama Hub (463 Cities)
-                </Link>
-              </li>
+              {activeStates.map((st) => (
+                <li key={st.stateSlug}>
+                  <Link
+                    href={`/hvac/${st.stateSlug}`}
+                    className="text-blue-400 font-bold hover:underline block"
+                  >
+                    {st.stateName} Hub ({st.majorCities.length} Cities)
+                  </Link>
+                </li>
+              ))}
               <li className="pt-1 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
-                Top Cities:
+                Top Metros:
               </li>
               <li>
                 <Link

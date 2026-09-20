@@ -2,26 +2,27 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
   SITE_CONFIG,
-  TEXAS_STATE_DATA,
+  ALL_STATES_DATA,
   TEXAS_CITIES_DATA,
-  ALABAMA_STATE_DATA,
   ALABAMA_PRESET_CITIES_DATA,
   ALABAMA_ALL_CITIES,
 } from "@/config/site";
 import ZipChecker from "@/components/ZipChecker";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
-import { MapPin, ArrowRight, Phone, ShieldAlert, Building2 } from "lucide-react";
+import { MapPin, ArrowRight, Phone, Building2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Texas & Alabama HVAC Service Areas Directory | AirHeat Dispatch",
+  title: "HVAC Service Areas Directory | AirHeat Dispatch",
   description:
-    "Explore AirHeat Dispatch service areas directory covering Texas and all 463 cities in Alabama. Connect with independent local HVAC contractors in Houston, Dallas, Austin, Birmingham, Huntsville, Montgomery, Mobile, and nationwide.",
+    "Explore AirHeat Dispatch service areas directory covering Texas, Alabama (all 463 cities), and U.S. service regions. Connect with independent local HVAC contractors.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/service-areas`,
   },
 };
 
 export default function ServiceAreasPage() {
+  const activeStates = Object.values(ALL_STATES_DATA);
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -49,66 +50,48 @@ export default function ServiceAreasPage() {
           <div className="max-w-3xl mb-8 sm:mb-10">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">
               <MapPin className="w-3.5 h-3.5 shrink-0" />
-              <span>Texas, Alabama & U.S. Coverage Directory</span>
+              <span>Statewide & Regional Coverage Directory</span>
             </div>
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
               HVAC Service Area Directory
             </h1>
             <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-              AirHeat Dispatch helps homeowners connect with independent local HVAC contractors across all Texas cities, all 463 Alabama cities and municipalities, and nationwide U.S. service regions.
+              AirHeat Dispatch helps homeowners connect with independent local HVAC contractors across all active state directories, major metropolitan areas, and local municipalities nationwide.
             </p>
           </div>
 
           <DirectAnswerCard
             questionTitle="Which states and cities are covered by AirHeat Dispatch?"
-            directAnswer="We cover all major metropolitan regions and local municipalities in Texas (Houston, Dallas, San Antonio, Austin, Fort Worth, El Paso, etc.) and Alabama (Birmingham, Huntsville, Montgomery, Mobile, Tuscaloosa, Hoover, Auburn, Decatur, Dothan, and all 463 Alabama cities), as well as nationwide call matching."
+            directAnswer={`We cover all major metropolitan regions and local municipalities in ${activeStates.map((s) => s.stateName).join(", ")}, as well as nationwide call matching across U.S. zip codes.`}
           />
 
-          {/* STATEWIDE HUBS SECTION */}
+          {/* DYNAMIC STATEWIDE HUBS SECTION */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 sm:my-12">
-            {/* Texas State Hub Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
-              <div className="space-y-2">
-                <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider inline-block">
-                  Texas Statewide Hub
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                  Texas HVAC Connection Hub
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {TEXAS_STATE_DATA.intro}
-                </p>
-              </div>
-              <Link
-                href="/hvac/texas"
-                className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-sm transition-colors whitespace-nowrap"
+            {activeStates.map((st) => (
+              <div
+                key={st.stateSlug}
+                className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between"
               >
-                <span>Visit Texas Hub (10 Metros)</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
-              </Link>
-            </div>
-
-            {/* Alabama State Hub Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
-              <div className="space-y-2">
-                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold uppercase tracking-wider inline-block">
-                  Alabama Statewide Hub (463 Cities)
-                </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                  Alabama HVAC Connection Hub
-                </h2>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {ALABAMA_STATE_DATA.intro}
-                </p>
+                <div className="space-y-2">
+                  <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold uppercase tracking-wider inline-block">
+                    {st.stateName} Statewide Hub
+                  </span>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                    {st.stateName} HVAC Connection Hub
+                  </h2>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {st.intro}
+                  </p>
+                </div>
+                <Link
+                  href={`/hvac/${st.stateSlug}`}
+                  className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-sm transition-colors whitespace-nowrap"
+                >
+                  <span>Visit {st.stateName} Hub</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
+                </Link>
               </div>
-              <Link
-                href="/hvac/alabama"
-                className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-sm transition-colors whitespace-nowrap"
-              >
-                <span>Visit Alabama Hub (463 Cities)</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
-              </Link>
-            </div>
+            ))}
           </div>
 
           {/* ALABAMA CITY HUBS */}
@@ -318,7 +301,7 @@ export default function ServiceAreasPage() {
               Don&apos;t See Your City Listed?
             </h2>
             <p className="text-slate-300 text-sm max-w-lg mx-auto leading-relaxed">
-              Our 24/7 hotline connects callers with independent local HVAC contractors across all Texas and Alabama zip codes. Call now to check local availability.
+              Our 24/7 hotline connects callers with independent local HVAC contractors across all U.S. zip codes. Call now to check local availability.
             </p>
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}

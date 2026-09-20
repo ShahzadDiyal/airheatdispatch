@@ -1,3 +1,27 @@
+import { ALL_STATES_DATA, getAllPrebuiltCities } from "./locations";
+
+export function getDynamicServiceAreas(): string[] {
+  const areas: string[] = [];
+
+  // Add state-level service coverage
+  if (ALL_STATES_DATA) {
+    Object.values(ALL_STATES_DATA).forEach((st) => {
+      areas.push(`${st.stateName} Statewide`);
+    });
+  }
+
+  // Add major prebuilt cities
+  const prebuilt = getAllPrebuiltCities();
+  if (prebuilt && prebuilt.length > 0) {
+    prebuilt.forEach((c) => {
+      const stateCode = c.stateSlug === "alabama" ? "AL" : c.stateSlug === "texas" ? "TX" : c.stateSlug.toUpperCase();
+      areas.push(`${c.cityName}, ${stateCode}`);
+    });
+  }
+
+  return areas;
+}
+
 export const SITE_CONFIG = {
   name: "AirHeat Dispatch",
   tagline: "Free Homeowner Connection Service for Independent HVAC Contractors",
@@ -9,16 +33,9 @@ export const SITE_CONFIG = {
   primaryKeyword: "Connect With Local HVAC Providers",
   disclaimer:
     "This site is a free service to assist homeowners in connecting with local service contractors. All contractors are independent and this site does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.",
-  serviceAreas: [
-    "Austin, TX",
-    "Houston, TX",
-    "Dallas, TX",
-    "San Antonio, TX",
-    "Birmingham, AL",
-    "Huntsville, AL",
-    "Montgomery, AL",
-    "Mobile, AL",
-  ],
+  get serviceAreas() {
+    return getDynamicServiceAreas();
+  },
 };
 
 export const GENERAL_FAQS = [

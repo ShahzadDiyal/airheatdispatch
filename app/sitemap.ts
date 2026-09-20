@@ -2,10 +2,8 @@ import { MetadataRoute } from "next";
 import {
   SITE_CONFIG,
   CORE_SERVICES,
-  TEXAS_STATE_DATA,
-  TEXAS_CITIES_DATA,
-  ALABAMA_STATE_DATA,
-  ALABAMA_PRESET_CITIES_DATA,
+  ALL_STATES_DATA,
+  getAllPrebuiltCities,
   ALABAMA_ALL_CITIES,
 } from "@/config/site";
 
@@ -82,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const states = [TEXAS_STATE_DATA.stateSlug, ALABAMA_STATE_DATA.stateSlug];
+  const states = Object.keys(ALL_STATES_DATA);
   const stateRoutes: MetadataRoute.Sitemap = [];
   for (const service of CORE_SERVICES) {
     for (const state of states) {
@@ -95,7 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const allCityLocations = [...TEXAS_CITIES_DATA, ...ALABAMA_PRESET_CITIES_DATA];
+  const allCityLocations = getAllPrebuiltCities();
   const cityRoutes: MetadataRoute.Sitemap = [];
   for (const service of CORE_SERVICES) {
     for (const cityData of allCityLocations) {
