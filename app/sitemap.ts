@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
+import { SITE_CONFIG, CORE_SERVICES, TEXAS_STATE_DATA, TEXAS_CITIES_DATA } from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.domain;
@@ -18,10 +18,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/how-it-works`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/service-areas`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/faqs`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/why-us`,
@@ -56,11 +68,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = CORE_SERVICES.map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
+    url: `${baseUrl}/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
+
+  const stateRoutes: MetadataRoute.Sitemap = CORE_SERVICES.map((service) => ({
+    url: `${baseUrl}/${service.slug}/${TEXAS_STATE_DATA.stateSlug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.85,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const cityRoutes: MetadataRoute.Sitemap = [];
+  for (const service of CORE_SERVICES) {
+    for (const cityData of TEXAS_CITIES_DATA) {
+      cityRoutes.push({
+        url: `${baseUrl}/${service.slug}/${cityData.stateSlug}/${cityData.citySlug}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.8,
+      });
+    }
+  }
+
+  return [...staticRoutes, ...serviceRoutes, ...stateRoutes, ...cityRoutes];
 }

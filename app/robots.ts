@@ -8,7 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
       },
-      // Explicit permissions for AI & LLM Crawlers (AEO / GEO Optimization)
       {
         userAgent: [
           "GPTBot",

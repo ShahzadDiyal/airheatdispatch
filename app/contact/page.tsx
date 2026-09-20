@@ -3,12 +3,12 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/config/site";
 import ZipChecker from "@/components/ZipChecker";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, Clock, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Emergency Dispatch Hotline | 24/7 HVAC Service",
+  title: "Contact & Phone Connection Hotline | AirHeat Dispatch",
   description:
-    "Need immediate HVAC Service and Repair? Call our 24/7 emergency dispatch hotline at (555) 839-4328 or schedule your service appointment online.",
+    "Need assistance connecting with a local HVAC contractor? Call our 24/7 hotline at (555) 839-4328 to connect with independent service providers.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
@@ -41,94 +41,94 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
+      <div className="bg-slate-50 min-h-screen py-12 lg:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-xs text-slate-400 mb-8" aria-label="Breadcrumb">
-            <Link href="/" rel="dofollow" className="hover:text-amber-400">
+          <nav className="flex items-center gap-2 text-xs text-slate-500 mb-8" aria-label="Breadcrumb">
+            <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">
               Home
             </Link>
             <span>/</span>
-            <span className="text-white font-semibold">Contact Us</span>
+            <span className="text-slate-900 font-semibold">Contact Us</span>
           </nav>
 
-          <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="max-w-3xl mb-10">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">
               <Phone className="w-3.5 h-3.5" />
-              <span>24/7 Direct Contact</span>
+              <span>24/7 Homeowner Hotline</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-              Contact AirHeat Dispatch Hotline
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
+              Contact AirHeat Dispatch
             </h1>
-            <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Have an HVAC emergency or need a flat-rate repair estimate? Reach out to our 24/7 dispatch team anytime.
+            <p className="text-slate-600 text-base mt-3 leading-relaxed">
+              Have an HVAC issue or need help connecting with a local heating or cooling provider? Reach out to our 24/7 hotline team.
             </p>
           </div>
 
           <DirectAnswerCard
-            questionTitle="How Do I Contact AirHeat Dispatch for Immediate HVAC Repair?"
-            directAnswer="You can reach our 24/7 emergency dispatch line directly at (555) 839-4328. Technicians are on call 24/7 with average arrival times under 60 minutes throughout Austin and surrounding communities."
+            questionTitle="How Do I Connect With a Local HVAC Provider?"
+            directAnswer="Call our 24/7 connection hotline directly at (555) 839-4328. Your call will be routed to an independent local HVAC contractor servicing your area."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-12">
-            <div className="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
-              <h2 className="text-2xl font-bold text-white">Direct Dispatch Details</h2>
+            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+              <h2 className="text-2xl font-bold text-slate-900">Connection Details</h2>
 
               <div className="space-y-4">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
-                  aria-label={`Call emergency dispatch hotline at ${SITE_CONFIG.phone}`}
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-amber-400/20 border border-amber-400/40 text-amber-300 font-bold hover:bg-amber-400/30 transition-colors"
+                  aria-label={`Call connection hotline at ${SITE_CONFIG.phone}`}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-600 font-bold hover:bg-orange-500/15 transition-colors"
                 >
-                  <div className="p-3 rounded-xl bg-amber-400 text-slate-950">
-                    <Phone className="w-5 h-5 fill-slate-950" />
+                  <div className="p-3 rounded-xl bg-orange-500 text-white shadow-xs">
+                    <Phone className="w-5 h-5 fill-white" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-300 font-medium">24/7 Emergency Hotline</div>
-                    <div className="text-base text-amber-400 font-black">{SITE_CONFIG.phone}</div>
+                    <div className="text-xs text-slate-500 font-medium">24/7 Phone Hotline</div>
+                    <div className="text-base text-orange-600 font-bold">{SITE_CONFIG.phone}</div>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-slate-300">
-                  <div className="p-3 rounded-xl bg-slate-800 text-slate-400">
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                  <div className="p-3 rounded-xl bg-blue-50 text-blue-600">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400 font-medium">Support Email</div>
-                    <div className="text-sm font-semibold">{SITE_CONFIG.email}</div>
+                    <div className="text-xs text-slate-500 font-medium">Support Email</div>
+                    <div className="text-sm font-bold text-slate-900">{SITE_CONFIG.email}</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-slate-300">
-                  <div className="p-3 rounded-xl bg-slate-800 text-slate-400 mt-0.5">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-slate-400 font-medium">Dispatch Office</div>
-                    <div className="text-sm font-semibold">
-                      {SITE_CONFIG.address.street}, {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800 text-slate-300">
-                  <div className="p-3 rounded-xl bg-emerald-500/15 text-emerald-400">
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                  <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400 font-medium">Business Hours</div>
-                    <div className="text-sm font-semibold text-emerald-400">24 Hours / 7 Days / 365 Days</div>
+                    <div className="text-xs text-slate-500 font-medium">Hotline Operating Hours</div>
+                    <div className="text-sm font-bold text-emerald-600">24 Hours / 7 Days / 365 Days</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                  <div className="p-3 rounded-xl bg-slate-100 text-slate-600 mt-0.5">
+                    <ShieldAlert className="w-5 h-5 text-orange-500" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-500 font-medium">Independent Providers</div>
+                    <div className="text-xs text-slate-600 leading-relaxed">
+                      Callers are connected directly with independent local service contractors.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6">
-              <h2 className="text-2xl font-bold text-white">Send Direct Message to Dispatch Desk</h2>
+            <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+              <h2 className="text-2xl font-bold text-slate-900">Request Connection Assistance</h2>
               <form className="space-y-4" action={`tel:${SITE_CONFIG.phoneRaw}`}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label htmlFor="contact-form-name" className="text-xs font-bold text-slate-200 uppercase tracking-wider block">
+                  <div className="space-y-1.5">
+                    <label htmlFor="contact-form-name" className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
                       Your Name *
                     </label>
                     <input
@@ -137,11 +137,11 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Jane Doe"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>
-                  <div className="space-y-1">
-                    <label htmlFor="contact-form-phone" className="text-xs font-bold text-slate-200 uppercase tracking-wider block">
+                  <div className="space-y-1.5">
+                    <label htmlFor="contact-form-phone" className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
                       Phone Number *
                     </label>
                     <input
@@ -150,43 +150,44 @@ export default function ContactPage() {
                       type="tel"
                       required
                       placeholder="(555) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <label htmlFor="contact-form-address" className="text-xs font-bold text-slate-200 uppercase tracking-wider block">
-                    Service Street Address *
+                <div className="space-y-1.5">
+                  <label htmlFor="contact-form-address" className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                    City / Service ZIP Code *
                   </label>
                   <input
                     id="contact-form-address"
-                    aria-label="Service Street Address"
+                    aria-label="City or Service ZIP Code"
                     type="text"
                     required
-                    placeholder="100 Climate Way, Austin, TX"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
+                    placeholder="Austin, TX 78701"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                   />
                 </div>
 
-                <div className="space-y-1">
-                  <label htmlFor="contact-form-notes" className="text-xs font-bold text-slate-200 uppercase tracking-wider block">
-                    HVAC Issue Details
+                <div className="space-y-1.5">
+                  <label htmlFor="contact-form-notes" className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                    HVAC Issue Details (Optional)
                   </label>
                   <textarea
                     id="contact-form-notes"
                     aria-label="HVAC Issue Details"
                     rows={3}
-                    placeholder="Please describe your system issue..."
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-amber-400 placeholder:text-slate-500 resize-none"
+                    placeholder="Describe your heating or air conditioning issue..."
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 resize-none transition-colors"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm uppercase tracking-wider shadow-lg transition-all cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-wider shadow-md transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
-                  Send Dispatch Request ({SITE_CONFIG.phone}) →
+                  <Phone className="w-4 h-4 fill-white" />
+                  <span>Call {SITE_CONFIG.phone} to Connect Now →</span>
                 </button>
               </form>
             </div>

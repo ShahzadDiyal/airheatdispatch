@@ -1,31 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, ArrowRight, Sparkles, Check } from "lucide-react";
+import { Wrench, Phone, Check } from "lucide-react";
 import BookingModal from "./BookingModal";
 import { SITE_CONFIG } from "@/config/site";
 
 export default function ServiceEstimator() {
   const [systemType, setSystemType] = useState("central-ac");
   const [issueType, setIssueType] = useState("not-cooling");
-  const [homeSize, setHomeSize] = useState("1500-2500");
   const [bookingOpen, setBookingOpen] = useState(false);
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden text-slate-100">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-
+    <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden text-slate-900">
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
-          <Calculator className="w-3.5 h-3.5" />
-          <span>Transparent Service Request Calculator</span>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
+          <Wrench className="w-3.5 h-3.5" />
+          <span>HVAC Connection Assistant</span>
         </div>
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Instant HVAC Service Quote Request
+        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          Find HVAC Help in Your Area
         </h3>
-        <p className="text-slate-300 text-sm mt-1">
-          Select your system details to request an upfront flat-rate price quote
-          before scheduling.
+        <p className="text-slate-600 text-sm mt-1">
+          Select your equipment and current system issue to connect with an independent local HVAC contractor.
         </p>
       </div>
 
@@ -34,10 +30,10 @@ export default function ServiceEstimator() {
         <div className="lg:col-span-2 space-y-5">
           {/* System Type */}
           <fieldset>
-            <legend className="text-xs font-bold text-slate-200 uppercase tracking-wider block mb-2">
+            <legend className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
               1. Select HVAC System Type
             </legend>
-            <div className="grid grid-cols-3 gap-1 md:gap-2">
+            <div className="grid grid-cols-3 gap-2">
               {[
                 { id: "central-ac", label: "Central AC" },
                 { id: "heat-pump", label: "Heat Pump" },
@@ -49,8 +45,8 @@ export default function ServiceEstimator() {
                   onClick={() => setSystemType(item.id)}
                   className={`py-3 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
                     systemType === item.id
-                      ? "bg-sky-500/20 border-sky-400 text-sky-300 shadow-md"
-                      : "bg-slate-950 border-slate-800 text-slate-300 hover:border-slate-700"
+                      ? "bg-blue-50 border-blue-500 text-blue-700 shadow-xs"
+                      : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                   }`}
                 >
                   {item.label}
@@ -61,14 +57,14 @@ export default function ServiceEstimator() {
 
           {/* Issue Type */}
           <fieldset>
-            <legend className="text-xs font-bold text-slate-200 uppercase tracking-wider block mb-2">
-              2. What is the Primary Issue?
+            <legend className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
+              2. What is the System Issue?
             </legend>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {[
                 { id: "not-cooling", label: "Blowing Warm Air" },
-                { id: "full-outage", label: "Complete System Failure" },
-                { id: "strange-noise", label: "Loud Noise / Buzzing" },
+                { id: "full-outage", label: "Complete Outage" },
+                { id: "strange-noise", label: "Unusual Noises" },
                 { id: "leak", label: "Water Leak / Frozen Coil" },
                 { id: "maintenance", label: "Seasonal Tune-Up" },
               ].map((item) => (
@@ -78,35 +74,8 @@ export default function ServiceEstimator() {
                   onClick={() => setIssueType(item.id)}
                   className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all text-left cursor-pointer ${
                     issueType === item.id
-                      ? "bg-amber-400/20 border-amber-400 text-amber-300 shadow-md"
-                      : "bg-slate-950 border-slate-800 text-slate-300 hover:border-slate-700"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </fieldset>
-
-          {/* Home Size */}
-          <fieldset className="hidden md:block">
-            <legend className="text-xs font-bold text-slate-200 uppercase tracking-wider block mb-2">
-              3. Home Size (Square Feet)
-            </legend>
-            <div className="grid grid-cols-3 gap-2">
-              {[
-                { id: "under-1500", label: "< 1,500 sq ft" },
-                { id: "1500-2500", label: "1,500 - 2,500 sq ft" },
-                { id: "2500-4000", label: "2,500+ sq ft" },
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setHomeSize(item.id)}
-                  className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
-                    homeSize === item.id
-                      ? "bg-sky-500/20 border-sky-400 text-sky-300"
-                      : "bg-slate-950 border-slate-800 text-slate-300 hover:border-slate-700"
+                      ? "bg-orange-50 border-orange-500 text-orange-700 shadow-xs"
+                      : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                   }`}
                 >
                   {item.label}
@@ -116,45 +85,41 @@ export default function ServiceEstimator() {
           </fieldset>
         </div>
 
-        {/* Quote Request Output Box */}
-        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 md:p-6 flex flex-col justify-between space-y-6">
+        {/* Action Call Box */}
+        <div className="bg-slate-900 border border-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between space-y-6 shadow-md">
           <div>
-            <div className="flex items-center justify-between text-xs text-slate-300 mb-2">
-              <span>Upfront Flat-Rate Estimate</span>
-              <Sparkles className="w-4 h-4 text-amber-400" />
+            <div className="text-xs text-orange-400 font-bold mb-1">Direct Phone Match</div>
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              Connect With a Provider
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Request Free Quote
-            </div>
-            <p className="text-xs text-slate-300 mt-2">
-              Includes full technician diagnostic inspection. Diagnostic fee
-              waived 100% upon repair approval.
+            <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+              Speak directly with an independent local HVAC contractor who services your zip code.
             </p>
           </div>
 
-          <div className="space-y-2 text-xs text-slate-200">
+          <div className="space-y-2 text-xs text-slate-300">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Upfront flat-rate pricing guarantee</span>
+              <span>Independent local service contractors</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>No overtime fees for evenings or weekends</span>
+              <span>24/7 phone connection hotline</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>1-Year parts & labor guarantee</span>
+              <span>Free connection service for homeowners</span>
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setBookingOpen(true)}
-            className="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm flex items-center justify-center gap-2 shadow-lg transition-all hover:scale-[1.02] cursor-pointer"
+          <a
+            href={`tel:${SITE_CONFIG.phoneRaw}`}
+            rel="dofollow"
+            className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-orange-500/30 transition-all cursor-pointer"
           >
-            <span>Request Free Quote</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+            <Phone className="w-4 h-4 fill-white" />
+            <span>Call {SITE_CONFIG.phone}</span>
+          </a>
         </div>
       </div>
 

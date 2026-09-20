@@ -1,38 +1,38 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
-import { Phone, Calendar } from "lucide-react";
+import { Phone } from "lucide-react";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
   title: {
-    default: "HVAC Service and Repair | 24/7 Emergency AC & Heating Experts",
+    default: "Connect With Local HVAC Service Providers | AirHeat Dispatch",
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
-    "Fast, reliable HVAC Service and Repair by state-licensed technicians. 24/7 emergency air conditioning repair, furnace maintenance, and flat-rate pricing. Call (555) 839-4328.",
+    "Free homeowner connection service to find independent local HVAC contractors for AC repair, furnace repair, heating service, and HVAC maintenance. Call (555) 839-4328.",
   keywords: [
-    "HVAC Service and Repair",
-    "Emergency AC Repair",
-    "Furnace Repair Near Me",
-    "Heating System Maintenance",
-    "HVAC Contractor",
-    "Seasonal HVAC Tune-Up",
-    "24/7 Air Conditioning Repair",
-    "Indoor Air Quality",
+    "Connect With Local HVAC Provider",
+    "Find HVAC Repair Near Me",
+    "Independent HVAC Contractors",
+    "Air Conditioning Repair Connection",
+    "Furnace Repair Service",
+    "Heating Service Providers",
+    "HVAC Maintenance Help",
   ],
-  authors: [{ name: SITE_CONFIG.legalName }],
-  creator: SITE_CONFIG.legalName,
-  publisher: SITE_CONFIG.legalName,
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
   robots: {
     index: true,
     follow: true,
@@ -48,24 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_CONFIG.domain,
-    title: "HVAC Service and Repair | 24/7 Emergency AC & Heating Experts",
+    title: "Connect With Local HVAC Service Providers | AirHeat Dispatch",
     description:
-      "Fast, reliable HVAC Service and Repair by state-licensed technicians. 24/7 emergency air conditioning repair, furnace maintenance, and flat-rate pricing.",
+      "Free homeowner connection service to find independent local HVAC contractors for AC repair, furnace repair, heating service, and HVAC maintenance.",
     siteName: SITE_CONFIG.name,
     images: [
       {
         url: `${SITE_CONFIG.domain}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "AirHeat Dispatch - HVAC Service and Repair Specialists",
+        alt: "AirHeat Dispatch - Connect With Independent HVAC Contractors",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HVAC Service and Repair | 24/7 Emergency AC & Heating",
+    title: "Connect With Local HVAC Service Providers | AirHeat Dispatch",
     description:
-      "Fast, reliable HVAC Service and Repair by state-licensed technicians. 24/7 emergency air conditioning repair.",
+      "Free homeowner connection service to find independent local HVAC contractors for AC repair, furnace repair, and heating service.",
     images: [`${SITE_CONFIG.domain}/og-image.jpg`],
   },
   alternates: {
@@ -78,116 +78,74 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured JSON-LD Schema for LocalBusiness / HVACBusiness
-  const hvacBusinessSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "@id": `${SITE_CONFIG.domain}/#hvacbusiness`,
-    name: SITE_CONFIG.legalName,
-    alternateName: SITE_CONFIG.name,
+    "@type": "Organization",
+    "@id": `${SITE_CONFIG.domain}/#organization`,
+    name: SITE_CONFIG.name,
     url: SITE_CONFIG.domain,
     telephone: SITE_CONFIG.phone,
     email: SITE_CONFIG.email,
-    priceRange: SITE_CONFIG.priceRange,
-    image: `${SITE_CONFIG.domain}/og-image.jpg`,
     description:
-      "Licensed and certified HVAC contractor providing 24/7 emergency air conditioning repair, heating and furnace diagnostics, seasonal maintenance, and indoor air quality services.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE_CONFIG.address.street,
-      addressLocality: SITE_CONFIG.address.city,
-      addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.zip,
-      addressCountry: SITE_CONFIG.address.country,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE_CONFIG.geo.latitude,
-      longitude: SITE_CONFIG.geo.longitude,
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "00:00",
-        closes: "23:59",
-      },
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_CONFIG.rating.ratingValue,
-      reviewCount: SITE_CONFIG.rating.reviewCount,
-      bestRating: "5",
-      worstRating: "1",
-    },
+      "Free service to assist homeowners in connecting with independent local HVAC service contractors.",
     areaServed: SITE_CONFIG.serviceAreas.map((area) => ({
       "@type": "AdministrativeArea",
       name: area,
     })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "HVAC Services Catalog",
+      name: "HVAC Homeowner Connection Services",
       itemListElement: CORE_SERVICES.map((s, index) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: s.name,
           description: s.shortDesc,
-          url: `${SITE_CONFIG.domain}/services/${s.slug}`,
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "USD",
-          price: "0.00",
-          description: s.priceLabel,
+          url: `${SITE_CONFIG.domain}/${s.slug}`,
         },
         position: index + 1,
       })),
     },
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_CONFIG.domain}/#website`,
+    url: SITE_CONFIG.domain,
+    name: SITE_CONFIG.name,
+    description: SITE_CONFIG.tagline,
+  };
+
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
+    <html lang="en" className={`scroll-smooth ${poppins.variable}`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(hvacBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-400 selection:text-slate-950 min-h-screen flex flex-col">
+      <body className="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-orange-500 selection:text-white min-h-screen flex flex-col pb-16 md:pb-0">
         <Header />
         <main className="flex-1" id="main-content">
           {children}
         </main>
         <Footer />
 
-        {/* Mobile Sticky Quick Action Call Bar (Conversion Booster) */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-2.5 flex items-center justify-between gap-2 shadow-2xl">
+        {/* Mobile Sticky Call Bar (Bright Orange CTA) */}
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center justify-between gap-2 shadow-2xl">
           <a
             href={`tel:${SITE_CONFIG.phoneRaw}`}
             rel="dofollow"
-            aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
-            className="flex-1 py-3 px-3 rounded-xl bg-amber-400 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 shadow-md"
+            aria-label={`Call now to connect with a local HVAC provider at ${SITE_CONFIG.phone}`}
+            className="w-full py-3.5 px-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-orange-500/20"
           >
-            <Phone className="w-4 h-4 fill-slate-950 animate-bounce" />
-            <span>{SITE_CONFIG.phone}</span>
-          </a>
-          <a
-            href="#hero-booking"
-            rel="dofollow"
-            aria-label="Request Quote Online"
-            className="flex-1 py-3 px-3 rounded-xl bg-slate-100 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 active:scale-95 text-center shadow-md"
-          >
-            <Calendar className="w-4 h-4" />
-            <span>Request Quote</span>
+            <Phone className="w-4 h-4 fill-white animate-bounce" />
+            <span>Call Now ({SITE_CONFIG.phone})</span>
           </a>
         </div>
       </body>

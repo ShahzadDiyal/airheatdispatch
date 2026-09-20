@@ -1,28 +1,28 @@
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, GENERAL_FAQS } from "@/config/site";
+import { SITE_CONFIG, CORE_SERVICES, GENERAL_FAQS, TEXAS_CITIES_DATA } from "@/config/site";
 import FaqAccordion from "@/components/FaqAccordion";
-import ServiceEstimator from "@/components/ServiceEstimator";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
 import BrandTrustGrid from "@/components/BrandTrustGrid";
 import ZipChecker from "@/components/ZipChecker";
 import TrustGuarantees from "@/components/TrustGuarantees";
+import ServiceEstimator from "@/components/ServiceEstimator";
 import {
   Phone,
-  ShieldCheck,
-  Star,
   Clock,
   Wrench,
   CheckCircle2,
-  AlertTriangle,
   ArrowRight,
   Flame,
   Snowflake,
   Wind,
-  Zap,
+  ShieldAlert,
+  MapPin,
+  UserCheck,
+  Check,
+  FileText,
 } from "lucide-react";
 
 export default function HomePage() {
-  // Structured FAQPage JSON-LD schema for search engines & AI engines
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -38,612 +38,637 @@ export default function HomePage() {
 
   return (
     <>
-      {/* FAQ Schema for AEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* HERO SECTION */}
-      <section className="relative pt-10 pb-16 lg:pt-20 lg:pb-28 overflow-hidden border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
-        {/* Glowing Background Accents */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
+      {/* HERO SECTION (Matches Image 1 Mockup) */}
+      <section className="relative pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-b from-blue-50/50 via-slate-50 to-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-6">
-              {/* Trust Badge Bar */}
-              <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-sky-400">
-                <span className="flex items-center gap-1">
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  <span className="text-white font-bold">
-                    {SITE_CONFIG.rating.ratingValue}
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 shadow-xs text-xs font-bold text-blue-600">
+                <span className="flex items-center gap-1.5 text-emerald-600">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span className="text-slate-400">
-                    ({SITE_CONFIG.rating.reviewCount} Verified Reviews)
-                  </span>
+                  24/7 Homeowner Connection Desk
                 </span>
-                <span className="hidden sm:inline text-slate-700">|</span>
-                <span className="text-emerald-400 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  {SITE_CONFIG.licenseText}
-                </span>
+                <span className="text-slate-300">|</span>
+                <span>Fast Local Provider Matching</span>
               </div>
 
-              {/* Single Strictly Enforced H1 Tag */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
-                Fast & Reliable <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-amber-400">
-                  HVAC Service and Repair
-                </span>
+              {/* H1 Tag */}
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.12]">
+                Connect With Local <br />
+                <span className="text-blue-600">HVAC Service Providers</span>
               </h1>
 
-              {/* Concise Value Proposition & Direct Answer */}
-              <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
-                Certified local specialists providing 24/7 emergency air
-                conditioning repair, furnace diagnostics, and energy-efficient
-                system tune-ups. Zero hidden fees, upfront flat-rate quotes, and
-                guaranteed same-day dispatch.
+              {/* Value Proposition */}
+              <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
+                AirHeat Dispatch is a free homeowner service that connects you with independent local HVAC contractors for emergency air conditioning repair, furnace troubleshooting, heating service, and system tune-ups.
               </p>
 
-              {/* Dual Action CTAs with High Contrast & Phone Number */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              {/* Dual Action CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3.5 pt-1">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95 group"
+                  aria-label={`Call now to connect with a local HVAC provider at ${SITE_CONFIG.phone}`}
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-3 shadow-lg shadow-orange-500/25 transition-all hover:scale-[1.02] active:scale-95 group"
                 >
-                  <Phone className="w-5 h-5 fill-slate-950" />
-                  <span>Call Hotline</span>
+                  <Phone className="w-5 h-5 fill-white" />
+                  <span>Call Now ({SITE_CONFIG.phone})</span>
                 </a>
 
-                <a
-                  href="#quick-quote"
+                <Link
+                  href="/services"
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-100 hover:bg-white text-slate-950 font-black text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600 border border-blue-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs"
                 >
-                  <span>Request Free Quote</span>
-                  <ArrowRight className="w-4 h-4 text-slate-950" />
+                  <span>Find HVAC Service</span>
+                  <ArrowRight className="w-4 h-4 text-blue-600" />
+                </Link>
+              </div>
+
+              {/* Trust Pills */}
+              <div className="pt-2">
+                <a
+                  href={`tel:${SITE_CONFIG.phoneRaw}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 fill-white" />
+                  <span>Speak With a Local Provider</span>
                 </a>
               </div>
 
-              {/* Trust Signal Badges Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400">
-                    <Clock className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-white">
-                     Contact to Get Access
-                    </div>
-                    <div className="text-[10px] text-slate-400">
-                      Emergency Dispatch
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-white">
-                     Assured 
-                    </div>
-                    <div className="text-[10px] text-slate-400">
-                      Parts & Labor
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-amber-400/10 text-amber-400">
-                    <Wrench className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-white">
-                      All HVAC Brands
-                    </div>
-                    <div className="text-[10px] text-slate-400">
-                      Carrier, Trane, Lennox
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p className="text-xs text-slate-500 flex items-center gap-1.5">
+                <ShieldAlert className="w-4 h-4 text-amber-500 shrink-0" />
+                <span>Fast homeowner connection service to find independent local HVAC contractors across the United States.</span>
+              </p>
             </div>
 
-            {/* Right Column: Hero Quick Dispatch Card */}
-            <div className="lg:col-span-5" id="hero-booking">
-              <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-2xl relative">
-                <div className="absolute top-0 right-0 px-3 py-1 bg-gradient-to-l from-amber-400 to-amber-500 text-slate-950 font-black text-[10px] sm:text-[11px] uppercase tracking-wider rounded-bl-xl rounded-tr-2xl">
-                  24/7 Live Dispatch
-                </div>
+            {/* Right Column: Hero Technician Image Card (Matches Image 1 Mockup) */}
+            <div className="lg:col-span-5">
+              <div className="bg-white p-2 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden group">
+                <div className="relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden bg-slate-900">
+                  <img
+                    src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80"
+                    alt="HVAC Technician Diagnosing Furnace and Air Conditioning System"
+                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
 
-                <div className="mb-6">
-                  {/* Sequential Heading Fix: H2 instead of H3 right under H1 */}
-                  <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-amber-400 shrink-0" />
-                    Request Emergency HVAC Dispatch
-                  </h2>
-                  <p className="text-xs text-slate-300 mt-1">
-                    Fill in your details below for immediate technician
-                    call-back within 10 minutes.
-                  </p>
-                </div>
-
-                <form
-                  className="space-y-4"
-                  action={`tel:${SITE_CONFIG.phoneRaw}`}
-                >
-                  <div className="space-y-1">
-                    <label
-                      htmlFor="hero-service-select"
-                      className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
-                    >
-                      Select HVAC Service Required *
-                    </label>
-                    <select
-                      id="hero-service-select"
-                      aria-label="Select HVAC Service Required"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400"
-                    >
-                      {CORE_SERVICES.map((s) => (
-                        <option key={s.slug} value={s.slug}>
-                          {s.name} ({s.priceLabel})
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div className="space-y-1">
-                      <label
-                        htmlFor="hero-name-input"
-                        className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
-                      >
-                        Your Name *
-                      </label>
-                      <input
-                        id="hero-name-input"
-                        aria-label="Your Full Name"
-                        type="text"
-                        placeholder="John Smith"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
-                        required
-                      />
+                  {/* Dark Glass Overlay Badge on Image */}
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-slate-800 text-white space-y-2">
+                    <div className="flex items-center justify-between text-xs font-bold text-orange-400">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5 text-orange-400" />
+                        24/7 Hotline Active
+                      </span>
+                      <span className="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 text-[10px] uppercase font-bold">
+                        Nationwide
+                      </span>
                     </div>
-                    <div className="space-y-1">
-                      <label
-                        htmlFor="hero-phone-input"
-                        className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
-                      >
-                        Phone Number *
-                      </label>
-                      <input
-                        id="hero-phone-input"
-                        aria-label="Phone Number"
-                        type="tel"
-                        placeholder="(555) 000-0000"
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
-                        required
-                      />
+                    <div className="text-sm font-bold text-white">
+                      Emergency Response & Local Dispatch
                     </div>
+                    <p className="text-[11px] text-slate-300">
+                      Connecting homeowners directly with independent local HVAC contractors.
+                    </p>
                   </div>
-
-                  <div className="space-y-1">
-                    <label
-                      htmlFor="hero-zip-input"
-                      className="text-[11px] font-bold text-slate-200 uppercase tracking-wider block"
-                    >
-                      Zip Code / City *
-                    </label>
-                    <input
-                      id="hero-zip-input"
-                      aria-label="Zip Code or City"
-                      type="text"
-                      placeholder="Austin, TX 78701"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs focus:outline-none focus:border-amber-400 placeholder:text-slate-500"
-                      required
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] active:scale-95 cursor-pointer"
-                  >
-                    Dispatch Certified Technician Now  →
-                  </button>
-
-                  <p className="text-[10px] text-center text-slate-400">
-                    🔒 Zero obligation. Diagnostic fee waived 100% with any
-                    approved repair.
-                  </p>
-                </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AEO / GEO DIRECT ANSWER SECTION */}
-      <section className="py-16 bg-slate-950 border-b border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      {/* 4 TRUST BADGES GRID (Matches Image 1 Mockup) */}
+      <section className="py-8 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <TrustGuarantees />
+        </div>
+      </section>
+
+      {/* AEO / DIRECT ANSWER SECTION */}
+      <section className="py-14 bg-white border-b border-slate-200">
+        <div className=" mx-auto px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              What is Professional HVAC Service and Repair?
+            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider border border-blue-200 inline-block mb-2">
+              HOMEOWNER SERVICE OVERVIEW
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+              How Does AirHeat Dispatch Help Homeowners?
             </h2>
-            <p className="text-slate-400 text-sm mt-2">
-              Understanding core HVAC components, maintenance cycles, and repair
-              standards.
+            <p className="text-slate-600 text-sm mt-1">
+              Connecting homeowners with independent local heating and cooling service contractors.
             </p>
           </div>
 
           <DirectAnswerCard
-            questionTitle="Core Definition & Operational Purpose of HVAC Service and Repair"
-            directAnswer="Professional HVAC service and repair involves systemic diagnostic testing, refrigerant pressure calibration, electrical component restoration, combustion safety audits, and mechanical cleaning of heating and cooling systems. Regular service restores system SEER efficiency, prevents catastrophic compressor failure, and ensures safe indoor thermal comfort."
+            questionTitle="What is AirHeat Dispatch and how does it connect homeowners with local HVAC providers?"
+            directAnswer="AirHeat Dispatch is a free homeowner connection platform that matches homeowners facing heating or cooling problems with independent local HVAC contractors. By calling (555) 839-4328, homeowners are routed to independent service providers who diagnose and resolve system issues."
             keyPoints={[
-              "Rapid same-day technician dispatch for emergency AC & heating outages",
-              "100% waived diagnostic fee when repair work is performed",
-              "State-certified technicians trained on Carrier, Trane, Lennox & Rheem",
-              "Bi-annual maintenance prevents 85% of sudden seasonal breakdowns",
+              "Free phone connection service for homeowners",
+              "Matches callers with independent local HVAC contractors",
+              "Covers AC repair, furnace repair, heating, and HVAC maintenance",
+              "24/7 hotline coverage across U.S. service regions",
             ]}
           />
         </div>
       </section>
 
-      {/* LIVE DISPATCH ZIP CHECKER WIDGET */}
-      <section className="py-12 bg-slate-900/50 border-b border-slate-800">
+      {/* CORE ACCEPTED HVAC SERVICES GRID (Matches Image 1 & 4 Mockup) */}
+      <section className="py-16 bg-slate-50 border-b border-slate-200 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                RESPONSIVE REPAIR COVERAGE
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                Core Accepted HVAC Services
+              </h2>
+            </div>
+            <p className="text-slate-600 text-xs sm:text-sm max-w-md">
+              Connecting homeowners with independent local service providers for residential heating, cooling, and ventilation needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {CORE_SERVICES.map((s, idx) => {
+              // Highlight 1 dark card like Image 1
+              const isEmergency = s.slug === "hvac" || idx === 7;
+              if (isEmergency) {
+                return (
+                  <div
+                    key={s.slug}
+                    className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-white flex flex-col justify-between shadow-xl relative overflow-hidden group"
+                  >
+                    <div className="space-y-4">
+                      <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase">
+                        24/7 Live Dispatch
+                      </div>
+                      <h3 className="text-xl font-bold text-white">
+                        24/7 Emergency HVAC Dispatch
+                      </h3>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        Sudden cooling or heating failure during weather extremes? Call our hotline for immediate contractor routing.
+                      </p>
+                      <ul className="space-y-1.5 text-xs text-slate-300 pt-2">
+                        <li className="flex items-center gap-1.5">
+                          <Check className="w-3.5 h-3.5 text-orange-400" />
+                          <span>Immediate phone matching</span>
+                        </li>
+                        <li className="flex items-center gap-1.5">
+                          <Check className="w-3.5 h-3.5 text-orange-400" />
+                          <span>Local independent technicians</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <a
+                      href={`tel:${SITE_CONFIG.phoneRaw}`}
+                      className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/30 transition-all mt-6"
+                    >
+                      <Phone className="w-3.5 h-3.5 fill-white" />
+                      <span>Call {SITE_CONFIG.phone}</span>
+                    </a>
+                  </div>
+                );
+              }
+
+              return (
+                <div
+                  key={s.slug}
+                  className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md group"
+                >
+                  <div className="space-y-3">
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                      {s.slug.includes("ac") && <Snowflake className="w-5 h-5" />}
+                      {(s.slug.includes("furnace") || s.slug.includes("heating")) && (
+                        <Flame className="w-5 h-5" />
+                      )}
+                      {s.slug.includes("maintenance") && <Wrench className="w-5 h-5" />}
+                      {![
+                        "ac-repair",
+                        "furnace-repair",
+                        "furnace-cleaning",
+                        "furnace-replacement",
+                        "heating-repair",
+                        "hvac-maintenance",
+                      ].includes(s.slug) && <Wind className="w-5 h-5" />}
+                    </div>
+
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {s.name}
+                    </h3>
+
+                    <p className="text-slate-600 text-xs leading-relaxed">
+                      {s.shortDesc}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                    <Link
+                      href={`/${s.slug}`}
+                      className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                    >
+                      <span>Explore Service</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-blue-600" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW AIRHEAT DISPATCH WORKS (Matches Image 1 & 4 Mockup) */}
+      <section className="py-16 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center px-3 md:px-6 xl:px-12 mx-auto mb-12">
+            <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+              SIMPLE 3-STEP PROCESS
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              How AirHeat Dispatch Works
+            </h2>
+            <p className="text-slate-600 text-sm mt-1">
+              Connecting homeowners with independent local HVAC contractors in 3 easy steps.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Step 1 */}
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20">
+                  01
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Tell Us What You Need
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Call our 24/7 hotline to explain whether your air conditioner is blowing warm air, your furnace won't ignite, or you need seasonal maintenance.
+                </p>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+                Call <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-orange-500 font-bold underline">{SITE_CONFIG.phone}</a> to request connection.
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20">
+                  02
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Connect With a Local Provider
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  We route your call directly to an independent local HVAC contractor servicing your zip code or community.
+                </p>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+                Direct phone matching with independent providers.
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-4 relative flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-orange-500/20">
+                  03
+                </div>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Receive Service Directly
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Discuss equipment symptoms directly with your hired contractor and schedule an in-home evaluation.
+                </p>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+                Work performed directly by independent contractor.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY PROPERTY OWNERS USE AIRHEAT DISPATCH (Matches Image 1 Mockup) */}
+      <section className="py-16 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-5 space-y-6">
+              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider inline-block">
+                SUCCESSFUL MATCHING
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                Why Property Owners Use AirHeat Dispatch
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                When heating or air conditioning systems fail during extreme weather, homeowners need a fast, reliable way to reach independent service providers in their local area.
+              </p>
+
+              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-700 space-y-2">
+                <strong className="text-slate-900 block font-bold">Free Connection Service:</strong>
+                Our homeowner connection desk is completely free to use. Call anytime to speak with a representative.
+              </div>
+
+              <div>
+                <a
+                  href={`tel:${SITE_CONFIG.phoneRaw}`}
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-lg shadow-orange-500/20 transition-all hover:scale-[1.02]"
+                >
+                  <Phone className="w-4 h-4 fill-white" />
+                  <span>Call ({SITE_CONFIG.phone})</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Feature Cards Grid */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                  <UserCheck className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  Independent Local Contractors
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Connect directly with independent local HVAC contractors serving your zip code.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                  <Clock className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  24/7 Phone Connection
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Call anytime day or night for fast assistance connecting with a local service provider.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                  <Wrench className="w-5 h-5" />
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  Full HVAC Coverage
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Assistance for central AC repair, furnace troubleshooting, heat pump issues, and tune-ups.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+                  <ShieldAlert className="w-5 h-5 text-blue-600" />
+                </div>
+                <h3 className="text-base font-bold text-slate-900">
+                  Free for Homeowners
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Our connection service helps homeowners find local service contractors at no cost to you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NATIONWIDE SERVICE AREAS & REGIONAL DEMANDS (Matches Image 1 & 4 Mockup) */}
+      <section className="py-16 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                NATIONWIDE SERVICE AREAS
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                Nationwide Service Areas & Regional Demands
+              </h2>
+            </div>
+            <p className="text-slate-600 text-xs sm:text-sm max-w-md">
+              Connecting callers with independent local HVAC contractors across Texas and major U.S. service regions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TEXAS_CITIES_DATA.slice(0, 6).map((city) => (
+              <div
+                key={city.citySlug}
+                className="bg-slate-50 border border-slate-200 hover:border-blue-400 rounded-2xl p-6 space-y-4 transition-all group flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-blue-600 flex items-center gap-1">
+                      <MapPin className="w-3.5 h-3.5 text-orange-500" />
+                      {city.cityName}, TX
+                    </span>
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold uppercase">
+                      Texas Hub
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {city.cityName} HVAC Service
+                  </h3>
+
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                    {city.intro}
+                  </p>
+                </div>
+
+                <Link
+                  href={`/hvac/texas/${city.citySlug}`}
+                  className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-500 text-blue-600 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
+                >
+                  <span>View {city.cityName} Service Hub</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          {/* Statewide Link Bar */}
+          <div className="mt-8 p-4 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-xs text-slate-700 font-medium">
+              <strong className="text-blue-700">Looking for more Texas cities?</strong> View our full Texas Statewide HVAC Service Hub covering Houston, Dallas, San Antonio, Austin, Fort Worth, El Paso, and more.
+            </div>
+            <Link
+              href="/hvac/texas"
+              className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shrink-0 shadow-xs"
+            >
+              Visit Texas Statewide Hub →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* COVERAGE CHECKER */}
+      <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ZipChecker />
         </div>
       </section>
 
-      {/* CORE SERVICES GRID */}
-      <section className="py-20 bg-slate-900 border-b border-slate-800 relative">
+      {/* HOMEOWNER DIAGNOSTIC & MAINTENANCE GUIDES (Matches Image 1 Mockup) */}
+      <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-semibold uppercase tracking-wider mb-3">
-              <Wrench className="w-3.5 h-3.5" />
-              <span>Comprehensive HVAC Solutions</span>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                HVAC KNOWLEDGE HUB
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                Homeowner Diagnostic & Maintenance Guides
+              </h2>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-              Our Core HVAC Service and Repair Offerings
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base mt-2">
-              Explore our {CORE_SERVICES.length} specialized heating, air
-              conditioning, and air quality services engineered for residential
-              and commercial systems.
+            <p className="text-slate-600 text-xs sm:text-sm max-w-md">
+              Learn about key HVAC components, system symptoms, and when to contact an independent provider.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CORE_SERVICES.map((s) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Signs Your Furnace Needs Immediate Repair",
+                desc: "Learn how to spot early igniter failure, dirty flame sensors, and limit switch trips before full cold weather outages.",
+                tag: "FURNACE DIAGNOSTICS",
+                image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80",
+                link: "/furnace-repair",
+              },
+              {
+                title: "Why Is My AC Unit Blowing Warm Air?",
+                desc: "Understand common causes including blown compressor capacitors, low refrigerant, and frozen indoor evaporator coils.",
+                tag: "AC TROUBLESHOOTING",
+                image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80",
+                link: "/ac-repair",
+              },
+              {
+                title: "Heat Pump vs Furnace: Which Is Right?",
+                desc: "Compare dual heating and cooling heat pumps with high-AFUE gas furnaces for seasonal efficiency.",
+                tag: "EQUIPMENT SELECTION",
+                image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80",
+                link: "/heat-pump-repair",
+              },
+              {
+                title: "How Often to Replace AC Air Filters",
+                desc: "Discover how clean air filters prevent coil freezing, protect blower motors, and lower utility bills.",
+                tag: "SYSTEM MAINTENANCE",
+                image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+                link: "/hvac-maintenance",
+              },
+            ].map((guide, idx) => (
               <div
-                key={s.slug}
-                className="bg-slate-950 border border-slate-800 hover:border-amber-400/50 rounded-2xl p-3 md:p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xl group"
+                key={idx}
+                className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all">
-                    {s.slug === "ac-repair" && (
-                      <Snowflake className="w-6 h-6" />
-                    )}
-                    {s.slug === "heating-repair" && (
-                      <Flame className="w-6 h-6" />
-                    )}
-                    {s.slug === "hvac-maintenance" && (
-                      <Wrench className="w-6 h-6" />
-                    )}
-                    {s.slug === "emergency-service" && (
-                      <Zap className="w-6 h-6 text-amber-400 group-hover:text-slate-950" />
-                    )}
-                    {s.slug === "indoor-air-quality" && (
-                      <Wind className="w-6 h-6" />
-                    )}
-                    {![
-                      "ac-repair",
-                      "heating-repair",
-                      "hvac-maintenance",
-                      "emergency-service",
-                      "indoor-air-quality",
-                    ].includes(s.slug) && <Wrench className="w-6 h-6" />}
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
-                    {s.name}
-                  </h3>
-
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-                    {s.shortDesc}
-                  </p>
-
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 mb-6">
-                    <span className="text-slate-400 block font-medium">
-                      Pricing Model:
-                    </span>
-                    <span className="text-amber-400 font-bold text-sm">
-                      {s.priceLabel}
+                  <div className="h-44 overflow-hidden relative bg-slate-100">
+                    <img
+                      src={guide.image}
+                      alt={guide.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-xs text-white text-[10px] font-bold uppercase">
+                      {guide.tag}
                     </span>
                   </div>
 
-                  <ul className="space-y-2 mb-6">
-                    {s.features.slice(0, 3).map((feat, i) => (
-                      <li
-                        key={i}
-                        className="text-xs text-slate-300 flex items-center gap-2"
-                      >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="p-5 space-y-2">
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                      {guide.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {guide.desc}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Unique Accessible Name on Card Links (Fix Lighthouse Identical Links error) */}
-                <Link
-                  href={`/services/${s.slug}`}
-                  rel="dofollow"
-                  aria-label={`View details and request free quote for ${s.name}`}
-                  className="w-full py-3 rounded-xl bg-slate-900 hover:bg-amber-400 hover:text-slate-950 text-white font-bold text-xs flex items-center justify-center gap-2 border border-slate-700 transition-all cursor-pointer"
-                >
-                  <span>Request Quote & View Guide</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="px-5 pb-5 pt-2 border-t border-slate-100">
+                  <Link
+                    href={guide.link}
+                    className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                  >
+                    <span>Read Article Guide</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US & AUTHORITY SECTION */}
-      <section
-        className="py-20 bg-slate-950 border-b border-slate-800"
-        id="why-us"
-      >
+      {/* BRAND TRUST GRID */}
+      <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Licensed & Trusted Experts</span>
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Why Austin Homeowners Trust AirHeat Dispatch
-              </h2>
-
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                When your HVAC system breaks down during extreme heat or
-                freezing cold, you need a contractor who responds immediately
-                with transparent flat-rate pricing and certified expertise.
-              </p>
-
-              <div className="space-y-4 pt-2">
-                {[
-                  {
-                    title: "Upfront Flat-Rate Pricing",
-                    desc: "You review and approve the exact repair cost before work begins. No hidden mileage or overtime surcharges.",
-                  },
-                  {
-                    title: "EPA-Certified Technicians",
-                    desc: "Our technicians undergo continuous factory training on modern inverter compressors, heat pumps, and gas furnaces.",
-                  },
-                  {
-                    title: "60-Minute Emergency Dispatch",
-                    desc: "Fully stocked mobile dispatch units carry original OEM capacitors, fan motors, and control boards for same-day repairs.",
-                  },
-                  {
-                    title: "1-Year Parts & Labor Warranty",
-                    desc: "Every repair is backed by our unconditional 100% satisfaction guarantee.",
-                  },
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-start gap-4"
-                  >
-                    <div className="p-2.5 rounded-lg bg-sky-500/10 text-sky-400 mt-0.5 shrink-0">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-bold text-white">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-slate-300 mt-0.5 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Side Authority Badge & Stats Box */}
-            <div className="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-10 space-y-8 shadow-2xl relative">
-              <div className="text-center space-y-2">
-                <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-amber-400">
-                  99.4%
-                </div>
-                <div className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
-                  First-Visit Repair Resolution Rate
-                </div>
-                <p className="text-xs text-slate-300 max-w-sm mx-auto">
-                  Our mobile trucks carry over 200 OEM replacement parts to
-                  ensure your cooling or heating is fixed on the first visit.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 border-t border-b border-slate-800 py-6 text-center">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
-                    15,000+
-                  </div>
-                  <div className="text-xs text-slate-300 mt-1">
-                    HVAC Repairs Completed
-                  </div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-white">
-                    &lt; 60 Mins
-                  </div>
-                  <div className="text-xs text-slate-300 mt-1">
-                    Average Response Time
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div>
-                  <div className="text-xs font-bold text-white text-center sm:text-left">
-                    Need Urgent Diagnostics?
-                  </div>
-                  <div className="text-[11px] text-slate-300 text-center sm:text-left">
-                    Technicians available in your area
-                  </div>
-                </div>
-                <a
-                  href={`tel:${SITE_CONFIG.phoneRaw}`}
-                  rel="dofollow"
-                  aria-label={`Call HVAC emergency hotline at ${SITE_CONFIG.phone}`}
-                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs text-center shadow-md"
-                >
-                  Call {SITE_CONFIG.phone}
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <TrustGuarantees />
-
           <BrandTrustGrid />
         </div>
       </section>
 
-      {/* INTERACTIVE SERVICE ESTIMATOR SECTION */}
-      <section
-        className="py-20 bg-slate-900 border-b border-slate-800"
-        id="quick-quote"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ServiceEstimator />
-        </div>
-      </section>
-
-      {/* CUSTOMER REVIEWS & SOCIAL PROOF GRID */}
-      <section className="py-20 bg-slate-950 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-              <span>Verified Customer Feedback</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-              Real Reviews from Local Homeowners
-            </h2>
-            <p className="text-slate-300 text-sm mt-2">
-              Over 684 verified 5-star reviews across Google, Yelp, and Angi.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Marcus Thorne",
-                location: "Downtown Austin, TX",
-                date: "2 days ago",
-                service: "Emergency AC Repair",
-                review:
-                  "Our AC unit stopped blowing cold air on a 102°F afternoon. AirHeat Dispatch arrived within 45 minutes, replaced a blown capacitor, and had icy cold air flowing again. Upfront quote was clear and accurate!",
-              },
-              {
-                name: "Sarah Jenkins",
-                location: "Round Rock, TX",
-                date: "1 week ago",
-                service: "Furnace Ignition Repair",
-                review:
-                  "Extremely professional technician! He diagnosed our gas furnace flame sensor issue in 15 minutes and performed a full safety check for carbon monoxide. Top-notch service and very clear flat rate.",
-              },
-              {
-                name: "David Chen",
-                location: "Cedar Park, TX",
-                date: "2 weeks ago",
-                service: "Seasonal HVAC Tune-Up",
-                review:
-                  "Joined their annual maintenance plan. They cleaned the coils, flushed out the drain pan, and calibrated our thermostat. Our electric bill dropped by almost 20% the following month!",
-              },
-            ].map((rev, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-900 border border-slate-800 rounded-2xl p-3 md:p-6 flex flex-col justify-between space-y-4"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
-                    ))}
-                  </div>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
-                    &ldquo;{rev.review}&rdquo;
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-                  <div>
-                    <div className="font-bold text-white">{rev.name}</div>
-                    <div className="text-slate-400">{rev.location}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-amber-400 font-semibold">
-                      {rev.service}
-                    </div>
-                    <div className="text-[10px] text-slate-400">{rev.date}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AEO FAQ ACCORDION SECTION */}
-      <section
-        className="py-20 bg-slate-900 border-b border-slate-800"
-        id="faqs"
-      >
+      {/* FAQ SECTION (Matches Image 1 & 4 Mockup) */}
+      <section className="py-16 bg-white border-b border-slate-200" id="faqs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FaqAccordion faqs={GENERAL_FAQS} />
         </div>
       </section>
 
-      {/* EMERGENCY CALLOUT CTA BANNER */}
-      <section className="py-16 bg-gradient-to-r from-sky-900 via-slate-900 to-amber-950 border-b border-slate-800 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
-                <AlertTriangle className="w-4 h-4 text-amber-400 animate-bounce" />
-                <span>HVAC Emergency Alert</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                No Cooling or Heating Right Now?
-              </h2>
-              <p className="text-slate-200 text-sm sm:text-base">
-                Do not suffer in extreme heat or cold. Our emergency service
-                trucks are on call 24 hours a day with guaranteed 60-minute
-                response times.
-              </p>
-            </div>
+      {/* BOTTOM CONVERSION CALL CTA BANNER (Matches Image 1, 2, 3, 4, 5 Mockups) */}
+      <section className="py-16 bg-slate-900 text-white border-t border-slate-800 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+          <span className="px-3.5 py-1.5 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider border border-orange-500/30 inline-block">
+            24/7 HOMEOWNER CONNECTION DESK
+          </span>
 
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <a
-                href={`tel:${SITE_CONFIG.phoneRaw}`}
-                rel="dofollow"
-                className="px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-base flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-[1.02] active:scale-95"
-              >
-                <Phone className="w-5 h-5 fill-slate-950" />
-                <span>{SITE_CONFIG.phone}</span>
-              </a>
-            </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
+            Need HVAC Service Today?
+          </h2>
+
+          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Do not suffer in extreme heat or freezing cold. Our 24/7 hotline connects you directly with independent local HVAC contractors in your area.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+            <a
+              href={`tel:${SITE_CONFIG.phoneRaw}`}
+              rel="dofollow"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-base flex items-center justify-center gap-3 shadow-xl shadow-orange-500/30 transition-all hover:scale-[1.02] active:scale-95"
+            >
+              <Phone className="w-5 h-5 fill-white" />
+              <span>Call ({SITE_CONFIG.phone})</span>
+            </a>
+
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-base flex items-center justify-center gap-2 border border-slate-200 shadow-md"
+            >
+              <Phone className="w-4 h-4 text-slate-700" />
+              <span>Speak With a Local Provider</span>
+            </Link>
+          </div>
+
+          <div className="pt-6 px-3 md:px-6 xl:px-12 mx-auto">
+            <p className="text-[11px] text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
+              {SITE_CONFIG.disclaimer}
+            </p>
           </div>
         </div>
       </section>

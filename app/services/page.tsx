@@ -3,18 +3,12 @@ import Link from "next/link";
 import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
 import FaqAccordion from "@/components/FaqAccordion";
-import {
-  Wrench,
-  ArrowRight,
-  CheckCircle2,
-  Phone,
-  ShieldCheck,
-} from "lucide-react";
+import { Wrench, ArrowRight, CheckCircle2, Phone, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Comprehensive HVAC Services Catalog & Quote Directory",
+  title: "HVAC Services Directory | AirHeat Dispatch",
   description:
-    "Explore our complete range of 11 certified HVAC Service and Repair offerings including emergency AC repair, furnace troubleshooting, heat pumps, mini-splits, and commercial RTUs.",
+    "Explore our directory of 9 HVAC service categories including AC repair, furnace repair, furnace cleaning, furnace replacement, HVAC installation, and maintenance.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/services`,
   },
@@ -34,7 +28,7 @@ export default function ServicesPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Services",
+        name: "Services Directory",
         item: `${SITE_CONFIG.domain}/services`,
       },
     ],
@@ -58,31 +52,27 @@ export default function ServicesPage() {
               Home
             </Link>
             <span>/</span>
-            <span className="text-white font-semibold">Services Catalog</span>
+            <span className="text-white font-semibold">Services Directory</span>
           </nav>
 
           {/* Page Header */}
           <div className="max-w-3xl mb-12">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
               <Wrench className="w-3.5 h-3.5" />
-              <span>
-                Full Service Directory ({CORE_SERVICES.length} Solutions)
-              </span>
+              <span>Full Service Directory ({CORE_SERVICES.length} Categories)</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-              HVAC Service and Repair Solutions
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+              HVAC Services Directory
             </h1>
             <p className="text-slate-300 text-base mt-3 leading-relaxed">
-              Explore our complete range of certified residential and commercial
-              HVAC services. All work includes flat-rate transparent quotes,
-              100% satisfaction guarantees, and same-day dispatch options.
+              Explore our core HVAC service categories. AirHeat Dispatch helps connect homeowners with independent local contractors for heating, cooling, and equipment care.
             </p>
           </div>
 
           {/* Direct Answer Summary Block */}
           <DirectAnswerCard
-            questionTitle="Overview of Professional HVAC Service Offerings"
-            directAnswer="Our certified HVAC service directory includes 24/7 emergency AC diagnostics, gas and electric furnace repairs, seasonal energy-efficiency tune-ups, heat pump inverter servicing, mini-split ductless installations, commercial RTU maintenance, and whole-home air quality purifications."
+            questionTitle="Overview of HVAC Services Available Through AirHeat Dispatch"
+            directAnswer="Our homeowner connection directory includes 9 primary HVAC service categories: HVAC Repair, AC Repair, Furnace Repair, Furnace Cleaning, Furnace Replacement, HVAC Installation, HVAC Maintenance, Heating Repair, and Heat Pump Repair."
           />
 
           {/* Services List Grid */}
@@ -90,22 +80,22 @@ export default function ServicesPage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-slate-900 border border-slate-800 rounded-3xl p-3 md:p-8 space-y-6 hover:border-amber-400/40 transition-all shadow-xl flex flex-col justify-between"
+                className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 hover:border-amber-400/40 transition-all shadow-xl flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-bold border border-amber-400/20">
-                      {s.priceLabel}
+                    <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 text-xs font-bold border border-sky-500/20">
+                      Homeowner Connection Service
                     </span>
                     <span className="text-xs text-slate-300 flex items-center gap-1">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                      100% Warranted
+                      <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
+                      Independent Local Providers
                     </span>
                   </div>
 
                   <h2 className="text-2xl font-bold text-white">
                     <Link
-                      href={`/services/${s.slug}`}
+                      href={`/${s.slug}`}
                       rel="dofollow"
                       className="hover:text-amber-400 transition-colors"
                     >
@@ -119,7 +109,7 @@ export default function ServicesPage() {
 
                   <div className="space-y-2 pt-2">
                     <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
-                      Key Features:
+                      Key Highlights:
                     </div>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {s.features.slice(0, 4).map((feat, idx) => (
@@ -137,12 +127,12 @@ export default function ServicesPage() {
 
                 <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-4">
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={`/${s.slug}`}
                     rel="dofollow"
-                    aria-label={`Read full guide and request free quote for ${s.name}`}
-                    className="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center gap-2 transition-colors cursor-pointer"
+                    aria-label={`Read guide for ${s.name}`}
+                    className="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs flex items-center gap-2 transition-colors cursor-pointer"
                   >
-                    <span>Read Guide & Request Quote</span>
+                    <span>View Service Guide</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
 
@@ -152,7 +142,7 @@ export default function ServicesPage() {
                     aria-label={`Call hotline for ${s.name} at ${SITE_CONFIG.phone}`}
                     className="text-xs font-bold text-slate-300 hover:text-amber-400 flex items-center gap-1.5"
                   >
-                    <Phone className="w-3.5 h-3.5 text-amber-400" />
+                    <Phone className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                     <span>Call {SITE_CONFIG.phone}</span>
                   </a>
                 </div>

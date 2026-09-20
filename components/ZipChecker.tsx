@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/config/site";
 
 export default function ZipChecker() {
   const [zipInput, setZipInput] = useState("");
-  const [result, setResult] = useState<"available" | "busy" | null>(null);
+  const [result, setResult] = useState<"available" | null>(null);
 
   const handleCheck = (e: FormEvent) => {
     e.preventDefault();
@@ -15,18 +15,17 @@ export default function ZipChecker() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-900 to-sky-950/40 border border-slate-800 rounded-3xl p-3 md:p-6 sm:p-8 shadow-xl my-10 relative overflow-hidden">
+    <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs my-6 relative overflow-hidden">
       <div className="max-w-2xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-2">
-          <MapPin className="w-3.5 h-3.5" />
-          <span>Live Dispatch Coverage Checker</span>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+          <MapPin className="w-3.5 h-3.5 text-orange-500" />
+          <span>Local Contractor Coverage Checker</span>
         </div>
-        <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-          Check Immediate Emergency Technician Availability
+        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+          Find HVAC Service Providers in Your Area
         </h3>
-        <p className="text-xs sm:text-sm text-slate-300 mt-1">
-          Enter your ZIP code to verify live technician positioning and
-          emergency dispatch response time in your area.
+        <p className="text-xs sm:text-sm text-slate-600 mt-1">
+          Enter your ZIP code or city to connect with independent local HVAC contractors available for heating and cooling assistance.
         </p>
       </div>
 
@@ -48,40 +47,38 @@ export default function ZipChecker() {
               setZipInput(e.target.value);
               setResult(null);
             }}
-            placeholder="e.g. 78701 or Austin"
-            className="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:outline-none focus:border-sky-400 placeholder:text-slate-500"
+            placeholder="e.g. 78701, Houston, or Dallas"
+            className="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-blue-500 placeholder:text-slate-400"
             required
           />
         </div>
         <button
           type="submit"
-          className="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-md"
+          className="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-md shadow-orange-500/20"
         >
-          Check Availability
+          Check Coverage
         </button>
       </form>
 
       {result === "available" && (
-        <div className="mt-4 p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm space-y-2 animate-in fade-in">
-          <div className="flex items-center gap-2 font-bold text-emerald-300">
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
+        <div className="mt-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm space-y-2 animate-in fade-in">
+          <div className="flex items-center gap-2 font-bold text-emerald-800">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
             <span>
-              Technicians On Call in Area ({zipInput}) - &lt; 45 Min Dispatch
-              Available!
+              Independent Contractors Available in Area ({zipInput})!
             </span>
           </div>
-          <p className="text-slate-200 text-xs">
-            We have active mobile units routed near{" "}
-            <span className="font-semibold text-white">{zipInput}</span> right
-            now. Call our direct hotline for priority arrival:
+          <p className="text-slate-700 text-xs">
+            Independent HVAC service providers are available near{" "}
+            <span className="font-semibold text-slate-900">{zipInput}</span>. Call our connection hotline to speak with a local contractor:
           </p>
           <a
             href={`tel:${SITE_CONFIG.phoneRaw}`}
             rel="dofollow"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-400 text-slate-950 font-black text-xs hover:bg-emerald-300 transition-colors mt-1"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 text-white font-bold text-xs hover:bg-orange-600 transition-colors mt-1 shadow-sm"
           >
-            <Phone className="w-3.5 h-3.5" />
-            <span>{SITE_CONFIG.phone}</span>
+            <Phone className="w-3.5 h-3.5 fill-white" />
+            <span>Call Now ({SITE_CONFIG.phone})</span>
           </a>
         </div>
       )}
