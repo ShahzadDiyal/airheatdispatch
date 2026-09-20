@@ -18,6 +18,7 @@ import {
   ShieldAlert,
   ArrowRight,
 } from "lucide-react";
+import { getStateCode } from "@/config/states";
 
 interface PageProps {
   params: Promise<{ service: string; state: string; city: string }>;
@@ -40,13 +41,15 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { service: serviceSlug, state, city } = await params;
-  const service = CORE_SERVICES.find((s) => s.slug === serviceSlug);
+  const service = CORE_SERVICES.find(
+    (s) => s.slug === serviceSlug || (serviceSlug === "air-conditioning-repair" && s.slug === "ac-repair")
+  );
   const locationData = getLocationData(state, city);
 
   if (!service || !locationData) return { title: "Location Service Not Found" };
 
   const cityName = locationData.cityName;
-  const stateCode = locationData.stateSlug === "alabama" ? "AL" : "TX";
+  const stateCode = getStateCode(locationData.stateSlug);
 
   return {
     title: `${service.name} in ${cityName}, ${stateCode} | AirHeat Dispatch`,
@@ -62,14 +65,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function LocalServicePage({ params }: PageProps) {
   const { service: serviceSlug, state, city } = await params;
-  const service = CORE_SERVICES.find((s) => s.slug === serviceSlug);
+  const service = CORE_SERVICES.find(
+    (s) => s.slug === serviceSlug || (serviceSlug === "air-conditioning-repair" && s.slug === "ac-repair")
+  );
   const locationData = getLocationData(state, city);
 
   if (!service || !locationData) notFound();
 
   const cityName = locationData.cityName;
   const stateName = locationData.stateName;
-  const stateCode = locationData.stateSlug === "alabama" ? "AL" : "TX";
+  const stateCode = getStateCode(locationData.stateSlug);
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",

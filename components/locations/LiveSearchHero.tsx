@@ -1,54 +1,92 @@
 "use client";
 
-import { useState, useMemo, FormEvent } from "react";
-import Link from "next/link";
-import { Search, MapPin, Phone, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
-import { SITE_CONFIG } from "@/lib/seo";
-import { ALL_STATES_DATA } from "@/config/states";
+import { useState, useEffect, FormEvent, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { Search, MapPin, ShieldCheck, ArrowRight, Loader2 } from "lucide-react";
+
+interface SearchResult {
+  zip: string;
+  city: string;
+  state: string;
+  stateName: string;
+  stateSlug: string;
+  citySlug: string;
+}
 
 export default function LiveSearchHero() {
+  const router = useRouter();
   const [query, setQuery] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
-  const [searchedLocation, setSearchedLocation] = useState<string | null>(null);
+  const [suggestions, setSuggestions] = useState<SearchResult[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [notFoundMessage, setNotFoundMessage] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Flatten all major cities across all 50 states for instant search matching
-  const allCitiesList = useMemo(() => {
-    const list: { cityName: string; stateName: string; stateSlug: string; citySlug: string }[] = [];
-    const activeStates = Object.values(ALL_STATES_DATA);
-    for (const st of activeStates) {
-      for (const city of st.majorCities) {
-        list.push({
-          cityName: city.name,
-          stateName: st.stateName,
-          stateSlug: st.stateSlug,
-          citySlug: city.slug,
-        });
+  // Debounced API search
+  useEffect(() => {
+    if (!query.trim() || query.trim().length < 2) {
+      setSuggestions([]);
+      setIsOpen(false);
+      setNotFoundMessage(false);
+      return;
+    }
+
+    const timer = setTimeout(async () => {
+      setIsLoading(true);
+      try {
+        const res = await fetch(`/api/locations/search?q=${encodeURIComponent(query.trim())}`);
+        if (res.ok) {
+          const data = await res.json();
+          setSuggestions(data.results || []);
+          setIsOpen(true);
+          setNotFoundMessage((data.results || []).length === 0);
+        }
+      } catch (err) {
+        console.error("Location search error:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    }, 150);
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
       }
     }
-    return list;
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const filteredSuggestions = useMemo(() => {
-    if (!query.trim() || query.length < 2) return [];
-    const q = query.toLowerCase().trim();
-    return allCitiesList
-      .filter(
-        (c) =>
-          c.cityName.toLowerCase().includes(q) ||
-          c.stateName.toLowerCase().includes(q)
-      )
-      .slice(0, 6);
-  }, [query, allCitiesList]);
+  const handleSelectLocation = (item: SearchResult) => {
+    setIsOpen(false);
+    setQuery(`${item.city}, ${item.state} ${item.zip ? `(${item.zip})` : ""}`);
+    // Redirect to local city hub page for AC repair
+    router.push(`/ac-repair/${item.stateSlug}/${item.citySlug}`);
+  };
 
-  const handleSearch = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    setSearchedLocation(query.trim());
+
+    if (suggestions.length > 0) {
+      // Automatically redirect to the top matching autocomplete location
+      handleSelectLocation(suggestions[0]);
+    } else {
+      setNotFoundMessage(true);
+    }
   };
 
   return (
-    <div className="w-full max-w-2xl bg-white rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-200/90 relative text-slate-900">
-      <form onSubmit={handleSearch} className="relative">
+    <div
+      ref={containerRef}
+      className="w-full max-w-2xl bg-white rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-200/90 relative text-slate-900"
+    >
+      <form onSubmit={handleSubmit} className="relative">
         <label htmlFor="hero-live-search-input" className="sr-only">
           Search ZIP Code or City Across 50 States
         </label>
@@ -62,14 +100,19 @@ export default function LiveSearchHero() {
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
-                setSearchedLocation(null);
+                setNotFoundMessage(false);
               }}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setTimeout(() => setIsFocused(false), 200)}
-              placeholder="Enter ZIP Code or City (e.g. 78701, Austin, Miami)..."
-              className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 font-medium transition-colors"
+              onFocus={() => {
+                if (suggestions.length > 0) setIsOpen(true);
+              }}
+              placeholder="Enter ZIP Code or City (e.g. 07001, Avenel, Houston)..."
+              className="w-full pl-10 pr-9 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 font-medium transition-colors"
               required
+              autoComplete="off"
             />
+            {isLoading && (
+              <Loader2 className="w-4 h-4 text-blue-600 absolute right-3 top-1/2 -translate-y-1/2 animate-spin shrink-0" />
+            )}
           </div>
 
           <button
@@ -77,69 +120,68 @@ export default function LiveSearchHero() {
             className="px-6 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-all hover:scale-[1.02] active:scale-95 shadow-md shadow-orange-500/25 cursor-pointer flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
           >
             <Search className="w-4 h-4 text-white shrink-0" />
-            <span>Find Coverage</span>
+            <span>Search Area</span>
           </button>
         </div>
 
         {/* Live Auto-Suggest Dropdown */}
-        {isFocused && filteredSuggestions.length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-xl shadow-2xl z-30 max-h-60 overflow-y-auto p-1.5 space-y-1">
+        {isOpen && suggestions.length > 0 && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 max-h-72 overflow-y-auto p-2 space-y-1 divide-y divide-slate-100">
             <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
-              Matching City Service Hubs:
+              Select Your Area / ZIP Code:
             </div>
-            {filteredSuggestions.map((item, idx) => (
-              <Link
-                key={idx}
-                href={`/hvac/${item.stateSlug}/${item.citySlug}`}
-                className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-blue-50 text-xs font-semibold text-slate-800 hover:text-blue-700 transition-colors"
+            {suggestions.map((item, idx) => (
+              <button
+                key={`${item.zip}-${item.citySlug}-${idx}`}
+                type="button"
+                onClick={() => handleSelectLocation(item)}
+                className="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-blue-50 text-xs font-semibold text-slate-800 hover:text-blue-700 transition-colors group cursor-pointer"
               >
-                <span className="flex items-center gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                  <span>{item.cityName}, {item.stateName}</span>
-                </span>
-                <span className="text-[10px] text-blue-600 flex items-center gap-0.5">
-                  <span>View Hub</span>
-                  <ArrowRight className="w-3 h-3 shrink-0" />
-                </span>
-              </Link>
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+                    <MapPin className="w-3.5 h-3.5" />
+                  </div>
+                  <div className="truncate min-w-0">
+                    <span className="font-bold text-slate-900 group-hover:text-blue-700">
+                      {item.city}, {item.state}
+                    </span>
+                    {item.zip && (
+                      <span className="ml-1.5 text-[11px] font-normal text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">
+                        ZIP {item.zip}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                <div className="text-[10px] font-bold text-blue-600 flex items-center gap-1 shrink-0 ml-2">
+                  <span>Go to Area Hub</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
+                </div>
+              </button>
             ))}
           </div>
         )}
-      </form>
 
-      {/* Coverage Found Box */}
-      {searchedLocation && (
-        <div className="mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs space-y-2.5 animate-in fade-in">
-          <div className="flex items-center gap-2 font-bold text-emerald-800 text-sm">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Independent Contractors Available Near &ldquo;{searchedLocation}&rdquo;</span>
+        {/* Not Found Alert */}
+        {notFoundMessage && query.length >= 2 && !isLoading && (
+          <div className="absolute top-full left-0 right-0 mt-2 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 z-50 shadow-lg">
+            No specific ZIP or city match found for &ldquo;{query}&rdquo;. Try typing a ZIP code like <strong>07001</strong> or city like <strong>Houston</strong>.
           </div>
-          <p className="text-slate-700 text-xs leading-relaxed">
-            Independent local HVAC service providers are available for emergency air conditioning and heating repair near <strong className="text-slate-900">&ldquo;{searchedLocation}&rdquo;</strong>. Call our 24/7 desk to get connected:
-          </p>
-          <a
-            href={`tel:${SITE_CONFIG.phoneRaw}`}
-            rel="dofollow"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02]"
-          >
-            <Phone className="w-4 h-4 fill-white shrink-0" />
-            <span>Call Now ({SITE_CONFIG.phone})</span>
-          </a>
-        </div>
-      )}
+        )}
+      </form>
 
       {/* Trust pill */}
       <div className="mt-3 flex items-center justify-between text-[11px] text-slate-500 pt-2 border-t border-slate-100 flex-wrap gap-2">
         <span className="flex items-center gap-1">
           <ShieldCheck className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-          <span>All 50 US States & 20,000+ ZIP Codes Covered</span>
+          <span>All 50 US States & 23,700+ ZIP Codes Covered</span>
         </span>
         <span className="text-emerald-600 font-bold flex items-center gap-1">
           <span className="relative flex h-2 w-2 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span>Hotline Active (24/7)</span>
+          <span>Instant Autocomplete & Area Hubs</span>
         </span>
       </div>
     </div>
