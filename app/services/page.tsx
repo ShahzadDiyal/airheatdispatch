@@ -41,30 +41,30 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <div className="bg-slate-950 min-h-screen py-12 lg:py-20 text-slate-100">
+      <div className="bg-slate-50 min-h-screen py-12 lg:py-16 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb Navigation */}
           <nav
-            className="flex items-center gap-2 text-xs text-slate-400 mb-8"
+            className="flex items-center gap-2 text-xs text-slate-500 mb-8"
             aria-label="Breadcrumb"
           >
-            <Link href="/" rel="dofollow" className="hover:text-amber-400">
+            <Link href="/" rel="dofollow" className="hover:text-blue-600 font-medium">
               Home
             </Link>
             <span>/</span>
-            <span className="text-white font-semibold">Services Directory</span>
+            <span className="text-slate-900 font-semibold">Services Directory</span>
           </nav>
 
           {/* Page Header */}
-          <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-bold uppercase tracking-wider mb-3">
-              <Wrench className="w-3.5 h-3.5" />
+          <div className="max-w-3xl mb-10">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">
+              <Wrench className="w-3.5 h-3.5 text-blue-600" />
               <span>Full Service Directory ({CORE_SERVICES.length} Categories)</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
               HVAC Services Directory
             </h1>
-            <p className="text-slate-300 text-base mt-3 leading-relaxed">
+            <p className="text-slate-600 text-base mt-3 leading-relaxed">
               Explore our core HVAC service categories. AirHeat Dispatch helps connect homeowners with independent local contractors for heating, cooling, and equipment care.
             </p>
           </div>
@@ -80,44 +80,44 @@ export default function ServicesPage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 hover:border-amber-400/40 transition-all shadow-xl flex flex-col justify-between"
+                className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 text-xs font-bold border border-sky-500/20">
+                    <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold border border-blue-100">
                       Homeowner Connection Service
                     </span>
-                    <span className="text-xs text-slate-300 flex items-center gap-1">
-                      <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
+                    <span className="text-xs text-slate-500 flex items-center gap-1 font-medium">
+                      <ShieldAlert className="w-3.5 h-3.5 text-orange-500" />
                       Independent Local Providers
                     </span>
                   </div>
 
-                  <h2 className="text-2xl font-bold text-white">
+                  <h2 className="text-2xl font-bold text-slate-900">
                     <Link
                       href={`/${s.slug}`}
                       rel="dofollow"
-                      className="hover:text-amber-400 transition-colors"
+                      className="hover:text-blue-600 transition-colors"
                     >
                       {s.name}
                     </Link>
                   </h2>
 
-                  <p className="text-slate-300 text-sm leading-relaxed">
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     {s.shortDesc}
                   </p>
 
                   <div className="space-y-2 pt-2">
-                    <div className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <div className="text-xs font-bold text-slate-700 uppercase tracking-wider">
                       Key Highlights:
                     </div>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {s.features.slice(0, 4).map((feat, idx) => (
                         <li
                           key={idx}
-                          className="text-xs text-slate-300 flex items-center gap-2"
+                          className="text-xs text-slate-600 flex items-center gap-2"
                         >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -125,12 +125,12 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-4">
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
                   <Link
                     href={`/${s.slug}`}
                     rel="dofollow"
                     aria-label={`Read guide for ${s.name}`}
-                    className="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs flex items-center gap-2 transition-colors cursor-pointer"
+                    className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs flex items-center gap-2 transition-colors cursor-pointer shadow-xs"
                   >
                     <span>View Service Guide</span>
                     <ArrowRight className="w-4 h-4" />
@@ -140,9 +140,9 @@ export default function ServicesPage() {
                     href={`tel:${SITE_CONFIG.phoneRaw}`}
                     rel="dofollow"
                     aria-label={`Call hotline for ${s.name} at ${SITE_CONFIG.phone}`}
-                    className="text-xs font-bold text-slate-300 hover:text-amber-400 flex items-center gap-1.5"
+                    className="text-xs font-extrabold text-orange-600 hover:text-orange-700 flex items-center gap-1.5 transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    <Phone className="w-3.5 h-3.5 fill-orange-600" />
                     <span>Call {SITE_CONFIG.phone}</span>
                   </a>
                 </div>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
           </div>
 
           {/* FAQs section */}
-          <div className="pt-10">
+          <div className="pt-6">
             <FaqAccordion faqs={CORE_SERVICES.flatMap((s) => s.faqs)} />
           </div>
         </div>
