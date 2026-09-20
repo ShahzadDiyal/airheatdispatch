@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
+import { SITE_CONFIG } from "@/lib/seo";
 import { ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {

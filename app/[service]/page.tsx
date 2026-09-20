@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, ALL_STATES_DATA } from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import FaqAccordion from "@/components/FaqAccordion";
-import ZipChecker from "@/components/ZipChecker";
+import { SITE_CONFIG } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import { ALL_STATES_DATA } from "@/config/states";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import ZipChecker from "@/components/locations/ZipChecker";
 import {
   Phone,
   CheckCircle2,

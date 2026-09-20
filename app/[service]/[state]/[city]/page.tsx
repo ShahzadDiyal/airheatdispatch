@@ -1,16 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  SITE_CONFIG,
-  CORE_SERVICES,
-  TEXAS_CITIES_DATA,
-  ALABAMA_PRESET_CITIES_DATA,
-  getLocationData,
-} from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import FaqAccordion from "@/components/FaqAccordion";
-import ZipChecker from "@/components/ZipChecker";
+import { SITE_CONFIG } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import { TEXAS_CITIES_DATA } from "@/config/locations/texas";
+import { ALABAMA_PRESET_CITIES_DATA } from "@/config/locations/alabama";
+import { getLocationData } from "@/lib/locations";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import ZipChecker from "@/components/locations/ZipChecker";
 import {
   Phone,
   CheckCircle2,

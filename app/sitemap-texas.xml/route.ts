@@ -1,4 +1,4 @@
-import { getStateSitemapUrls, buildUrlSetXml } from "@/config/sitemap-matrix";
+import { getStateSitemapUrls, buildUrlSetXml } from "@/lib/sitemap";
 
 export async function GET() {
   const urls = getStateSitemapUrls("texas");

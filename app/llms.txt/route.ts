@@ -1,10 +1,7 @@
-import {
-  SITE_CONFIG,
-  CORE_SERVICES,
-  GENERAL_FAQS,
-  ALL_STATES_DATA,
-  getAllPrebuiltCities,
-} from "@/config/site";
+import { SITE_CONFIG, GENERAL_FAQS } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import { ALL_STATES_DATA } from "@/config/states";
+import { getAllPrebuiltCities } from "@/lib/locations";
 
 export async function GET() {
   const activeStates = Object.values(ALL_STATES_DATA);

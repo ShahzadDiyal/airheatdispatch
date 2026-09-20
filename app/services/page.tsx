@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import FaqAccordion from "@/components/FaqAccordion";
+import { SITE_CONFIG } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import FaqAccordion from "@/components/ui/FaqAccordion";
 import { Wrench, ArrowRight, CheckCircle2, Phone, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {

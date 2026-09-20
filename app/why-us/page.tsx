@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
-import BrandTrustGrid from "@/components/BrandTrustGrid";
-import TrustGuarantees from "@/components/TrustGuarantees";
-import ZipChecker from "@/components/ZipChecker";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
+import { SITE_CONFIG } from "@/lib/seo";
+import BrandTrustGrid from "@/components/home/BrandTrustGrid";
+import TrustGuarantees from "@/components/home/TrustGuarantees";
+import ZipChecker from "@/components/locations/ZipChecker";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import { Phone, Clock, UserCheck, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {

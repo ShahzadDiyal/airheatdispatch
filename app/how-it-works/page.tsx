@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import ZipChecker from "@/components/ZipChecker";
+import { SITE_CONFIG } from "@/lib/seo";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import ZipChecker from "@/components/locations/ZipChecker";
 import { Phone, CheckCircle2, UserCheck, ShieldAlert, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {

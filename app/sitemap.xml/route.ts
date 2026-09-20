@@ -1,4 +1,4 @@
-import { getSitemapIndexEntries, buildSitemapIndexXml } from "@/config/sitemap-matrix";
+import { getSitemapIndexEntries, buildSitemapIndexXml } from "@/lib/sitemap";
 
 export async function GET() {
   const entries = getSitemapIndexEntries();

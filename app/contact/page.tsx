@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
-import ZipChecker from "@/components/ZipChecker";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
+import { SITE_CONFIG } from "@/lib/seo";
+import ZipChecker from "@/components/locations/ZipChecker";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import { Phone, Mail, Clock, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {

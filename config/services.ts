@@ -1,16 +1,14 @@
-export interface ServiceItem {
-  slug: string;
-  name: string;
-  shortDesc: string;
-  fullTitle: string;
-  directAnswer: string;
-  heroHeadline: string;
-  features: string[];
-  processSteps: { title: string; desc: string }[];
-  faqs: { question: string; answer: string }[];
-}
+import { CoreService } from "@/types/service";
 
-export const CORE_SERVICES: ServiceItem[] = [
+export type ServiceItem = CoreService & {
+  fullTitle?: string;
+  directAnswer?: string;
+  heroHeadline?: string;
+  processSteps?: { title: string; desc: string }[];
+  faqs?: { question: string; answer: string }[];
+};
+
+export const CORE_SERVICES: CoreService[] = [
   {
     slug: "hvac",
     name: "HVAC Repair & Service",

@@ -1,17 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  SITE_CONFIG,
-  CORE_SERVICES,
-  ALL_STATES_DATA,
-  getStateData,
-  getStateCities,
-  LocationData,
-} from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import FaqAccordion from "@/components/FaqAccordion";
-import ZipChecker from "@/components/ZipChecker";
+import { SITE_CONFIG } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import { ALL_STATES_DATA, getStateData } from "@/config/states";
+import { getStateCities, getAllCitiesForState } from "@/lib/locations";
+import { LocationData } from "@/types/location";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import ZipChecker from "@/components/locations/ZipChecker";
 import {
   Phone,
   CheckCircle2,
@@ -20,6 +17,7 @@ import {
   Clock,
   ShieldAlert,
   ArrowRight,
+  Building2,
 } from "lucide-react";
 
 interface PageProps {
@@ -64,6 +62,7 @@ export default async function StateServicePage({ params }: PageProps) {
   if (!service || !stateData) notFound();
 
   const citiesList: LocationData[] = getStateCities(stateSlug);
+  const allCities = getAllCitiesForState(stateSlug);
   const isTexas = stateSlug.toLowerCase() === "texas";
   const stateCode = isTexas ? "TX" : stateSlug.toLowerCase() === "alabama" ? "AL" : stateSlug.toUpperCase();
 
@@ -210,6 +209,33 @@ export default async function StateServicePage({ params }: PageProps) {
               ))}
             </div>
           </section>
+
+          {/* Complete Statewide City Directory */}
+          {allCities.length > 0 && (
+            <section className="my-10 sm:my-14 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+              <div className="flex items-center gap-2">
+                <Building2 className="w-5 h-5 text-blue-600 shrink-0" />
+                <h2 className="text-xl font-bold text-slate-900">
+                  All {allCities.length} {stateData.stateName} Cities & Towns Directory for {service.name}
+                </h2>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                AirHeat Dispatch connects callers across all {allCities.length} incorporated cities and municipalities in {stateData.stateName}. Select your local city to connect with independent local HVAC contractors:
+              </p>
+
+              <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 pt-2 max-h-96 overflow-y-auto pr-1">
+                {allCities.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/${service.slug}/${stateSlug}/${city.slug}`}
+                    className="px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-800 hover:border-blue-300 transition-colors truncate"
+                  >
+                    {city.name}, {stateCode}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           <ZipChecker />
 

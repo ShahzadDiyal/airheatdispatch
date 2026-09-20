@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { SITE_CONFIG, CORE_SERVICES } from "@/config/site";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { SITE_CONFIG } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
 import { Phone } from "lucide-react";
 
 const poppins = Poppins({

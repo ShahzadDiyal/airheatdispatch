@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, GENERAL_FAQS, TEXAS_CITIES_DATA } from "@/config/site";
-import FaqAccordion from "@/components/FaqAccordion";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
-import BrandTrustGrid from "@/components/BrandTrustGrid";
-import ZipChecker from "@/components/ZipChecker";
-import TrustGuarantees from "@/components/TrustGuarantees";
-import ServiceEstimator from "@/components/ServiceEstimator";
+import { SITE_CONFIG, GENERAL_FAQS } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import { TEXAS_CITIES_DATA } from "@/config/locations/texas";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
+import BrandTrustGrid from "@/components/home/BrandTrustGrid";
+import ZipChecker from "@/components/locations/ZipChecker";
+import TrustGuarantees from "@/components/home/TrustGuarantees";
+import ServiceEstimator from "@/components/services/ServiceEstimator";
 import {
   Phone,
   Clock,

@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG, GENERAL_FAQS, CORE_SERVICES } from "@/config/site";
-import FaqAccordion from "@/components/FaqAccordion";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
+import { SITE_CONFIG, GENERAL_FAQS } from "@/lib/seo";
+import { CORE_SERVICES } from "@/config/services";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import { HelpCircle, Phone } from "lucide-react";
 
 export const metadata: Metadata = {

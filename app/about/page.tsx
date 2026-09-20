@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/config/site";
-import DirectAnswerCard from "@/components/DirectAnswerCard";
+import { SITE_CONFIG } from "@/lib/seo";
+import DirectAnswerCard from "@/components/seo/DirectAnswerCard";
 import { Building2, CheckCircle2, Phone, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {

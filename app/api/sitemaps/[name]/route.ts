@@ -3,8 +3,8 @@ import {
   getStateSitemapUrls,
   buildUrlSetXml,
   CHUNK_LIMIT,
-} from "@/config/sitemap-matrix";
-import { ALL_STATES_DATA } from "@/config/locations";
+} from "@/lib/sitemap";
+import { ALL_STATES_DATA } from "@/config/states";
 
 interface RouteProps {
   params: Promise<{ name: string }>;

@@ -1,4 +1,4 @@
-import { getMainSitemapUrls, buildUrlSetXml } from "@/config/sitemap-matrix";
+import { getMainSitemapUrls, buildUrlSetXml } from "@/lib/sitemap";
 
 export async function GET() {
   const urls = getMainSitemapUrls();

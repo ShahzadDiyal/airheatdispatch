@@ -1,5 +1,5 @@
 import { redirect, notFound } from "next/navigation";
-import { CORE_SERVICES } from "@/config/site";
+import { CORE_SERVICES } from "@/config/services";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
