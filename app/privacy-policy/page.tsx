@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
+        <div className="bg-white  rounded-2xl p-5 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
           <section className="space-y-2">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               1. Information Collection & Usage
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
             <p>
               For privacy inquiries regarding our connection service, please contact us at:
             </p>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1">
+            <div className="p-4 rounded-xl bg-slate-50  text-xs space-y-1">
               <p className="font-bold text-slate-900">{SITE_CONFIG.name}</p>
               <p className="text-blue-600 font-bold break-all">{SITE_CONFIG.email}</p>
               <p className="text-slate-700">Hotline: {SITE_CONFIG.phone}</p>

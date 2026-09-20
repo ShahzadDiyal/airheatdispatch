@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <Link href="/" rel="dofollow" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 p-0.5 shadow-md shadow-blue-500/20 shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-blue-600 p-0.5 shadow-xs shadow-blue-500/20 shrink-0">
                 <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center relative">
                   <Snowflake className="w-4 h-4 text-sky-400 absolute -translate-x-0.5 -translate-y-0.5" />
                   <Flame className="w-4 h-4 text-orange-500 absolute translate-x-0.5 translate-y-0.5" />
@@ -32,7 +32,7 @@ export default function Footer() {
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-md shadow-orange-500/20 text-xs sm:text-sm"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition-all shadow-xs shadow-orange-500/20 text-xs sm:text-sm"
               >
                 <Phone className="w-4 h-4 fill-white shrink-0" />
                 <span className="truncate">Call {SITE_CONFIG.phone} (24/7)</span>
@@ -76,10 +76,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Texas Cities */}
+          {/* State Locations */}
           <div className="space-y-4">
             <h3 className="text-xs font-bold text-white tracking-wider uppercase">
-              Texas Locations
+              State Service Hubs
             </h3>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
@@ -87,20 +87,52 @@ export default function Footer() {
                   href="/hvac/texas"
                   className="text-blue-400 font-bold hover:underline block"
                 >
-                  Texas Statewide Hub
+                  Texas Hub (10 Metros)
                 </Link>
               </li>
-              {TEXAS_CITIES_DATA.slice(0, 6).map((city) => (
-                <li key={city.citySlug}>
-                  <Link
-                    href={`/hvac/texas/${city.citySlug}`}
-                    rel="dofollow"
-                    className="hover:text-orange-400 transition-colors block py-0.5"
-                  >
-                    {city.cityName} HVAC
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/hvac/alabama"
+                  className="text-emerald-400 font-bold hover:underline block"
+                >
+                  Alabama Hub (463 Cities)
+                </Link>
+              </li>
+              <li className="pt-1 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
+                Top Cities:
+              </li>
+              <li>
+                <Link
+                  href="/hvac/texas/austin"
+                  className="hover:text-orange-400 transition-colors block py-0.5"
+                >
+                  Austin, TX HVAC
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hvac/texas/houston"
+                  className="hover:text-orange-400 transition-colors block py-0.5"
+                >
+                  Houston, TX HVAC
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hvac/alabama/birmingham"
+                  className="hover:text-orange-400 transition-colors block py-0.5"
+                >
+                  Birmingham, AL HVAC
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/hvac/alabama/huntsville"
+                  className="hover:text-orange-400 transition-colors block py-0.5"
+                >
+                  Huntsville, AL HVAC
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/service-areas"

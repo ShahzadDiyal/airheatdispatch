@@ -1,5 +1,13 @@
 import { MetadataRoute } from "next";
-import { SITE_CONFIG, CORE_SERVICES, TEXAS_STATE_DATA, TEXAS_CITIES_DATA } from "@/config/site";
+import {
+  SITE_CONFIG,
+  CORE_SERVICES,
+  TEXAS_STATE_DATA,
+  TEXAS_CITIES_DATA,
+  ALABAMA_STATE_DATA,
+  ALABAMA_PRESET_CITIES_DATA,
+  ALABAMA_ALL_CITIES,
+} from "@/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.domain;
@@ -74,22 +82,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const stateRoutes: MetadataRoute.Sitemap = CORE_SERVICES.map((service) => ({
-    url: `${baseUrl}/${service.slug}/${TEXAS_STATE_DATA.stateSlug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.85,
-  }));
+  const states = [TEXAS_STATE_DATA.stateSlug, ALABAMA_STATE_DATA.stateSlug];
+  const stateRoutes: MetadataRoute.Sitemap = [];
+  for (const service of CORE_SERVICES) {
+    for (const state of states) {
+      stateRoutes.push({
+        url: `${baseUrl}/${service.slug}/${state}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.85,
+      });
+    }
+  }
 
+  const allCityLocations = [...TEXAS_CITIES_DATA, ...ALABAMA_PRESET_CITIES_DATA];
   const cityRoutes: MetadataRoute.Sitemap = [];
   for (const service of CORE_SERVICES) {
-    for (const cityData of TEXAS_CITIES_DATA) {
+    for (const cityData of allCityLocations) {
       cityRoutes.push({
         url: `${baseUrl}/${service.slug}/${cityData.stateSlug}/${cityData.citySlug}`,
         lastModified: new Date(),
         changeFrequency: "weekly",
         priority: 0.8,
       });
+    }
+    // Include all 463 Alabama cities for the primary 'hvac' service category
+    if (service.slug === "hvac") {
+      for (const alCity of ALABAMA_ALL_CITIES) {
+        cityRoutes.push({
+          url: `${baseUrl}/hvac/alabama/${alCity.slug}`,
+          lastModified: new Date(),
+          changeFrequency: "weekly",
+          priority: 0.75,
+        });
+      }
     }
   }
 

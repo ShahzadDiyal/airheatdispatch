@@ -1,7 +1,13 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { SITE_CONFIG, CORE_SERVICES, TEXAS_CITIES_DATA, getLocationData } from "@/config/site";
+import {
+  SITE_CONFIG,
+  CORE_SERVICES,
+  TEXAS_CITIES_DATA,
+  ALABAMA_PRESET_CITIES_DATA,
+  getLocationData,
+} from "@/config/site";
 import DirectAnswerCard from "@/components/DirectAnswerCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import ZipChecker from "@/components/ZipChecker";
@@ -20,8 +26,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const params: { service: string; state: string; city: string }[] = [];
+  const prebuiltLocations = [...TEXAS_CITIES_DATA, ...ALABAMA_PRESET_CITIES_DATA];
   for (const s of CORE_SERVICES) {
-    for (const cityData of TEXAS_CITIES_DATA) {
+    for (const cityData of prebuiltLocations) {
       params.push({
         service: s.slug,
         state: cityData.stateSlug,
@@ -40,7 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service || !locationData) return { title: "Location Service Not Found" };
 
   const cityName = locationData.cityName;
-  const stateCode = "TX";
+  const stateCode = locationData.stateSlug === "alabama" ? "AL" : "TX";
 
   return {
     title: `${service.name} in ${cityName}, ${stateCode} | AirHeat Dispatch`,
@@ -63,6 +70,7 @@ export default async function LocalServicePage({ params }: PageProps) {
 
   const cityName = locationData.cityName;
   const stateName = locationData.stateName;
+  const stateCode = locationData.stateSlug === "alabama" ? "AL" : "TX";
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -70,7 +78,7 @@ export default async function LocalServicePage({ params }: PageProps) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_CONFIG.domain },
       { "@type": "ListItem", position: 2, name: service.name, item: `${SITE_CONFIG.domain}/${service.slug}` },
-      { "@type": "ListItem", position: 3, name: `${cityName}, TX`, item: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}` },
+      { "@type": "ListItem", position: 3, name: `${cityName}, ${stateCode}`, item: `${SITE_CONFIG.domain}/${service.slug}/${state}/${city}` },
     ],
   };
 
@@ -105,15 +113,15 @@ export default async function LocalServicePage({ params }: PageProps) {
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider">
                 <MapPin className="w-3.5 h-3.5 shrink-0" />
-                <span>{cityName}, TX Local HVAC Hub</span>
+                <span>{cityName}, {stateCode} Local HVAC Hub</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                {service.name} in {cityName}, TX
+                {service.name} in {cityName}, {stateCode}
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-medium">
-                Connect with independent local HVAC contractors serving {cityName} and surrounding Texas communities.
+                Connect with independent local HVAC contractors serving {cityName} and surrounding {stateName} communities.
               </p>
 
               <div className="flex flex-wrap gap-2 sm:gap-3 text-xs font-semibold text-slate-700">
@@ -180,7 +188,7 @@ export default async function LocalServicePage({ params }: PageProps) {
           {/* Direct Answer Card */}
           <DirectAnswerCard
             questionTitle={`What Should Homeowners Know About ${service.name} in ${cityName}?`}
-            directAnswer={`Homeowners seeking ${service.name.toLowerCase()} in ${cityName} can connect with independent local HVAC contractors through AirHeat Dispatch. Local technicians assist with system diagnostics, component replacement, and maintenance tailored to Texas weather conditions.`}
+            directAnswer={`Homeowners seeking ${service.name.toLowerCase()} in ${cityName} can connect with independent local HVAC contractors through AirHeat Dispatch. Local technicians assist with system diagnostics, component replacement, and maintenance tailored to ${stateName} weather conditions.`}
             keyPoints={service.features}
           />
 
@@ -188,10 +196,10 @@ export default async function LocalServicePage({ params }: PageProps) {
           <section className="my-12 sm:my-16 space-y-6 sm:space-y-8">
             <div className="text-center px-2 sm:px-6 lg:px-12">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
-                Common HVAC Issues in {cityName}, TX
+                Common HVAC Issues in {cityName}, {stateCode}
               </h2>
               <p className="text-slate-600 text-sm mt-2">
-                Realistic heating and cooling challenges experienced by Texas homeowners.
+                Realistic heating and cooling challenges experienced by local homeowners.
               </p>
             </div>
 
@@ -216,7 +224,7 @@ export default async function LocalServicePage({ params }: PageProps) {
           {/* Related HVAC Services in City */}
           <section className="my-12 sm:my-16 space-y-5 sm:space-y-6">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-              All HVAC Services Available in {cityName}, TX
+              All HVAC Services Available in {cityName}, {stateCode}
             </h2>
             <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {CORE_SERVICES.map((s) => (
@@ -264,7 +272,7 @@ export default async function LocalServicePage({ params }: PageProps) {
           {/* Bottom CTA Banner */}
           <section className="my-12 sm:my-16 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-5 shadow-lg">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white">
-              Need HVAC Assistance in {cityName}, TX?
+              Need HVAC Assistance in {cityName}, {stateCode}?
             </h2>
             <p className="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed">
               Independent HVAC contractors are available in {cityName} and surrounding areas. Call our connection line now.

@@ -115,11 +115,11 @@ export default async function ServicePage({ params }: PageProps) {
               </p>
 
               <div className="flex flex-wrap gap-2 sm:gap-3 text-xs font-semibold text-slate-700">
-                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-orange-600 shadow-xs">
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white  text-orange-600 shadow-xs">
                   <ShieldAlert className="w-4 h-4 text-orange-500 shrink-0" />
                   Independent Local Contractors
                 </span>
-                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 shadow-xs">
+                <span className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-white  text-slate-700 shadow-xs">
                   <Clock className="w-4 h-4 text-blue-600 shrink-0" />
                   24/7 Hotline Connection
                 </span>
@@ -131,7 +131,7 @@ export default async function ServicePage({ params }: PageProps) {
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
                   aria-label={`Call now to connect with a local provider for ${service.name}`}
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm inline-flex items-center gap-2 sm:gap-3 shadow-md transition-colors cursor-pointer"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm inline-flex items-center gap-2 sm:gap-3 shadow-xs transition-colors cursor-pointer"
                 >
                   <Phone className="w-5 h-5 fill-white shrink-0" />
                   <span className="truncate">Call {SITE_CONFIG.phone} to Connect</span>
@@ -140,7 +140,7 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
 
             {/* Service Summary Highlight Box */}
-            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-6 shadow-sm">
+            <div className="lg:col-span-5 bg-white  rounded-2xl p-5 sm:p-8 space-y-6 shadow-sm">
               <h2 className="text-lg sm:text-xl font-bold text-slate-900 border-b border-slate-100 pb-4">
                 Service Overview
               </h2>
@@ -152,7 +152,7 @@ export default async function ServicePage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+              <div className="p-4 rounded-xl bg-slate-50  text-xs text-slate-600">
                 <span className="font-bold text-slate-900 block mb-1">Texas Local Hubs:</span>
                 Are you located in Texas? View local coverage for{" "}
                 <Link href={`/${service.slug}/texas`} className="text-blue-600 font-bold underline hover:text-blue-700">
@@ -184,7 +184,7 @@ export default async function ServicePage({ params }: PageProps) {
               {service.processSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 space-y-3 relative shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white  rounded-2xl p-5 sm:p-6 space-y-3 relative shadow-sm hover:shadow-xs transition-shadow"
                 >
                   <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center text-xs font-black uppercase tracking-wider shrink-0">
                     0{idx + 1}
@@ -197,7 +197,7 @@ export default async function ServicePage({ params }: PageProps) {
           </section>
 
           {/* Texas Hub Link Card */}
-          <section className="my-8 sm:my-12 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <section className="my-8 sm:my-12 p-5 sm:p-6 rounded-2xl bg-white  shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-start sm:items-center gap-3">
               <div className="p-3 rounded-xl bg-blue-50 text-blue-600 shrink-0">
                 <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -233,7 +233,7 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
 
           {/* Call CTA Banner */}
-          <section className="my-12 sm:my-16 bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-5 sm:space-y-6 shadow-lg">
+          <section className="my-12 sm:my-16 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 lg:p-12 text-center space-y-5 sm:space-y-6 shadow-lg">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white">
               Ready to Connect With a Local Provider for {service.name}?
             </h2>
@@ -245,7 +245,7 @@ export default async function ServicePage({ params }: PageProps) {
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
                 rel="dofollow"
                 aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
-                className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-colors cursor-pointer"
+                className="px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
               >
                 <Phone className="w-4 h-4 fill-white shrink-0" />
                 <span>Call {SITE_CONFIG.phone} Now</span>

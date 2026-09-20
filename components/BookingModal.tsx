@@ -49,7 +49,7 @@ export default function BookingModal({
       aria-labelledby="booking-modal-title"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="bg-white border border-slate-200 rounded-3xl w-full max-w-lg shadow-ms overflow-hidden relative text-slate-900 my-4 sm:my-8">
+      <div className="bg-white  rounded-2xl w-full max-w-lg shadow-ms overflow-hidden relative text-slate-900 my-4 sm:my-8">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -77,7 +77,7 @@ export default function BookingModal({
               </span>{" "}
               to assist with your request.
             </p>
-            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 break-words">
+            <div className="p-3.5 rounded-xl bg-slate-50  text-xs text-slate-700 break-words">
               For immediate connection, call our 24/7 hotline:{" "}
               <a
                 href={`tel:${SITE_CONFIG.phoneRaw}`}
@@ -100,7 +100,7 @@ export default function BookingModal({
           >
             {/* Header */}
             <div className="pr-8">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
                 <Clock className="w-3.5 h-3.5 shrink-0" />
                 <span>24/7 Homeowner Connection</span>
               </div>
@@ -217,7 +217,7 @@ export default function BookingModal({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md shadow-orange-500/20 transition-all hover:scale-[1.01] active:scale-95 disabled:opacity-50 cursor-pointer"
+              className="w-full py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-xs shadow-orange-500/20 transition-all hover:scale-[1.01] active:scale-95 disabled:opacity-50 cursor-pointer"
             >
               {isSubmitting
                 ? "Submitting Request..."

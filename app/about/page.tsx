@@ -57,7 +57,7 @@ export default function AboutPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 my-10 sm:my-14">
-            <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-4 shadow-sm">
+            <div className="bg-white  rounded-2xl p-5 sm:p-8 space-y-4 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
                 Our Purpose & Service Model
               </h2>
@@ -79,7 +79,7 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
+            <div className="bg-white  rounded-2xl p-5 sm:p-8 space-y-4 shadow-sm flex flex-col justify-between">
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2 flex-wrap">
                   <ShieldAlert className="w-5 h-5 text-orange-500 shrink-0" />
@@ -95,12 +95,12 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-700 space-y-2">
+              <div className="p-4 rounded-xl bg-slate-100  text-xs text-slate-700 space-y-2">
                 <span className="font-bold text-slate-900 block">24/7 Connection Hotline:</span>
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
                   rel="dofollow"
-                  className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-colors shadow-md"
+                  className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-colors shadow-xs"
                 >
                   <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
                   <span>Call {SITE_CONFIG.phone}</span>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           </div>
 
           {/* Mandated Disclaimer */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 leading-relaxed my-10 sm:my-12 shadow-sm">
+          <div className="p-5 sm:p-6 rounded-2xl bg-white  text-xs text-slate-500 leading-relaxed my-10 sm:my-12 shadow-sm">
             <strong className="text-slate-900 block mb-1">Required Homeowner Disclaimer:</strong>
             {SITE_CONFIG.disclaimer}
           </div>

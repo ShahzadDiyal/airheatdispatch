@@ -64,7 +64,7 @@ export default function HowItWorksPage() {
               { num: "02", title: "Connect With Local Provider", desc: "You will be connected directly with an independent local HVAC contractor who operates in your city or zip code." },
               { num: "03", title: "Schedule Diagnostics & Repair", desc: "Discuss system symptoms directly with your hired contractor and schedule an in-home evaluation." },
             ].map(({ num, title, desc }) => (
-              <div key={num} className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm hover:shadow-md transition-shadow">
+              <div key={num} className="bg-white  rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm hover:shadow-xs transition-shadow">
                 <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">
                   {num}
                 </div>
@@ -75,7 +75,7 @@ export default function HowItWorksPage() {
           </div>
 
           {/* Key Principles */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 my-10 sm:my-12 space-y-6 shadow-sm">
+          <div className="bg-white  rounded-2xl p-6 sm:p-8 my-10 sm:my-12 space-y-6 shadow-sm">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
               What Homeowners Should Know
             </h2>
@@ -100,7 +100,7 @@ export default function HowItWorksPage() {
           <ZipChecker />
 
           {/* CTA Banner */}
-          <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
+          <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
               Need HVAC Assistance Right Now?
             </h2>
@@ -110,7 +110,7 @@ export default function HowItWorksPage() {
             <a
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-colors shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-colors shadow-xs"
             >
               <Phone className="w-4 h-4 fill-white shrink-0" />
               <span>Call Now: {SITE_CONFIG.phone}</span>

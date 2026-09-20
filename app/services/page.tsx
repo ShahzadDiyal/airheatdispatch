@@ -65,7 +65,7 @@ export default function ServicesPage() {
             {CORE_SERVICES.map((s) => (
               <div
                 key={s.slug}
-                className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-5 hover:border-blue-300 transition-all shadow-sm hover:shadow-md flex flex-col justify-between"
+                className="bg-white  rounded-2xl p-5 sm:p-8 space-y-5 hover:border-blue-300 transition-all shadow-sm hover:shadow-xs flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between gap-2 flex-wrap">

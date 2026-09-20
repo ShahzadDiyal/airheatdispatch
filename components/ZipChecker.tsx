@@ -15,9 +15,9 @@ export default function ZipChecker() {
   };
 
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-xs my-6 relative overflow-hidden">
+    <div className="bg-white  rounded-2xl p-5 sm:p-8 shadow-xs my-6 relative overflow-hidden">
       <div className="max-w-2xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">
           <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
           <span>Local Contractor Coverage Checker</span>
         </div>
@@ -54,7 +54,7 @@ export default function ZipChecker() {
         </div>
         <button
           type="submit"
-          className="px-5 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-md shadow-orange-500/20 whitespace-nowrap"
+          className="px-5 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-xs shadow-orange-500/20 whitespace-nowrap"
         >
           Check Coverage
         </button>

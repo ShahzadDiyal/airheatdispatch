@@ -76,7 +76,7 @@ export default function FaqsPage() {
           </div>
 
           {/* CTA Banner */}
-          <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
+          <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
               Have a Specific HVAC Question?
             </h2>
@@ -87,7 +87,7 @@ export default function FaqsPage() {
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
               aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-colors shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-colors shadow-xs"
             >
               <Phone className="w-4 h-4 fill-white shrink-0" />
               <span>Call Connection Hotline: {SITE_CONFIG.phone}</span>

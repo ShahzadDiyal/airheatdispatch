@@ -5,11 +5,11 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_CONFIG.name,
     short_name: SITE_CONFIG.name,
-    description: "24/7 Fast & Reliable HVAC Service and Repair by licensed thermal experts.",
+    description: "Free homeowner connection service to find independent local HVAC contractors for 24/7 air conditioning and heating help.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0f172a",
-    theme_color: "#0284c7",
+    background_color: "#f8fafc",
+    theme_color: "#2563eb",
     icons: [
       {
         src: "/favicon.ico",

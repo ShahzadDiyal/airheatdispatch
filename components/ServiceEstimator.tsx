@@ -25,9 +25,9 @@ export default function ServiceEstimator() {
   ];
 
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden text-slate-900">
+    <div className="bg-white  rounded-2xl p-5 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden text-slate-900">
       <div className="max-w-3xl">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-3">
           <Wrench className="w-3.5 h-3.5 shrink-0" />
           <span>HVAC Connection Assistant</span>
         </div>
@@ -90,7 +90,7 @@ export default function ServiceEstimator() {
         </div>
 
         {/* Action Call Box */}
-        <div className="bg-slate-900 border border-slate-800 text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5 shadow-md">
+        <div className="bg-slate-900 border border-slate-800 text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between space-y-5 shadow-xs">
           <div>
             <div className="text-xs text-orange-400 font-bold mb-1">Direct Phone Match</div>
             <div className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight">

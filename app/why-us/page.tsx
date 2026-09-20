@@ -66,7 +66,7 @@ export default function WhyUsPage() {
           <BrandTrustGrid />
 
           {/* Service Feature Grid */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 lg:p-12 my-10 sm:my-14 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 shadow-sm">
+          <div className="bg-white  rounded-2xl p-5 sm:p-8 lg:p-12 my-10 sm:my-14 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 shadow-sm">
             {[
               {
                 icon: UserCheck,
@@ -96,7 +96,7 @@ export default function WhyUsPage() {
           </div>
 
           {/* CTA Banner */}
-          <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
+          <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 lg:p-12 text-center space-y-4 my-10 sm:my-14 shadow-lg">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
               Ready to Connect With a Provider?
             </h2>
@@ -107,7 +107,7 @@ export default function WhyUsPage() {
               href={`tel:${SITE_CONFIG.phoneRaw}`}
               rel="dofollow"
               aria-label={`Call hotline at ${SITE_CONFIG.phone}`}
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-md transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm shadow-xs transition-colors"
             >
               <Phone className="w-4 h-4 fill-white shrink-0" />
               <span>Call Connection Hotline: {SITE_CONFIG.phone}</span>

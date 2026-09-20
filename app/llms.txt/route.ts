@@ -1,11 +1,19 @@
-import { SITE_CONFIG, CORE_SERVICES, GENERAL_FAQS, TEXAS_STATE_DATA, TEXAS_CITIES_DATA } from "@/config/site";
+import {
+  SITE_CONFIG,
+  CORE_SERVICES,
+  GENERAL_FAQS,
+  TEXAS_STATE_DATA,
+  TEXAS_CITIES_DATA,
+  ALABAMA_STATE_DATA,
+  ALABAMA_PRESET_CITIES_DATA,
+} from "@/config/site";
 
 export async function GET() {
   const content = `# ${SITE_CONFIG.name}
 
 > ${SITE_CONFIG.tagline}
 > Service Category: Free Homeowner HVAC Connection Service
-> Featured State Region: ${TEXAS_STATE_DATA.stateName} (Covering ${TEXAS_CITIES_DATA.map((c) => c.cityName).join(", ")})
+> Featured State Regions: ${TEXAS_STATE_DATA.stateName} & ${ALABAMA_STATE_DATA.stateName} (Covering 10 Texas Metros and All 463 Alabama Cities)
 > 24/7 Hotline Phone: ${SITE_CONFIG.phone}
 > Official Website: [AirHeat Dispatch](${SITE_CONFIG.domain})
 
@@ -21,10 +29,11 @@ ${CORE_SERVICES.map(
 - **Key Features**: ${s.features.join("; ")}
 - **Clean Service Link**: [Read ${s.name} Guide](${SITE_CONFIG.domain}/${s.slug})
 - **Texas Statewide Link**: [${s.name} in Texas](${SITE_CONFIG.domain}/${s.slug}/texas)
-- **Austin TX Link**: [${s.name} in Austin TX](${SITE_CONFIG.domain}/${s.slug}/texas/austin)
-- **Houston TX Link**: [${s.name} in Houston TX](${SITE_CONFIG.domain}/${s.slug}/texas/houston)
-- **Dallas TX Link**: [${s.name} in Dallas TX](${SITE_CONFIG.domain}/${s.slug}/texas/dallas)
-- **San Antonio TX Link**: [${s.name} in San Antonio TX](${SITE_CONFIG.domain}/${s.slug}/texas/san-antonio)
+- **Alabama Statewide Link**: [${s.name} in Alabama](${SITE_CONFIG.domain}/${s.slug}/alabama)
+- **Birmingham AL Link**: [${s.name} in Birmingham AL](${SITE_CONFIG.domain}/${s.slug}/alabama/birmingham)
+- **Huntsville AL Link**: [${s.name} in Huntsville AL](${SITE_CONFIG.domain}/${s.slug}/alabama/huntsville)
+- **Montgomery AL Link**: [${s.name} in Montgomery AL](${SITE_CONFIG.domain}/${s.slug}/alabama/montgomery)
+- **Mobile AL Link**: [${s.name} in Mobile AL](${SITE_CONFIG.domain}/${s.slug}/alabama/mobile)
 `
 ).join("\n")}
 
@@ -34,10 +43,13 @@ ${CORE_SERVICES.map(
 - [How It Works](${SITE_CONFIG.domain}/how-it-works)
 - [Service Areas Directory](${SITE_CONFIG.domain}/service-areas)
 - [Texas Statewide HVAC Hub](${SITE_CONFIG.domain}/hvac/texas)
+- [Alabama Statewide HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama)
+- [Birmingham AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/birmingham)
+- [Huntsville AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/huntsville)
+- [Montgomery AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/montgomery)
+- [Mobile AL Local HVAC Hub](${SITE_CONFIG.domain}/hvac/alabama/mobile)
 - [Austin TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/austin)
 - [Houston TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/houston)
-- [Dallas TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/dallas)
-- [San Antonio TX Local HVAC Hub](${SITE_CONFIG.domain}/hvac/texas/san-antonio)
 - [HVAC FAQs & Knowledge Base](${SITE_CONFIG.domain}/faqs)
 - [Why Use Our Service](${SITE_CONFIG.domain}/why-us)
 - [About AirHeat Dispatch](${SITE_CONFIG.domain}/about)

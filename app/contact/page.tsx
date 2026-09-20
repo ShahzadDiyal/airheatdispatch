@@ -59,7 +59,7 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 my-10 sm:my-12">
             {/* Contact Details Sidebar */}
-            <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-5 shadow-sm">
+            <div className="lg:col-span-5 bg-white  rounded-2xl p-5 sm:p-8 space-y-5 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Connection Details</h2>
 
               <div className="space-y-3">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   </div>
                 </a>
 
-                <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50  text-slate-700">
                   <div className="p-2.5 sm:p-3 rounded-xl bg-blue-50 text-blue-600 shrink-0">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50  text-slate-700">
                   <div className="p-2.5 sm:p-3 rounded-xl bg-emerald-50 text-emerald-600 shrink-0">
                     <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700">
+                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-slate-50  text-slate-700">
                   <div className="p-2.5 sm:p-3 rounded-xl bg-slate-100 text-slate-600 mt-0.5 shrink-0">
                     <ShieldAlert className="w-4 h-4 sm:w-5 sm:h-5 text-orange-500" />
                   </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-5 shadow-sm">
+            <div className="lg:col-span-7 bg-white  rounded-2xl p-5 sm:p-8 space-y-5 shadow-sm">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900">Request Connection Assistance</h2>
               <form className="space-y-4" action={`tel:${SITE_CONFIG.phoneRaw}`}>
                 <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4">
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Jane Doe"
-                      className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
+                      className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -140,7 +140,7 @@ export default function ContactPage() {
                       type="tel"
                       required
                       placeholder="(555) 000-0000"
-                      className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
+                      className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                     type="text"
                     required
                     placeholder="Austin, TX 78701"
-                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
+                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                   />
                 </div>
 
@@ -168,13 +168,13 @@ export default function ContactPage() {
                     aria-label="HVAC Issue Details"
                     rows={3}
                     placeholder="Describe your heating or air conditioning issue..."
-                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 resize-none transition-colors"
+                    className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 resize-none transition-colors"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-wider shadow-md transition-colors cursor-pointer flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm uppercase tracking-wider shadow-xs transition-colors cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4 fill-white shrink-0" />
                   <span className="truncate">Connect Now  {SITE_CONFIG.phone} →</span>

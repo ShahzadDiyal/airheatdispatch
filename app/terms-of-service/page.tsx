@@ -35,7 +35,7 @@ export default function TermsOfServicePage() {
           </p>
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
+        <div className="bg-white  rounded-2xl p-5 sm:p-8 space-y-6 text-sm leading-relaxed shadow-sm">
           <section className="space-y-2">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               1. Free Connection Service
@@ -67,7 +67,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-lg sm:text-xl font-bold text-slate-900">
               4. Mandatory Homeowner Disclaimer
             </h2>
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 leading-relaxed">
+            <div className="p-4 rounded-xl bg-slate-50  text-xs text-slate-600 leading-relaxed">
               {SITE_CONFIG.disclaimer}
             </div>
           </section>

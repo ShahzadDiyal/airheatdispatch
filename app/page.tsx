@@ -50,7 +50,7 @@ export default function HomePage() {
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-5 sm:space-y-6">
               {/* Badge */}
-              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-200 shadow-xs text-xs font-bold text-blue-600">
+              <div className="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-full bg-white  shadow-xs text-xs font-bold text-blue-600">
                 <span className="flex items-center gap-1.5 text-emerald-600 shrink-0">
                   <span className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -88,7 +88,7 @@ export default function HomePage() {
                 <Link
                   href="/services"
                   rel="dofollow"
-                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600 border border-blue-200 font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs whitespace-nowrap"
+                  className="px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-blue-600  font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xs whitespace-nowrap"
                 >
                   <span>Find HVAC Service</span>
                   <ArrowRight className="w-4 h-4 text-blue-600 shrink-0" />
@@ -99,7 +99,7 @@ export default function HomePage() {
               <div className="pt-1">
                 <a
                   href={`tel:${SITE_CONFIG.phoneRaw}`}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-md transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
                   <span>Speak With a Local Provider</span>
@@ -114,7 +114,7 @@ export default function HomePage() {
 
             {/* Right Column: Hero Image Card */}
             <div className="lg:col-span-5 mt-4 lg:mt-0">
-              <div className="bg-white p-2 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden group">
+              <div className="bg-white p-2 rounded-2xl  shadow-xl relative overflow-hidden group">
                 <div className="relative h-[280px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden bg-slate-900">
                   <img
                     src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80"
@@ -159,7 +159,7 @@ export default function HomePage() {
       <section className="py-12 sm:py-14 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 px-2">
-            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider border border-blue-200 inline-block mb-2">
+            <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider  inline-block mb-2">
               HOMEOWNER SERVICE OVERVIEW
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
@@ -188,7 +188,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
-              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+              <span className="px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
                 RESPONSIVE REPAIR COVERAGE
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
@@ -233,7 +233,7 @@ export default function HomePage() {
 
                     <a
                       href={`tel:${SITE_CONFIG.phoneRaw}`}
-                      className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-orange-500/30 transition-all mt-5"
+                      className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xs shadow-orange-500/30 transition-all mt-5"
                     >
                       <Phone className="w-3.5 h-3.5 fill-white shrink-0" />
                       <span className="truncate">Call {SITE_CONFIG.phone}</span>
@@ -245,7 +245,7 @@ export default function HomePage() {
               return (
                 <div
                   key={s.slug}
-                  className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-md group"
+                  className="bg-white  hover:border-blue-400 rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 shadow-xs hover:shadow-xs group"
                 >
                   <div className="space-y-3">
                     <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0">
@@ -286,7 +286,7 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center px-2 sm:px-6 xl:px-12 mb-10 sm:mb-12">
-            <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+            <span className="px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
               SIMPLE 3-STEP PROCESS
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
@@ -299,9 +299,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Step 1 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50  rounded-2xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20 shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-xs shadow-blue-500/20 shrink-0">
                   01
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -312,15 +312,15 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+              <div className="p-3 rounded-xl bg-white  text-xs text-slate-700 font-semibold mt-4">
                 Call <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-orange-500 font-bold underline">{SITE_CONFIG.phone}</a> to request connection.
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50  rounded-2xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-blue-500/20 shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white font-bold text-lg flex items-center justify-center shadow-xs shadow-blue-500/20 shrink-0">
                   02
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -331,15 +331,15 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+              <div className="p-3 rounded-xl bg-white  text-xs text-slate-700 font-semibold mt-4">
                 Direct phone matching with independent providers.
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
+            <div className="bg-slate-50  rounded-2xl p-6 sm:p-8 space-y-4 relative flex flex-col justify-between">
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white font-bold text-lg flex items-center justify-center shadow-md shadow-orange-500/20 shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white font-bold text-lg flex items-center justify-center shadow-xs shadow-orange-500/20 shrink-0">
                   03
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -350,7 +350,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-700 font-semibold mt-4">
+              <div className="p-3 rounded-xl bg-white  text-xs text-slate-700 font-semibold mt-4">
                 Work performed directly by independent contractor.
               </div>
             </div>
@@ -364,7 +364,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-5 space-y-5 sm:space-y-6">
-              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider inline-block">
+              <span className="px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider inline-block">
                 SUCCESSFUL MATCHING
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
@@ -374,7 +374,7 @@ export default function HomePage() {
                 When heating or air conditioning systems fail during extreme weather, homeowners need a fast, reliable way to reach independent service providers in their local area.
               </p>
 
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-700 space-y-1">
+              <div className="p-4 rounded-2xl bg-white  text-xs text-slate-700 space-y-1">
                 <strong className="text-slate-900 block font-bold">Free Connection Service:</strong>
                 Our homeowner connection desk is completely free to use. Call anytime to speak with a representative.
               </div>
@@ -396,7 +396,7 @@ export default function HomePage() {
                 { icon: Wrench, title: "Full HVAC Coverage", desc: "Assistance for central AC repair, furnace troubleshooting, heat pump issues, and tune-ups." },
                 { icon: ShieldAlert, title: "Free for Homeowners", desc: "Our connection service helps homeowners find local service contractors at no cost to you." },
               ].map(({ icon: Icon, title, desc }, idx) => (
-                <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2">
+                <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-white  shadow-xs space-y-2">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-2 shrink-0">
                     <Icon className="w-5 h-5" />
                   </div>
@@ -409,70 +409,116 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NATIONWIDE SERVICE AREAS */}
+      {/* NATIONWIDE & STATEWIDE SERVICE AREAS */}
       <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
-              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
-                NATIONWIDE SERVICE AREAS
+              <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                STATEWIDE & REGIONAL DIRECTORIES
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-                Nationwide Service Areas & Regional Demands
+                Featured Texas & Alabama Service Metros
               </h2>
             </div>
             <p className="text-slate-600 text-xs sm:text-sm max-w-md">
-              Connecting callers with independent local HVAC contractors across Texas and major U.S. service regions.
+              Connecting callers with independent local HVAC contractors across Texas, Alabama (all 463 cities), and nationwide service regions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {TEXAS_CITIES_DATA.slice(0, 6).map((city) => (
-              <div
-                key={city.citySlug}
-                className="bg-slate-50 border border-slate-200 hover:border-blue-400 rounded-2xl p-5 sm:p-6 space-y-4 transition-all group flex flex-col justify-between"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-blue-600 flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-                      {city.cityName}, TX
-                    </span>
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold uppercase shrink-0">
-                      Texas Hub
-                    </span>
-                  </div>
-
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                    {city.cityName} HVAC Service
-                  </h3>
-
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
-                    {city.intro}
-                  </p>
+            <div className="bg-slate-50 border border-slate-200 hover:border-blue-400 rounded-2xl p-5 sm:p-6 space-y-4 transition-all group flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-blue-600 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+                    Austin, TX
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold uppercase shrink-0">
+                    Texas Hub
+                  </span>
                 </div>
-
-                <Link
-                  href={`/hvac/texas/${city.citySlug}`}
-                  className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-500 text-blue-600 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
-                >
-                  <span>View {city.cityName} Service Hub</span>
-                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
-                </Link>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  Austin Local HVAC Hub
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Connect with independent local HVAC contractors serving Austin and Central Texas heatwave demands.
+                </p>
               </div>
-            ))}
+              <Link
+                href="/hvac/texas/austin"
+                className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-blue-500 text-blue-600 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
+              >
+                <span>View Austin Hub</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+              </Link>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 hover:border-emerald-400 rounded-2xl p-5 sm:p-6 space-y-4 transition-all group flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-emerald-700 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    Birmingham, AL
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold uppercase shrink-0">
+                    Alabama Hub
+                  </span>
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                  Birmingham Local HVAC Hub
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Connect with independent contractors in Birmingham, Jefferson County, and Central Alabama.
+                </p>
+              </div>
+              <Link
+                href="/hvac/alabama/birmingham"
+                className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 text-emerald-700 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
+              >
+                <span>View Birmingham Hub</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+              </Link>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 hover:border-emerald-400 rounded-2xl p-5 sm:p-6 space-y-4 transition-all group flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-emerald-700 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    Huntsville, AL
+                  </span>
+                  <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold uppercase shrink-0">
+                    Alabama Hub
+                  </span>
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                  Huntsville Local HVAC Hub
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                  Connect with independent local technicians across the Rocket City and Tennessee Valley region.
+                </p>
+              </div>
+              <Link
+                href="/hvac/alabama/huntsville"
+                className="w-full py-2.5 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 text-emerald-700 font-bold text-xs flex items-center justify-center gap-2 transition-colors mt-2"
+              >
+                <span>View Huntsville Hub</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+              </Link>
+            </div>
           </div>
 
-          {/* Statewide Link Bar */}
+          {/* Dual State Hub Link Bar */}
           <div className="mt-6 sm:mt-8 p-4 rounded-2xl bg-blue-50 border border-blue-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="text-xs text-slate-700 font-medium">
-              <strong className="text-blue-700">Looking for more Texas cities?</strong> View our full Texas Statewide HVAC Service Hub covering Houston, Dallas, San Antonio, Austin, Fort Worth, El Paso, and more.
+              <strong className="text-blue-700">Explore State Directories:</strong> View full coverage for <Link href="/hvac/texas" className="text-blue-700 font-bold underline">Texas Hub (10 Metros)</Link> or <Link href="/hvac/alabama" className="text-emerald-800 font-bold underline">Alabama Hub (463 Cities)</Link>.
             </div>
             <Link
-              href="/hvac/texas"
+              href="/service-areas"
               className="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shrink-0 shadow-xs whitespace-nowrap"
             >
-              Visit Texas Statewide Hub →
+              All Service Areas Directory →
             </Link>
           </div>
         </div>
@@ -490,7 +536,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-12">
             <div>
-              <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+              <span className="px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
                 HVAC KNOWLEDGE HUB
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
@@ -535,7 +581,7 @@ export default function HomePage() {
             ].map((guide, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                className="bg-white  hover:border-blue-400 rounded-2xl overflow-hidden shadow-xs hover:shadow-xs transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="h-40 sm:h-44 overflow-hidden relative bg-slate-100">
@@ -615,7 +661,7 @@ export default function HomePage() {
 
             <Link
               href="/contact"
-              className="w-full xs:w-auto sm:w-auto px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-sm sm:text-base flex items-center justify-center gap-2 border border-slate-200 shadow-md whitespace-nowrap"
+              className="w-full xs:w-auto sm:w-auto px-6 sm:px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-sm sm:text-base flex items-center justify-center gap-2  shadow-xs whitespace-nowrap"
             >
               <Phone className="w-4 h-4 text-slate-700 shrink-0" />
               <span>Speak With a Local Provider</span>

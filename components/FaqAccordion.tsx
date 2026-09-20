@@ -28,7 +28,7 @@ export default function FaqAccordion({
   return (
     <div className="space-y-8">
       <div className="text-center px-2 sm:px-4 lg:px-8">
-        <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+        <span className="px-3 py-1 rounded-full bg-blue-50  text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 inline-block">
           FREQUENTLY ASKED QUESTIONS
         </span>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
@@ -43,7 +43,7 @@ export default function FaqAccordion({
           return (
             <div
               key={idx}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs transition-colors"
+              className="bg-white  rounded-2xl overflow-hidden shadow-xs transition-colors"
             >
               <button
                 onClick={() => toggle(idx)}
