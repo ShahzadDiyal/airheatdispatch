@@ -22,7 +22,7 @@ export const MONTANA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Montana?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Montana homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Montana homeowners."
     },
     {
       question: "Which Montana cities are covered?",
@@ -52,7 +52,7 @@ export const MONTANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Billings", "North Billings", "South Billings", "West Billings", "East Billings"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Billings?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Billings, MT." },
+      { question: "How do I connect with an HVAC contractor in Billings?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Billings, MT." },
       { question: "Are contractors in Billings licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Montana." }
     ]
   },
@@ -72,7 +72,7 @@ export const MONTANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Missoula", "North Missoula", "South Missoula", "West Missoula", "East Missoula"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Missoula?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Missoula, MT." },
+      { question: "How do I connect with an HVAC contractor in Missoula?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Missoula, MT." },
       { question: "Are contractors in Missoula licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Montana." }
     ]
   },
@@ -92,7 +92,7 @@ export const MONTANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Great Falls", "North Great Falls", "South Great Falls", "West Great Falls", "East Great Falls"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Great Falls?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Great Falls, MT." },
+      { question: "How do I connect with an HVAC contractor in Great Falls?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Great Falls, MT." },
       { question: "Are contractors in Great Falls licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Montana." }
     ]
   },
@@ -112,7 +112,7 @@ export const MONTANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bozeman", "North Bozeman", "South Bozeman", "West Bozeman", "East Bozeman"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bozeman?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bozeman, MT." },
+      { question: "How do I connect with an HVAC contractor in Bozeman?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bozeman, MT." },
       { question: "Are contractors in Bozeman licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Montana." }
     ]
   },
@@ -132,7 +132,7 @@ export const MONTANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Butte", "North Butte", "South Butte", "West Butte", "East Butte"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Butte?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Butte, MT." },
+      { question: "How do I connect with an HVAC contractor in Butte?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Butte, MT." },
       { question: "Are contractors in Butte licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Montana." }
     ]
   }

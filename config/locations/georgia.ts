@@ -22,7 +22,7 @@ export const GEORGIA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Georgia?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Georgia homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Georgia homeowners."
     },
     {
       question: "Which Georgia cities are covered?",
@@ -52,7 +52,7 @@ export const GEORGIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Atlanta", "North Atlanta", "South Atlanta", "West Atlanta", "East Atlanta"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Atlanta?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Atlanta, GA." },
+      { question: "How do I connect with an HVAC contractor in Atlanta?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Atlanta, GA." },
       { question: "Are contractors in Atlanta licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Georgia." }
     ]
   },
@@ -72,7 +72,7 @@ export const GEORGIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Columbus", "North Columbus", "South Columbus", "West Columbus", "East Columbus"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Columbus?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Columbus, GA." },
+      { question: "How do I connect with an HVAC contractor in Columbus?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Columbus, GA." },
       { question: "Are contractors in Columbus licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Georgia." }
     ]
   },
@@ -92,7 +92,7 @@ export const GEORGIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Augusta", "North Augusta", "South Augusta", "West Augusta", "East Augusta"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Augusta?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Augusta, GA." },
+      { question: "How do I connect with an HVAC contractor in Augusta?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Augusta, GA." },
       { question: "Are contractors in Augusta licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Georgia." }
     ]
   },
@@ -112,7 +112,7 @@ export const GEORGIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Macon", "North Macon", "South Macon", "West Macon", "East Macon"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Macon?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Macon, GA." },
+      { question: "How do I connect with an HVAC contractor in Macon?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Macon, GA." },
       { question: "Are contractors in Macon licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Georgia." }
     ]
   },
@@ -132,7 +132,7 @@ export const GEORGIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Savannah", "North Savannah", "South Savannah", "West Savannah", "East Savannah"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Savannah?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Savannah, GA." },
+      { question: "How do I connect with an HVAC contractor in Savannah?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Savannah, GA." },
       { question: "Are contractors in Savannah licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Georgia." }
     ]
   }

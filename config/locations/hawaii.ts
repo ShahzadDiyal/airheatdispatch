@@ -22,7 +22,7 @@ export const HAWAII_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Hawaii?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Hawaii homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Hawaii homeowners."
     },
     {
       question: "Which Hawaii cities are covered?",
@@ -52,7 +52,7 @@ export const HAWAII_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Honolulu", "North Honolulu", "South Honolulu", "West Honolulu", "East Honolulu"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Honolulu?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Honolulu, HI." },
+      { question: "How do I connect with an HVAC contractor in Honolulu?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Honolulu, HI." },
       { question: "Are contractors in Honolulu licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Hawaii." }
     ]
   },
@@ -72,7 +72,7 @@ export const HAWAII_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central East Honolulu", "North East Honolulu", "South East Honolulu", "West East Honolulu", "East East Honolulu"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in East Honolulu?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing East Honolulu, HI." },
+      { question: "How do I connect with an HVAC contractor in East Honolulu?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing East Honolulu, HI." },
       { question: "Are contractors in East Honolulu licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Hawaii." }
     ]
   },
@@ -92,7 +92,7 @@ export const HAWAII_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Pearl City", "North Pearl City", "South Pearl City", "West Pearl City", "East Pearl City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Pearl City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Pearl City, HI." },
+      { question: "How do I connect with an HVAC contractor in Pearl City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Pearl City, HI." },
       { question: "Are contractors in Pearl City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Hawaii." }
     ]
   },
@@ -112,7 +112,7 @@ export const HAWAII_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Hilo", "North Hilo", "South Hilo", "West Hilo", "East Hilo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Hilo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Hilo, HI." },
+      { question: "How do I connect with an HVAC contractor in Hilo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Hilo, HI." },
       { question: "Are contractors in Hilo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Hawaii." }
     ]
   },
@@ -132,7 +132,7 @@ export const HAWAII_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Kailua", "North Kailua", "South Kailua", "West Kailua", "East Kailua"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Kailua?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Kailua, HI." },
+      { question: "How do I connect with an HVAC contractor in Kailua?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Kailua, HI." },
       { question: "Are contractors in Kailua licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Hawaii." }
     ]
   }

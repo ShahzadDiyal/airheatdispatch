@@ -22,7 +22,7 @@ export const OKLAHOMA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Oklahoma?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Oklahoma homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Oklahoma homeowners."
     },
     {
       question: "Which Oklahoma cities are covered?",
@@ -52,7 +52,7 @@ export const OKLAHOMA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Oklahoma City", "North Oklahoma City", "South Oklahoma City", "West Oklahoma City", "East Oklahoma City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Oklahoma City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Oklahoma City, OK." },
+      { question: "How do I connect with an HVAC contractor in Oklahoma City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Oklahoma City, OK." },
       { question: "Are contractors in Oklahoma City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oklahoma." }
     ]
   },
@@ -72,7 +72,7 @@ export const OKLAHOMA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Tulsa", "North Tulsa", "South Tulsa", "West Tulsa", "East Tulsa"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Tulsa?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Tulsa, OK." },
+      { question: "How do I connect with an HVAC contractor in Tulsa?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Tulsa, OK." },
       { question: "Are contractors in Tulsa licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oklahoma." }
     ]
   },
@@ -92,7 +92,7 @@ export const OKLAHOMA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Norman", "North Norman", "South Norman", "West Norman", "East Norman"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Norman?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Norman, OK." },
+      { question: "How do I connect with an HVAC contractor in Norman?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Norman, OK." },
       { question: "Are contractors in Norman licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oklahoma." }
     ]
   },
@@ -112,7 +112,7 @@ export const OKLAHOMA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Broken Arrow", "North Broken Arrow", "South Broken Arrow", "West Broken Arrow", "East Broken Arrow"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Broken Arrow?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Broken Arrow, OK." },
+      { question: "How do I connect with an HVAC contractor in Broken Arrow?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Broken Arrow, OK." },
       { question: "Are contractors in Broken Arrow licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oklahoma." }
     ]
   },
@@ -132,7 +132,7 @@ export const OKLAHOMA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lawton", "North Lawton", "South Lawton", "West Lawton", "East Lawton"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lawton?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lawton, OK." },
+      { question: "How do I connect with an HVAC contractor in Lawton?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lawton, OK." },
       { question: "Are contractors in Lawton licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oklahoma." }
     ]
   }

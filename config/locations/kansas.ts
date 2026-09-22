@@ -22,7 +22,7 @@ export const KANSAS_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Kansas?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Kansas homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Kansas homeowners."
     },
     {
       question: "Which Kansas cities are covered?",
@@ -52,7 +52,7 @@ export const KANSAS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Wichita", "North Wichita", "South Wichita", "West Wichita", "East Wichita"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Wichita?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Wichita, KS." },
+      { question: "How do I connect with an HVAC contractor in Wichita?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Wichita, KS." },
       { question: "Are contractors in Wichita licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kansas." }
     ]
   },
@@ -72,7 +72,7 @@ export const KANSAS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Overland Park", "North Overland Park", "South Overland Park", "West Overland Park", "East Overland Park"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Overland Park?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Overland Park, KS." },
+      { question: "How do I connect with an HVAC contractor in Overland Park?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Overland Park, KS." },
       { question: "Are contractors in Overland Park licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kansas." }
     ]
   },
@@ -92,7 +92,7 @@ export const KANSAS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Kansas City", "North Kansas City", "South Kansas City", "West Kansas City", "East Kansas City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Kansas City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Kansas City, KS." },
+      { question: "How do I connect with an HVAC contractor in Kansas City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Kansas City, KS." },
       { question: "Are contractors in Kansas City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kansas." }
     ]
   },
@@ -112,7 +112,7 @@ export const KANSAS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Olathe", "North Olathe", "South Olathe", "West Olathe", "East Olathe"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Olathe?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Olathe, KS." },
+      { question: "How do I connect with an HVAC contractor in Olathe?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Olathe, KS." },
       { question: "Are contractors in Olathe licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kansas." }
     ]
   },
@@ -132,7 +132,7 @@ export const KANSAS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Topeka", "North Topeka", "South Topeka", "West Topeka", "East Topeka"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Topeka?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Topeka, KS." },
+      { question: "How do I connect with an HVAC contractor in Topeka?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Topeka, KS." },
       { question: "Are contractors in Topeka licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kansas." }
     ]
   }

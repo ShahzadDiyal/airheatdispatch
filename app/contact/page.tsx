@@ -8,7 +8,7 @@ import { Phone, Mail, Clock, ShieldAlert } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact & Phone Connection Hotline | AirHeat Dispatch",
   description:
-    "Need assistance connecting with a local HVAC contractor? Call our 24/7 hotline at (555) 839-4328 to connect with independent service providers.",
+    "Need assistance connecting with a local HVAC contractor? Call our 24/7 hotline at (202) 931-4151 to connect with independent service providers.",
   alternates: {
     canonical: `${SITE_CONFIG.domain}/contact`,
   },
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
           <DirectAnswerCard
             questionTitle="How Do I Connect With a Local HVAC Provider?"
-            directAnswer="Call our 24/7 connection hotline directly at (555) 839-4328. Your call will be routed to an independent local HVAC contractor servicing your area."
+            directAnswer="Call our 24/7 connection hotline directly at (202) 931-4151. Your call will be routed to an independent local HVAC contractor servicing your area."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 my-10 sm:my-12">
@@ -139,7 +139,7 @@ export default function ContactPage() {
                       aria-label="Phone Number"
                       type="tel"
                       required
-                      placeholder="(555) 000-0000"
+       (202) 931-4151               placeholder=""
                       className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>

@@ -22,7 +22,7 @@ export const NEW_YORK_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in New York?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving New York homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving New York homeowners."
     },
     {
       question: "Which New York cities are covered?",
@@ -52,7 +52,7 @@ export const NEW_YORK_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central New York City", "North New York City", "South New York City", "West New York City", "East New York City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in New York City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing New York City, NY." },
+      { question: "How do I connect with an HVAC contractor in New York City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing New York City, NY." },
       { question: "Are contractors in New York City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New York." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEW_YORK_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Buffalo", "North Buffalo", "South Buffalo", "West Buffalo", "East Buffalo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Buffalo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Buffalo, NY." },
+      { question: "How do I connect with an HVAC contractor in Buffalo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Buffalo, NY." },
       { question: "Are contractors in Buffalo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New York." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEW_YORK_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rochester", "North Rochester", "South Rochester", "West Rochester", "East Rochester"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rochester, NY." },
+      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rochester, NY." },
       { question: "Are contractors in Rochester licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New York." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEW_YORK_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Yonkers", "North Yonkers", "South Yonkers", "West Yonkers", "East Yonkers"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Yonkers?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Yonkers, NY." },
+      { question: "How do I connect with an HVAC contractor in Yonkers?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Yonkers, NY." },
       { question: "Are contractors in Yonkers licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New York." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEW_YORK_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Syracuse", "North Syracuse", "South Syracuse", "West Syracuse", "East Syracuse"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Syracuse?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Syracuse, NY." },
+      { question: "How do I connect with an HVAC contractor in Syracuse?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Syracuse, NY." },
       { question: "Are contractors in Syracuse licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New York." }
     ]
   }

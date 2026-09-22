@@ -22,7 +22,7 @@ export const ILLINOIS_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Illinois?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Illinois homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Illinois homeowners."
     },
     {
       question: "Which Illinois cities are covered?",
@@ -52,7 +52,7 @@ export const ILLINOIS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Chicago", "North Chicago", "South Chicago", "West Chicago", "East Chicago"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Chicago?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Chicago, IL." },
+      { question: "How do I connect with an HVAC contractor in Chicago?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Chicago, IL." },
       { question: "Are contractors in Chicago licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Illinois." }
     ]
   },
@@ -72,7 +72,7 @@ export const ILLINOIS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Aurora", "North Aurora", "South Aurora", "West Aurora", "East Aurora"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Aurora?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Aurora, IL." },
+      { question: "How do I connect with an HVAC contractor in Aurora?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Aurora, IL." },
       { question: "Are contractors in Aurora licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Illinois." }
     ]
   },
@@ -92,7 +92,7 @@ export const ILLINOIS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Joliet", "North Joliet", "South Joliet", "West Joliet", "East Joliet"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Joliet?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Joliet, IL." },
+      { question: "How do I connect with an HVAC contractor in Joliet?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Joliet, IL." },
       { question: "Are contractors in Joliet licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Illinois." }
     ]
   },
@@ -112,7 +112,7 @@ export const ILLINOIS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Naperville", "North Naperville", "South Naperville", "West Naperville", "East Naperville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Naperville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Naperville, IL." },
+      { question: "How do I connect with an HVAC contractor in Naperville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Naperville, IL." },
       { question: "Are contractors in Naperville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Illinois." }
     ]
   },
@@ -132,7 +132,7 @@ export const ILLINOIS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rockford", "North Rockford", "South Rockford", "West Rockford", "East Rockford"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rockford?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rockford, IL." },
+      { question: "How do I connect with an HVAC contractor in Rockford?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rockford, IL." },
       { question: "Are contractors in Rockford licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Illinois." }
     ]
   }

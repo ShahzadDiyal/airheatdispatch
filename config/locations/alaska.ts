@@ -22,7 +22,7 @@ export const ALASKA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Alaska?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Alaska homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Alaska homeowners."
     },
     {
       question: "Which Alaska cities are covered?",
@@ -52,7 +52,7 @@ export const ALASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Anchorage", "North Anchorage", "South Anchorage", "West Anchorage", "East Anchorage"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Anchorage?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Anchorage, AK." },
+      { question: "How do I connect with an HVAC contractor in Anchorage?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Anchorage, AK." },
       { question: "Are contractors in Anchorage licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Alaska." }
     ]
   },
@@ -72,7 +72,7 @@ export const ALASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Fairbanks", "North Fairbanks", "South Fairbanks", "West Fairbanks", "East Fairbanks"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Fairbanks?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Fairbanks, AK." },
+      { question: "How do I connect with an HVAC contractor in Fairbanks?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Fairbanks, AK." },
       { question: "Are contractors in Fairbanks licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Alaska." }
     ]
   },
@@ -92,7 +92,7 @@ export const ALASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Juneau", "North Juneau", "South Juneau", "West Juneau", "East Juneau"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Juneau?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Juneau, AK." },
+      { question: "How do I connect with an HVAC contractor in Juneau?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Juneau, AK." },
       { question: "Are contractors in Juneau licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Alaska." }
     ]
   },
@@ -112,7 +112,7 @@ export const ALASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Sitka", "North Sitka", "South Sitka", "West Sitka", "East Sitka"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Sitka?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Sitka, AK." },
+      { question: "How do I connect with an HVAC contractor in Sitka?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Sitka, AK." },
       { question: "Are contractors in Sitka licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Alaska." }
     ]
   },
@@ -132,7 +132,7 @@ export const ALASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Ketchikan", "North Ketchikan", "South Ketchikan", "West Ketchikan", "East Ketchikan"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Ketchikan?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Ketchikan, AK." },
+      { question: "How do I connect with an HVAC contractor in Ketchikan?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Ketchikan, AK." },
       { question: "Are contractors in Ketchikan licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Alaska." }
     ]
   }

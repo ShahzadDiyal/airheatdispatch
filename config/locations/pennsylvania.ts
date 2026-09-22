@@ -22,7 +22,7 @@ export const PENNSYLVANIA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Pennsylvania?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Pennsylvania homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Pennsylvania homeowners."
     },
     {
       question: "Which Pennsylvania cities are covered?",
@@ -52,7 +52,7 @@ export const PENNSYLVANIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Philadelphia", "North Philadelphia", "South Philadelphia", "West Philadelphia", "East Philadelphia"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Philadelphia?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Philadelphia, PA." },
+      { question: "How do I connect with an HVAC contractor in Philadelphia?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Philadelphia, PA." },
       { question: "Are contractors in Philadelphia licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Pennsylvania." }
     ]
   },
@@ -72,7 +72,7 @@ export const PENNSYLVANIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Pittsburgh", "North Pittsburgh", "South Pittsburgh", "West Pittsburgh", "East Pittsburgh"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Pittsburgh?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Pittsburgh, PA." },
+      { question: "How do I connect with an HVAC contractor in Pittsburgh?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Pittsburgh, PA." },
       { question: "Are contractors in Pittsburgh licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Pennsylvania." }
     ]
   },
@@ -92,7 +92,7 @@ export const PENNSYLVANIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Allentown", "North Allentown", "South Allentown", "West Allentown", "East Allentown"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Allentown?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Allentown, PA." },
+      { question: "How do I connect with an HVAC contractor in Allentown?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Allentown, PA." },
       { question: "Are contractors in Allentown licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Pennsylvania." }
     ]
   },
@@ -112,7 +112,7 @@ export const PENNSYLVANIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Reading", "North Reading", "South Reading", "West Reading", "East Reading"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Reading?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Reading, PA." },
+      { question: "How do I connect with an HVAC contractor in Reading?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Reading, PA." },
       { question: "Are contractors in Reading licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Pennsylvania." }
     ]
   },
@@ -132,7 +132,7 @@ export const PENNSYLVANIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Erie", "North Erie", "South Erie", "West Erie", "East Erie"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Erie?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Erie, PA." },
+      { question: "How do I connect with an HVAC contractor in Erie?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Erie, PA." },
       { question: "Are contractors in Erie licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Pennsylvania." }
     ]
   }

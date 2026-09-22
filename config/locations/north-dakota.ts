@@ -22,7 +22,7 @@ export const NORTH_DAKOTA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in North Dakota?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving North Dakota homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving North Dakota homeowners."
     },
     {
       question: "Which North Dakota cities are covered?",
@@ -52,7 +52,7 @@ export const NORTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Fargo", "North Fargo", "South Fargo", "West Fargo", "East Fargo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Fargo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Fargo, ND." },
+      { question: "How do I connect with an HVAC contractor in Fargo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Fargo, ND." },
       { question: "Are contractors in Fargo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Dakota." }
     ]
   },
@@ -72,7 +72,7 @@ export const NORTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bismarck", "North Bismarck", "South Bismarck", "West Bismarck", "East Bismarck"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bismarck?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bismarck, ND." },
+      { question: "How do I connect with an HVAC contractor in Bismarck?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bismarck, ND." },
       { question: "Are contractors in Bismarck licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Dakota." }
     ]
   },
@@ -92,7 +92,7 @@ export const NORTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Grand Forks", "North Grand Forks", "South Grand Forks", "West Grand Forks", "East Grand Forks"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Grand Forks?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Grand Forks, ND." },
+      { question: "How do I connect with an HVAC contractor in Grand Forks?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Grand Forks, ND." },
       { question: "Are contractors in Grand Forks licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Dakota." }
     ]
   },
@@ -112,7 +112,7 @@ export const NORTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Minot", "North Minot", "South Minot", "West Minot", "East Minot"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Minot?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Minot, ND." },
+      { question: "How do I connect with an HVAC contractor in Minot?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Minot, ND." },
       { question: "Are contractors in Minot licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Dakota." }
     ]
   },
@@ -132,7 +132,7 @@ export const NORTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central West Fargo", "North West Fargo", "South West Fargo", "West West Fargo", "East West Fargo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in West Fargo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing West Fargo, ND." },
+      { question: "How do I connect with an HVAC contractor in West Fargo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing West Fargo, ND." },
       { question: "Are contractors in West Fargo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Dakota." }
     ]
   }

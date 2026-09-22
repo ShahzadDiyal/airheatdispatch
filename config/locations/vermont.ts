@@ -22,7 +22,7 @@ export const VERMONT_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Vermont?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Vermont homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Vermont homeowners."
     },
     {
       question: "Which Vermont cities are covered?",
@@ -52,7 +52,7 @@ export const VERMONT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Burlington", "North Burlington", "South Burlington", "West Burlington", "East Burlington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Burlington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Burlington, VT." },
+      { question: "How do I connect with an HVAC contractor in Burlington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Burlington, VT." },
       { question: "Are contractors in Burlington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Vermont." }
     ]
   },
@@ -72,7 +72,7 @@ export const VERMONT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central South Burlington", "North South Burlington", "South South Burlington", "West South Burlington", "East South Burlington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in South Burlington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing South Burlington, VT." },
+      { question: "How do I connect with an HVAC contractor in South Burlington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing South Burlington, VT." },
       { question: "Are contractors in South Burlington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Vermont." }
     ]
   },
@@ -92,7 +92,7 @@ export const VERMONT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rutland", "North Rutland", "South Rutland", "West Rutland", "East Rutland"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rutland?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rutland, VT." },
+      { question: "How do I connect with an HVAC contractor in Rutland?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rutland, VT." },
       { question: "Are contractors in Rutland licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Vermont." }
     ]
   },
@@ -112,7 +112,7 @@ export const VERMONT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Barre", "North Barre", "South Barre", "West Barre", "East Barre"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Barre?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Barre, VT." },
+      { question: "How do I connect with an HVAC contractor in Barre?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Barre, VT." },
       { question: "Are contractors in Barre licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Vermont." }
     ]
   },
@@ -132,7 +132,7 @@ export const VERMONT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Montpelier", "North Montpelier", "South Montpelier", "West Montpelier", "East Montpelier"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Montpelier?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Montpelier, VT." },
+      { question: "How do I connect with an HVAC contractor in Montpelier?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Montpelier, VT." },
       { question: "Are contractors in Montpelier licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Vermont." }
     ]
   }

@@ -22,7 +22,7 @@ export const INDIANA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Indiana?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Indiana homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Indiana homeowners."
     },
     {
       question: "Which Indiana cities are covered?",
@@ -52,7 +52,7 @@ export const INDIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Indianapolis", "North Indianapolis", "South Indianapolis", "West Indianapolis", "East Indianapolis"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Indianapolis?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Indianapolis, IN." },
+      { question: "How do I connect with an HVAC contractor in Indianapolis?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Indianapolis, IN." },
       { question: "Are contractors in Indianapolis licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Indiana." }
     ]
   },
@@ -72,7 +72,7 @@ export const INDIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Fort Wayne", "North Fort Wayne", "South Fort Wayne", "West Fort Wayne", "East Fort Wayne"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Fort Wayne?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Fort Wayne, IN." },
+      { question: "How do I connect with an HVAC contractor in Fort Wayne?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Fort Wayne, IN." },
       { question: "Are contractors in Fort Wayne licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Indiana." }
     ]
   },
@@ -92,7 +92,7 @@ export const INDIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Evansville", "North Evansville", "South Evansville", "West Evansville", "East Evansville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Evansville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Evansville, IN." },
+      { question: "How do I connect with an HVAC contractor in Evansville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Evansville, IN." },
       { question: "Are contractors in Evansville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Indiana." }
     ]
   },
@@ -112,7 +112,7 @@ export const INDIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central South Bend", "North South Bend", "South South Bend", "West South Bend", "East South Bend"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in South Bend?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing South Bend, IN." },
+      { question: "How do I connect with an HVAC contractor in South Bend?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing South Bend, IN." },
       { question: "Are contractors in South Bend licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Indiana." }
     ]
   },
@@ -132,7 +132,7 @@ export const INDIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Carmel", "North Carmel", "South Carmel", "West Carmel", "East Carmel"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Carmel?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Carmel, IN." },
+      { question: "How do I connect with an HVAC contractor in Carmel?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Carmel, IN." },
       { question: "Are contractors in Carmel licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Indiana." }
     ]
   }

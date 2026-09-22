@@ -46,7 +46,7 @@ export const ALABAMA_STATE_DATA: StateData = {
     {
       question: "How do I connect with an HVAC contractor in Alabama?",
       answer:
-        "Call our 24/7 hotline at (555) 839-4328. AirHeat Dispatch is a free service that connects Alabama homeowners with independent local HVAC contractors.",
+        "Call our 24/7 hotline at (202) 931-4151. AirHeat Dispatch is a free service that connects Alabama homeowners with independent local HVAC contractors.",
     },
     {
       question: "Which Alabama cities have HVAC connection coverage?",
@@ -98,7 +98,7 @@ export const ALABAMA_PRESET_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Birmingham, AL?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Birmingham and Jefferson County.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Birmingham and Jefferson County.",
       },
       {
         question: "What is the most common AC problem in Birmingham during summer?",
@@ -142,7 +142,7 @@ export const ALABAMA_PRESET_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Huntsville, AL?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Huntsville and the Rocket City area.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Huntsville and the Rocket City area.",
       },
     ],
   },
@@ -181,7 +181,7 @@ export const ALABAMA_PRESET_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Montgomery, AL?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Montgomery and the River Region.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Montgomery and the River Region.",
       },
     ],
   },
@@ -220,7 +220,7 @@ export const ALABAMA_PRESET_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Mobile, AL?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Mobile and the Gulf Coast.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Mobile and the Gulf Coast.",
       },
     ],
   },
@@ -259,7 +259,7 @@ export const ALABAMA_PRESET_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Tuscaloosa, AL?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Tuscaloosa and West Alabama.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Tuscaloosa and West Alabama.",
       },
     ],
   },

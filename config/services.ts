@@ -18,7 +18,7 @@ export const CORE_SERVICES: CoreService[] = [
     heroHeadline:
       "HVAC System Malfunctioning? Connect With Independent Local Providers Today",
     directAnswer:
-      "AirHeat Dispatch helps homeowners connect with independent local HVAC contractors for heating and cooling assistance. When your central HVAC unit experiences airflow restriction, thermostat miscommunication, electrical capacitor failure, or refrigerant imbalance, call (555) 839-4328 to connect with local service providers.",
+      "AirHeat Dispatch helps homeowners connect with independent local HVAC contractors for heating and cooling assistance. When your central HVAC unit experiences airflow restriction, thermostat miscommunication, electrical capacitor failure, or refrigerant imbalance, call (202) 931-4151 to connect with local service providers.",
     features: [
       "Free 24/7 hotline connection service for homeowners",
       "Matches callers with independent local HVAC contractors",
@@ -28,7 +28,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Connection Hotline",
-        desc: "Dial (555) 839-4328 to connect with an independent local HVAC contractor.",
+        desc: "Dial (202) 931-4151 to connect with an independent local HVAC contractor.",
       },
       {
         title: "2. Describe System Symptoms",
@@ -75,7 +75,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call AC Connection Line",
-        desc: "Contact (555) 839-4328 to speak with a representative for local provider connection.",
+        desc: "Contact (202) 931-4151 to speak with a representative for local provider connection.",
       },
       {
         title: "2. Provide Location & AC Issue",
@@ -122,7 +122,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Heating Line",
-        desc: "Dial (555) 839-4328 to connect with an independent heating contractor.",
+        desc: "Dial (202) 931-4151 to connect with an independent heating contractor.",
       },
       {
         title: "2. State Furnace Symptoms",
@@ -169,7 +169,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Maintenance Line",
-        desc: "Contact (555) 839-4328 to request local furnace cleaning provider connection.",
+        desc: "Contact (202) 931-4151 to request local furnace cleaning provider connection.",
       },
       {
         title: "2. Specify Heating Type",
@@ -216,7 +216,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Replacement Line",
-        desc: "Call (555) 839-4328 to connect with independent local installation contractors.",
+        desc: "Call (202) 931-4151 to connect with independent local installation contractors.",
       },
       {
         title: "2. Discuss System Goals",
@@ -263,7 +263,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Contact Installation Line",
-        desc: "Dial (555) 839-4328 to connect with independent local HVAC contractors.",
+        desc: "Dial (202) 931-4151 to connect with independent local HVAC contractors.",
       },
       {
         title: "2. Schedule Home Consultation",
@@ -310,7 +310,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Maintenance Line",
-        desc: "Call (555) 839-4328 to request local HVAC maintenance provider connection.",
+        desc: "Call (202) 931-4151 to request local HVAC maintenance provider connection.",
       },
       {
         title: "2. Request Spring/Fall Tune-Up",
@@ -357,7 +357,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Heating Line",
-        desc: "Contact (555) 839-4328 to connect with an independent local heating contractor.",
+        desc: "Contact (202) 931-4151 to connect with an independent local heating contractor.",
       },
       {
         title: "2. Describe Heating Symptoms",
@@ -404,7 +404,7 @@ export const CORE_SERVICES: CoreService[] = [
     processSteps: [
       {
         title: "1. Call Heat Pump Line",
-        desc: "Contact (555) 839-4328 to connect with independent local heat pump contractors.",
+        desc: "Contact (202) 931-4151 to connect with independent local heat pump contractors.",
       },
       {
         title: "2. Describe Heat Pump Issue",

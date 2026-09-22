@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description:
-    "Free homeowner connection service to find independent local HVAC contractors for AC repair, furnace repair, heating service, and HVAC maintenance. Call (555) 839-4328.",
+    "Free homeowner connection service to find independent local HVAC contractors for AC repair, furnace repair, heating service, and HVAC maintenance. Call (202) 931-4151.",
   keywords: [
     "Connect With Local HVAC Provider",
     "Find HVAC Repair Near Me",

@@ -26,7 +26,7 @@ export const ARKANSAS_STATE_DATA: StateData = {
     {
       question: "How do I connect with an HVAC contractor in Arkansas?",
       answer:
-        "Call our 24/7 connection line at (555) 839-4328. AirHeat Dispatch is a free service that connects Arkansas homeowners with independent local HVAC contractors.",
+        "Call our 24/7 connection line at (202) 931-4151. AirHeat Dispatch is a free service that connects Arkansas homeowners with independent local HVAC contractors.",
     },
     {
       question: "Which Arkansas cities have HVAC coverage?",
@@ -82,7 +82,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Little Rock, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Little Rock and Pulaski County."
+        "answer": "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Little Rock and Pulaski County."
       },
       {
         "question": "What HVAC services are available in Little Rock?",
@@ -129,7 +129,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Fort Smith, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Fort Smith and Sebastian County."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Fort Smith and Sebastian County."
       }
     ]
   },
@@ -172,7 +172,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Fayetteville, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Fayetteville and Washington County."
+        "answer": "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Fayetteville and Washington County."
       }
     ]
   },
@@ -210,7 +210,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Springdale, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local HVAC contractors in Springdale, AR."
+        "answer": "Call (202) 931-4151 to connect with independent local HVAC contractors in Springdale, AR."
       }
     ]
   },
@@ -248,7 +248,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Jonesboro, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Jonesboro and Craighead County."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Jonesboro and Craighead County."
       }
     ]
   },
@@ -282,7 +282,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Rogers, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Rogers, AR."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Rogers, AR."
       }
     ]
   },
@@ -315,7 +315,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Conway, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors in Conway, AR."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors in Conway, AR."
       }
     ]
   },
@@ -348,7 +348,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Bentonville, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Bentonville, AR."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Bentonville, AR."
       }
     ]
   },
@@ -381,7 +381,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Pine Bluff, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Pine Bluff."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Pine Bluff."
       }
     ]
   },
@@ -414,7 +414,7 @@ export const ARKANSAS_PRESET_CITIES_DATA: LocationData[] = [
     "faqs": [
       {
         "question": "How do I connect with an HVAC contractor in Hot Springs, AR?",
-        "answer": "Call (555) 839-4328 to connect with independent local contractors serving Hot Springs, AR."
+        "answer": "Call (202) 931-4151 to connect with independent local contractors serving Hot Springs, AR."
       }
     ]
   }
@@ -2349,7 +2349,7 @@ export function getArkansasLocationData(citySlug: string): LocationData {
     ],
     subAreas: [`Greater ${cityName}`, `${cityName} Metro Area`],
     faqs: [
-      { question: `How do I connect with an HVAC contractor in ${cityName}, AR?`, answer: `Call (555) 839-4328 to connect with independent local HVAC service contractors serving ${cityName}.` }
+      { question: `How do I connect with an HVAC contractor in ${cityName}, AR?`, answer: `Call (202) 931-4151 to connect with independent local HVAC service contractors serving ${cityName}.` }
     ]
   };
 }

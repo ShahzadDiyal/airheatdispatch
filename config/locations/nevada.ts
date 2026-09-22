@@ -22,7 +22,7 @@ export const NEVADA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Nevada?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Nevada homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Nevada homeowners."
     },
     {
       question: "Which Nevada cities are covered?",
@@ -52,7 +52,7 @@ export const NEVADA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Las Vegas", "North Las Vegas", "South Las Vegas", "West Las Vegas", "East Las Vegas"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Las Vegas?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Las Vegas, NV." },
+      { question: "How do I connect with an HVAC contractor in Las Vegas?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Las Vegas, NV." },
       { question: "Are contractors in Las Vegas licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nevada." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEVADA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Henderson", "North Henderson", "South Henderson", "West Henderson", "East Henderson"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Henderson?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Henderson, NV." },
+      { question: "How do I connect with an HVAC contractor in Henderson?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Henderson, NV." },
       { question: "Are contractors in Henderson licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nevada." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEVADA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Reno", "North Reno", "South Reno", "West Reno", "East Reno"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Reno?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Reno, NV." },
+      { question: "How do I connect with an HVAC contractor in Reno?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Reno, NV." },
       { question: "Are contractors in Reno licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nevada." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEVADA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central North Las Vegas", "North North Las Vegas", "South North Las Vegas", "West North Las Vegas", "East North Las Vegas"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in North Las Vegas?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing North Las Vegas, NV." },
+      { question: "How do I connect with an HVAC contractor in North Las Vegas?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing North Las Vegas, NV." },
       { question: "Are contractors in North Las Vegas licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nevada." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEVADA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Enterprise", "North Enterprise", "South Enterprise", "West Enterprise", "East Enterprise"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Enterprise?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Enterprise, NV." },
+      { question: "How do I connect with an HVAC contractor in Enterprise?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Enterprise, NV." },
       { question: "Are contractors in Enterprise licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nevada." }
     ]
   }

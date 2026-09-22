@@ -22,7 +22,7 @@ export const NEW_MEXICO_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in New Mexico?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving New Mexico homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving New Mexico homeowners."
     },
     {
       question: "Which New Mexico cities are covered?",
@@ -52,7 +52,7 @@ export const NEW_MEXICO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Albuquerque", "North Albuquerque", "South Albuquerque", "West Albuquerque", "East Albuquerque"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Albuquerque?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Albuquerque, NM." },
+      { question: "How do I connect with an HVAC contractor in Albuquerque?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Albuquerque, NM." },
       { question: "Are contractors in Albuquerque licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Mexico." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEW_MEXICO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Las Cruces", "North Las Cruces", "South Las Cruces", "West Las Cruces", "East Las Cruces"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Las Cruces?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Las Cruces, NM." },
+      { question: "How do I connect with an HVAC contractor in Las Cruces?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Las Cruces, NM." },
       { question: "Are contractors in Las Cruces licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Mexico." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEW_MEXICO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rio Rancho", "North Rio Rancho", "South Rio Rancho", "West Rio Rancho", "East Rio Rancho"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rio Rancho?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rio Rancho, NM." },
+      { question: "How do I connect with an HVAC contractor in Rio Rancho?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rio Rancho, NM." },
       { question: "Are contractors in Rio Rancho licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Mexico." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEW_MEXICO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Santa Fe", "North Santa Fe", "South Santa Fe", "West Santa Fe", "East Santa Fe"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Santa Fe?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Santa Fe, NM." },
+      { question: "How do I connect with an HVAC contractor in Santa Fe?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Santa Fe, NM." },
       { question: "Are contractors in Santa Fe licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Mexico." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEW_MEXICO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Roswell", "North Roswell", "South Roswell", "West Roswell", "East Roswell"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Roswell?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Roswell, NM." },
+      { question: "How do I connect with an HVAC contractor in Roswell?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Roswell, NM." },
       { question: "Are contractors in Roswell licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Mexico." }
     ]
   }

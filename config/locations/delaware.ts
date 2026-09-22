@@ -22,7 +22,7 @@ export const DELAWARE_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Delaware?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Delaware homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Delaware homeowners."
     },
     {
       question: "Which Delaware cities are covered?",
@@ -52,7 +52,7 @@ export const DELAWARE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Wilmington", "North Wilmington", "South Wilmington", "West Wilmington", "East Wilmington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Wilmington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Wilmington, DE." },
+      { question: "How do I connect with an HVAC contractor in Wilmington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Wilmington, DE." },
       { question: "Are contractors in Wilmington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Delaware." }
     ]
   },
@@ -72,7 +72,7 @@ export const DELAWARE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Dover", "North Dover", "South Dover", "West Dover", "East Dover"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Dover?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Dover, DE." },
+      { question: "How do I connect with an HVAC contractor in Dover?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Dover, DE." },
       { question: "Are contractors in Dover licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Delaware." }
     ]
   },
@@ -92,7 +92,7 @@ export const DELAWARE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Newark", "North Newark", "South Newark", "West Newark", "East Newark"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Newark?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Newark, DE." },
+      { question: "How do I connect with an HVAC contractor in Newark?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Newark, DE." },
       { question: "Are contractors in Newark licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Delaware." }
     ]
   },
@@ -112,7 +112,7 @@ export const DELAWARE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Middletown", "North Middletown", "South Middletown", "West Middletown", "East Middletown"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Middletown?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Middletown, DE." },
+      { question: "How do I connect with an HVAC contractor in Middletown?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Middletown, DE." },
       { question: "Are contractors in Middletown licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Delaware." }
     ]
   },
@@ -132,7 +132,7 @@ export const DELAWARE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Smyrna", "North Smyrna", "South Smyrna", "West Smyrna", "East Smyrna"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Smyrna?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Smyrna, DE." },
+      { question: "How do I connect with an HVAC contractor in Smyrna?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Smyrna, DE." },
       { question: "Are contractors in Smyrna licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Delaware." }
     ]
   }

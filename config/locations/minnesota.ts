@@ -22,7 +22,7 @@ export const MINNESOTA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Minnesota?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Minnesota homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Minnesota homeowners."
     },
     {
       question: "Which Minnesota cities are covered?",
@@ -52,7 +52,7 @@ export const MINNESOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Minneapolis", "North Minneapolis", "South Minneapolis", "West Minneapolis", "East Minneapolis"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Minneapolis?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Minneapolis, MN." },
+      { question: "How do I connect with an HVAC contractor in Minneapolis?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Minneapolis, MN." },
       { question: "Are contractors in Minneapolis licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Minnesota." }
     ]
   },
@@ -72,7 +72,7 @@ export const MINNESOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central St. Paul", "North St. Paul", "South St. Paul", "West St. Paul", "East St. Paul"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in St. Paul?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing St. Paul, MN." },
+      { question: "How do I connect with an HVAC contractor in St. Paul?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing St. Paul, MN." },
       { question: "Are contractors in St. Paul licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Minnesota." }
     ]
   },
@@ -92,7 +92,7 @@ export const MINNESOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rochester", "North Rochester", "South Rochester", "West Rochester", "East Rochester"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rochester, MN." },
+      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rochester, MN." },
       { question: "Are contractors in Rochester licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Minnesota." }
     ]
   },
@@ -112,7 +112,7 @@ export const MINNESOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Duluth", "North Duluth", "South Duluth", "West Duluth", "East Duluth"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Duluth?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Duluth, MN." },
+      { question: "How do I connect with an HVAC contractor in Duluth?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Duluth, MN." },
       { question: "Are contractors in Duluth licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Minnesota." }
     ]
   },
@@ -132,7 +132,7 @@ export const MINNESOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bloomington", "North Bloomington", "South Bloomington", "West Bloomington", "East Bloomington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bloomington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bloomington, MN." },
+      { question: "How do I connect with an HVAC contractor in Bloomington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bloomington, MN." },
       { question: "Are contractors in Bloomington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Minnesota." }
     ]
   }

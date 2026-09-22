@@ -22,7 +22,7 @@ export const CALIFORNIA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in California?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving California homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving California homeowners."
     },
     {
       question: "Which California cities are covered?",
@@ -52,7 +52,7 @@ export const CALIFORNIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Los Angeles", "North Los Angeles", "South Los Angeles", "West Los Angeles", "East Los Angeles"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Los Angeles?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Los Angeles, CA." },
+      { question: "How do I connect with an HVAC contractor in Los Angeles?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Los Angeles, CA." },
       { question: "Are contractors in Los Angeles licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in California." }
     ]
   },
@@ -72,7 +72,7 @@ export const CALIFORNIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central San Diego", "North San Diego", "South San Diego", "West San Diego", "East San Diego"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in San Diego?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing San Diego, CA." },
+      { question: "How do I connect with an HVAC contractor in San Diego?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing San Diego, CA." },
       { question: "Are contractors in San Diego licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in California." }
     ]
   },
@@ -92,7 +92,7 @@ export const CALIFORNIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central San Jose", "North San Jose", "South San Jose", "West San Jose", "East San Jose"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in San Jose?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing San Jose, CA." },
+      { question: "How do I connect with an HVAC contractor in San Jose?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing San Jose, CA." },
       { question: "Are contractors in San Jose licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in California." }
     ]
   },
@@ -112,7 +112,7 @@ export const CALIFORNIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central San Francisco", "North San Francisco", "South San Francisco", "West San Francisco", "East San Francisco"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in San Francisco?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing San Francisco, CA." },
+      { question: "How do I connect with an HVAC contractor in San Francisco?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing San Francisco, CA." },
       { question: "Are contractors in San Francisco licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in California." }
     ]
   },
@@ -132,7 +132,7 @@ export const CALIFORNIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Fresno", "North Fresno", "South Fresno", "West Fresno", "East Fresno"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Fresno?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Fresno, CA." },
+      { question: "How do I connect with an HVAC contractor in Fresno?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Fresno, CA." },
       { question: "Are contractors in Fresno licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in California." }
     ]
   }

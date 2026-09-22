@@ -172,7 +172,7 @@ export default function HomePage() {
 
           <DirectAnswerCard
             questionTitle="What is AirHeat Dispatch and how does it connect homeowners with local HVAC providers?"
-            directAnswer="AirHeat Dispatch is a free homeowner connection platform that matches homeowners facing heating or cooling problems with independent local HVAC contractors. By calling (555) 839-4328, homeowners are routed to independent service providers who diagnose and resolve system issues."
+            directAnswer="AirHeat Dispatch is a free homeowner connection platform that matches homeowners facing heating or cooling problems with independent local HVAC contractors. By calling (202) 931-4151, homeowners are routed to independent service providers who diagnose and resolve system issues."
             keyPoints={[
               "Free phone connection service for homeowners",
               "Matches callers with independent local HVAC contractors",

@@ -22,7 +22,7 @@ export const MISSISSIPPI_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Mississippi?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Mississippi homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Mississippi homeowners."
     },
     {
       question: "Which Mississippi cities are covered?",
@@ -52,7 +52,7 @@ export const MISSISSIPPI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Jackson", "North Jackson", "South Jackson", "West Jackson", "East Jackson"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Jackson?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Jackson, MS." },
+      { question: "How do I connect with an HVAC contractor in Jackson?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Jackson, MS." },
       { question: "Are contractors in Jackson licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Mississippi." }
     ]
   },
@@ -72,7 +72,7 @@ export const MISSISSIPPI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Gulfport", "North Gulfport", "South Gulfport", "West Gulfport", "East Gulfport"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Gulfport?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Gulfport, MS." },
+      { question: "How do I connect with an HVAC contractor in Gulfport?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Gulfport, MS." },
       { question: "Are contractors in Gulfport licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Mississippi." }
     ]
   },
@@ -92,7 +92,7 @@ export const MISSISSIPPI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Southaven", "North Southaven", "South Southaven", "West Southaven", "East Southaven"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Southaven?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Southaven, MS." },
+      { question: "How do I connect with an HVAC contractor in Southaven?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Southaven, MS." },
       { question: "Are contractors in Southaven licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Mississippi." }
     ]
   },
@@ -112,7 +112,7 @@ export const MISSISSIPPI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Biloxi", "North Biloxi", "South Biloxi", "West Biloxi", "East Biloxi"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Biloxi?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Biloxi, MS." },
+      { question: "How do I connect with an HVAC contractor in Biloxi?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Biloxi, MS." },
       { question: "Are contractors in Biloxi licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Mississippi." }
     ]
   },
@@ -132,7 +132,7 @@ export const MISSISSIPPI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Hattiesburg", "North Hattiesburg", "South Hattiesburg", "West Hattiesburg", "East Hattiesburg"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Hattiesburg?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Hattiesburg, MS." },
+      { question: "How do I connect with an HVAC contractor in Hattiesburg?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Hattiesburg, MS." },
       { question: "Are contractors in Hattiesburg licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Mississippi." }
     ]
   }

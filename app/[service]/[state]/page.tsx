@@ -162,14 +162,14 @@ export default async function StateServicePage({ params }: PageProps) {
               </p>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
                 <strong className="text-slate-900 block mb-1">Statewide Connection Hotline:</strong>
-                Call (555) 839-4328 to connect with an independent HVAC provider serving your local {stateData.stateName} zip code.
+                Call (202) 931-4151 to connect with an independent HVAC provider serving your local {stateData.stateName} zip code.
               </div>
             </div>
           </div>
 
           <DirectAnswerCard
             questionTitle={`How Do ${stateData.stateName} Homeowners Connect With Providers for ${service.name}?`}
-            directAnswer={`Homeowners throughout ${stateData.stateName} can connect with independent local HVAC contractors for ${service.name.toLowerCase()} by calling (555) 839-4328. Local contractors serve major ${stateData.stateName} cities including ${stateData.majorCities.slice(0, 6).map((c) => c.name).join(", ")}, and surrounding communities.`}
+            directAnswer={`Homeowners throughout ${stateData.stateName} can connect with independent local HVAC contractors for ${service.name.toLowerCase()} by calling (202) 931-4151. Local contractors serve major ${stateData.stateName} cities including ${stateData.majorCities.slice(0, 6).map((c) => c.name).join(", ")}, and surrounding communities.`}
             keyPoints={service.features}
           />
 

@@ -22,7 +22,7 @@ export const SOUTH_DAKOTA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in South Dakota?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving South Dakota homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving South Dakota homeowners."
     },
     {
       question: "Which South Dakota cities are covered?",
@@ -52,7 +52,7 @@ export const SOUTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Sioux Falls", "North Sioux Falls", "South Sioux Falls", "West Sioux Falls", "East Sioux Falls"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Sioux Falls?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Sioux Falls, SD." },
+      { question: "How do I connect with an HVAC contractor in Sioux Falls?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Sioux Falls, SD." },
       { question: "Are contractors in Sioux Falls licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Dakota." }
     ]
   },
@@ -72,7 +72,7 @@ export const SOUTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rapid City", "North Rapid City", "South Rapid City", "West Rapid City", "East Rapid City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rapid City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rapid City, SD." },
+      { question: "How do I connect with an HVAC contractor in Rapid City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rapid City, SD." },
       { question: "Are contractors in Rapid City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Dakota." }
     ]
   },
@@ -92,7 +92,7 @@ export const SOUTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Aberdeen", "North Aberdeen", "South Aberdeen", "West Aberdeen", "East Aberdeen"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Aberdeen?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Aberdeen, SD." },
+      { question: "How do I connect with an HVAC contractor in Aberdeen?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Aberdeen, SD." },
       { question: "Are contractors in Aberdeen licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Dakota." }
     ]
   },
@@ -112,7 +112,7 @@ export const SOUTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Brookings", "North Brookings", "South Brookings", "West Brookings", "East Brookings"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Brookings?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Brookings, SD." },
+      { question: "How do I connect with an HVAC contractor in Brookings?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Brookings, SD." },
       { question: "Are contractors in Brookings licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Dakota." }
     ]
   },
@@ -132,7 +132,7 @@ export const SOUTH_DAKOTA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Watertown", "North Watertown", "South Watertown", "West Watertown", "East Watertown"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Watertown?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Watertown, SD." },
+      { question: "How do I connect with an HVAC contractor in Watertown?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Watertown, SD." },
       { question: "Are contractors in Watertown licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Dakota." }
     ]
   }

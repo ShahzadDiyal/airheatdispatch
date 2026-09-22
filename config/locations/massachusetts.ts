@@ -22,7 +22,7 @@ export const MASSACHUSETTS_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Massachusetts?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Massachusetts homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Massachusetts homeowners."
     },
     {
       question: "Which Massachusetts cities are covered?",
@@ -52,7 +52,7 @@ export const MASSACHUSETTS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Boston", "North Boston", "South Boston", "West Boston", "East Boston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Boston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Boston, MA." },
+      { question: "How do I connect with an HVAC contractor in Boston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Boston, MA." },
       { question: "Are contractors in Boston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Massachusetts." }
     ]
   },
@@ -72,7 +72,7 @@ export const MASSACHUSETTS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Worcester", "North Worcester", "South Worcester", "West Worcester", "East Worcester"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Worcester?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Worcester, MA." },
+      { question: "How do I connect with an HVAC contractor in Worcester?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Worcester, MA." },
       { question: "Are contractors in Worcester licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Massachusetts." }
     ]
   },
@@ -92,7 +92,7 @@ export const MASSACHUSETTS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Springfield", "North Springfield", "South Springfield", "West Springfield", "East Springfield"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Springfield?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Springfield, MA." },
+      { question: "How do I connect with an HVAC contractor in Springfield?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Springfield, MA." },
       { question: "Are contractors in Springfield licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Massachusetts." }
     ]
   },
@@ -112,7 +112,7 @@ export const MASSACHUSETTS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cambridge", "North Cambridge", "South Cambridge", "West Cambridge", "East Cambridge"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cambridge?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cambridge, MA." },
+      { question: "How do I connect with an HVAC contractor in Cambridge?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cambridge, MA." },
       { question: "Are contractors in Cambridge licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Massachusetts." }
     ]
   },
@@ -132,7 +132,7 @@ export const MASSACHUSETTS_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lowell", "North Lowell", "South Lowell", "West Lowell", "East Lowell"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lowell?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lowell, MA." },
+      { question: "How do I connect with an HVAC contractor in Lowell?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lowell, MA." },
       { question: "Are contractors in Lowell licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Massachusetts." }
     ]
   }

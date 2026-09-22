@@ -22,7 +22,7 @@ export const KENTUCKY_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Kentucky?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Kentucky homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Kentucky homeowners."
     },
     {
       question: "Which Kentucky cities are covered?",
@@ -52,7 +52,7 @@ export const KENTUCKY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Louisville", "North Louisville", "South Louisville", "West Louisville", "East Louisville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Louisville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Louisville, KY." },
+      { question: "How do I connect with an HVAC contractor in Louisville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Louisville, KY." },
       { question: "Are contractors in Louisville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kentucky." }
     ]
   },
@@ -72,7 +72,7 @@ export const KENTUCKY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lexington", "North Lexington", "South Lexington", "West Lexington", "East Lexington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lexington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lexington, KY." },
+      { question: "How do I connect with an HVAC contractor in Lexington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lexington, KY." },
       { question: "Are contractors in Lexington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kentucky." }
     ]
   },
@@ -92,7 +92,7 @@ export const KENTUCKY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bowling Green", "North Bowling Green", "South Bowling Green", "West Bowling Green", "East Bowling Green"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bowling Green?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bowling Green, KY." },
+      { question: "How do I connect with an HVAC contractor in Bowling Green?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bowling Green, KY." },
       { question: "Are contractors in Bowling Green licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kentucky." }
     ]
   },
@@ -112,7 +112,7 @@ export const KENTUCKY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Owensboro", "North Owensboro", "South Owensboro", "West Owensboro", "East Owensboro"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Owensboro?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Owensboro, KY." },
+      { question: "How do I connect with an HVAC contractor in Owensboro?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Owensboro, KY." },
       { question: "Are contractors in Owensboro licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kentucky." }
     ]
   },
@@ -132,7 +132,7 @@ export const KENTUCKY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Covington", "North Covington", "South Covington", "West Covington", "East Covington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Covington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Covington, KY." },
+      { question: "How do I connect with an HVAC contractor in Covington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Covington, KY." },
       { question: "Are contractors in Covington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Kentucky." }
     ]
   }

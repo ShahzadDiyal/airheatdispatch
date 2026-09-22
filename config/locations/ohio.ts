@@ -22,7 +22,7 @@ export const OHIO_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Ohio?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Ohio homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Ohio homeowners."
     },
     {
       question: "Which Ohio cities are covered?",
@@ -52,7 +52,7 @@ export const OHIO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Columbus", "North Columbus", "South Columbus", "West Columbus", "East Columbus"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Columbus?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Columbus, OH." },
+      { question: "How do I connect with an HVAC contractor in Columbus?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Columbus, OH." },
       { question: "Are contractors in Columbus licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Ohio." }
     ]
   },
@@ -72,7 +72,7 @@ export const OHIO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cleveland", "North Cleveland", "South Cleveland", "West Cleveland", "East Cleveland"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cleveland?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cleveland, OH." },
+      { question: "How do I connect with an HVAC contractor in Cleveland?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cleveland, OH." },
       { question: "Are contractors in Cleveland licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Ohio." }
     ]
   },
@@ -92,7 +92,7 @@ export const OHIO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cincinnati", "North Cincinnati", "South Cincinnati", "West Cincinnati", "East Cincinnati"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cincinnati?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cincinnati, OH." },
+      { question: "How do I connect with an HVAC contractor in Cincinnati?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cincinnati, OH." },
       { question: "Are contractors in Cincinnati licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Ohio." }
     ]
   },
@@ -112,7 +112,7 @@ export const OHIO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Toledo", "North Toledo", "South Toledo", "West Toledo", "East Toledo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Toledo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Toledo, OH." },
+      { question: "How do I connect with an HVAC contractor in Toledo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Toledo, OH." },
       { question: "Are contractors in Toledo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Ohio." }
     ]
   },
@@ -132,7 +132,7 @@ export const OHIO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Akron", "North Akron", "South Akron", "West Akron", "East Akron"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Akron?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Akron, OH." },
+      { question: "How do I connect with an HVAC contractor in Akron?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Akron, OH." },
       { question: "Are contractors in Akron licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Ohio." }
     ]
   }

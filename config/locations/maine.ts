@@ -22,7 +22,7 @@ export const MAINE_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Maine?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Maine homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Maine homeowners."
     },
     {
       question: "Which Maine cities are covered?",
@@ -52,7 +52,7 @@ export const MAINE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Portland", "North Portland", "South Portland", "West Portland", "East Portland"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Portland?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Portland, ME." },
+      { question: "How do I connect with an HVAC contractor in Portland?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Portland, ME." },
       { question: "Are contractors in Portland licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maine." }
     ]
   },
@@ -72,7 +72,7 @@ export const MAINE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lewiston", "North Lewiston", "South Lewiston", "West Lewiston", "East Lewiston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lewiston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lewiston, ME." },
+      { question: "How do I connect with an HVAC contractor in Lewiston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lewiston, ME." },
       { question: "Are contractors in Lewiston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maine." }
     ]
   },
@@ -92,7 +92,7 @@ export const MAINE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bangor", "North Bangor", "South Bangor", "West Bangor", "East Bangor"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bangor?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bangor, ME." },
+      { question: "How do I connect with an HVAC contractor in Bangor?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bangor, ME." },
       { question: "Are contractors in Bangor licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maine." }
     ]
   },
@@ -112,7 +112,7 @@ export const MAINE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central South Portland", "North South Portland", "South South Portland", "West South Portland", "East South Portland"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in South Portland?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing South Portland, ME." },
+      { question: "How do I connect with an HVAC contractor in South Portland?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing South Portland, ME." },
       { question: "Are contractors in South Portland licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maine." }
     ]
   },
@@ -132,7 +132,7 @@ export const MAINE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Auburn", "North Auburn", "South Auburn", "West Auburn", "East Auburn"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Auburn?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Auburn, ME." },
+      { question: "How do I connect with an HVAC contractor in Auburn?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Auburn, ME." },
       { question: "Are contractors in Auburn licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maine." }
     ]
   }

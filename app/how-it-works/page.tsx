@@ -54,13 +54,13 @@ export default function HowItWorksPage() {
 
           <DirectAnswerCard
             questionTitle="What is the process to connect with a local HVAC provider?"
-            directAnswer="Homeowners call (555) 839-4328 to request connection assistance. Our system matches your call with an independent local HVAC contractor servicing your zip code who evaluates your equipment and provides repair services directly to you."
+            directAnswer="Homeowners call (202) 931-4151 to request connection assistance. Our system matches your call with an independent local HVAC contractor servicing your zip code who evaluates your equipment and provides repair services directly to you."
           />
 
           {/* 3 Step Breakdown */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 my-10 sm:my-14">
             {[
-              { num: "01", title: "Call the Hotline", desc: "Call (555) 839-4328 anytime 24/7. Speak with a customer representative ready to help match your heating or cooling issue." },
+              { num: "01", title: "Call the Hotline", desc: "Call (202) 931-4151 anytime 24/7. Speak with a customer representative ready to help match your heating or cooling issue." },
               { num: "02", title: "Connect With Local Provider", desc: "You will be connected directly with an independent local HVAC contractor who operates in your city or zip code." },
               { num: "03", title: "Schedule Diagnostics & Repair", desc: "Discuss system symptoms directly with your hired contractor and schedule an in-home evaluation." },
             ].map(({ num, title, desc }) => (

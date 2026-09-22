@@ -22,7 +22,7 @@ export const OREGON_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Oregon?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Oregon homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Oregon homeowners."
     },
     {
       question: "Which Oregon cities are covered?",
@@ -52,7 +52,7 @@ export const OREGON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Portland", "North Portland", "South Portland", "West Portland", "East Portland"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Portland?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Portland, OR." },
+      { question: "How do I connect with an HVAC contractor in Portland?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Portland, OR." },
       { question: "Are contractors in Portland licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oregon." }
     ]
   },
@@ -72,7 +72,7 @@ export const OREGON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Eugene", "North Eugene", "South Eugene", "West Eugene", "East Eugene"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Eugene?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Eugene, OR." },
+      { question: "How do I connect with an HVAC contractor in Eugene?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Eugene, OR." },
       { question: "Are contractors in Eugene licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oregon." }
     ]
   },
@@ -92,7 +92,7 @@ export const OREGON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Salem", "North Salem", "South Salem", "West Salem", "East Salem"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Salem?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Salem, OR." },
+      { question: "How do I connect with an HVAC contractor in Salem?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Salem, OR." },
       { question: "Are contractors in Salem licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oregon." }
     ]
   },
@@ -112,7 +112,7 @@ export const OREGON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Gresham", "North Gresham", "South Gresham", "West Gresham", "East Gresham"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Gresham?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Gresham, OR." },
+      { question: "How do I connect with an HVAC contractor in Gresham?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Gresham, OR." },
       { question: "Are contractors in Gresham licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oregon." }
     ]
   },
@@ -132,7 +132,7 @@ export const OREGON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Hillsboro", "North Hillsboro", "South Hillsboro", "West Hillsboro", "East Hillsboro"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Hillsboro?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Hillsboro, OR." },
+      { question: "How do I connect with an HVAC contractor in Hillsboro?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Hillsboro, OR." },
       { question: "Are contractors in Hillsboro licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Oregon." }
     ]
   }

@@ -32,7 +32,7 @@ export function getStateCities(stateSlug: string): LocationData[] {
     ],
     subAreas: [`Greater ${mc.name}`, `${mc.name} Metro Region`],
     faqs: [
-      { question: `How do I connect with an HVAC provider in ${mc.name}?`, answer: `Call (555) 839-4328 to connect with independent local HVAC contractors serving ${mc.name}.` },
+      { question: `How do I connect with an HVAC provider in ${mc.name}?`, answer: `Call (202) 931-4151 to connect with independent local HVAC contractors serving ${mc.name}.` },
     ],
   }));
 }
@@ -99,7 +99,7 @@ export function getLocationData(stateSlug: string, citySlug: string): LocationDa
       ],
       subAreas: [`Greater ${cityName}`, `${cityName} Metro Area`],
       faqs: [
-        { question: `How do I connect with an HVAC contractor in ${cityName}, TX?`, answer: `Call (555) 839-4328 to connect with independent local contractors serving ${cityName}.` }
+        { question: `How do I connect with an HVAC contractor in ${cityName}, TX?`, answer: `Call (202) 931-4151 to connect with independent local contractors serving ${cityName}.` }
       ],
     };
   }
@@ -141,7 +141,7 @@ export function getLocationData(stateSlug: string, citySlug: string): LocationDa
     ],
     subAreas: [`Greater ${cityName}`, `${cityName} Metro Area`],
     faqs: [
-      { question: `How do I connect with an HVAC provider in ${cityName}?`, answer: `Call (555) 839-4328 to connect with independent local HVAC contractors serving ${cityName}.` },
+      { question: `How do I connect with an HVAC provider in ${cityName}?`, answer: `Call (202) 931-4151 to connect with independent local HVAC contractors serving ${cityName}.` },
     ],
   };
 }

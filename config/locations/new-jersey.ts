@@ -22,7 +22,7 @@ export const NEW_JERSEY_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in New Jersey?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving New Jersey homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving New Jersey homeowners."
     },
     {
       question: "Which New Jersey cities are covered?",
@@ -52,7 +52,7 @@ export const NEW_JERSEY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Newark", "North Newark", "South Newark", "West Newark", "East Newark"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Newark?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Newark, NJ." },
+      { question: "How do I connect with an HVAC contractor in Newark?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Newark, NJ." },
       { question: "Are contractors in Newark licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Jersey." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEW_JERSEY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Jersey City", "North Jersey City", "South Jersey City", "West Jersey City", "East Jersey City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Jersey City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Jersey City, NJ." },
+      { question: "How do I connect with an HVAC contractor in Jersey City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Jersey City, NJ." },
       { question: "Are contractors in Jersey City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Jersey." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEW_JERSEY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Paterson", "North Paterson", "South Paterson", "West Paterson", "East Paterson"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Paterson?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Paterson, NJ." },
+      { question: "How do I connect with an HVAC contractor in Paterson?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Paterson, NJ." },
       { question: "Are contractors in Paterson licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Jersey." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEW_JERSEY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Elizabeth", "North Elizabeth", "South Elizabeth", "West Elizabeth", "East Elizabeth"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Elizabeth?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Elizabeth, NJ." },
+      { question: "How do I connect with an HVAC contractor in Elizabeth?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Elizabeth, NJ." },
       { question: "Are contractors in Elizabeth licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Jersey." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEW_JERSEY_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lakewood", "North Lakewood", "South Lakewood", "West Lakewood", "East Lakewood"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lakewood?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lakewood, NJ." },
+      { question: "How do I connect with an HVAC contractor in Lakewood?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lakewood, NJ." },
       { question: "Are contractors in Lakewood licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Jersey." }
     ]
   }

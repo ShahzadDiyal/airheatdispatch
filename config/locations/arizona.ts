@@ -28,7 +28,7 @@ export const ARIZONA_STATE_DATA: StateData = {
     {
       question: "How do I connect with an HVAC contractor in Arizona?",
       answer:
-        "Call our 24/7 connection line at (555) 839-4328. AirHeat Dispatch is a free service that matches Arizona homeowners with independent local HVAC contractors.",
+        "Call our 24/7 connection line at (202) 931-4151. AirHeat Dispatch is a free service that matches Arizona homeowners with independent local HVAC contractors.",
     },
     {
       question: "Which Arizona cities have HVAC coverage?",
@@ -221,7 +221,7 @@ export function getArizonaLocationData(citySlug: string): LocationData | undefin
     faqs: [
       {
         question: `How do I connect with an HVAC contractor in ${cityName}, AZ?`,
-        answer: `Call (555) 839-4328 to connect with independent local HVAC service contractors serving ${cityName} and ${county} County.`,
+        answer: `Call (202) 931-4151 to connect with independent local HVAC service contractors serving ${cityName} and ${county} County.`,
       },
       {
         question: `What HVAC services are available for ${cityName} homeowners?`,

@@ -22,7 +22,7 @@ export const SOUTH_CAROLINA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in South Carolina?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving South Carolina homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving South Carolina homeowners."
     },
     {
       question: "Which South Carolina cities are covered?",
@@ -52,7 +52,7 @@ export const SOUTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Charleston", "North Charleston", "South Charleston", "West Charleston", "East Charleston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Charleston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Charleston, SC." },
+      { question: "How do I connect with an HVAC contractor in Charleston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Charleston, SC." },
       { question: "Are contractors in Charleston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Carolina." }
     ]
   },
@@ -72,7 +72,7 @@ export const SOUTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Columbia", "North Columbia", "South Columbia", "West Columbia", "East Columbia"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Columbia?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Columbia, SC." },
+      { question: "How do I connect with an HVAC contractor in Columbia?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Columbia, SC." },
       { question: "Are contractors in Columbia licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Carolina." }
     ]
   },
@@ -92,7 +92,7 @@ export const SOUTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central North Charleston", "North North Charleston", "South North Charleston", "West North Charleston", "East North Charleston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in North Charleston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing North Charleston, SC." },
+      { question: "How do I connect with an HVAC contractor in North Charleston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing North Charleston, SC." },
       { question: "Are contractors in North Charleston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Carolina." }
     ]
   },
@@ -112,7 +112,7 @@ export const SOUTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Mount Pleasant", "North Mount Pleasant", "South Mount Pleasant", "West Mount Pleasant", "East Mount Pleasant"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Mount Pleasant?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Mount Pleasant, SC." },
+      { question: "How do I connect with an HVAC contractor in Mount Pleasant?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Mount Pleasant, SC." },
       { question: "Are contractors in Mount Pleasant licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Carolina." }
     ]
   },
@@ -132,7 +132,7 @@ export const SOUTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rock Hill", "North Rock Hill", "South Rock Hill", "West Rock Hill", "East Rock Hill"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rock Hill?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rock Hill, SC." },
+      { question: "How do I connect with an HVAC contractor in Rock Hill?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rock Hill, SC." },
       { question: "Are contractors in Rock Hill licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in South Carolina." }
     ]
   }

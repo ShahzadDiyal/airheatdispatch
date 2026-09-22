@@ -22,7 +22,7 @@ export const TENNESSEE_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Tennessee?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Tennessee homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Tennessee homeowners."
     },
     {
       question: "Which Tennessee cities are covered?",
@@ -52,7 +52,7 @@ export const TENNESSEE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Nashville", "North Nashville", "South Nashville", "West Nashville", "East Nashville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Nashville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Nashville, TN." },
+      { question: "How do I connect with an HVAC contractor in Nashville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Nashville, TN." },
       { question: "Are contractors in Nashville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Tennessee." }
     ]
   },
@@ -72,7 +72,7 @@ export const TENNESSEE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Memphis", "North Memphis", "South Memphis", "West Memphis", "East Memphis"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Memphis?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Memphis, TN." },
+      { question: "How do I connect with an HVAC contractor in Memphis?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Memphis, TN." },
       { question: "Are contractors in Memphis licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Tennessee." }
     ]
   },
@@ -92,7 +92,7 @@ export const TENNESSEE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Knoxville", "North Knoxville", "South Knoxville", "West Knoxville", "East Knoxville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Knoxville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Knoxville, TN." },
+      { question: "How do I connect with an HVAC contractor in Knoxville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Knoxville, TN." },
       { question: "Are contractors in Knoxville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Tennessee." }
     ]
   },
@@ -112,7 +112,7 @@ export const TENNESSEE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Chattanooga", "North Chattanooga", "South Chattanooga", "West Chattanooga", "East Chattanooga"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Chattanooga?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Chattanooga, TN." },
+      { question: "How do I connect with an HVAC contractor in Chattanooga?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Chattanooga, TN." },
       { question: "Are contractors in Chattanooga licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Tennessee." }
     ]
   },
@@ -132,7 +132,7 @@ export const TENNESSEE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Clarksville", "North Clarksville", "South Clarksville", "West Clarksville", "East Clarksville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Clarksville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Clarksville, TN." },
+      { question: "How do I connect with an HVAC contractor in Clarksville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Clarksville, TN." },
       { question: "Are contractors in Clarksville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Tennessee." }
     ]
   }

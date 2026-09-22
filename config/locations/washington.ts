@@ -22,7 +22,7 @@ export const WASHINGTON_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Washington?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Washington homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Washington homeowners."
     },
     {
       question: "Which Washington cities are covered?",
@@ -52,7 +52,7 @@ export const WASHINGTON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Seattle", "North Seattle", "South Seattle", "West Seattle", "East Seattle"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Seattle?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Seattle, WA." },
+      { question: "How do I connect with an HVAC contractor in Seattle?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Seattle, WA." },
       { question: "Are contractors in Seattle licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Washington." }
     ]
   },
@@ -72,7 +72,7 @@ export const WASHINGTON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Spokane", "North Spokane", "South Spokane", "West Spokane", "East Spokane"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Spokane?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Spokane, WA." },
+      { question: "How do I connect with an HVAC contractor in Spokane?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Spokane, WA." },
       { question: "Are contractors in Spokane licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Washington." }
     ]
   },
@@ -92,7 +92,7 @@ export const WASHINGTON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Tacoma", "North Tacoma", "South Tacoma", "West Tacoma", "East Tacoma"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Tacoma?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Tacoma, WA." },
+      { question: "How do I connect with an HVAC contractor in Tacoma?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Tacoma, WA." },
       { question: "Are contractors in Tacoma licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Washington." }
     ]
   },
@@ -112,7 +112,7 @@ export const WASHINGTON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Vancouver", "North Vancouver", "South Vancouver", "West Vancouver", "East Vancouver"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Vancouver?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Vancouver, WA." },
+      { question: "How do I connect with an HVAC contractor in Vancouver?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Vancouver, WA." },
       { question: "Are contractors in Vancouver licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Washington." }
     ]
   },
@@ -132,7 +132,7 @@ export const WASHINGTON_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bellevue", "North Bellevue", "South Bellevue", "West Bellevue", "East Bellevue"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bellevue?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bellevue, WA." },
+      { question: "How do I connect with an HVAC contractor in Bellevue?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bellevue, WA." },
       { question: "Are contractors in Bellevue licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Washington." }
     ]
   }

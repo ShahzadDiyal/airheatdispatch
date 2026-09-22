@@ -22,7 +22,7 @@ export const MISSOURI_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Missouri?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Missouri homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Missouri homeowners."
     },
     {
       question: "Which Missouri cities are covered?",
@@ -52,7 +52,7 @@ export const MISSOURI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Kansas City", "North Kansas City", "South Kansas City", "West Kansas City", "East Kansas City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Kansas City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Kansas City, MO." },
+      { question: "How do I connect with an HVAC contractor in Kansas City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Kansas City, MO." },
       { question: "Are contractors in Kansas City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Missouri." }
     ]
   },
@@ -72,7 +72,7 @@ export const MISSOURI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central St. Louis", "North St. Louis", "South St. Louis", "West St. Louis", "East St. Louis"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in St. Louis?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing St. Louis, MO." },
+      { question: "How do I connect with an HVAC contractor in St. Louis?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing St. Louis, MO." },
       { question: "Are contractors in St. Louis licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Missouri." }
     ]
   },
@@ -92,7 +92,7 @@ export const MISSOURI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Springfield", "North Springfield", "South Springfield", "West Springfield", "East Springfield"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Springfield?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Springfield, MO." },
+      { question: "How do I connect with an HVAC contractor in Springfield?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Springfield, MO." },
       { question: "Are contractors in Springfield licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Missouri." }
     ]
   },
@@ -112,7 +112,7 @@ export const MISSOURI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Columbia", "North Columbia", "South Columbia", "West Columbia", "East Columbia"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Columbia?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Columbia, MO." },
+      { question: "How do I connect with an HVAC contractor in Columbia?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Columbia, MO." },
       { question: "Are contractors in Columbia licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Missouri." }
     ]
   },
@@ -132,7 +132,7 @@ export const MISSOURI_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Independence", "North Independence", "South Independence", "West Independence", "East Independence"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Independence?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Independence, MO." },
+      { question: "How do I connect with an HVAC contractor in Independence?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Independence, MO." },
       { question: "Are contractors in Independence licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Missouri." }
     ]
   }

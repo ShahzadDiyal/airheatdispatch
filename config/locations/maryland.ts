@@ -22,7 +22,7 @@ export const MARYLAND_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Maryland?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Maryland homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Maryland homeowners."
     },
     {
       question: "Which Maryland cities are covered?",
@@ -52,7 +52,7 @@ export const MARYLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Baltimore", "North Baltimore", "South Baltimore", "West Baltimore", "East Baltimore"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Baltimore?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Baltimore, MD." },
+      { question: "How do I connect with an HVAC contractor in Baltimore?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Baltimore, MD." },
       { question: "Are contractors in Baltimore licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maryland." }
     ]
   },
@@ -72,7 +72,7 @@ export const MARYLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Frederick", "North Frederick", "South Frederick", "West Frederick", "East Frederick"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Frederick?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Frederick, MD." },
+      { question: "How do I connect with an HVAC contractor in Frederick?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Frederick, MD." },
       { question: "Are contractors in Frederick licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maryland." }
     ]
   },
@@ -92,7 +92,7 @@ export const MARYLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rockville", "North Rockville", "South Rockville", "West Rockville", "East Rockville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rockville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rockville, MD." },
+      { question: "How do I connect with an HVAC contractor in Rockville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rockville, MD." },
       { question: "Are contractors in Rockville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maryland." }
     ]
   },
@@ -112,7 +112,7 @@ export const MARYLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Gaithersburg", "North Gaithersburg", "South Gaithersburg", "West Gaithersburg", "East Gaithersburg"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Gaithersburg?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Gaithersburg, MD." },
+      { question: "How do I connect with an HVAC contractor in Gaithersburg?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Gaithersburg, MD." },
       { question: "Are contractors in Gaithersburg licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maryland." }
     ]
   },
@@ -132,7 +132,7 @@ export const MARYLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bowie", "North Bowie", "South Bowie", "West Bowie", "East Bowie"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bowie?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bowie, MD." },
+      { question: "How do I connect with an HVAC contractor in Bowie?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bowie, MD." },
       { question: "Are contractors in Bowie licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Maryland." }
     ]
   }

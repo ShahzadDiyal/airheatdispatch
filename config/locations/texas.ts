@@ -26,7 +26,7 @@ export const TEXAS_STATE_DATA: StateData = {
     {
       question: "How do I connect with an HVAC contractor in Texas?",
       answer:
-        "Call our 24/7 hotline at (555) 839-4328. AirHeat Dispatch is a free service that connects Texas homeowners with independent local HVAC contractors.",
+        "Call our 24/7 hotline at (202) 931-4151. AirHeat Dispatch is a free service that connects Texas homeowners with independent local HVAC contractors.",
     },
     {
       question: "Which Texas cities have HVAC coverage?",
@@ -88,7 +88,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Austin, TX?",
         answer:
-          "Simply call (555) 839-4328. AirHeat Dispatch is a free service connecting Austin homeowners with independent local HVAC contractors.",
+          "Simply call (202) 931-4151. AirHeat Dispatch is a free service connecting Austin homeowners with independent local HVAC contractors.",
       },
       {
         question: "What HVAC services are available for Austin homeowners?",
@@ -143,7 +143,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Houston, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Houston and surrounding communities.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Houston and surrounding communities.",
       },
       {
         question: "Why does my Houston home feel humid even when the AC is running?",
@@ -198,7 +198,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Dallas, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC contractors serving Dallas and the DFW Metroplex.",
+          "Call (202) 931-4151 to connect with independent local HVAC contractors serving Dallas and the DFW Metroplex.",
       },
       {
         question: "How often should I change my AC filter in Dallas?",
@@ -253,7 +253,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in San Antonio, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving San Antonio and Bexar County.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving San Antonio and Bexar County.",
       },
       {
         question: "Can independent contractors service heat pumps in San Antonio?",
@@ -308,7 +308,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Fort Worth, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Fort Worth and Tarrant County.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Fort Worth and Tarrant County.",
       },
       {
         question: "What causes an AC compressor to stop running in Fort Worth?",
@@ -361,7 +361,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in El Paso, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving El Paso and West Texas.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving El Paso and West Texas.",
       },
       {
         question: "Why is outdoor coil cleaning important in El Paso?",
@@ -412,7 +412,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Arlington, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Arlington, TX.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Arlington, TX.",
       },
       {
         question: "What is included in a summer AC diagnostic visit?",
@@ -465,7 +465,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Corpus Christi, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Corpus Christi and the Coastal Bend.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Corpus Christi and the Coastal Bend.",
       },
       {
         question: "How does salt air affect AC units in Corpus Christi?",
@@ -517,7 +517,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Plano, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Plano and Collin County.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Plano and Collin County.",
       },
       {
         question: "Can independent contractors handle multi-zone HVAC systems in Plano?",
@@ -566,7 +566,7 @@ export const TEXAS_CITIES_DATA: LocationData[] = [
       {
         question: "How do I connect with an HVAC contractor in Lubbock, TX?",
         answer:
-          "Call (555) 839-4328 to connect with independent local HVAC service contractors serving Lubbock and the South Plains.",
+          "Call (202) 931-4151 to connect with independent local HVAC service contractors serving Lubbock and the South Plains.",
       },
       {
         question: "Why is winter heating service critical in Lubbock?",

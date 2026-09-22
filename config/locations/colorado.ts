@@ -22,7 +22,7 @@ export const COLORADO_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Colorado?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Colorado homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Colorado homeowners."
     },
     {
       question: "Which Colorado cities are covered?",
@@ -52,7 +52,7 @@ export const COLORADO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Denver", "North Denver", "South Denver", "West Denver", "East Denver"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Denver?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Denver, CO." },
+      { question: "How do I connect with an HVAC contractor in Denver?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Denver, CO." },
       { question: "Are contractors in Denver licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Colorado." }
     ]
   },
@@ -72,7 +72,7 @@ export const COLORADO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Colorado Springs", "North Colorado Springs", "South Colorado Springs", "West Colorado Springs", "East Colorado Springs"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Colorado Springs?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Colorado Springs, CO." },
+      { question: "How do I connect with an HVAC contractor in Colorado Springs?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Colorado Springs, CO." },
       { question: "Are contractors in Colorado Springs licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Colorado." }
     ]
   },
@@ -92,7 +92,7 @@ export const COLORADO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Aurora", "North Aurora", "South Aurora", "West Aurora", "East Aurora"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Aurora?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Aurora, CO." },
+      { question: "How do I connect with an HVAC contractor in Aurora?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Aurora, CO." },
       { question: "Are contractors in Aurora licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Colorado." }
     ]
   },
@@ -112,7 +112,7 @@ export const COLORADO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Fort Collins", "North Fort Collins", "South Fort Collins", "West Fort Collins", "East Fort Collins"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Fort Collins?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Fort Collins, CO." },
+      { question: "How do I connect with an HVAC contractor in Fort Collins?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Fort Collins, CO." },
       { question: "Are contractors in Fort Collins licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Colorado." }
     ]
   },
@@ -132,7 +132,7 @@ export const COLORADO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lakewood", "North Lakewood", "South Lakewood", "West Lakewood", "East Lakewood"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lakewood?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lakewood, CO." },
+      { question: "How do I connect with an HVAC contractor in Lakewood?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lakewood, CO." },
       { question: "Are contractors in Lakewood licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Colorado." }
     ]
   }

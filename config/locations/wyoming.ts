@@ -22,7 +22,7 @@ export const WYOMING_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Wyoming?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Wyoming homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Wyoming homeowners."
     },
     {
       question: "Which Wyoming cities are covered?",
@@ -52,7 +52,7 @@ export const WYOMING_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cheyenne", "North Cheyenne", "South Cheyenne", "West Cheyenne", "East Cheyenne"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cheyenne?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cheyenne, WY." },
+      { question: "How do I connect with an HVAC contractor in Cheyenne?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cheyenne, WY." },
       { question: "Are contractors in Cheyenne licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wyoming." }
     ]
   },
@@ -72,7 +72,7 @@ export const WYOMING_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Casper", "North Casper", "South Casper", "West Casper", "East Casper"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Casper?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Casper, WY." },
+      { question: "How do I connect with an HVAC contractor in Casper?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Casper, WY." },
       { question: "Are contractors in Casper licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wyoming." }
     ]
   },
@@ -92,7 +92,7 @@ export const WYOMING_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Laramie", "North Laramie", "South Laramie", "West Laramie", "East Laramie"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Laramie?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Laramie, WY." },
+      { question: "How do I connect with an HVAC contractor in Laramie?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Laramie, WY." },
       { question: "Are contractors in Laramie licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wyoming." }
     ]
   },
@@ -112,7 +112,7 @@ export const WYOMING_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Gillette", "North Gillette", "South Gillette", "West Gillette", "East Gillette"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Gillette?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Gillette, WY." },
+      { question: "How do I connect with an HVAC contractor in Gillette?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Gillette, WY." },
       { question: "Are contractors in Gillette licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wyoming." }
     ]
   },
@@ -132,7 +132,7 @@ export const WYOMING_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rock Springs", "North Rock Springs", "South Rock Springs", "West Rock Springs", "East Rock Springs"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rock Springs?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rock Springs, WY." },
+      { question: "How do I connect with an HVAC contractor in Rock Springs?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rock Springs, WY." },
       { question: "Are contractors in Rock Springs licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wyoming." }
     ]
   }

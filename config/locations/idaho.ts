@@ -22,7 +22,7 @@ export const IDAHO_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Idaho?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Idaho homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Idaho homeowners."
     },
     {
       question: "Which Idaho cities are covered?",
@@ -52,7 +52,7 @@ export const IDAHO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Boise", "North Boise", "South Boise", "West Boise", "East Boise"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Boise?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Boise, ID." },
+      { question: "How do I connect with an HVAC contractor in Boise?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Boise, ID." },
       { question: "Are contractors in Boise licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Idaho." }
     ]
   },
@@ -72,7 +72,7 @@ export const IDAHO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Meridian", "North Meridian", "South Meridian", "West Meridian", "East Meridian"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Meridian?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Meridian, ID." },
+      { question: "How do I connect with an HVAC contractor in Meridian?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Meridian, ID." },
       { question: "Are contractors in Meridian licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Idaho." }
     ]
   },
@@ -92,7 +92,7 @@ export const IDAHO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Nampa", "North Nampa", "South Nampa", "West Nampa", "East Nampa"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Nampa?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Nampa, ID." },
+      { question: "How do I connect with an HVAC contractor in Nampa?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Nampa, ID." },
       { question: "Are contractors in Nampa licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Idaho." }
     ]
   },
@@ -112,7 +112,7 @@ export const IDAHO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Idaho Falls", "North Idaho Falls", "South Idaho Falls", "West Idaho Falls", "East Idaho Falls"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Idaho Falls?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Idaho Falls, ID." },
+      { question: "How do I connect with an HVAC contractor in Idaho Falls?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Idaho Falls, ID." },
       { question: "Are contractors in Idaho Falls licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Idaho." }
     ]
   },
@@ -132,7 +132,7 @@ export const IDAHO_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Caldwell", "North Caldwell", "South Caldwell", "West Caldwell", "East Caldwell"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Caldwell?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Caldwell, ID." },
+      { question: "How do I connect with an HVAC contractor in Caldwell?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Caldwell, ID." },
       { question: "Are contractors in Caldwell licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Idaho." }
     ]
   }

@@ -22,7 +22,7 @@ export const NORTH_CAROLINA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in North Carolina?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving North Carolina homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving North Carolina homeowners."
     },
     {
       question: "Which North Carolina cities are covered?",
@@ -52,7 +52,7 @@ export const NORTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Charlotte", "North Charlotte", "South Charlotte", "West Charlotte", "East Charlotte"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Charlotte?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Charlotte, NC." },
+      { question: "How do I connect with an HVAC contractor in Charlotte?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Charlotte, NC." },
       { question: "Are contractors in Charlotte licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Carolina." }
     ]
   },
@@ -72,7 +72,7 @@ export const NORTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Raleigh", "North Raleigh", "South Raleigh", "West Raleigh", "East Raleigh"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Raleigh?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Raleigh, NC." },
+      { question: "How do I connect with an HVAC contractor in Raleigh?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Raleigh, NC." },
       { question: "Are contractors in Raleigh licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Carolina." }
     ]
   },
@@ -92,7 +92,7 @@ export const NORTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Greensboro", "North Greensboro", "South Greensboro", "West Greensboro", "East Greensboro"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Greensboro?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Greensboro, NC." },
+      { question: "How do I connect with an HVAC contractor in Greensboro?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Greensboro, NC." },
       { question: "Are contractors in Greensboro licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Carolina." }
     ]
   },
@@ -112,7 +112,7 @@ export const NORTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Durham", "North Durham", "South Durham", "West Durham", "East Durham"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Durham?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Durham, NC." },
+      { question: "How do I connect with an HVAC contractor in Durham?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Durham, NC." },
       { question: "Are contractors in Durham licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Carolina." }
     ]
   },
@@ -132,7 +132,7 @@ export const NORTH_CAROLINA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Winston-Salem", "North Winston-Salem", "South Winston-Salem", "West Winston-Salem", "East Winston-Salem"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Winston-Salem?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Winston-Salem, NC." },
+      { question: "How do I connect with an HVAC contractor in Winston-Salem?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Winston-Salem, NC." },
       { question: "Are contractors in Winston-Salem licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in North Carolina." }
     ]
   }

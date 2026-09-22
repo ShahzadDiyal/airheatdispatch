@@ -22,7 +22,7 @@ export const VIRGINIA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Virginia?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Virginia homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Virginia homeowners."
     },
     {
       question: "Which Virginia cities are covered?",
@@ -52,7 +52,7 @@ export const VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Virginia Beach", "North Virginia Beach", "South Virginia Beach", "West Virginia Beach", "East Virginia Beach"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Virginia Beach?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Virginia Beach, VA." },
+      { question: "How do I connect with an HVAC contractor in Virginia Beach?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Virginia Beach, VA." },
       { question: "Are contractors in Virginia Beach licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Virginia." }
     ]
   },
@@ -72,7 +72,7 @@ export const VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Chesapeake", "North Chesapeake", "South Chesapeake", "West Chesapeake", "East Chesapeake"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Chesapeake?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Chesapeake, VA." },
+      { question: "How do I connect with an HVAC contractor in Chesapeake?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Chesapeake, VA." },
       { question: "Are contractors in Chesapeake licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Virginia." }
     ]
   },
@@ -92,7 +92,7 @@ export const VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Norfolk", "North Norfolk", "South Norfolk", "West Norfolk", "East Norfolk"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Norfolk?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Norfolk, VA." },
+      { question: "How do I connect with an HVAC contractor in Norfolk?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Norfolk, VA." },
       { question: "Are contractors in Norfolk licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Virginia." }
     ]
   },
@@ -112,7 +112,7 @@ export const VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Richmond", "North Richmond", "South Richmond", "West Richmond", "East Richmond"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Richmond?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Richmond, VA." },
+      { question: "How do I connect with an HVAC contractor in Richmond?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Richmond, VA." },
       { question: "Are contractors in Richmond licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Virginia." }
     ]
   },
@@ -132,7 +132,7 @@ export const VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Newport News", "North Newport News", "South Newport News", "West Newport News", "East Newport News"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Newport News?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Newport News, VA." },
+      { question: "How do I connect with an HVAC contractor in Newport News?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Newport News, VA." },
       { question: "Are contractors in Newport News licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Virginia." }
     ]
   }

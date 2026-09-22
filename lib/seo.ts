@@ -2,8 +2,8 @@ export const SITE_CONFIG = {
   name: "AirHeat Dispatch",
   tagline: "Free Homeowner Connection Service for Independent HVAC Contractors",
   domain: "https://airheatdispatch.com",
-  phone: "(555) 839-4328",
-  phoneRaw: "5558394328",
+  phone: "(202) 931-4151",
+  phoneRaw: "2029314151",
   email: "support@airheatdispatch.com",
   openingHours: "Mo-Su 00:00-23:59", // 24/7 Hotline
   primaryKeyword: "Connect With Local HVAC Providers",
@@ -45,7 +45,7 @@ export const GENERAL_FAQS = [
   {
     question: "How do I connect with a local HVAC service provider?",
     answer:
-      "Call our connection hotline at (555) 839-4328 anytime to speak with a representative and connect with an independent HVAC contractor serving your area.",
+      "Call our connection hotline at (202) 931-4151 anytime to speak with a representative and connect with an independent HVAC contractor serving your area.",
   },
 ];
 

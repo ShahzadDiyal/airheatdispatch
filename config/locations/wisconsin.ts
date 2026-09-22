@@ -22,7 +22,7 @@ export const WISCONSIN_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Wisconsin?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Wisconsin homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Wisconsin homeowners."
     },
     {
       question: "Which Wisconsin cities are covered?",
@@ -52,7 +52,7 @@ export const WISCONSIN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Milwaukee", "North Milwaukee", "South Milwaukee", "West Milwaukee", "East Milwaukee"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Milwaukee?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Milwaukee, WI." },
+      { question: "How do I connect with an HVAC contractor in Milwaukee?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Milwaukee, WI." },
       { question: "Are contractors in Milwaukee licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wisconsin." }
     ]
   },
@@ -72,7 +72,7 @@ export const WISCONSIN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Madison", "North Madison", "South Madison", "West Madison", "East Madison"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Madison?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Madison, WI." },
+      { question: "How do I connect with an HVAC contractor in Madison?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Madison, WI." },
       { question: "Are contractors in Madison licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wisconsin." }
     ]
   },
@@ -92,7 +92,7 @@ export const WISCONSIN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Green Bay", "North Green Bay", "South Green Bay", "West Green Bay", "East Green Bay"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Green Bay?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Green Bay, WI." },
+      { question: "How do I connect with an HVAC contractor in Green Bay?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Green Bay, WI." },
       { question: "Are contractors in Green Bay licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wisconsin." }
     ]
   },
@@ -112,7 +112,7 @@ export const WISCONSIN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Kenosha", "North Kenosha", "South Kenosha", "West Kenosha", "East Kenosha"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Kenosha?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Kenosha, WI." },
+      { question: "How do I connect with an HVAC contractor in Kenosha?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Kenosha, WI." },
       { question: "Are contractors in Kenosha licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wisconsin." }
     ]
   },
@@ -132,7 +132,7 @@ export const WISCONSIN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Racine", "North Racine", "South Racine", "West Racine", "East Racine"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Racine?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Racine, WI." },
+      { question: "How do I connect with an HVAC contractor in Racine?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Racine, WI." },
       { question: "Are contractors in Racine licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Wisconsin." }
     ]
   }

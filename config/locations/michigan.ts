@@ -22,7 +22,7 @@ export const MICHIGAN_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Michigan?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Michigan homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Michigan homeowners."
     },
     {
       question: "Which Michigan cities are covered?",
@@ -52,7 +52,7 @@ export const MICHIGAN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Detroit", "North Detroit", "South Detroit", "West Detroit", "East Detroit"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Detroit?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Detroit, MI." },
+      { question: "How do I connect with an HVAC contractor in Detroit?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Detroit, MI." },
       { question: "Are contractors in Detroit licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Michigan." }
     ]
   },
@@ -72,7 +72,7 @@ export const MICHIGAN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Grand Rapids", "North Grand Rapids", "South Grand Rapids", "West Grand Rapids", "East Grand Rapids"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Grand Rapids?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Grand Rapids, MI." },
+      { question: "How do I connect with an HVAC contractor in Grand Rapids?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Grand Rapids, MI." },
       { question: "Are contractors in Grand Rapids licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Michigan." }
     ]
   },
@@ -92,7 +92,7 @@ export const MICHIGAN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Warren", "North Warren", "South Warren", "West Warren", "East Warren"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Warren?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Warren, MI." },
+      { question: "How do I connect with an HVAC contractor in Warren?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Warren, MI." },
       { question: "Are contractors in Warren licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Michigan." }
     ]
   },
@@ -112,7 +112,7 @@ export const MICHIGAN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Sterling Heights", "North Sterling Heights", "South Sterling Heights", "West Sterling Heights", "East Sterling Heights"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Sterling Heights?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Sterling Heights, MI." },
+      { question: "How do I connect with an HVAC contractor in Sterling Heights?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Sterling Heights, MI." },
       { question: "Are contractors in Sterling Heights licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Michigan." }
     ]
   },
@@ -132,7 +132,7 @@ export const MICHIGAN_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Ann Arbor", "North Ann Arbor", "South Ann Arbor", "West Ann Arbor", "East Ann Arbor"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Ann Arbor?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Ann Arbor, MI." },
+      { question: "How do I connect with an HVAC contractor in Ann Arbor?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Ann Arbor, MI." },
       { question: "Are contractors in Ann Arbor licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Michigan." }
     ]
   }

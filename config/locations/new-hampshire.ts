@@ -22,7 +22,7 @@ export const NEW_HAMPSHIRE_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in New Hampshire?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving New Hampshire homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving New Hampshire homeowners."
     },
     {
       question: "Which New Hampshire cities are covered?",
@@ -52,7 +52,7 @@ export const NEW_HAMPSHIRE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Manchester", "North Manchester", "South Manchester", "West Manchester", "East Manchester"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Manchester?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Manchester, NH." },
+      { question: "How do I connect with an HVAC contractor in Manchester?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Manchester, NH." },
       { question: "Are contractors in Manchester licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Hampshire." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEW_HAMPSHIRE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Nashua", "North Nashua", "South Nashua", "West Nashua", "East Nashua"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Nashua?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Nashua, NH." },
+      { question: "How do I connect with an HVAC contractor in Nashua?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Nashua, NH." },
       { question: "Are contractors in Nashua licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Hampshire." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEW_HAMPSHIRE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Concord", "North Concord", "South Concord", "West Concord", "East Concord"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Concord?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Concord, NH." },
+      { question: "How do I connect with an HVAC contractor in Concord?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Concord, NH." },
       { question: "Are contractors in Concord licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Hampshire." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEW_HAMPSHIRE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Dover", "North Dover", "South Dover", "West Dover", "East Dover"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Dover?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Dover, NH." },
+      { question: "How do I connect with an HVAC contractor in Dover?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Dover, NH." },
       { question: "Are contractors in Dover licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Hampshire." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEW_HAMPSHIRE_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Rochester", "North Rochester", "South Rochester", "West Rochester", "East Rochester"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Rochester, NH." },
+      { question: "How do I connect with an HVAC contractor in Rochester?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Rochester, NH." },
       { question: "Are contractors in Rochester licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in New Hampshire." }
     ]
   }

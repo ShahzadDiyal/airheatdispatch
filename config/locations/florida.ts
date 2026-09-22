@@ -22,7 +22,7 @@ export const FLORIDA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Florida?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Florida homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Florida homeowners."
     },
     {
       question: "Which Florida cities are covered?",
@@ -52,7 +52,7 @@ export const FLORIDA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Jacksonville", "North Jacksonville", "South Jacksonville", "West Jacksonville", "East Jacksonville"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Jacksonville?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Jacksonville, FL." },
+      { question: "How do I connect with an HVAC contractor in Jacksonville?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Jacksonville, FL." },
       { question: "Are contractors in Jacksonville licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Florida." }
     ]
   },
@@ -72,7 +72,7 @@ export const FLORIDA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Miami", "North Miami", "South Miami", "West Miami", "East Miami"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Miami?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Miami, FL." },
+      { question: "How do I connect with an HVAC contractor in Miami?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Miami, FL." },
       { question: "Are contractors in Miami licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Florida." }
     ]
   },
@@ -92,7 +92,7 @@ export const FLORIDA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Tampa", "North Tampa", "South Tampa", "West Tampa", "East Tampa"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Tampa?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Tampa, FL." },
+      { question: "How do I connect with an HVAC contractor in Tampa?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Tampa, FL." },
       { question: "Are contractors in Tampa licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Florida." }
     ]
   },
@@ -112,7 +112,7 @@ export const FLORIDA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Orlando", "North Orlando", "South Orlando", "West Orlando", "East Orlando"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Orlando?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Orlando, FL." },
+      { question: "How do I connect with an HVAC contractor in Orlando?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Orlando, FL." },
       { question: "Are contractors in Orlando licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Florida." }
     ]
   },
@@ -132,7 +132,7 @@ export const FLORIDA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central St. Petersburg", "North St. Petersburg", "South St. Petersburg", "West St. Petersburg", "East St. Petersburg"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in St. Petersburg?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing St. Petersburg, FL." },
+      { question: "How do I connect with an HVAC contractor in St. Petersburg?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing St. Petersburg, FL." },
       { question: "Are contractors in St. Petersburg licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Florida." }
     ]
   }

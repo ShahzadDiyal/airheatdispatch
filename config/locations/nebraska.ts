@@ -22,7 +22,7 @@ export const NEBRASKA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Nebraska?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Nebraska homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Nebraska homeowners."
     },
     {
       question: "Which Nebraska cities are covered?",
@@ -52,7 +52,7 @@ export const NEBRASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Omaha", "North Omaha", "South Omaha", "West Omaha", "East Omaha"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Omaha?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Omaha, NE." },
+      { question: "How do I connect with an HVAC contractor in Omaha?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Omaha, NE." },
       { question: "Are contractors in Omaha licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nebraska." }
     ]
   },
@@ -72,7 +72,7 @@ export const NEBRASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lincoln", "North Lincoln", "South Lincoln", "West Lincoln", "East Lincoln"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lincoln?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lincoln, NE." },
+      { question: "How do I connect with an HVAC contractor in Lincoln?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lincoln, NE." },
       { question: "Are contractors in Lincoln licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nebraska." }
     ]
   },
@@ -92,7 +92,7 @@ export const NEBRASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bellevue", "North Bellevue", "South Bellevue", "West Bellevue", "East Bellevue"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bellevue?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bellevue, NE." },
+      { question: "How do I connect with an HVAC contractor in Bellevue?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bellevue, NE." },
       { question: "Are contractors in Bellevue licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nebraska." }
     ]
   },
@@ -112,7 +112,7 @@ export const NEBRASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Grand Island", "North Grand Island", "South Grand Island", "West Grand Island", "East Grand Island"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Grand Island?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Grand Island, NE." },
+      { question: "How do I connect with an HVAC contractor in Grand Island?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Grand Island, NE." },
       { question: "Are contractors in Grand Island licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nebraska." }
     ]
   },
@@ -132,7 +132,7 @@ export const NEBRASKA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Kearney", "North Kearney", "South Kearney", "West Kearney", "East Kearney"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Kearney?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Kearney, NE." },
+      { question: "How do I connect with an HVAC contractor in Kearney?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Kearney, NE." },
       { question: "Are contractors in Kearney licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Nebraska." }
     ]
   }

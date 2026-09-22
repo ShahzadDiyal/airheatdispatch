@@ -22,7 +22,7 @@ export const RHODE_ISLAND_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Rhode Island?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Rhode Island homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Rhode Island homeowners."
     },
     {
       question: "Which Rhode Island cities are covered?",
@@ -52,7 +52,7 @@ export const RHODE_ISLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Providence", "North Providence", "South Providence", "West Providence", "East Providence"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Providence?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Providence, RI." },
+      { question: "How do I connect with an HVAC contractor in Providence?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Providence, RI." },
       { question: "Are contractors in Providence licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Rhode Island." }
     ]
   },
@@ -72,7 +72,7 @@ export const RHODE_ISLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Warwick", "North Warwick", "South Warwick", "West Warwick", "East Warwick"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Warwick?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Warwick, RI." },
+      { question: "How do I connect with an HVAC contractor in Warwick?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Warwick, RI." },
       { question: "Are contractors in Warwick licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Rhode Island." }
     ]
   },
@@ -92,7 +92,7 @@ export const RHODE_ISLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cranston", "North Cranston", "South Cranston", "West Cranston", "East Cranston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cranston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cranston, RI." },
+      { question: "How do I connect with an HVAC contractor in Cranston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cranston, RI." },
       { question: "Are contractors in Cranston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Rhode Island." }
     ]
   },
@@ -112,7 +112,7 @@ export const RHODE_ISLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Pawtucket", "North Pawtucket", "South Pawtucket", "West Pawtucket", "East Pawtucket"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Pawtucket?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Pawtucket, RI." },
+      { question: "How do I connect with an HVAC contractor in Pawtucket?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Pawtucket, RI." },
       { question: "Are contractors in Pawtucket licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Rhode Island." }
     ]
   },
@@ -132,7 +132,7 @@ export const RHODE_ISLAND_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central East Providence", "North East Providence", "South East Providence", "West East Providence", "East East Providence"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in East Providence?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing East Providence, RI." },
+      { question: "How do I connect with an HVAC contractor in East Providence?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing East Providence, RI." },
       { question: "Are contractors in East Providence licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Rhode Island." }
     ]
   }

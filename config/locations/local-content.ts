@@ -29,7 +29,7 @@ export function generateGenericFaqs(cityName: string, stateName: string): Locati
   return [
     {
       question: `How do I connect with an HVAC contractor in ${cityName}, ${stateName}?`,
-      answer: `Call (555) 839-4328 to connect with independent local HVAC service contractors serving ${cityName} and surrounding ${stateName} communities.`,
+      answer: `Call (202) 931-4151 to connect with independent local HVAC service contractors serving ${cityName} and surrounding ${stateName} communities.`,
     },
     {
       question: `What heating and cooling services are available in ${cityName}?`,

@@ -22,7 +22,7 @@ export const LOUISIANA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Louisiana?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Louisiana homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Louisiana homeowners."
     },
     {
       question: "Which Louisiana cities are covered?",
@@ -52,7 +52,7 @@ export const LOUISIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central New Orleans", "North New Orleans", "South New Orleans", "West New Orleans", "East New Orleans"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in New Orleans?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing New Orleans, LA." },
+      { question: "How do I connect with an HVAC contractor in New Orleans?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing New Orleans, LA." },
       { question: "Are contractors in New Orleans licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Louisiana." }
     ]
   },
@@ -72,7 +72,7 @@ export const LOUISIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Baton Rouge", "North Baton Rouge", "South Baton Rouge", "West Baton Rouge", "East Baton Rouge"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Baton Rouge?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Baton Rouge, LA." },
+      { question: "How do I connect with an HVAC contractor in Baton Rouge?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Baton Rouge, LA." },
       { question: "Are contractors in Baton Rouge licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Louisiana." }
     ]
   },
@@ -92,7 +92,7 @@ export const LOUISIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Shreveport", "North Shreveport", "South Shreveport", "West Shreveport", "East Shreveport"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Shreveport?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Shreveport, LA." },
+      { question: "How do I connect with an HVAC contractor in Shreveport?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Shreveport, LA." },
       { question: "Are contractors in Shreveport licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Louisiana." }
     ]
   },
@@ -112,7 +112,7 @@ export const LOUISIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lafayette", "North Lafayette", "South Lafayette", "West Lafayette", "East Lafayette"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lafayette?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lafayette, LA." },
+      { question: "How do I connect with an HVAC contractor in Lafayette?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lafayette, LA." },
       { question: "Are contractors in Lafayette licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Louisiana." }
     ]
   },
@@ -132,7 +132,7 @@ export const LOUISIANA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Lake Charles", "North Lake Charles", "South Lake Charles", "West Lake Charles", "East Lake Charles"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Lake Charles?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Lake Charles, LA." },
+      { question: "How do I connect with an HVAC contractor in Lake Charles?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Lake Charles, LA." },
       { question: "Are contractors in Lake Charles licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Louisiana." }
     ]
   }

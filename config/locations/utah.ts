@@ -22,7 +22,7 @@ export const UTAH_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Utah?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Utah homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Utah homeowners."
     },
     {
       question: "Which Utah cities are covered?",
@@ -52,7 +52,7 @@ export const UTAH_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Salt Lake City", "North Salt Lake City", "South Salt Lake City", "West Salt Lake City", "East Salt Lake City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Salt Lake City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Salt Lake City, UT." },
+      { question: "How do I connect with an HVAC contractor in Salt Lake City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Salt Lake City, UT." },
       { question: "Are contractors in Salt Lake City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Utah." }
     ]
   },
@@ -72,7 +72,7 @@ export const UTAH_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central West Valley City", "North West Valley City", "South West Valley City", "West West Valley City", "East West Valley City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in West Valley City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing West Valley City, UT." },
+      { question: "How do I connect with an HVAC contractor in West Valley City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing West Valley City, UT." },
       { question: "Are contractors in West Valley City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Utah." }
     ]
   },
@@ -92,7 +92,7 @@ export const UTAH_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Provo", "North Provo", "South Provo", "West Provo", "East Provo"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Provo?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Provo, UT." },
+      { question: "How do I connect with an HVAC contractor in Provo?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Provo, UT." },
       { question: "Are contractors in Provo licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Utah." }
     ]
   },
@@ -112,7 +112,7 @@ export const UTAH_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central West Jordan", "North West Jordan", "South West Jordan", "West West Jordan", "East West Jordan"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in West Jordan?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing West Jordan, UT." },
+      { question: "How do I connect with an HVAC contractor in West Jordan?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing West Jordan, UT." },
       { question: "Are contractors in West Jordan licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Utah." }
     ]
   },
@@ -132,7 +132,7 @@ export const UTAH_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Orem", "North Orem", "South Orem", "West Orem", "East Orem"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Orem?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Orem, UT." },
+      { question: "How do I connect with an HVAC contractor in Orem?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Orem, UT." },
       { question: "Are contractors in Orem licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Utah." }
     ]
   }

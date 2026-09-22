@@ -22,7 +22,7 @@ export const CONNECTICUT_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Connecticut?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Connecticut homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Connecticut homeowners."
     },
     {
       question: "Which Connecticut cities are covered?",
@@ -52,7 +52,7 @@ export const CONNECTICUT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Bridgeport", "North Bridgeport", "South Bridgeport", "West Bridgeport", "East Bridgeport"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Bridgeport?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Bridgeport, CT." },
+      { question: "How do I connect with an HVAC contractor in Bridgeport?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Bridgeport, CT." },
       { question: "Are contractors in Bridgeport licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Connecticut." }
     ]
   },
@@ -72,7 +72,7 @@ export const CONNECTICUT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Stamford", "North Stamford", "South Stamford", "West Stamford", "East Stamford"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Stamford?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Stamford, CT." },
+      { question: "How do I connect with an HVAC contractor in Stamford?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Stamford, CT." },
       { question: "Are contractors in Stamford licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Connecticut." }
     ]
   },
@@ -92,7 +92,7 @@ export const CONNECTICUT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central New Haven", "North New Haven", "South New Haven", "West New Haven", "East New Haven"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in New Haven?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing New Haven, CT." },
+      { question: "How do I connect with an HVAC contractor in New Haven?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing New Haven, CT." },
       { question: "Are contractors in New Haven licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Connecticut." }
     ]
   },
@@ -112,7 +112,7 @@ export const CONNECTICUT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Hartford", "North Hartford", "South Hartford", "West Hartford", "East Hartford"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Hartford?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Hartford, CT." },
+      { question: "How do I connect with an HVAC contractor in Hartford?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Hartford, CT." },
       { question: "Are contractors in Hartford licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Connecticut." }
     ]
   },
@@ -132,7 +132,7 @@ export const CONNECTICUT_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Waterbury", "North Waterbury", "South Waterbury", "West Waterbury", "East Waterbury"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Waterbury?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Waterbury, CT." },
+      { question: "How do I connect with an HVAC contractor in Waterbury?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Waterbury, CT." },
       { question: "Are contractors in Waterbury licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Connecticut." }
     ]
   }

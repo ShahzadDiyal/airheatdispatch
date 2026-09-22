@@ -22,7 +22,7 @@ export const IOWA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in Iowa?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving Iowa homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving Iowa homeowners."
     },
     {
       question: "Which Iowa cities are covered?",
@@ -52,7 +52,7 @@ export const IOWA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Des Moines", "North Des Moines", "South Des Moines", "West Des Moines", "East Des Moines"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Des Moines?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Des Moines, IA." },
+      { question: "How do I connect with an HVAC contractor in Des Moines?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Des Moines, IA." },
       { question: "Are contractors in Des Moines licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Iowa." }
     ]
   },
@@ -72,7 +72,7 @@ export const IOWA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Cedar Rapids", "North Cedar Rapids", "South Cedar Rapids", "West Cedar Rapids", "East Cedar Rapids"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Cedar Rapids?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Cedar Rapids, IA." },
+      { question: "How do I connect with an HVAC contractor in Cedar Rapids?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Cedar Rapids, IA." },
       { question: "Are contractors in Cedar Rapids licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Iowa." }
     ]
   },
@@ -92,7 +92,7 @@ export const IOWA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Davenport", "North Davenport", "South Davenport", "West Davenport", "East Davenport"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Davenport?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Davenport, IA." },
+      { question: "How do I connect with an HVAC contractor in Davenport?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Davenport, IA." },
       { question: "Are contractors in Davenport licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Iowa." }
     ]
   },
@@ -112,7 +112,7 @@ export const IOWA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Sioux City", "North Sioux City", "South Sioux City", "West Sioux City", "East Sioux City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Sioux City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Sioux City, IA." },
+      { question: "How do I connect with an HVAC contractor in Sioux City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Sioux City, IA." },
       { question: "Are contractors in Sioux City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Iowa." }
     ]
   },
@@ -132,7 +132,7 @@ export const IOWA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Iowa City", "North Iowa City", "South Iowa City", "West Iowa City", "East Iowa City"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Iowa City?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Iowa City, IA." },
+      { question: "How do I connect with an HVAC contractor in Iowa City?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Iowa City, IA." },
       { question: "Are contractors in Iowa City licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in Iowa." }
     ]
   }

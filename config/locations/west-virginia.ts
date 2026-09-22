@@ -22,7 +22,7 @@ export const WEST_VIRGINIA_STATE_DATA: StateData = {
   faqs: [
     {
       question: "How do I connect with an HVAC contractor in West Virginia?",
-      answer: "Call (555) 839-4328 to connect with independent local HVAC contractors serving West Virginia homeowners."
+      answer: "Call (202) 931-4151 to connect with independent local HVAC contractors serving West Virginia homeowners."
     },
     {
       question: "Which West Virginia cities are covered?",
@@ -52,7 +52,7 @@ export const WEST_VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Charleston", "North Charleston", "South Charleston", "West Charleston", "East Charleston"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Charleston?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Charleston, WV." },
+      { question: "How do I connect with an HVAC contractor in Charleston?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Charleston, WV." },
       { question: "Are contractors in Charleston licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in West Virginia." }
     ]
   },
@@ -72,7 +72,7 @@ export const WEST_VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Huntington", "North Huntington", "South Huntington", "West Huntington", "East Huntington"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Huntington?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Huntington, WV." },
+      { question: "How do I connect with an HVAC contractor in Huntington?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Huntington, WV." },
       { question: "Are contractors in Huntington licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in West Virginia." }
     ]
   },
@@ -92,7 +92,7 @@ export const WEST_VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Morgantown", "North Morgantown", "South Morgantown", "West Morgantown", "East Morgantown"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Morgantown?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Morgantown, WV." },
+      { question: "How do I connect with an HVAC contractor in Morgantown?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Morgantown, WV." },
       { question: "Are contractors in Morgantown licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in West Virginia." }
     ]
   },
@@ -112,7 +112,7 @@ export const WEST_VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Parkersburg", "North Parkersburg", "South Parkersburg", "West Parkersburg", "East Parkersburg"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Parkersburg?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Parkersburg, WV." },
+      { question: "How do I connect with an HVAC contractor in Parkersburg?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Parkersburg, WV." },
       { question: "Are contractors in Parkersburg licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in West Virginia." }
     ]
   },
@@ -132,7 +132,7 @@ export const WEST_VIRGINIA_PRESET_CITIES_DATA: LocationData[] = [
     ],
     subAreas: ["Central Wheeling", "North Wheeling", "South Wheeling", "West Wheeling", "East Wheeling"],
     faqs: [
-      { question: "How do I connect with an HVAC contractor in Wheeling?", answer: "Call (555) 839-4328 to connect with an independent local HVAC contractor servicing Wheeling, WV." },
+      { question: "How do I connect with an HVAC contractor in Wheeling?", answer: "Call (202) 931-4151 to connect with an independent local HVAC contractor servicing Wheeling, WV." },
       { question: "Are contractors in Wheeling licensed and insured?", answer: "Homeowners must verify that the independent contractor holds required licensing and insurance in West Virginia." }
     ]
   }
