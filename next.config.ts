@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap-:name.xml",
-        destination: "/api/sitemaps/sitemap-:name.xml",
-      },
-    ];
+  output: 'export',
+  images: {
+    unoptimized: true, // required for static export
   },
+  // Note: move sitemaps to public folder or app/sitemap.ts
 };
 
 export default nextConfig;

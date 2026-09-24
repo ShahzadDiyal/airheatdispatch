@@ -252,7 +252,7 @@ export default function Header() {
               className="flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs xl:text-sm transition-all hover:scale-[1.02] shadow-xs shadow-orange-500/20 whitespace-nowrap"
             >
               <Phone className="w-4 h-4 fill-white shrink-0" />
-              <span>Call ({SITE_CONFIG.phone})</span>
+              <span>Call {SITE_CONFIG.phone}</span>
             </a>
           </div>
 
@@ -374,7 +374,7 @@ export default function Header() {
                 className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-orange-500 text-white font-bold text-sm shadow-lg shadow-orange-500/20"
               >
                 <Phone className="w-4 h-4 fill-white shrink-0" />
-                <span>Call Now ({SITE_CONFIG.phone})</span>
+                <span>Call Now {SITE_CONFIG.phone}</span>
               </a>
             </div>
           </div>

@@ -139,7 +139,7 @@ export default function ContactPage() {
                       aria-label="Phone Number"
                       type="tel"
                       required
-       (202) 931-4151               placeholder=""
+                     placeholder="(202) 931-4151 "
                       className="w-full px-3 sm:px-4 py-3 rounded-xl bg-slate-50  text-slate-900 text-sm focus:outline-none focus:border-blue-600 focus:bg-white placeholder:text-slate-400 transition-colors"
                     />
                   </div>
