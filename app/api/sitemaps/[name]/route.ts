@@ -3,8 +3,16 @@ import {
   getStateSitemapUrls,
   buildUrlSetXml,
   CHUNK_LIMIT,
+  getSitemapParams,
 } from "@/lib/sitemap";
 import { ALL_STATES_DATA } from "@/config/states";
+
+export const dynamic = "force-static";
+export const revalidate = false;
+
+export function generateStaticParams() {
+  return getSitemapParams();
+}
 
 interface RouteProps {
   params: Promise<{ name: string }>;

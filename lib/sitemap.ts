@@ -79,6 +79,14 @@ export function getSitemapIndexEntries(): { url: string }[] {
   return entries;
 }
 
+export function getSitemapParams(): { name: string }[] {
+  const entries = getSitemapIndexEntries();
+  return entries.map((e) => {
+    const parts = e.url.split("/");
+    return { name: parts[parts.length - 1] };
+  });
+}
+
 export function buildUrlSetXml(urls: string[]): string {
   const xmlUrls = urls
     .map((u) => `  <url>\n    <loc>${u}</loc>\n  </url>`)

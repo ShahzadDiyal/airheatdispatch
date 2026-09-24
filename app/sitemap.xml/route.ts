@@ -1,5 +1,8 @@
 import { getSitemapIndexEntries, buildSitemapIndexXml } from "@/lib/sitemap";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export async function GET() {
   const entries = getSitemapIndexEntries();
   const xml = buildSitemapIndexXml(entries);

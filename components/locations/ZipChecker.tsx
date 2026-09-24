@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { MapPin, ArrowRight, Loader2 } from "lucide-react";
+import { searchLocations } from "@/lib/locations";
 
 interface SearchResult {
   zip: string;
@@ -31,18 +32,24 @@ export default function ZipChecker() {
     const timer = setTimeout(async () => {
       setIsLoading(true);
       try {
-        const res = await fetch(`/api/locations/search?q=${encodeURIComponent(zipInput.trim())}`);
-        if (res.ok) {
-          const data = await res.json();
-          setSuggestions(data.results || []);
-          setIsOpen(data.results && data.results.length > 0);
+        const localResults = searchLocations(zipInput.trim());
+        if (localResults && localResults.length > 0) {
+          setSuggestions(localResults);
+          setIsOpen(true);
+        } else {
+          const res = await fetch(`/api/locations/search?q=${encodeURIComponent(zipInput.trim())}`);
+          if (res.ok) {
+            const data = await res.json();
+            setSuggestions(data.results || []);
+            setIsOpen(data.results && data.results.length > 0);
+          }
         }
       } catch (err) {
         console.error("ZIP search error:", err);
       } finally {
         setIsLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [zipInput]);

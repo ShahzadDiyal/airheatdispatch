@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Search, MapPin, ShieldCheck, ArrowRight, Loader2 } from "lucide-react";
+import { searchLocations } from "@/lib/locations";
 
 interface SearchResult {
   zip: string;
@@ -34,19 +35,29 @@ export default function LiveSearchHero() {
     const timer = setTimeout(async () => {
       setIsLoading(true);
       try {
-        const res = await fetch(`/api/locations/search?q=${encodeURIComponent(query.trim())}`);
-        if (res.ok) {
-          const data = await res.json();
-          setSuggestions(data.results || []);
+        const localResults = searchLocations(query.trim());
+        if (localResults && localResults.length > 0) {
+          setSuggestions(localResults);
           setIsOpen(true);
-          setNotFoundMessage((data.results || []).length === 0);
+          setNotFoundMessage(false);
+        } else {
+          const res = await fetch(`/api/locations/search?q=${encodeURIComponent(query.trim())}`);
+          if (res.ok) {
+            const data = await res.json();
+            setSuggestions(data.results || []);
+            setIsOpen(true);
+            setNotFoundMessage((data.results || []).length === 0);
+          } else {
+            setSuggestions([]);
+            setNotFoundMessage(true);
+          }
         }
       } catch (err) {
         console.error("Location search error:", err);
       } finally {
         setIsLoading(false);
       }
-    }, 150);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [query]);

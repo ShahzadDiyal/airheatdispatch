@@ -145,3 +145,79 @@ export function getLocationData(stateSlug: string, citySlug: string): LocationDa
     ],
   };
 }
+
+export function searchLocations(query: string) {
+  if (!query || query.trim().length < 2) return [];
+
+  const q = query.trim().toLowerCase();
+  const isNumeric = /^\d+$/.test(q);
+
+  const matchedResults: any[] = [];
+  const seenKeys = new Set<string>();
+
+  if (isNumeric) {
+    for (const item of ZIP_DATABASE) {
+      if (item.zip.startsWith(q) || item.zip.includes(q)) {
+        const key = `${item.zip}-${item.stateSlug}-${item.citySlug}`;
+        if (!seenKeys.has(key)) {
+          seenKeys.add(key);
+          matchedResults.push(item);
+        }
+      }
+      if (matchedResults.length >= 10) break;
+    }
+  } else {
+    for (const item of ZIP_DATABASE) {
+      if (item.city.toLowerCase().startsWith(q)) {
+        const key = `${item.stateSlug}-${item.citySlug}`;
+        if (!seenKeys.has(key)) {
+          seenKeys.add(key);
+          matchedResults.push(item);
+        }
+      }
+      if (matchedResults.length >= 10) break;
+    }
+
+    if (matchedResults.length < 10) {
+      for (const item of ZIP_DATABASE) {
+        if (
+          item.city.toLowerCase().includes(q) ||
+          item.stateName.toLowerCase().includes(q) ||
+          item.state.toLowerCase() === q
+        ) {
+          const key = `${item.stateSlug}-${item.citySlug}`;
+          if (!seenKeys.has(key)) {
+            seenKeys.add(key);
+            matchedResults.push(item);
+          }
+        }
+        if (matchedResults.length >= 10) break;
+      }
+    }
+
+    if (matchedResults.length < 5) {
+      for (const st of Object.values(ALL_STATES_DATA)) {
+        if (st.stateName.toLowerCase().includes(q) || st.stateSlug.includes(q)) {
+          for (const city of st.majorCities) {
+            const key = `${st.stateSlug}-${city.slug}`;
+            if (!seenKeys.has(key)) {
+              seenKeys.add(key);
+              matchedResults.push({
+                zip: "",
+                city: city.name,
+                state: st.stateSlug.toUpperCase().slice(0, 2),
+                stateName: st.stateName,
+                stateSlug: st.stateSlug,
+                citySlug: city.slug,
+              });
+            }
+            if (matchedResults.length >= 10) break;
+          }
+        }
+        if (matchedResults.length >= 10) break;
+      }
+    }
+  }
+
+  return matchedResults.slice(0, 10);
+}

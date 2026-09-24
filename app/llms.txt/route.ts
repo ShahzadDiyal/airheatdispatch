@@ -3,6 +3,9 @@ import { CORE_SERVICES } from "@/config/services";
 import { ALL_STATES_DATA } from "@/config/states";
 import { getAllPrebuiltCities } from "@/lib/locations";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export async function GET() {
   const activeStates = Object.values(ALL_STATES_DATA);
   const prebuiltCities = getAllPrebuiltCities();
